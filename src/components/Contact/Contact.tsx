@@ -4,7 +4,7 @@ import { Flex, Text } from "@chakra-ui/react";
 function Contact() {
   return (
     <Flex
-      bgColor={"gray.100"}
+      bgColor={"gray.200"}
       w={'100%'}
       h={400}
       justifyContent={"center"}

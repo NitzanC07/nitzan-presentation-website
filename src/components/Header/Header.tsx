@@ -7,10 +7,14 @@ function Header() {
       justifyContent={"space-between"}
       alignItems={"center"}
       bgColor={"gray.300"}
+      pos={'fixed'}
+      w={'100%'}
+      h={'70px'}
+      px={10}
     >
-      <Text className={varelaRound.className} fontSize={50}>
+      <Heading style={{'fontFamily': 'Varela Round, sans-serif'}} fontSize={50}>
         ניצן כהן
-      </Text>
+      </Heading>
       <Box className={varelaRound.className} fontSize={20} bgColor={"gray.200"}>
         Navigator
       </Box>
