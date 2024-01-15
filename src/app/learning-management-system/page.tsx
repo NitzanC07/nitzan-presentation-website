@@ -16,7 +16,7 @@ function LearningManagementSystem() {
       justifyContent={"flex-start"}
       alignItems={"center"}
     >
-      <Grid templateColumns={["1fr","1fr 2fr", "1fr 4fr"]} mt="70px" w="100%" gap={0}>
+      <Grid templateColumns={["1fr","1fr","1fr 2fr", "1fr 4fr"]} mt="70px" w="100%" gap={0}>
         <GridItem rowSpan={2} colSpan={1} bgColor={"blue.200"} p={4}>
           <Heading
             as="h2"
@@ -33,7 +33,7 @@ function LearningManagementSystem() {
           <LessonTitle />
         </GridItem>
 
-        <GridItem colSpan={1} bgColor={"blue.50"} minH={400} py={4} px={[5, 5, 10, 20, 250, 350]}>
+        <GridItem colSpan={1} bgColor={"blue.50"} w='100%' minH={400} py={4} px={'auto'}>
           <LessonContent />
         </GridItem>
       </Grid>
