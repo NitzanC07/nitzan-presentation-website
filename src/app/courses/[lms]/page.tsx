@@ -26,7 +26,7 @@ function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
             רשימת שיעורים
           </Heading>
 
-          <NavLessonsList />
+          <NavLessonsList selectedCourse={params.lms} />
         </GridItem>
 
         <GridItem colSpan={1} bgColor={"blue.100"} h={20} p={4}>
@@ -41,7 +41,7 @@ function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
           py={4}
           px={"auto"}
         >
-          <LessonContent />
+          <LessonContent selectedCourse={params.lms} />
 
           <Text mt={"70px"}>Params: {params.lms}</Text>
         </GridItem>

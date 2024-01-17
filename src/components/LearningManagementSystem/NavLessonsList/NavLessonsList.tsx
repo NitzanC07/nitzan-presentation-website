@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import {
   Accordion,
   AccordionButton,
@@ -8,47 +10,29 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 
-function NavLessonsList() {
+interface NavLessonsListProps {
+  selectedCourse: string;
+}
 
-  const modulesCourse = [
-    {
-      module: 1,
-      title: "הקדמה",
-      lessons: [
-        { id: 1, title: "אודות הקורס" },
-        { id: 2, title: "מה זה אינטרנט?" },
-        { id: 3, title: "מה זה אינטרנט?" },
-      ],
-    },
-    {
-      module: 2,
-      title: "HTML",
-      lessons: [
-        { id: 1, title: "מה זה HTML, ומה החשיבות שלו בבניית אתרי אינטרנט?" },
-        { id: 2, title: "מבנה עמוד HTML בסיסי." },
-        { id: 3, title: "מבנה עמוד HTML בסיסי." },
-        { id: 4, title: "מבנה עמוד HTML בסיסי." },
-      ],
-    },
-    {
-      module: 3,
-      title: "CSS",
-      lessons: [
-        { id: 1, title: "מה זה CSS, ועל מה הוא אחראי בבניית אתרי אינטרנט?" },
-        { id: 2, title: "הגדרות כלליות של CSS." },
-        { id: 3, title: "מאפייני עיצוב בסיסיים" },
-      ],
-    },
-  ];
+function NavLessonsList(props: NavLessonsListProps) {
+  
+  const readSelectedCourseData = () => {
+    const filePath = path.join(process.cwd(), 'data', `${props.selectedCourse}.json`);
+    const fileData = fs.readFileSync(filePath, 'utf-8');
+    const courseData = JSON.parse(fileData);
+    return courseData;
+  }
+
+  const modulesSelectedCourse = readSelectedCourseData();    
 
   return (
     <Accordion>
-      {modulesCourse.map((moduleCourse) => (
+      {modulesSelectedCourse.map((moduleCourse: any) => (
         <AccordionItem key={moduleCourse.module}>
           <AccordionButton>
             <Heading
               as="h3"
-              fontSize={20}
+              fontSize={18}
               style={{ fontFamily: "Varela Round, sans-serif" }}
             >
               {`יחידה ${moduleCourse.module}: ${moduleCourse.title}`}
@@ -56,15 +40,16 @@ function NavLessonsList() {
           </AccordionButton>
           <AccordionPanel>
             <List>
-              {moduleCourse.lessons.map((lesson) => (
-                <ListItem key={lesson.id}>
-                    שיעור {lesson.id}: {lesson.title}
+              {moduleCourse.lessons.map((lesson: any) => (
+                <ListItem key={lesson.lessonId}>
+                    שיעור {lesson.lessonId}: {lesson.title}
                 </ListItem>
               ))}
             </List>
           </AccordionPanel>
         </AccordionItem>
       ))}
+      <AccordionItem>params: {props.selectedCourse}</AccordionItem>
     </Accordion>
   );
 }

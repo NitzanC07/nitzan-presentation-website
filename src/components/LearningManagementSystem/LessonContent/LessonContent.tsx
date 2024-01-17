@@ -14,7 +14,15 @@ import {
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 
-function LessonContent() {
+interface LessonContentProps {
+  selectedCourse: string;
+}
+
+function LessonContent(props: LessonContentProps) {
+
+  console.log(props.selectedCourse);
+  
+
   const nameInputRef = useRef<HTMLInputElement>(null);
 
   const sampleCode = [

@@ -1,4 +1,3 @@
-"use client";
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 
 function CoursesPage() {
