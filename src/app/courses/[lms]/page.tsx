@@ -1,9 +1,9 @@
-import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
-import NavLessonsList from "@/components/LearningManagementSystem/NavLessonsList/NavLessonsList";
-import LessonTitle from "@/components/LearningManagementSystem/LessonTitle/LessonTitle";
 import LessonContent from "@/components/LearningManagementSystem/LessonContent/LessonContent";
+import LessonTitle from "@/components/LearningManagementSystem/LessonTitle/LessonTitle";
+import NavLessonsList from "@/components/LearningManagementSystem/NavLessonsList/NavLessonsList";
+import { Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 
-function LearningManagementSystem() {
+function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
   return (
     <Flex
       flexDir={"column"}
@@ -21,6 +21,7 @@ function LearningManagementSystem() {
             as="h2"
             style={{ fontFamily: "Varela Round, sans-serif" }}
             fontSize={23}
+            mb={5}
           >
             רשימת שיעורים
           </Heading>
@@ -41,10 +42,12 @@ function LearningManagementSystem() {
           px={"auto"}
         >
           <LessonContent />
+
+          <Text mt={"70px"}>Params: {params.lms}</Text>
         </GridItem>
       </Grid>
     </Flex>
   );
 }
 
-export default LearningManagementSystem;
+export default LearningManagementSystemPage;

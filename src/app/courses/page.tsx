@@ -1,12 +1,7 @@
 "use client";
-import { Box, Button, Flex, Heading, Link } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 
 function CoursesPage() {
-  function chooseCourse() {
-    fetch("/api/courses/basic-course")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
 
   return (
     <Flex
@@ -22,11 +17,9 @@ function CoursesPage() {
         >
           קורסים
         </Heading>
-        <Link href="/courses/learning-management-system" onClick={chooseCourse}>קורס בסיסי</Link>
-        <Link href="/courses/learning-management-system">קורס מתקדם</Link>
-        <Link href="/courses/learning-management-system">
-          סדנת כתיבה יצירתית
-        </Link>
+        <Link href="/courses/basic-course">קורס בסיסי</Link>
+        <Link href="/courses/master-course">קורס מתקדם</Link>
+        <Link href="/courses/creative-writing">סדנת כתיבה יצירתית</Link>
       </Box>
     </Flex>
   );
