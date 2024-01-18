@@ -1,4 +1,6 @@
 import { Heading } from "@chakra-ui/react";
+import fs from "fs";
+import path from "path";
 
 function LessonTitle() {
   return (
@@ -13,3 +15,7 @@ function LessonTitle() {
 }
 
 export default LessonTitle;
+
+export function getStaticProps() {
+  
+}

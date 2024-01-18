@@ -14,34 +14,26 @@ import {
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 
-interface LessonContentProps {
-  selectedCourse: string;
-}
-
-function LessonContent(props: LessonContentProps) {
-
-  console.log(props.selectedCourse);
-  
-
+function LessonContent() {
   const nameInputRef = useRef<HTMLInputElement>(null);
 
   const sampleCode = [
     { element: "<!DOCTYPE html>", spaces: 0, color: "yellow.300" },
     { element: "<html>", spaces: 0, color: "red.300" },
-    { element: "<head>", spaces: 2, color: "blue.300" },
-    { element: '<meta charset="UTF-8" />', spaces: 4, color: "white" },
+    { element: "<head>", spaces: 4, color: "blue.300" },
+    { element: '<meta charset="UTF-8" />', spaces: 8, color: "white" },
     {
       element:
         '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
-      spaces: 4,
+      spaces: 8,
       color: "white",
     },
-    { element: "<title>Document</title>", spaces: 4, color: "white" },
-    { element: "<style />", spaces: 4, color: "white" },
-    { element: "</head>", spaces: 2, color: "blue.300" },
-    { element: "<body>", spaces: 2, color: "green.300" },
-    { element: "", spaces: 2, color: "white" },
-    { element: "</body>", spaces: 2, color: "green.300" },
+    { element: "<title>Document</title>", spaces: 8, color: "white" },
+    { element: "<style />", spaces: 8, color: "white" },
+    { element: "</head>", spaces: 4, color: "blue.300" },
+    { element: "<body>", spaces: 4, color: "green.300" },
+    { element: "", spaces: 4, color: "white" },
+    { element: "</body>", spaces: 4, color: "green.300" },
     { element: "</html>", spaces: 0, color: "red.300" },
   ];
 

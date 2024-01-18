@@ -1,9 +1,40 @@
+import path from "path";
+import fs from "fs";
 import LessonContent from "@/components/LearningManagementSystem/LessonContent/LessonContent";
 import LessonTitle from "@/components/LearningManagementSystem/LessonTitle/LessonTitle";
 import NavLessonsList from "@/components/LearningManagementSystem/NavLessonsList/NavLessonsList";
 import { Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 
-function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
+export interface Lesson {
+  lessonId: string;
+  title: string;
+}
+export interface ModuleCourse {
+  module: string;
+  title: string;
+  lessons: Lesson[];
+}
+interface LmsProps {
+  courseData: ModuleCourse[];
+}
+
+async function getData(selectedCourse: string) {
+  const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
+  const fileData = fs.readFileSync(filePath, "utf-8");
+  const courseData: ModuleCourse[] = JSON.parse(fileData);
+  return courseData;
+}
+
+export default async function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
+  // const readCourseDataFromFile = (selectedCourse: string) => {
+  //   const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
+  //   const fileData = fs.readFileSync(filePath, "utf-8");
+  //   const courseData: ModuleCourse[] = JSON.parse(fileData);
+  //   return courseData;
+  // };
+
+  const courseData = await getData(params.lms);
+
   return (
     <Flex
       flexDir={"column"}
@@ -26,7 +57,7 @@ function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
             רשימת שיעורים
           </Heading>
 
-          <NavLessonsList selectedCourse={params.lms} />
+          <NavLessonsList courseData={courseData} />
         </GridItem>
 
         <GridItem colSpan={1} bgColor={"blue.100"} h={20} p={4}>
@@ -41,7 +72,7 @@ function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
           py={4}
           px={"auto"}
         >
-          <LessonContent selectedCourse={params.lms} />
+          <LessonContent />
 
           <Text mt={"70px"}>Params: {params.lms}</Text>
         </GridItem>
@@ -50,4 +81,22 @@ function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
   );
 }
 
-export default LearningManagementSystemPage;
+
+// export async function getStaticProps({ params }: {params: {selectedCourse: string}}) {
+//   console.log("PARAMS", params);
+
+//   const { selectedCourse } = params;
+//   console.log(selectedCourse);
+//   const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
+//   const fileData = fs.readFileSync(filePath, "utf-8");
+//   const courseData: ModuleCourse[] = JSON.parse(fileData);
+//   return { props: { courseData } };
+// }
+
+// export async function getStaticPaths() {
+//   const courses = ["basic-course", "master-course"];
+//   const paths = courses.map((course) => ({
+//     params: { selectedCourse: course },
+//   }));
+//   return { paths, fallback: false };
+// }
