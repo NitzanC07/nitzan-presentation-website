@@ -1,25 +1,27 @@
-import fs from "fs";
-import path from "path";
 import {
   Accordion,
   AccordionButton,
   AccordionItem,
   AccordionPanel,
   Heading,
+  Link,
   List,
   ListItem,
 } from "@chakra-ui/react";
-import { ModuleCourse } from "@/app/courses/[lms]/page";
+import { ModuleCourse } from "@/app/courses/[...lms]/page";
 
 interface NavLessonsListProps {
-  courseData: ModuleCourse[];
+  courseData: ModuleCourse;
 }
 
-function NavLessonsList({courseData}: NavLessonsListProps) {  
-    
+function NavLessonsList({courseData}: NavLessonsListProps) {
+  
+  const courseContent = courseData.courseContent;
+  const courseId = courseData.courseId;
+  
   return (
     <Accordion>
-      {courseData.map((moduleCourse: any) => (
+      {courseContent.map((moduleCourse: any) => (
         <AccordionItem key={moduleCourse.module}>
           <AccordionButton>
             <Heading
@@ -34,17 +36,17 @@ function NavLessonsList({courseData}: NavLessonsListProps) {
             <List>
               {moduleCourse.lessons.map((lesson: any) => (
                 <ListItem key={lesson.lessonId}>
-                  שיעור {lesson.lessonId}: {lesson.title}
+                  <Link href={`/courses/${courseId}/${lesson.lessonId}`}>
+                    שיעור {lesson.lessonId}: {lesson.title}
+                  </Link>
                 </ListItem>
               ))}
             </List>
           </AccordionPanel>
         </AccordionItem>
       ))}
-      
     </Accordion>
   );
 }
 
 export default NavLessonsList;
-

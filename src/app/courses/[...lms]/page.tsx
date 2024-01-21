@@ -8,32 +8,37 @@ import { Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 export interface Lesson {
   lessonId: string;
   title: string;
+  content: string;
 }
-export interface ModuleCourse {
+export interface CourseContent {
   module: string;
   title: string;
   lessons: Lesson[];
 }
+export interface ModuleCourse {
+  courseId: string;
+  courseName: string;
+  courseContent: CourseContent[];
+}
 interface LmsProps {
-  courseData: ModuleCourse[];
+  courseData: ModuleCourse;
 }
 
-async function getData(selectedCourse: string) {
+async function getCourseData(selectedCourse: string) {
+  // * Function that read the data of the selected course as SSG method.
   const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
   const fileData = fs.readFileSync(filePath, "utf-8");
-  const courseData: ModuleCourse[] = JSON.parse(fileData);
+  const courseData: ModuleCourse = JSON.parse(fileData);
   return courseData;
 }
 
-export default async function LearningManagementSystemPage({ params }: { params: { lms: string } }) {
-  // const readCourseDataFromFile = (selectedCourse: string) => {
-  //   const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
-  //   const fileData = fs.readFileSync(filePath, "utf-8");
-  //   const courseData: ModuleCourse[] = JSON.parse(fileData);
-  //   return courseData;
-  // };
-
-  const courseData = await getData(params.lms);
+export default async function LearningManagementSystemPage({
+  params,
+}: {
+  params: { lms: string };
+}) {
+  // * Call the function of reading course data appropriate to params url.
+  const courseData = await getCourseData(params.lms[0]);
 
   return (
     <Flex
@@ -60,8 +65,8 @@ export default async function LearningManagementSystemPage({ params }: { params:
           <NavLessonsList courseData={courseData} />
         </GridItem>
 
-        <GridItem colSpan={1} bgColor={"blue.100"} h={20} p={4}>
-          <LessonTitle />
+        <GridItem colSpan={1} bgColor={"blue.100"} py={3} px={5}>
+          <LessonTitle courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
 
         <GridItem
@@ -72,15 +77,12 @@ export default async function LearningManagementSystemPage({ params }: { params:
           py={4}
           px={"auto"}
         >
-          <LessonContent />
-
-          <Text mt={"70px"}>Params: {params.lms}</Text>
+          <LessonContent courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
       </Grid>
     </Flex>
   );
 }
-
 
 // export async function getStaticProps({ params }: {params: {selectedCourse: string}}) {
 //   console.log("PARAMS", params);
