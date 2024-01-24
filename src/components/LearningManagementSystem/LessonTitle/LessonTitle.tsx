@@ -9,7 +9,6 @@ interface LessonTitleProps {
 }
 
 function LessonTitle({ courseData, lessonId }: LessonTitleProps) {
-  // const courseData = props.courseData;
   const courseTitle = courseData.courseName;
   const [moduleNumber, setModuleNumber] = useState("");
   const [lessonNumber, setLessonNumber] = useState("");

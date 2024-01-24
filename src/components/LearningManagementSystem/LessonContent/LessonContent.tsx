@@ -1,8 +1,8 @@
 "use client";
 import dynamic from "next/dynamic";
 import { ModuleCourse } from "@/app/courses/[...lms]/page";
-import { Flex, Text } from "@chakra-ui/react";
-import { Suspense, useEffect, useState } from "react";
+import { Flex } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import Loading from "@/components/Loading/Loading";
 
 interface LessonContentProps {

@@ -14,11 +14,10 @@ interface NavLessonsListProps {
   courseData: ModuleCourse;
 }
 
-function NavLessonsList({courseData}: NavLessonsListProps) {
-  
+function NavLessonsList({ courseData }: NavLessonsListProps) {
   const courseContent = courseData.courseContent;
   const courseId = courseData.courseId;
-  
+
   return (
     <Accordion>
       {courseContent.map((moduleCourse: any) => (

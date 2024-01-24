@@ -1,97 +1,88 @@
-[
-  {
-    "module": 1,
-    "title": "הקדמה",
-    "lessons": [
-      {
-        "lessonId": 1,
-        "title": "אודות הקורס",
-        "content": "תוכן השיעור - אודות הקורס"
-      },
-      {
-        "lessonId": 2,
-        "title": "מה נלמד בקורס הזה?",
-        "content": "תוכן השיעור - נלמד בקורס..."
-      }
-    ]
-  },
-  {
-    "module": 2,
-    "title": "סביבת עבודה React.js",
-    "lessons": [
-      {
-        "lessonId": 1,
-        "title": "מה זה HTML, ומה החשיבות שלו בבניית אתרי אינטרנט?",
-        "content": "תוכן השיעור - החשיבות של... "
-      },
-      {
-        "lessonId": 2,
-        "title": "מבנה עמוד HTML בסיסי.",
-        "content": "תוכן השיעור - מסמך בסיסי מורכב מ..."
-      }
-    ]
-  },
-  {
-    "module": 3,
-    "title": "State Variable",
-    "lessons": [
-      {
-        "lessonId": 1,
-        "title": "useState",
-        "content": "תוכן השיעור - הפונקציה הזאת..."
-      },
-      {
-        "lessonId": 2,
-        "title": "useEffect",
-        "content": "תוכן השיעור - הפונקציה הזאת אחראית על..."
-      },
-      {
-        "lessonId": 3,
-        "title": "useContext",
-        "content": "תוכן השיעור - משתנה גלובלי הוא..."
-      }
-    ]
-  },
-  {
-    "module": 4,
-    "title": "פרויקט סיום",
-    "lessons": [
-      {
-        "lessonId": 1,
-        "title": "בחירת נושא לפרויקט",
-        "content": "תוכן השיעור - הנושא שאני בוחר הוא..."
-      },
-      {
-        "lessonId": 2,
-        "title": "תכנון הפרויקט",
-        "content": "תוכן השיעור - הצעדים שלי לעבודה הם..."
-      },
-      {
-        "lessonId": 3,
-        "title": "ביצוע הפרויקט",
-        "content": "תוכן השיעור - אני מבצע את הפרויקט כך..."
-      }
-    ]
-  },
-  {
-    "module": 5,
-    "title": "משוב על הקורס",
-    "lessons": [
-      {
-        "lessonId": 1,
-        "title": "דעתי על הקורס",
-        "content": "תוכן השיעור - הקורס הוא..."
-      },
-      {
-        "lessonId": 2,
-        "title": "מידת הקושי",
-        "content": "תוכן השיעור - הקורס מאתגר..."
-      },
-      {
-        "lessonId": 3,
-        "title": "מידת העניין",
-        "content": "תוכן השיעור - הקורס מעניין מאוד..."
-      }
-    ]
-  }
-]
+{
+  "courseId": "master-course",
+  "courseName": "בניית אתרי אינטרנט מתקדם",
+  "courseContent": [
+    {
+      "module": 1,
+      "title": "הקדמה",
+      "lessons": [
+        {
+          "lessonId": 1.1,
+          "title": "אודות הקורס"
+        },
+        {
+          "lessonId": 1.2,
+          "title": "מה נלמד בקורס הזה?"
+        }
+      ]
+    },
+    {
+      "module": 2,
+      "title": "סביבת עבודה React.js",
+      "lessons": [
+        {
+          "lessonId": 2.1,
+          "title": "מה זה HTML, ומה החשיבות שלו בבניית אתרי אינטרנט?"
+        },
+        {
+          "lessonId": 2.2,
+          "title": "מבנה עמוד HTML בסיסי."
+        }
+      ]
+    },
+    {
+      "module": 3,
+      "title": "State Variable",
+      "lessons": [
+        {
+          "lessonId": 3.1,
+          "title": "useState"
+        },
+        {
+          "lessonId": 3.2,
+          "title": "useEffect"
+        },
+        {
+          "lessonId": 3.3,
+          "title": "useContext"
+        }
+      ]
+    },
+    {
+      "module": 4,
+      "title": "פרויקט סיום",
+      "lessons": [
+        {
+          "lessonId": 4.1,
+          "title": "בחירת נושא לפרויקט"
+        },
+        {
+          "lessonId": 4.2,
+          "title": "תכנון הפרויקט"
+        },
+        {
+          "lessonId": 4.3,
+          "title": "ביצוע הפרויקט"
+        }
+      ]
+    },
+    {
+      "module": 5,
+      "title": "משוב על הקורס",
+      "lessons": [
+        {
+          "lessonId": 5.1,
+          "title": "דעתי על הקורס"
+        },
+        {
+          "lessonId": 5.2,
+          "title": "מידת הקושי"
+        },
+        {
+          "lessonId": 5.3,
+          "title": "מידת העניין"
+        }
+      ]
+    }
+  ]
+}

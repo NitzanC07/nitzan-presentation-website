@@ -1,7 +1,6 @@
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 
 function CoursesPage() {
-
   return (
     <Flex
       flexDir={"column"}
@@ -16,9 +15,9 @@ function CoursesPage() {
         >
           קורסים
         </Heading>
-        <Link href="/courses/basic-course">קורס בסיסי</Link>
-        <Link href="/courses/master-course">קורס מתקדם</Link>
-        <Link href="/courses/creative-writing">סדנת כתיבה יצירתית</Link>
+        <Link href="/courses/basic-course/1.1">קורס בסיסי</Link>
+        <Link href="/courses/master-course/1.1">קורס מתקדם</Link>
+        <Link href="/courses/creative-writing/1.1">סדנת כתיבה יצירתית</Link>
       </Box>
     </Flex>
   );
