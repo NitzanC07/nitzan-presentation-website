@@ -1,81 +1,79 @@
 "use client";
+import dynamic from "next/dynamic";
 import { ModuleCourse } from "@/app/courses/[...lms]/page";
-import {
-  Box,
-  Button,
-  Code,
-  Flex,
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  Select,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
-import { useRef, useState } from "react";
+import { Flex, Text } from "@chakra-ui/react";
+import { Suspense, useEffect, useState } from "react";
+import Loading from "@/components/Loading/Loading";
 
 interface LessonContentProps {
   lessonId: string;
   courseData: ModuleCourse;
 }
 
-function LessonContent(props: LessonContentProps) {
-  const courseData = props.courseData;
-  const courseTitle = courseData.courseName;
-  const [moduleNumber, lessonNumber] = props.lessonId.toString().split(".");
+function LessonContent({ courseData, lessonId }: LessonContentProps) {
+  const [moduleNumber, setModuleNumber] = useState("");
+  const [lessonNumber, setLessonNumber] = useState("");
+
   const currentModule = courseData.courseContent.find(
     (module) => module.module == moduleNumber
   );
+
   const currentLesson = currentModule?.lessons.find(
-    (lesson) => lesson.lessonId == props.lessonId
+    (lesson) => lesson.lessonId == lessonId
   );
 
-  // const nameInputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    setModuleNumber(lessonId.toString().split(".")[0]);
+    setLessonNumber(lessonId.toString().split(".")[1]);
+  }, [lessonId]);
 
-  // const sampleCode = [
-  //   { element: "<!DOCTYPE html>", spaces: 0, color: "yellow.300" },
-  //   { element: "<html>", spaces: 0, color: "red.300" },
-  //   { element: "<head>", spaces: 4, color: "blue.300" },
-  //   { element: '<meta charset="UTF-8" />', spaces: 8, color: "white" },
-  //   {
-  //     element:
-  //       '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
-  //     spaces: 8,
-  //     color: "white",
-  //   },
-  //   { element: "<title>Document</title>", spaces: 8, color: "white" },
-  //   { element: "<style />", spaces: 8, color: "white" },
-  //   { element: "</head>", spaces: 4, color: "blue.300" },
-  //   { element: "<body>", spaces: 4, color: "green.300" },
-  //   { element: "", spaces: 4, color: "white" },
-  //   { element: "</body>", spaces: 4, color: "green.300" },
-  //   { element: "</html>", spaces: 0, color: "red.300" },
-  // ];
-
-  // function handleInput() {
-  //   console.log(nameInputRef.current?.value);
-  // }
-  // function handleApi(e: React.FormEvent<HTMLFormElement>) {
-  //   e.preventDefault();
-  //   const enteredName = nameInputRef.current?.value;
-  //   console.log(enteredName);
-  // }
+  const LessonComponent = dynamic(
+    () =>
+      import(
+        `@/components/LearningManagementSystem/courses/${courseData.courseId}/module${moduleNumber}/Lesson${lessonNumber}`
+      ),
+    { ssr: false, loading: () => <Loading /> }
+  );
 
   return (
     <Flex direction={"column"} w={["100%"]} maxW={"700px"} mx={"auto"}>
-      <Text
-        as="p"
-        style={{ fontFamily: "Varela Round, sans-serif" }}
-        fontSize={18}
-      >
-        {currentLesson?.content}
-      </Text>
+      <LessonComponent />
     </Flex>
   );
 }
 
 export default LessonContent;
+
+// const nameInputRef = useRef<HTMLInputElement>(null);
+
+// const sampleCode = [
+//   { element: "<!DOCTYPE html>", spaces: 0, color: "yellow.300" },
+//   { element: "<html>", spaces: 0, color: "red.300" },
+//   { element: "<head>", spaces: 4, color: "blue.300" },
+//   { element: '<meta charset="UTF-8" />', spaces: 8, color: "white" },
+//   {
+//     element:
+//       '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
+//     spaces: 8,
+//     color: "white",
+//   },
+//   { element: "<title>Document</title>", spaces: 8, color: "white" },
+//   { element: "<style />", spaces: 8, color: "white" },
+//   { element: "</head>", spaces: 4, color: "blue.300" },
+//   { element: "<body>", spaces: 4, color: "green.300" },
+//   { element: "", spaces: 4, color: "white" },
+//   { element: "</body>", spaces: 4, color: "green.300" },
+//   { element: "</html>", spaces: 0, color: "red.300" },
+// ];
+
+// function handleInput() {
+//   console.log(nameInputRef.current?.value);
+// }
+// function handleApi(e: React.FormEvent<HTMLFormElement>) {
+//   e.preventDefault();
+//   const enteredName = nameInputRef.current?.value;
+//   console.log(enteredName);
+// }
 
 {
   /* <Heading

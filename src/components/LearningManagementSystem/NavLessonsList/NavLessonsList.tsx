@@ -27,6 +27,7 @@ function NavLessonsList({courseData}: NavLessonsListProps) {
             <Heading
               as="h3"
               fontSize={18}
+              textAlign={"right"}
               style={{ fontFamily: "Varela Round, sans-serif" }}
             >
               {`יחידה ${moduleCourse.module}: ${moduleCourse.title}`}

@@ -73,7 +73,7 @@ export default async function LearningManagementSystemPage({
           colSpan={1}
           bgColor={"blue.50"}
           w="100%"
-          minH={400}
+          minH={'600px'}
           py={4}
           px={"auto"}
         >
