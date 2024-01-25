@@ -52,12 +52,13 @@ export default async function LearningManagementSystemPage({
         w="100%"
         gap={0}
       >
-        <GridItem rowSpan={2} colSpan={1} bgColor={"blue.200"} p={4}>
+        <GridItem rowSpan={2} colSpan={1} bgColor={"blue.200"} p={4} tabIndex={1}>
           <Heading
             as="h2"
             style={{ fontFamily: "Varela Round, sans-serif" }}
             fontSize={23}
             mb={5}
+            tabIndex={2}
           >
             רשימת שיעורים
           </Heading>
@@ -65,7 +66,7 @@ export default async function LearningManagementSystemPage({
           <NavLessonsList courseData={courseData} />
         </GridItem>
 
-        <GridItem colSpan={1} bgColor={"blue.100"} py={3} px={5}>
+        <GridItem colSpan={1} bgColor={"blue.100"} py={3} px={5} tabIndex={1}>
           <LessonTitle courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
 
@@ -76,6 +77,7 @@ export default async function LearningManagementSystemPage({
           minH={"600px"}
           py={4}
           px={"auto"}
+          tabIndex={1}
         >
           <LessonContent courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
