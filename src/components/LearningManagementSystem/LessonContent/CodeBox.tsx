@@ -1,34 +1,33 @@
 import { Box, Code, Flex, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 
 interface LineCode {
-        element: string;
-        spaces: number;
-        color: string;
+  element: string;
+  spaces: number;
+  color: string;
 }
 
 interface CodeContentProps {
-    codeLanguage: string;
-    codeBlock: LineCode[]
+  codeLanguage: string;
+  codeBlock: LineCode[];
 }
 
-function CodeBox({codeBlock, codeLanguage}: CodeContentProps) {
-  
+function CodeBox({ codeBlock, codeLanguage }: CodeContentProps) {
   return (
     <Grid
       templateColumns={"30px 1fr"}
       dir="ltr"
       w="90%"
-      maxW={["200px", "500px", "700px"]}
-      mx='auto'
+      maxW={["350px", "500px", "700px"]}
+      mx="auto"
       my={3}
       p={1}
       bgColor={"gray.700"}
       borderWidth={0}
-    //   borderColor={"yellow.500"}
-    //   borderStyle={"solid"}
-    //   borderRadius={"3px"}
+      //   borderColor={"yellow.500"}
+      //   borderStyle={"solid"}
+      // borderRadius={"3px"}
     >
-      <GridItem colSpan={2} bgColor={"gray.600"} color={'white'} px={3} py={1}>
+      <GridItem colSpan={2} bgColor={"gray.600"} color={"white"} px={3} py={1}>
         {codeLanguage}
       </GridItem>
 
@@ -42,7 +41,7 @@ function CodeBox({codeBlock, codeLanguage}: CodeContentProps) {
               p={0}
               m={0}
             >
-              {i+1}
+              {i + 1}
             </Code>
           </Flex>
         ))}
