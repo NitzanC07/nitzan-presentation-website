@@ -3,7 +3,7 @@ import fs from "fs";
 import LessonContent from "@/components/LearningManagementSystem/LessonContent/LessonContent";
 import LessonTitle from "@/components/LearningManagementSystem/LessonTitle/LessonTitle";
 import NavLessonsList from "@/components/LearningManagementSystem/NavLessonsList/NavLessonsList";
-import { Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 
 export interface Lesson {
   lessonId: string;
@@ -42,17 +42,20 @@ export default async function LearningManagementSystemPage({
 
   return (
     <Flex
+      as='main'
       flexDir={"column"}
       justifyContent={"flex-start"}
       alignItems={"center"}
     >
       <Grid
+        as='section'
         templateColumns={["1fr", "1fr", "1fr 2fr", "1fr 4fr"]}
+        templateRows={["80px 1fr"]}
         mt="70px"
         w="100%"
         gap={0}
       >
-        <GridItem rowSpan={2} colSpan={1} bgColor={"green.500"} p={4} tabIndex={1}>
+        <GridItem as='nav' rowSpan={2} colSpan={1} bgColor={"green.500"} p={4} tabIndex={1}>
           <Heading
             as="h2"
             style={{ fontFamily: "Varela Round, sans-serif" }}
@@ -67,17 +70,19 @@ export default async function LearningManagementSystemPage({
           <NavLessonsList courseData={courseData} />
         </GridItem>
 
-        <GridItem colSpan={1} bgColor={"green.100"} py={3} px={5} tabIndex={1}>
+        <GridItem as='section' colSpan={1} bgColor={"green.100"} py={3} px={5} tabIndex={1}>
           <LessonTitle courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
 
         <GridItem
+          as='section'
           colSpan={1}
           bgColor={"green.50"}
           w="100%"
-          minH={"600px"}
-          py={4}
+          minH={"700px"}
+          py={0}
           px={"auto"}
+          mx={0}
           tabIndex={1}
         >
           <LessonContent courseData={courseData} lessonId={params.lms[1]} />

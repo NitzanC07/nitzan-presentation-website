@@ -4,6 +4,7 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 function Header() {
   return (
     <Flex
+      as='header'
       justifyContent={"space-between"}
       alignItems={"center"}
       bgColor={"gray.300"}
