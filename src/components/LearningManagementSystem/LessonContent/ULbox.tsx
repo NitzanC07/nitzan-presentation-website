@@ -6,7 +6,7 @@ interface ULboxProps {
 }
 function ULbox({ content }: ULboxProps) {
   return (
-    <UnorderedList  mt={0} mb={4} p={0}>
+    <UnorderedList  mx={8} p={0}>
       {content.map((item, i) => (
         <ListItem
           key={i}
@@ -15,9 +15,7 @@ function ULbox({ content }: ULboxProps) {
           fontSize={18}
           py={0}
           mx={[3, 3, 7, 0]}
-          mt={2}
-          mb={4}
-          
+          m={0}
           tabIndex={4}
         >
           {item}

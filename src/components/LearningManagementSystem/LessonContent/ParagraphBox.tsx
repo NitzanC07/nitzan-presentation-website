@@ -14,7 +14,7 @@ function ParagraphBox({ textContent }: ParagraphBoxProps) {
           style={{ fontFamily: "Varela Round, sans-serif" }}
           fontSize={18}
           mx={[3, 3, 7, 0]}
-          mt={2}
+          mt={0}
           mb={4}
           p={0}
           tabIndex={4}

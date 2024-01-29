@@ -29,6 +29,7 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
               textAlign={"right"}
               style={{ fontFamily: "Varela Round, sans-serif" }}
               tabIndex={-1}
+              color={'white'}
             >
               {`יחידה ${moduleCourse.module}: ${moduleCourse.title}`}
             </Heading>
@@ -36,9 +37,9 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
           <AccordionPanel>
             <List>
               {moduleCourse.lessons.map((lesson: any) => (
-                <ListItem key={lesson.lessonId} tabIndex={-1}>
-                  <Link href={`/courses/${courseId}/${lesson.lessonId}`} tabIndex={2}>
-                    שיעור {lesson.lessonId}: {lesson.title}
+                <ListItem key={lesson.lessonId} tabIndex={-1} mb={3} style={{'fontFamily': 'Varela Round, sans-serif'}}>
+                  <Link href={`/courses/${courseId}/${lesson.lessonId}`} color='white' tabIndex={2}>
+                    <b>שיעור {lesson.lessonId}:</b> {lesson.title}
                   </Link>
                 </ListItem>
               ))}

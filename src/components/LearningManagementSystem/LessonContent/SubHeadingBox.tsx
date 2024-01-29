@@ -14,8 +14,8 @@ function SubHeadingBox({ textHeading }: SubHeadingBoxProps) {
       fontSize={21}
       py={4}
       mx={[3, 3, 7, 0]}
-      mt={2}
-      mb={4}
+      mt={5}
+      mb={1}
       tabIndex={4}
     >
       {/* <Icon as={AddIcon} color={"purple.500"} fontSize={19} mx={2} /> */}

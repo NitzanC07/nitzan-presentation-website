@@ -11,6 +11,7 @@ function Header() {
       w={'100%'}
       h={'70px'}
       px={10}
+      zIndex={1}
     >
       <Heading style={{'fontFamily': 'Varela Round, sans-serif'}} fontSize={50}>
         ניצן כהן

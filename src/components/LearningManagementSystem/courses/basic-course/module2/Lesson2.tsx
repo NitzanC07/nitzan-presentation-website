@@ -15,6 +15,8 @@ function Lesson2_2() {
     {element: "<h5>Header 5</h5>", spaces: 2, color: "yellow.300"},
     {element: "<h6>Header 6</h6>", spaces: 2, color: "yellow.300"},
     {element: "<h7>Header 7</h7>", spaces: 2, color: "yellow.300"},
+    {element: "", spaces: 2, color: "white"},
+    {element: "<p>Paragraph</p>", spaces: 2, color: "purple.300"},
     {element: "</body>", spaces: 0, color: "white"}
   ]
 

@@ -9,6 +9,7 @@ function Lesson2_1() {
 
   return (
     <>
+      <SubHeadingBox textHeading="מה זה HTML?" />
       <ParagraphBox textContent={contentLesson1Data.text1} />
       <CodeBox codeBlock={contentLesson1Data.code} codeLanguage="HTML" />
       <SubHeadingBox textHeading="תגיות <html></html>" />
