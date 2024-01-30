@@ -1,6 +1,8 @@
 import CodeBox from "@/components/LearningManagementSystem/LessonContent/CodeBox";
 import ParagraphBox from "@/components/LearningManagementSystem/LessonContent/ParagraphBox";
-import { Text } from "@chakra-ui/react";
+import SubHeadingBox from "@/components/LearningManagementSystem/LessonContent/SubHeadingBox";
+import { Box, Card, CardBody, Image, Text } from "@chakra-ui/react";
+import contentLessonData from './lesson2_data.json';
 
 function Lesson2_2() {
 
@@ -21,10 +23,24 @@ function Lesson2_2() {
   ]
 
   return (
-    <>
-      <ParagraphBox textContent={text} />
-      <CodeBox codeBlock={sampleCode2} codeLanguage="HTML" />
-    </>
+    <Box as="section" p={0} mx={0} my={0}>
+      <SubHeadingBox textHeading="סוגי טקסטים" />
+      <ParagraphBox textContent={contentLessonData.text_intro1} />
+      
+      <Card p={2} mx='auto' my={7} w={400} bgColor={'gray.100'}>
+        <Image src="\images\lessonsContents\davar_1929_09_06.png" alt="עיתון דבר, 1929" w={'100%'} m={0} />
+        <Text as='h6' fontSize={11} pt={2}>{"מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. 6 בספטמבר 1929."}</Text>
+      </Card>
+      <ParagraphBox textContent={contentLessonData.text_intro2} />
+      <SubHeadingBox textHeading="כותרות - Headings" />
+      <ParagraphBox textContent={contentLessonData.text_headings} />
+      <CodeBox codeBlock={contentLessonData.code_h} codeLanguage="HTML" />
+      <SubHeadingBox textHeading="פסקה - Paragraph" />
+      <CodeBox codeBlock={contentLessonData.code_p} codeLanguage="HTML" />
+      <SubHeadingBox textHeading="רשימות - Lists" />
+      <CodeBox codeBlock={contentLessonData.code_ul} codeLanguage="HTML" />
+      <CodeBox codeBlock={contentLessonData.code_ol} codeLanguage="HTML" />
+    </Box>
   );
 }
 

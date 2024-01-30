@@ -10,7 +10,7 @@ function SubHeadingBox({ textHeading }: SubHeadingBoxProps) {
     <Heading
       as="h3"
       style={{ fontFamily: "Varela Round, sans-serif" }}
-      color={"purple.500"}
+      color={"orange.600"}
       fontSize={21}
       py={4}
       mx={[3, 3, 7, 0]}
