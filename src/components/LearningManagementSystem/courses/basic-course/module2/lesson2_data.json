@@ -26,53 +26,285 @@
     { "element": "<h6>Header 6</h6>", "spaces": 2, "color": "yellow.300" },
     { "element": "</body>", "spaces": 0, "color": "white" }
   ],
-  "text_paragraph": [""],
+  "output_h": [
+    {
+      "type": "h1",
+      "content": "Main heading",
+      "style": {
+        "display": "block",
+        "fontSize": "2em",
+        "marginTop": "0.67em",
+        "marginBottom": "0.67em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "h2",
+      "content": "Subheading",
+      "style": {
+        "display": "block",
+        "fontSize": "1.5em",
+        "marginTop": "0.83em",
+        "marginBottom": "0.83em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "h3",
+      "content": "Sub-subheading",
+      "style": {
+        "display": "block",
+        "fontSize": "1.17em",
+        "marginTop": "1em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "h4",
+      "content": "Heading 4",
+      "style": {
+        "display": "block",
+        "fontSize": "1em",
+        "marginTop": "1.33em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "h5",
+      "content": "Heading 5",
+      "style": {
+        "display": "block",
+        "fontSize": "0.83em",
+        "marginTop": "1.67em",
+        "marginBottom": "1.67em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "h6",
+      "content": "Heading 6",
+      "style": {
+        "display": "block",
+        "fontSize": "0.67em",
+        "marginTop": "1.67em",
+        "marginBottom": "1.67em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "fontWeight": "bold"
+      }
+    }
+  ],
+  "text_paragraph": [
+    "כמו בעיתון מודפס, גם בעמוד אינטרנט אנחנו נרצה להציג תוכן מילולי . כדי לעשות את זה אנחנו נשתמש בתגית הפותחת <p> וכשנרצה לסגור את הפסקה, נשתמש בתגית הסוגרת <p/>.",
+    "חשוב לציין שבדומה לכותרות, גם פסקה מהווה בלוק שתופס את כל רוחב המסך האפשרי. כך שאם נשתמש פעמיים בצמד התגיות של פסקה, הן יופיעו זו מתחת לזו בעמוד הדפדפן. כמו כן, כל התוכן של הפסקה שיופיע בין תגית הפתיחה לתגית הסגירה גם הוא יישאף למלא את כל רוחב המסך ויירד  שורה רק כאשר המלל מגיע לקצה רוחב המסך.",
+    "סוג נוסף של תגית ליצירת פסקה אלה צמד התגיות <pre></pre>, אשר בין תגיות אלה אנחנו יכולים להכניס מלל עם שבירת שורות. כלומר נוכל להשתמש בסוג זה של פסקה כשאנחנו רוצים לשמור על שורות קצרות בטקסט.",
+    "דבר חשוב נוסף שכדאי להכיר הוא כיוון הכתיבה. כידוע ישנן שפות שנכתבות משמאל לימין, כמו אנגלית, ואחרות שנכתבות מימין לשמאל, כמו עברית. ברירת המחדל של מסמך HTML היא כיוון כתיבה משמאל לימי. לכן, אם ברצוננו לבנות אתר בשפה העברית עלינו להגדיר את כיוון הכתיבה לכל האתר. כדי לעשות זאת אנחנו יכולים להוסיף מאפיין (Property) בתוך תג הפתיחה של ה-body עם הערך 'RTL' שזה אומר Right To Left. באופן דומה אפשר גם להגדיר 'LTR', אבל זה כאמור ברירת המחדל." 
+  ],
+
   "code_p": [
-    { "element": "<body>", "spaces": 0, "color": "white" },
-    { "element": "<p>Paragraph</p>", "spaces": 2, "color": "yellow.300" },
+    { "element": "<body direction=\"rtl\">", "spaces": 0, "color": "white" },
+    { "element": "<p>", "spaces": 2, "color": "yellow.300" },
+    {
+      "element": "אספת עם גדולה שהשתתפו בה ארבעים אלף יהודים,",
+      "spaces": 4,
+      "color": "white"
+    },
+    {
+      "element": "קבלה החלטה הדורשת מאת בריטניה,",
+      "spaces": 4,
+      "color": "white"
+    },
+    {
+      "element": "כי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
+      "spaces": 4,
+      "color": "white"
+    },
+    { "element": "</p>", "spaces": 2, "color": "yellow.300" },
+    { "element": "<pre>", "spaces": 2, "color": "yellow.300" },
+    {
+      "element": "אספת עם גדולה שהשתתפו בה ארבעים אלף יהודים,",
+      "spaces": 4,
+      "color": "white"
+    },
+    {
+      "element": "קבלה החלטה הדורשת מאת בריטניה,",
+      "spaces": 4,
+      "color": "white"
+    },
+    {
+      "element": "כי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
+      "spaces": 4,
+      "color": "white"
+    },
+    { "element": "</pre>", "spaces": 2, "color": "yellow.300" },
     { "element": "</body>", "spaces": 0, "color": "white" }
   ],
-  "text_list": [""],
+  "output_p": [
+    {
+      "type": "p",
+      "content": "אספת עם גדולה שהשתתפו בה ארבעים אלף יהודים,\n קבלה החלטה הדורשת מאת בריטניה,\n כי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
+      "style": {
+        "display": "block",
+        "marginTop": "1em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "direction": "rtl"
+      }
+    },
+    {
+      "type": "pre",
+      "content": "אספת עם גדולה שהשתתפו בה ארבעים אלף יהודים,\nקבלה החלטה הדורשת מאת בריטניה,\nכי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
+      "style": {
+        "display": "block",
+        "fontFamily": "monospace",
+        "margin": "1em 0",
+        "whiteSpace": "pre",
+        "direction": "rtl"
+      }
+    }
+  ],
+  "text_list_ul": [
+    "כשעסקנו קודם בכותרות ופסקאות למדנו שיש צמד תגיות, פתיחה וסגירה, ובינהן התוכן שאנחנו רוצים להציג. אך ישנם רכיבים שלא מכילים בהכרח תוכן מילולי, אלא הם מכילים בתוך עצמם רכיבים אחרים. בדיוק כמו שאת הכותרות והפסקאות הכנסו לתוך תגי ה-<body>. רשימות הן סוג כזה של רכיבים, ואנחנו קוראים להם רכיבים מקוננים - Nested elements.",
+    "למעשה רשימות נחלקות לשני סוגים עיקריים. סוג אחד הוא רשימה של פריטים בדידים, כלומר שאין חשיבות לסדר של הפריטים (Unorder list). כמו לדוגמא רשימת מכולת. בשביל להגדיר אותה במסמך HTML אנחנו נשתמש בתגי האם <ul></ul> ובינהם נכניס את תגי הפריטים עצמם <li></li>, כאשר בינהם נרשום את התוכן המילולי שאנחנו רוצים להציג על המסך."
+  ],
+  "text_list_ol": [
+    "הסוג השני שנכיר היא רשימה מסוג סדר, כלומר רשימה שבה לפריטים יש חשיבות היררכית או חשיבות של סדר מסוים בין הפריטים (Order list). את הרשימה הזאת אנחנו נגדיר באמצעות תגי האם <ol></ol>, וכמו בסוג הקודם של רשימה בינהם נוסיף את תגי הבן <li></li> ובתוכם את המלל שנרצה להוסיף ולהציג על הדפדפן."
+  ],
   "code_ul": [
     { "element": "<body>", "spaces": 0, "color": "white" },
     { "element": "<ul>", "spaces": 2, "color": "red.300" },
     {
-      "element": "<li>Unordered list item</li>",
+      "element": "<li>Strawberry</li>",
       "spaces": 4,
       "color": "yellow.300"
     },
     {
-      "element": "<li>Unordered list item</li>",
+      "element": "<li>Orange</li>",
       "spaces": 4,
       "color": "yellow.300"
     },
     {
-      "element": "<li>Unordered list item</li>",
+      "element": "<li>Apple</li>",
       "spaces": 4,
       "color": "yellow.300"
     },
     { "element": "</ul>", "spaces": 2, "color": "red.300" },
     { "element": "</body>", "spaces": 0, "color": "white" }
   ],
+  "output_ul": [
+    {
+      "type": "li",
+      "content": "Strawberry",
+      "style": {
+        "display": "list-item",
+        "listStyleType": "disc",
+        "marginTop": "1em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "paddingLeft": "40px"
+      }
+    },
+    {
+      "type": "li",
+      "content": "Orange",
+      "style": {
+        "display": "list-item",
+        "listStyleType": "disc",
+        "marginTop": "1em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "paddingLeft": "40px"
+      }
+    },
+    {
+      "type": "li",
+      "content": "Apple",
+      "style": {
+        "display": "list-item",
+        "listStyleType": "disc",
+        "marginTop": "1em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "paddingLeft": "40px"
+      }
+    }
+  ],
   "code_ol": [
     { "element": "<body>", "spaces": 0, "color": "white" },
     { "element": "<ol>", "spaces": 2, "color": "red.300" },
     {
-      "element": "<li>Ordered list item</li>",
+      "element": "<li>Grandfather</li>",
       "spaces": 4,
       "color": "yellow.300"
     },
     {
-      "element": "<li>Ordered list item</li>",
+      "element": "<li>Father</li>",
       "spaces": 4,
       "color": "yellow.300"
     },
     {
-      "element": "<li>Ordered list item</li>",
+      "element": "<li>Child</li>",
       "spaces": 4,
       "color": "yellow.300"
     },
     { "element": "</ol>", "spaces": 2, "color": "red.300" },
     { "element": "</body>", "spaces": 0, "color": "white" }
+  ],
+  "output_ol": [
+    {
+      "type": "li",
+      "content": "Grandfather",
+      "style": {
+        "display": "list-item",
+        "listStyleType": "decimal",
+        "marginTop": "1em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "paddingLeft": "40px"
+      }
+    },
+    {
+      "type": "li",
+      "content": "Father",
+      "style": {
+        "display": "list-item",
+        "listStyleType": "decimal",
+        "marginTop": "1em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "paddingLeft": "40px"
+      }
+    },
+    {
+      "type": "li",
+      "content": "Child",
+      "style": {
+        "display": "list-item",
+        "listStyleType": "decimal",
+        "marginTop": "1em",
+        "marginBottom": "1em",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "paddingLeft": "40px"
+      }
+    }
   ]
 }

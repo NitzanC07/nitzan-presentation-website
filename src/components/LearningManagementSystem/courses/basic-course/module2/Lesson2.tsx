@@ -27,19 +27,22 @@ function Lesson2_2() {
       <SubHeadingBox textHeading="סוגי טקסטים" />
       <ParagraphBox textContent={contentLessonData.text_intro1} />
       
-      <Card p={2} mx='auto' my={7} w={400} bgColor={'gray.100'}>
+      <Card p={2} mx='auto' my={7} w={[300, 400]} bgColor={'gray.100'}>
         <Image src="\images\lessonsContents\davar_1929_09_06.png" alt="עיתון דבר, 1929" w={'100%'} m={0} />
-        <Text as='h6' fontSize={11} pt={2}>{"מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. 6 בספטמבר 1929."}</Text>
+        <Text as='p' fontSize={11} pt={2}>{"מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. 6 בספטמבר 1929."}</Text>
       </Card>
       <ParagraphBox textContent={contentLessonData.text_intro2} />
       <SubHeadingBox textHeading="כותרות - Headings" />
       <ParagraphBox textContent={contentLessonData.text_headings} />
-      <CodeBox codeBlock={contentLessonData.code_h} codeLanguage="HTML" />
+      <CodeBox codeBlock={contentLessonData.code_h} outputCode={contentLessonData.output_h} codeLanguage="HTML" />
       <SubHeadingBox textHeading="פסקה - Paragraph" />
-      <CodeBox codeBlock={contentLessonData.code_p} codeLanguage="HTML" />
+      <ParagraphBox textContent={contentLessonData.text_paragraph} />
+      <CodeBox codeBlock={contentLessonData.code_p} outputCode={contentLessonData.output_p} codeLanguage="HTML" />
       <SubHeadingBox textHeading="רשימות - Lists" />
-      <CodeBox codeBlock={contentLessonData.code_ul} codeLanguage="HTML" />
-      <CodeBox codeBlock={contentLessonData.code_ol} codeLanguage="HTML" />
+      <ParagraphBox textContent={contentLessonData.text_list_ul} />
+      <CodeBox codeBlock={contentLessonData.code_ul} outputCode={contentLessonData.output_ul} codeLanguage="HTML" />
+      <ParagraphBox textContent={contentLessonData.text_list_ol} />
+      <CodeBox codeBlock={contentLessonData.code_ol} outputCode={contentLessonData.output_ol} codeLanguage="HTML" />
     </Box>
   );
 }

@@ -1,3 +1,4 @@
+import styles from "./styles.module.scss";
 import { Text } from "@chakra-ui/react";
 
 interface ParagraphBoxProps {

@@ -1,4 +1,16 @@
-import { Box, Code, Flex, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
+"use client";
+import {
+  Box,
+  Button,
+  Code,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import React, { useState } from "react";
 
 interface LineCode {
   element: string;
@@ -6,12 +18,25 @@ interface LineCode {
   color: string;
 }
 
+interface LineOutput {
+  type: string;
+  content: string;
+  style: {}
+}
+
 interface CodeContentProps {
   codeLanguage: string;
   codeBlock: LineCode[];
+  outputCode?: LineOutput[];
 }
 
-function CodeBox({ codeBlock, codeLanguage }: CodeContentProps) {
+function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
+  const [showOutput, setShowOutput] = useState(false);
+
+  const toggleShowOutput = () => {
+    setShowOutput(!showOutput);
+  };
+
   return (
     <Grid
       templateColumns={"30px 1fr"}
@@ -23,12 +48,22 @@ function CodeBox({ codeBlock, codeLanguage }: CodeContentProps) {
       p={1}
       bgColor={"gray.700"}
       borderWidth={0}
-      //   borderColor={"yellow.500"}
-      //   borderStyle={"solid"}
-      // borderRadius={"3px"}
     >
-      <GridItem colSpan={2} bgColor={"gray.600"} color={"white"} px={3} py={1}>
-        {codeLanguage}
+      <GridItem colSpan={2} bgColor={"gray.600"} color={"white"}>
+        <Flex justifyContent={"space-between"}>
+          {codeLanguage}
+          <Button
+            px={1}
+            py={0}
+            h={5}
+            m={1}
+            colorScheme="teal"
+            color="white"
+            onClick={toggleShowOutput}
+          >
+            הצג פלט
+          </Button>
+        </Flex>
       </GridItem>
 
       <GridItem bgColor={"gray.600"}>
@@ -63,6 +98,16 @@ function CodeBox({ codeBlock, codeLanguage }: CodeContentProps) {
           </Flex>
         ))}
       </GridItem>
+      {showOutput && (
+        <GridItem colSpan={2} bgColor={"white"} dir="ltr">
+          <Text bgColor={'gray.200'} px={2}>Output:</Text>
+          {outputCode?.map((element, i) => {
+            const { type, content, style } = element;
+            const props = { key: i, style};
+            return React.createElement(type, props, content);
+          })}
+        </GridItem>
+      )}
     </Grid>
   );
 }
