@@ -6,7 +6,7 @@ interface ULboxProps {
 }
 function ULbox({ content }: ULboxProps) {
   return (
-    <UnorderedList  mx={8} p={0}>
+    <UnorderedList  mx={8} my={5} p={0}>
       {content.map((item, i) => (
         <ListItem
           key={i}

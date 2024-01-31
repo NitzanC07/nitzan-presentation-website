@@ -80,9 +80,10 @@ export default async function LearningManagementSystemPage({
           bgColor={"orange.50"}
           w="100%"
           minH={"700px"}
-          py={0}
+          pt={0}
+          pb={16}
           px={"auto"}
-          mx={0}
+          m={0}
           tabIndex={1}
         >
           <LessonContent courseData={courseData} lessonId={params.lms[1]} />

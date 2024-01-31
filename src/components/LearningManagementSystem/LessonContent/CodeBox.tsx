@@ -21,7 +21,7 @@ interface LineCode {
 interface LineOutput {
   type: string;
   content: string;
-  style: {}
+  style: {};
 }
 
 interface CodeContentProps {
@@ -59,6 +59,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
             m={1}
             colorScheme="teal"
             color="white"
+            style={{ fontFamily: "Varela Round, sans-serif" }}
             onClick={toggleShowOutput}
           >
             הצג פלט
@@ -100,10 +101,12 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
       </GridItem>
       {showOutput && (
         <GridItem colSpan={2} bgColor={"white"} dir="ltr">
-          <Text bgColor={'gray.200'} px={2}>Output:</Text>
+          <Text bgColor={"gray.200"} px={2}>
+            Output:
+          </Text>
           {outputCode?.map((element, i) => {
             const { type, content, style } = element;
-            const props = { key: i, style};
+            const props = { key: i, style };
             return React.createElement(type, props, content);
           })}
         </GridItem>
