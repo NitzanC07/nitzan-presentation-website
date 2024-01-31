@@ -6,7 +6,7 @@ import { Box } from "@chakra-ui/react";
 
 function Lesson2_1() {
   return (
-    <Box as="section" p={0} mx={0} my={0}>
+    <Box as="article" p={0} mx={0} my={0}>
       <SubHeadingBox textHeading="מה זה HTML?" />
       <ParagraphBox textContent={contentLesson1Data.text1} />
       <CodeBox codeBlock={contentLesson1Data.code1} codeLanguage="HTML" />

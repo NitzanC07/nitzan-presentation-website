@@ -7,11 +7,11 @@
       "title": "הקדמה",
       "lessons": [
         {
-          "lessonId": 1.1,
+          "lessonId": "1.1",
           "title": "אודות הקורס"
         },
         {
-          "lessonId": 1.2,
+          "lessonId": "1.2",
           "title": "מה זה אינטרנט?"
         }
       ]
@@ -21,43 +21,43 @@
       "title": "HTML",
       "lessons": [
         {
-          "lessonId": 2.1,
+          "lessonId": "2.1",
           "title": "המבנה האנטומי של עמוד HTML"
         },
         {
-          "lessonId": 2.2,
+          "lessonId": "2.2",
           "title": "רכיבים מילוליים: כותרות, פסקאות ורשימות"
         },
         {
-          "lessonId": 2.3,
+          "lessonId": "2.3",
           "title": "קישורים בין עמודים שונים"
         },
         {
-          "lessonId": 2.4,
+          "lessonId": "2.4",
           "title": "יצירת טבלה"
         },
         {
-          "lessonId": 2.5,
+          "lessonId": "2.5",
           "title": "יצירת טפסים"
         },
         {
-          "lessonId": 2.6,
+          "lessonId": "2.6",
           "title": "אובייקטים חזותיים: תמונות ווידאו"
         },
         {
-          "lessonId": 2.7,
+          "lessonId": "2.7",
           "title": "מבנה העמוד וסמנטיקה"
         },
         {
-          "lessonId": 2.8,
+          "lessonId": "2.8",
           "title": "מידע על העמוד ו-metadata"
         },
         {
-          "lessonId": 2.9,
+          "lessonId": "2.9",
           "title": "סביבות עבודה בפיתוח אתרי אינטרנט"
         },
         {
-          "lessonId": 2.10,
+          "lessonId": "2.10",
           "title": "תרגיל מסכם"
         }
       ]
@@ -67,15 +67,15 @@
       "title": "CSS",
       "lessons": [
         {
-          "lessonId": 3.1,
+          "lessonId": "3.1",
           "title": "מה זה CSS, ועל מה הוא אחראי בבניית אתרי אינטרנט?"
         },
         {
-          "lessonId": 3.2,
+          "lessonId": "3.2",
           "title": "הגדרות כלליות של CSS."
         },
         {
-          "lessonId": 3.3,
+          "lessonId": "3.3",
           "title": "מאפייני עיצוב בסיסיים"
         }
       ]
@@ -85,15 +85,15 @@
       "title": "פרויקט סיום",
       "lessons": [
         {
-          "lessonId": 4.1,
+          "lessonId": "4.1",
           "title": "בחירת נושא לפרויקט"
         },
         {
-          "lessonId": 4.2,
+          "lessonId": "4.2",
           "title": "תכנון הפרויקט"
         },
         {
-          "lessonId": 4.3,
+          "lessonId": "4.3",
           "title": "ביצוע הפרויקט"
         }
       ]
@@ -103,15 +103,15 @@
       "title": "משוב על הקורס",
       "lessons": [
         {
-          "lessonId": 5.1,
+          "lessonId": "5.1",
           "title": "תן דעתך על הקורס"
         },
         {
-          "lessonId": 5.2,
+          "lessonId": "5.2",
           "title": "רמת הקושי של הקורס"
         },
         {
-          "lessonId": 5.3,
+          "lessonId": "5.3",
           "title": "מידת העניין בקורס"
         }
       ]

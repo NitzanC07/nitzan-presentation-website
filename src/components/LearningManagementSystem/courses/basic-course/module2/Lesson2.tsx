@@ -9,7 +9,7 @@ import Gallery from "@/components/LearningManagementSystem/LessonContent/Gallery
 
 function Lesson2_2() {
   return (
-    <Box as="section" p={0} mx={0} my={0}>
+    <Box as="article" p={0} mx={0} my={0}>
       <SubHeadingBox textHeading="סוגי טקסטים" />
       <ParagraphBox textContent={contentLessonData.text_intro1} />
 

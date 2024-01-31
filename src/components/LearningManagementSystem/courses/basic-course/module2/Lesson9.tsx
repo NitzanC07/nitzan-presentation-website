@@ -1,13 +1,17 @@
 import CodeBox from "@/components/LearningManagementSystem/LessonContent/CodeBox";
 import ParagraphBox from "@/components/LearningManagementSystem/LessonContent/ParagraphBox";
+import SubHeadingBox from "@/components/LearningManagementSystem/LessonContent/SubHeadingBox";
+import { Box } from "@chakra-ui/react";
+import contentLesson from "./lesson9_data.json";
 
 function Lesson2_9() {
   const text = ["יחידה 2, שיעור 9"];
 
   return (
-    <>
-      <ParagraphBox textContent={text} />
-    </>
+    <Box>
+      <SubHeadingBox textHeading="סביבות עבודה" />
+      <ParagraphBox textContent={contentLesson.text_intro} />
+    </Box>
   );
 }
 
