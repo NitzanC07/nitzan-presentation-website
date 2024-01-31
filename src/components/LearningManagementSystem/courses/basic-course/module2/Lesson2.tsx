@@ -14,7 +14,7 @@ function Lesson2_2() {
       <ParagraphBox textContent={contentLessonData.text_intro1} />
 
       <ImageContainer
-        srcUrl="\images\lessonsContents\module2\lesson2\article01.png"
+        srcUrl="\images\lessonsContents\module2\lesson2\article_davar_6-9-1929.png"
         altText="עיתון דבר, 1929"
         descText='מתוך אתר "עתונות יהודית היסטורית". הספריה הלאומית ואוניברסיטת ת"א. עיתון "דבר", 6 בספטמבר 1929.'
         width={[300, 400]}
@@ -63,6 +63,7 @@ function Lesson2_2() {
       <SubHeadingBox textHeading="זמן תרגול" />
       <ParagraphBox textContent={contentLessonData.practice_text1} />
       <ULbox content={contentLessonData.practice_text2} />
+      <SubHeadingBox textHeading="תרגיל - חידוש כתבות ישנות" />
       <ParagraphBox textContent={contentLessonData.practice_text3} />
       <Gallery images={contentLessonData.practiceArticles} />
     </Box>

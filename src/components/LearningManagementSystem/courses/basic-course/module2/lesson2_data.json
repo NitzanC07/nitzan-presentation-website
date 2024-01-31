@@ -323,27 +323,32 @@
   ],
   "practiceArticles": [
     {
-      "srcUrl": "/images/lessonsContents/module2/lesson2/article05.png",
-      "altText": "כתבה מעיתון \"דבר\", 30.11.1947",
+      "srcUrl": "/images/lessonsContents/module2/lesson2/article_davar_30-11-1947.png",
+      "altText": "כתבה מעיתון \"דבר\", 30.11.1947. הודעת דוד בן גוריון.",
       "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"דבר\", תאריך:  30 בנובמבר 1947."
     },
     {
-      "srcUrl": "/images/lessonsContents/module2/lesson2/article01.png",
+      "srcUrl": "/images/lessonsContents/module2/lesson2/article_davar_6-9-1929.png",
       "altText": "עיתון דבר, 6.9.1929",
       "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"דבר\", 6 בספטמבר 1929."
     },
     {
-      "srcUrl": "/images/lessonsContents/module2/lesson2/article04.png",
-      "altText": "כתבה מעיתון \"הארץ\", 1945",
-      "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"הארץ\", תאריך:  9 במאי 1945."
+      "srcUrl": "/images/lessonsContents/module2/lesson2/article_haretz_16-05-1948.png",
+      "altText": "כתבה מעיתון \"הארץ\", 16.5.1948. דבר הממשלה הזמנית אל תושבי מדינת ישראל.",
+      "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"הארץ\", תאריך:  16 במאי 1948."
     },
     {
-      "srcUrl": "/images/lessonsContents/module2/lesson2/article02.png",
+      "srcUrl": "/images/lessonsContents/module2/lesson2/article_haretz_17-5-1948.png",
+      "altText": "כתבה מעיתון \"הארץ\", 16.5.1948. דבר הממשלה הזמנית אל תושבי מדינת ישראל.",
+      "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"הארץ\", תאריך:  16 במאי 1948."
+    },
+    {
+      "srcUrl": "/images/lessonsContents/module2/lesson2/article_palestinepost_30-11-1947.png",
       "altText": "Article form Palstine Post, November 30th, 1947",
       "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"PALSTINE POST\", תאריך:  30 בנובמבר 1947."
     },
     {
-      "srcUrl": "/images/lessonsContents/module2/lesson2/article03.png",
+      "srcUrl": "/images/lessonsContents/module2/lesson2/article_palestinepost_9-5-1945.png",
       "altText": "Article form Palstine Post, May 9th, 1945",
       "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"PALSTINE POST\", תאריך:  9 במאי 1945."
     }
