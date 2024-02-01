@@ -29,7 +29,7 @@ function Gallery({images}: GalleryProps) {
   return (
     <Flex flexDir="column">
           <Flex justifyContent="space-evenly" alignItems='center'>
-            <Button onClick={prevPracticeArticleHandler} colorScheme='yellow'>
+            <Button onClick={prevPracticeArticleHandler} colorScheme='yellow' tabIndex={1}>
               <ArrowRightIcon />
             </Button>
             <Text
@@ -40,7 +40,7 @@ function Gallery({images}: GalleryProps) {
               p={0}
               tabIndex={4}
             >{`${visibleArticle + 1}/${images.length}`}</Text>
-            <Button onClick={nextPracticeArticleHandler} colorScheme='yellow'>
+            <Button onClick={nextPracticeArticleHandler} colorScheme='yellow' tabIndex={1}>
               <ArrowLeftIcon />
             </Button>
           </Flex>

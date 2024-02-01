@@ -42,27 +42,34 @@ export default async function LearningManagementSystemPage({
 
   return (
     <Flex
-      as='main'
+      as="main"
       flexDir={"column"}
       justifyContent={"flex-start"}
       alignItems={"center"}
     >
       <Grid
-        as='section'
+        as="section"
         templateColumns={["1fr", "1fr", "1fr 2fr", "1fr 4fr"]}
         templateRows={["80px 1fr"]}
         mt="70px"
         w="100%"
         gap={0}
       >
-        <GridItem as='nav' rowSpan={2} colSpan={1} bgColor={"orange.700"} p={4} tabIndex={1}>
+        <GridItem
+          as="nav"
+          rowSpan={2}
+          colSpan={1}
+          bgColor={"orange.700"}
+          p={4}
+          tabIndex={1}
+        >
           <Heading
             as="h2"
             style={{ fontFamily: "Varela Round, sans-serif" }}
             fontSize={23}
-            color='white'
+            color="white"
             mb={5}
-            tabIndex={2}
+            tabIndex={1}
           >
             רשימת שיעורים
           </Heading>
@@ -70,12 +77,12 @@ export default async function LearningManagementSystemPage({
           <NavLessonsList courseData={courseData} />
         </GridItem>
 
-        <GridItem as='section' colSpan={1} bgColor={"orange.200"} py={3} px={5} tabIndex={1}>
+        <GridItem as="section" colSpan={1} bgColor={"orange.200"} py={3} px={5}>
           <LessonTitle courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
 
         <GridItem
-          as='section'
+          as="section"
           colSpan={1}
           bgColor={"orange.50"}
           w="100%"
@@ -84,7 +91,6 @@ export default async function LearningManagementSystemPage({
           pb={16}
           px={"auto"}
           m={0}
-          tabIndex={1}
         >
           <LessonContent courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>

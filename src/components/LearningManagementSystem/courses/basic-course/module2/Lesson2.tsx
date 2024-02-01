@@ -63,7 +63,7 @@ function Lesson2_2() {
       <SubHeadingBox textHeading="זמן תרגול" />
       <ParagraphBox textContent={contentLessonData.practice_text1} />
       <ULbox content={contentLessonData.practice_text2} />
-      <SubHeadingBox textHeading="תרגיל - חידוש כתבות ישנות" />
+      <SubHeadingBox textHeading="תרגיל - עיתונות דיגיטלית" />
       <ParagraphBox textContent={contentLessonData.practice_text3} />
       <Gallery images={contentLessonData.practiceArticles} />
     </Box>

@@ -16,7 +16,7 @@ function ULbox({ content }: ULboxProps) {
           py={0}
           mx={[3, 3, 7, 0]}
           m={0}
-          tabIndex={4}
+          tabIndex={1}
         >
           {item}
         </ListItem>

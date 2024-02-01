@@ -18,7 +18,7 @@ function Lesson1_1() {
         style={{ fontFamily: "Varela Round, sans-serif" }}
         fontSize={24}
         pb={8}
-        tabIndex={4}
+        tabIndex={1}
       >
         מה נלמד בקורס?
       </Heading>

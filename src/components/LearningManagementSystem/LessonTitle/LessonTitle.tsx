@@ -30,7 +30,7 @@ function LessonTitle({ courseData, lessonId }: LessonTitleProps) {
         as="p"
         style={{ fontFamily: "Varela Round, sans-serif" }}
         fontSize={18}
-        tabIndex={3}
+        tabIndex={1}
       >
         קורס: {courseTitle} | יחידת לימוד {moduleNumber}
       </Text>
@@ -38,7 +38,7 @@ function LessonTitle({ courseData, lessonId }: LessonTitleProps) {
         as="h2"
         style={{ fontFamily: "Varela Round, sans-serif" }}
         fontSize={23}
-        tabIndex={3}
+        tabIndex={1}
       >
         שיעור {lessonNumber} - {currentLesson?.title}
       </Heading>

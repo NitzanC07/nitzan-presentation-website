@@ -18,7 +18,7 @@ function ParagraphBox({ textContent }: ParagraphBoxProps) {
           mt={0}
           mb={4}
           p={0}
-          tabIndex={4}
+          tabIndex={1}
         >
           {par}
         </Text>

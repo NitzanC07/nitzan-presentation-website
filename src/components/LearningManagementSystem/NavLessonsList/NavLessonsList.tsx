@@ -28,7 +28,7 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
               fontSize={18}
               textAlign={"right"}
               style={{ fontFamily: "Varela Round, sans-serif" }}
-              tabIndex={-1}
+              tabIndex={1}
               color={'white'}
             >
               {`יחידה ${moduleCourse.module}: ${moduleCourse.title}`}
@@ -38,7 +38,7 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
             <List>
               {moduleCourse.lessons.map((lesson: any) => (
                 <ListItem key={lesson.lessonId} tabIndex={-1} mb={3} style={{'fontFamily': 'Varela Round, sans-serif'}}>
-                  <Link href={`/courses/${courseId}/${lesson.lessonId}`} color='white' tabIndex={2}>
+                  <Link href={`/courses/${courseId}/${lesson.lessonId}`} color='white' tabIndex={1}>
                     <b>שיעור {lesson.lessonId}:</b> {lesson.title}
                   </Link>
                 </ListItem>

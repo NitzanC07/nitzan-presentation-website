@@ -47,6 +47,7 @@ function CoursesPage() {
           style={{ fontFamily: "Varela Round, sans-serif" }}
           fontSize={26}
           my={10}
+          tabIndex={1}
         >
           קורסים
         </Heading>
@@ -73,6 +74,7 @@ function CoursesPage() {
                 style={{ fontFamily: "Varela Round, sans-serif" }}
                 fontSize={24}
                 mb={5}
+                tabIndex={1}
               >
                 {course.title}
               </Heading>
@@ -80,6 +82,7 @@ function CoursesPage() {
                 style={{ fontFamily: "Varela Round, sans-serif" }}
                 fontSize={18}
                 mb={5}
+                tabIndex={1}
               >
                 {course.description}
               </Text>
@@ -89,10 +92,12 @@ function CoursesPage() {
                 pos={"absolute"}
                 bottom={3}
                 left={3}
+                tabIndex={1}
               >
                 <Button
                   style={{ fontFamily: "Varela Round, sans-serif" }}
                   colorScheme="green"
+                  tabIndex={-1}
                 >
                   כניסה לקורס
                 </Button>

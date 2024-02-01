@@ -1,15 +1,5 @@
 "use client";
-import {
-  Box,
-  Button,
-  Code,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Button, Code, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 interface LineCode {
@@ -20,7 +10,7 @@ interface LineCode {
 
 interface LineOutput {
   type: string;
-  content: string;
+  content: string | LineOutput[];
   style: {};
 }
 
@@ -61,6 +51,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
             color="white"
             style={{ fontFamily: "Varela Round, sans-serif" }}
             onClick={toggleShowOutput}
+            tabIndex={1}
           >
             הצג פלט
           </Button>
@@ -93,6 +84,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
               py={0}
               m={0}
               color={line.color}
+              tabIndex={1}
             >
               {`${"\u00A0".repeat(line.spaces)} ${line.element}`}
             </Code>
@@ -107,7 +99,30 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
           {outputCode?.map((element, i) => {
             const { type, content, style } = element;
             const props = { key: i, style };
-            return React.createElement(type, props, content);
+            if (Array.isArray(content)) {
+              let nestedElements = [];
+              for (let j = 0; j < content.length; j++) {
+                const {
+                  type: nestedType,
+                  content: nestedContent,
+                  style: nestedStyle,
+                } = content[j];
+                const nestedElement = React.createElement(
+                  nestedType,
+                  { key: j, ...nestedStyle },
+                  nestedContent as React.ReactNode
+                );
+                nestedElements.push(nestedElement);
+              }
+              const parentElement = React.createElement(
+                type,
+                props,
+                nestedElements
+              );
+              return parentElement;
+            } else {              
+              return React.createElement(type, props, content);
+            }
           })}
         </GridItem>
       )}
