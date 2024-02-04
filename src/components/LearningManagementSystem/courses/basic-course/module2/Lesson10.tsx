@@ -9,7 +9,7 @@ function Lesson2_10() {
 
   return (
     <Box>
-      <SubHeadingBox textHeading="סיכום יחידת הלימוד" />
+      <SubHeadingBox textHeading="סביבות עבודה: Git & GitHub" />
       <ParagraphBox textContent={contentLesson.text_intro} />
     </Box>
   );

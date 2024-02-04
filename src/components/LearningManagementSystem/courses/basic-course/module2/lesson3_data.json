@@ -126,7 +126,7 @@
           "content": "בריטניה,",
           "style": {
             "color": "blue",
-            "href": "https://www.google.com",
+            "href": "#",
             "textDecoration": "underline",
             "cursor": "pointer"
           }

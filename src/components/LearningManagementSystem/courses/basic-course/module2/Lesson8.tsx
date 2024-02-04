@@ -9,7 +9,7 @@ function Lesson2_8() {
 
   return (
     <Box as="article" m={0} p={0}>
-      <SubHeadingBox textHeading="Meta Data" />
+      <SubHeadingBox textHeading="מבנה העמוד וסמנטיקה (Semantics blocks)" />
       <ParagraphBox textContent={contentLesson.text_intro} />
     </Box>
   );

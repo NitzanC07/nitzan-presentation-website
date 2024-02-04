@@ -9,7 +9,7 @@ function Lesson2_7() {
 
   return (
     <Box as="section" m={0} p={0}>
-      <SubHeadingBox textHeading="סמנטיקה ומבנה העמוד" />
+      <SubHeadingBox textHeading="אובייקטים חזותיים: תמונות ווידאו (Images & Videos)" />
       <ParagraphBox textContent={contentLesson.text_intro} />
     </Box>
   );

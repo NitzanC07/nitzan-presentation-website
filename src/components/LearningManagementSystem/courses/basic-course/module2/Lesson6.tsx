@@ -9,7 +9,7 @@ function Lesson2_6() {
 
   return (
     <Box as="section" m={0} p={0}>
-      <SubHeadingBox textHeading="אובייקטים חזותיים" />
+      <SubHeadingBox textHeading="טופס (Forms)" />
       <ParagraphBox textContent={contentLesson.text_intro} />
     </Box>
   );

@@ -9,7 +9,7 @@ function Lesson2_9() {
 
   return (
     <Box>
-      <SubHeadingBox textHeading="סביבות עבודה" />
+      <SubHeadingBox textHeading="מידע אודות העמוד (Meta Data)" />
       <ParagraphBox textContent={contentLesson.text_intro} />
     </Box>
   );

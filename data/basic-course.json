@@ -34,30 +34,34 @@
         },
         {
           "lessonId": "2.4",
-          "title": "יצירת טבלה"
+          "title": "סביבות עבודה ועורכי קוד"
         },
         {
           "lessonId": "2.5",
-          "title": "יצירת טפסים"
+          "title": "יצירת טבלה"
         },
         {
           "lessonId": "2.6",
-          "title": "אובייקטים חזותיים: תמונות ווידאו"
+          "title": "יצירת טפסים"
         },
         {
           "lessonId": "2.7",
-          "title": "מבנה העמוד וסמנטיקה"
+          "title": "אובייקטים חזותיים: תמונות ווידאו"
         },
         {
           "lessonId": "2.8",
-          "title": "מידע על העמוד ו-metadata"
+          "title": "מבנה העמוד וסמנטיקה"
         },
         {
           "lessonId": "2.9",
-          "title": "סביבות עבודה בפיתוח אתרי אינטרנט"
+          "title": "מידע על העמוד ו-Meta Data"
         },
         {
           "lessonId": "2.10",
+          "title": "סביבות עבודה: Git & GitHub"
+        },
+        {
+          "lessonId": "2.11",
           "title": "תרגיל מסכם"
         }
       ]
@@ -82,36 +86,45 @@
     },
     {
       "module": 4,
+      "title": "Java Script",
+      "lessons": [
+        { "lessonId": "4.1", "title": "מבוא ל-Java Script" },
+        { "lessonId": "4.2", "title": "שיעור 2" },
+        { "lessonId": "4.3", "title": "שיעור 3" }
+      ]
+    },
+    {
+      "module": 5,
       "title": "פרויקט סיום",
       "lessons": [
         {
-          "lessonId": "4.1",
+          "lessonId": "5.1",
           "title": "בחירת נושא לפרויקט"
         },
         {
-          "lessonId": "4.2",
+          "lessonId": "5.2",
           "title": "תכנון הפרויקט"
         },
         {
-          "lessonId": "4.3",
+          "lessonId": "5.3",
           "title": "ביצוע הפרויקט"
         }
       ]
     },
     {
-      "module": 5,
+      "module": 6,
       "title": "משוב על הקורס",
       "lessons": [
         {
-          "lessonId": "5.1",
+          "lessonId": "6.1",
           "title": "תן דעתך על הקורס"
         },
         {
-          "lessonId": "5.2",
+          "lessonId": "6.2",
           "title": "רמת הקושי של הקורס"
         },
         {
-          "lessonId": "5.3",
+          "lessonId": "6.3",
           "title": "מידת העניין בקורס"
         }
       ]

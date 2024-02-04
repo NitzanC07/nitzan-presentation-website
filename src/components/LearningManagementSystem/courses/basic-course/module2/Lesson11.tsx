@@ -1,18 +1,18 @@
 import CodeBox from "@/components/LearningManagementSystem/LessonContent/CodeBox";
 import ParagraphBox from "@/components/LearningManagementSystem/LessonContent/ParagraphBox";
-import contentLesson from "./lesson5_data.json";
 import { Box } from "@chakra-ui/react";
+import contentLesson from "./lesson11_data.json";
 import SubHeadingBox from "@/components/LearningManagementSystem/LessonContent/SubHeadingBox";
 
-function Lesson2_5() {
-  const text = ["יחידה 2, שיעור 5"];
+function Lesson2_10() {
+  const text = ["יחידה 2, שיעור 10"];
 
   return (
-    <Box as="section" m={0} p={0}>
-      <SubHeadingBox textHeading="טבלאות (Tables)" />
+    <Box>
+      <SubHeadingBox textHeading="סיכום יחידת הלימוד" />
       <ParagraphBox textContent={contentLesson.text_intro} />
     </Box>
   );
 }
 
-export default Lesson2_5;
+export default Lesson2_10;

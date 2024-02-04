@@ -9,7 +9,7 @@ function Lesson2_4() {
 
   return (
     <Box as="article" m={0} p={0}>
-      <SubHeadingBox textHeading="יצירת טבלה" />
+      <SubHeadingBox textHeading="סביבות עבודה ועורכי קוד" />
       <ParagraphBox textContent={contentLesson.text_intro} />
     </Box>
   );
