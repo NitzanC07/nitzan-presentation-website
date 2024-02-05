@@ -120,7 +120,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
                 nestedElements
               );
               return parentElement;
-            } else {              
+            } else {
               return React.createElement(type, props, content);
             }
           })}
