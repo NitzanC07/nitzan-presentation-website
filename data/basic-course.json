@@ -13,6 +13,14 @@
         {
           "lessonId": "1.2",
           "title": "מה זה אינטרנט?"
+        },
+        {
+          "lessonId": "1.3",
+          "title": "עורכי קוד (Text Editors)"
+        },
+        {
+          "lessonId": "1.4",
+          "title": "סביבות עבודה: Git & GitHub"
         }
       ]
     },
@@ -34,34 +42,26 @@
         },
         {
           "lessonId": "2.4",
-          "title": "עורכי קוד (Text Editors)"
-        },
-        {
-          "lessonId": "2.5",
           "title": "יצירת טבלה (Tables)"
         },
         {
-          "lessonId": "2.6",
+          "lessonId": "2.5",
           "title": "יצירת טפסים (Forms)"
         },
         {
-          "lessonId": "2.7",
+          "lessonId": "2.6",
           "title": "אובייקטים חזותיים: תמונות ווידאו (Images & Videos)"
         },
         {
-          "lessonId": "2.8",
+          "lessonId": "2.7",
           "title": "מבנה העמוד וסמנטיקה (Semantics Boxes with HTML5)"
         },
         {
-          "lessonId": "2.9",
+          "lessonId": "2.8",
           "title": "מידע על העמוד ו-Meta Data"
         },
         {
-          "lessonId": "2.10",
-          "title": "סביבות עבודה: Git & GitHub"
-        },
-        {
-          "lessonId": "2.11",
+          "lessonId": "2.9",
           "title": "תרגיל מסכם"
         }
       ]

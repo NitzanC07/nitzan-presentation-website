@@ -1,7 +1,7 @@
 import CodeBox from "@/components/LearningManagementSystem/LessonContent/CodeBox";
 import ParagraphBox from "@/components/LearningManagementSystem/LessonContent/ParagraphBox";
 import { Box } from "@chakra-ui/react";
-import contentLesson from "./lesson10_data.json";
+import contentLesson from "./lesson4_data.json";
 import SubHeadingBox from "@/components/LearningManagementSystem/LessonContent/SubHeadingBox";
 
 function Lesson2_10() {

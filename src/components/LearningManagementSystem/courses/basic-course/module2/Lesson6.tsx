@@ -4,15 +4,15 @@ import SubHeadingBox from "@/components/LearningManagementSystem/LessonContent/S
 import { Box } from "@chakra-ui/react";
 import contentLesson from "./lesson6_data.json";
 
-function Lesson2_6() {
-  const text = ["יחידה 2, שיעור 6"];
+function Lesson2_7() {
+  const text = ["יחידה 2, שיעור 7"];
 
   return (
     <Box as="section" m={0} p={0}>
-      <SubHeadingBox textHeading="טופס (Forms)" />
+      <SubHeadingBox textHeading="אובייקטים חזותיים: תמונות ווידאו (Images & Videos)" />
       <ParagraphBox textContent={contentLesson.text_intro} />
     </Box>
   );
 }
 
-export default Lesson2_6;
+export default Lesson2_7;
