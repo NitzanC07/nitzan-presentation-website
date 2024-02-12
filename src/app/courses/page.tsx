@@ -14,14 +14,14 @@ function CoursesPage() {
   const coursesLink = [
     {
       title: "קורס בניית אתרים בסיסי",
-      description: "תקציר הקורס",
+      description: "HTML, CSS, JS",
       link: "/courses/basic-course/1.1",
       imagePath: "/images/little_stalk_erupts_from_the_g.jpeg",
       imageAlt: "Little stalk erupts from the ground.",
     },
     {
       title: "קורס בניית אתרים מתקדם",
-      description: "תקציר הקורס",
+      description: "React",
       link: "/courses/master-course/1.1",
       imagePath: "/images/Young_tree_grow_up_on_the_grou.jpeg",
       imageAlt: "Young tree grow up on the groud.",
