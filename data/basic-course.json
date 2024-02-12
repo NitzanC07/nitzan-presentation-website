@@ -1,4 +1,5 @@
 {
+  "_id": "",
   "courseId": "basic-course",
   "courseName": "בניית אתרי אינטרנט בסיסי",
   "courseContent": [
@@ -8,11 +9,70 @@
       "lessons": [
         {
           "lessonId": "1.1",
-          "title": "אודות הקורס"
+          "title": "אודות הקורס",
+          "sections": [
+            {
+              "sectionTitle": "מה נלמד בקורס",
+              "textBlock": ["פסקה ראשונה", "פסקה שנייה", "פסקה שלישית"],
+              "image": {
+                "url": "image1Url.png",
+                "altText": "Image1",
+                "descText": "Image desc",
+                "width": [100, 400]
+              },
+              "codeBox": {
+                "codeLang": "JS",
+                "lines": [
+                  {
+                    "element": "<body dir='rtl'>",
+                    "spaces": 0,
+                    "color": "white"
+                  },
+                  { "element": "<table>", "spaces": 2, "color": "red.300" },
+                  {
+                    "element": "<caption>סוגי פירות וירקות</caption>",
+                    "spaces": 4,
+                    "color": "orange.300"
+                  }
+                ]
+              }
+            },
+            {
+              "sectionTitle": "גלריית תמונות",
+              "imagesGallery": [
+                {
+                  "url": "image3Url.png",
+                  "altText": "Image 3",
+                  "descText": "Image 3 desc"
+                },
+                {
+                  "url": "image4Url.png",
+                  "altText": "Image 4",
+                  "descText": "Image 4 desc"
+                }
+              ],
+              "listBlock": ["פריט 1", "פריט 2"]
+            },
+            {
+              "sectionTitle": "עם מה נצא מהקורס?",
+              "textBlock": ["פסקה רביעית", "פסקה חמישית", "פסקה שישית"],
+              "image": {
+                "url": "image2url",
+                "altText": "Image 2",
+                "descText": "Image 2 desc",
+                "width": [100, 300]
+              },
+              "frameClause": {
+                "frameTitle": "אבג",
+                "paragraphs": ["פסקה 1", "פסקה 2"]
+              }
+            }
+          ]
         },
         {
           "lessonId": "1.2",
-          "title": "מה זה אינטרנט?"
+          "title": "מה זה אינטרנט?",
+          "sections": [{ "sectionTitle": "אינטרנט?" }]
         },
         {
           "lessonId": "1.3",

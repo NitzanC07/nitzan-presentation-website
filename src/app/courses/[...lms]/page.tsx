@@ -4,11 +4,16 @@ import LessonContent from "@/components/LearningManagementSystem/LessonContent/L
 import LessonTitle from "@/components/LearningManagementSystem/LessonTitle/LessonTitle";
 import NavLessonsList from "@/components/LearningManagementSystem/NavLessonsList/NavLessonsList";
 import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
+import LessonSections from "@/components/LearningManagementSystem/LessonContent/LessonSections";
 
 export interface Lesson {
   lessonId: string;
   title: string;
-  content: string;
+  sections?: {
+    sectionTitle: string;
+    textBlock: string[];
+    images: string[];
+  };
 }
 export interface CourseContent {
   module: string;
@@ -20,9 +25,9 @@ export interface ModuleCourse {
   courseName: string;
   courseContent: CourseContent[];
 }
-interface LmsProps {
-  courseData: ModuleCourse;
-}
+// interface LmsProps {
+//   courseData: ModuleCourse;
+// }
 
 async function getCourseData(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
@@ -92,7 +97,8 @@ export default async function LearningManagementSystemPage({
           px={"auto"}
           m={0}
         >
-          <LessonContent courseData={courseData} lessonId={params.lms[1]} />
+          {/* <LessonContent courseData={courseData} lessonId={params.lms[1]} /> */}
+          <LessonSections courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
       </Grid>
     </Flex>

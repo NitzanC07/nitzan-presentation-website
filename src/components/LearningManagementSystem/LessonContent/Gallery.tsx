@@ -4,13 +4,13 @@ import { Button, Flex, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import ImageContainer from './ImageContainer'
 
-interface images {
+interface image {
         srcUrl: string;
         altText: string;
         descText: string;
 }
 interface GalleryProps {
-    images: images[]
+    images: image[]
 }
 
 function Gallery({images}: GalleryProps) {

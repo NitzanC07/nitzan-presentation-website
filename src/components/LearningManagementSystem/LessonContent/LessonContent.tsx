@@ -11,6 +11,8 @@ interface LessonContentProps {
 }
 
 function LessonContent({ courseData, lessonId }: LessonContentProps) {
+  
+
   const [moduleNumber, setModuleNumber] = useState("");
   const [lessonNumber, setLessonNumber] = useState("");
 
