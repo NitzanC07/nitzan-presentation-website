@@ -15,19 +15,22 @@ function FrameClause({ textContent, title }: FrameClauseProps) {
       mb={5}
       borderWidth={2}
       borderColor="orange.200"
+      borderRadius={15}
       bgColor="white"
     >
-      <Heading
-        as="h3"
-        style={{ fontFamily: "Varela Round, sans-serif" }}
-        fontSize={19}
-        mx={[3, 3, 7, 0]}
-        mb={3}
-        p={0}
-        tabIndex={1}
-      >
-        {title}
-      </Heading>
+      {title && (
+        <Heading
+          as="h3"
+          style={{ fontFamily: "Varela Round, sans-serif" }}
+          fontSize={19}
+          mx={[3, 3, 7, 0]}
+          mb={3}
+          p={0}
+          tabIndex={1}
+        >
+          {title}
+        </Heading>
+      )}
       {textContent.map((paragraph, i) => (
         <Text
           key={i}
@@ -35,8 +38,9 @@ function FrameClause({ textContent, title }: FrameClauseProps) {
           style={{ fontFamily: "Varela Round, sans-serif" }}
           fontSize={15}
           mx={[3, 3, 7, 0]}
-          m={0}
+          my={0}
           p={0}
+          pb={2}
           tabIndex={1}
         >
           {paragraph}

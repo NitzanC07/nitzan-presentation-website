@@ -9,15 +9,20 @@ function Lesson2_5() {
 
   return (
     <Box as="section" m={0} p={0}>
+      {/** Section 1 */}
       <SubHeadingBox textHeading="טבלאות (Tables)" />
       <ParagraphBox textContent={contentLesson.text_intro} />
       <ULbox content={contentLesson.text2} />
+
+      {/** Section 2 */}
       <ParagraphBox textContent={contentLesson.text3} />
       <CodeBox
         codeBlock={contentLesson.code_table1}
         outputCode={contentLesson.outputCode1}
         codeLanguage="HTML"
-      />
+        />
+
+        {/** Section 3 */}
       <SubHeadingBox textHeading="מיזוג תאים - colspan & rowspan" />
       <ParagraphBox textContent={contentLesson.text4} />
       <ULbox content={contentLesson.text5} />
@@ -25,8 +30,9 @@ function Lesson2_5() {
         codeBlock={contentLesson.code_table2}
         outputCode={contentLesson.outputCode1}
         codeLanguage="HTML"
-      />
+        />
 
+        {/** Section 4 */}
       <SubHeadingBox textHeading="תגיות סמנטיות בטבלה (Semantics Tags)" />
       <ParagraphBox textContent={contentLesson.text6} />
       <ULbox content={contentLesson.text7} />
@@ -37,8 +43,9 @@ function Lesson2_5() {
         w={600}
         mx="auto"
         my={16}
-      />
+        />
 
+        {/** Section 5 */}
       <SubHeadingBox textHeading="זמן תרגול" />
 
     </Box>

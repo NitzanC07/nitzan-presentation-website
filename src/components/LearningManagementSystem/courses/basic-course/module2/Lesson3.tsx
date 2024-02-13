@@ -11,23 +11,28 @@ function Lesson2_3() {
 
   return (
     <Box as="article" p={0} m={0}>
+      {/** Section 1 */}
       <SubHeadingBox textHeading="חיבורים בין עולמות" />
-
       <ParagraphBox textContent={contentLesson.text_intro1} />
       <FrameClause textContent={contentLesson.game} title="משחק - מירוץ ויקיפדיה" />
-      <ParagraphBox textContent={contentLesson.text_intro2} />
 
+      {/** Section 2 */}
+      <ParagraphBox textContent={contentLesson.text_intro2} />
       <CodeBox codeBlock={contentLesson.code1} codeLanguage="HTML" />
+
+      {/** Section 3 */}
       <ParagraphBox textContent={contentLesson.text_intro3} />
       <CodeBox codeBlock={contentLesson.code2} outputCode={contentLesson.output2} codeLanguage="HTML" />
+
+      {/** Section 4 */}
       <ParagraphBox textContent={contentLesson.text_attributes} />
       <ULbox content={contentLesson.textList1} />
       <CodeBox codeBlock={contentLesson.code3} outputCode={contentLesson.output3} codeLanguage="HTML" />
       
+      {/** Section 5 */}
       <SubHeadingBox textHeading="קישורים במרחב" />
       <ParagraphBox textContent={contentLesson.text_relations} />
-      <CodeBox codeBlock={contentLesson.code4} outputCode={contentLesson.output4} codeLanguage="HTML" />
-      
+      <CodeBox codeBlock={contentLesson.code4} outputCode={contentLesson.output4} codeLanguage="HTML" />    
       <Image
         src="\images\iconsAndSymbols\line.svg"
         alt="line"
@@ -36,11 +41,12 @@ function Lesson2_3() {
         my={16}
       />
 
+        {/** Section 6 */}
       <SubHeadingBox textHeading="זמן תרגול" />
       <ParagraphBox textContent={contentLesson.text_conclusion1} />
-
       <FrameClause textContent={contentLesson.text_frame} />
       
+        {/** Section 7 */}
       <ParagraphBox textContent={contentLesson.text_conclusion2} />
 
     </Box>

@@ -9,6 +9,7 @@ import CodeBox from "./CodeBox";
 import Gallery from "./Gallery";
 import ULbox from "./ULbox";
 import { Box } from "@chakra-ui/react";
+import BigButton from "./BigButton";
 
 interface LessonSectionsProps {
   lessonId: string;
@@ -43,6 +44,7 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
             <ParagraphBox textContent={section.textBlock} />
           )}
           {section.listBlock && <ULbox content={section.listBlock} />}
+          {section.BigButton && <BigButton urlLink={section.BigButton.urlLink} text={section.BigButton.text} />}
           {section.frameClause && (
             <FrameClause
               textContent={section.frameClause.paragraphs}
@@ -53,6 +55,7 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
             <CodeBox
               codeBlock={section.codeBox.lines}
               codeLanguage={section.codeBox.codeLang}
+              outputCode={section.codeBox.outputCode}
             />
           )}
           {section.image && (

@@ -10,13 +10,17 @@ function Lesson2_1() {
       <SubHeadingBox textHeading="מה זה HTML?" />
       <ParagraphBox textContent={contentLesson1Data.text1} />
       <CodeBox codeBlock={contentLesson1Data.code1} codeLanguage="HTML" />
+
       <SubHeadingBox textHeading="המבנה האנטומי של מסמך HTML" />
       <ParagraphBox textContent={contentLesson1Data.text_anatomy} />
       <CodeBox codeBlock={contentLesson1Data.code2} codeLanguage="HTML" />
+      
       <SubHeadingBox textHeading="תגיות <html></html>" />
       <ParagraphBox textContent={contentLesson1Data.text_html} />
+      
       <SubHeadingBox textHeading="תגיות <head></head>" />
       <ParagraphBox textContent={contentLesson1Data.text_head} />
+      
       <SubHeadingBox textHeading="תגיות <body></body>" />
       <ParagraphBox textContent={contentLesson1Data.text_body} />
     </Box>

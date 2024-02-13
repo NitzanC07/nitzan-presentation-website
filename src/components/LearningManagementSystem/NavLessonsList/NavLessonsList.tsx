@@ -42,10 +42,10 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
                   tabIndex={-1}
                   mb={1}
                   p={1}
-                  style={{ fontFamily: "Varela Round, sans-serif" }}
-                  
                   borderWidth={0}
-                  bgColor={'rgba(255, 255, 255, 0.2)'}
+                  borderRadius={4}
+                  style={{ fontFamily: "Varela Round, sans-serif"}}
+                  bgColor={'rgba(255, 255, 255, 0.1)'}
                 >
                   <Link
                     href={`/courses/${courseId}/${lesson.lessonId}`}
