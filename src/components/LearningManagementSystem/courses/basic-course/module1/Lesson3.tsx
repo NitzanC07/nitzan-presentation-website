@@ -1,4 +1,3 @@
-import CodeBox from "@/components/LearningManagementSystem/LessonContent/CodeBox";
 import ParagraphBox from "@/components/LearningManagementSystem/LessonContent/ParagraphBox";
 import contentLesson from "./lesson3_data.json";
 import SubHeadingBox from "@/components/LearningManagementSystem/LessonContent/SubHeadingBox";

@@ -10,10 +10,17 @@ export interface Lesson {
   lessonId: string;
   title: string;
   sections?: {
-    sectionTitle: string;
-    textBlock: string[];
-    images: string[];
-  };
+    sectionTitle?: string;
+    textBlock?: string[];
+    image?: { url: string; altText: string; descText: string; width: number[] };
+    frameClause?: { frameTitle: string; paragraphs: string[] };
+    codeBox?: {
+      lines: { element: string; spaces: number; color: string }[];
+      codeLang: string;
+    };
+    listBlock?: string[];
+    imagesGallery?: { srcUrl: string; altText: string; descText: string }[];
+  }[];
 }
 export interface CourseContent {
   module: string;

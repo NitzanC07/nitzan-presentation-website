@@ -10,19 +10,6 @@ import Gallery from "./Gallery";
 import ULbox from "./ULbox";
 import { Box } from "@chakra-ui/react";
 
-interface Section {
-  sectionTitle?: string;
-  textBlock?: string[];
-  image?: { url: string; altText: string; descText: string; width: number[] };
-  frameClause?: { frameTitle: string; paragraphs: string[] };
-  codeBox?: {
-    lines: { element: string; spaces: number; color: string }[];
-    codeLang: string;
-  };
-  listBlock?: string[];
-  imagesGallery?: { srcUrl: string; altText: string; descText: string }[];
-}
-
 interface LessonSectionsProps {
   lessonId: string;
   courseData: ModuleCourse;
@@ -30,6 +17,11 @@ interface LessonSectionsProps {
 function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
   const [moduleNumber, setModuleNumber] = useState("");
   const [lessonNumber, setLessonNumber] = useState("");
+
+  useEffect(() => {
+    setModuleNumber(lessonId.toString().split(".")[0]);
+    setLessonNumber(lessonId.toString().split(".")[1]);
+  }, [lessonId]);
 
   const currentModule = courseData.courseContent.find(
     (module) => module.module == moduleNumber
@@ -39,17 +31,10 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
     (lesson) => lesson.lessonId == lessonId
   );
 
-  useEffect(() => {
-    setModuleNumber(lessonId.toString().split(".")[0]);
-    setLessonNumber(lessonId.toString().split(".")[1]);
-  }, [lessonId]);
-
-  const lessonContent = currentLesson?.sections;
-  console.log("Cuurent Lesson:", lessonContent);
 
   return (
     <Box as='article'w={"100%"} maxW={"750px"} mx={'auto'}>
-      {currentLesson?.sections?.map((section: Section, i: number) => (
+      {currentLesson?.sections?.map((section, i) => (
         <div key={i}>
           {section.sectionTitle && (
             <SubHeadingBox textHeading={section.sectionTitle} />
