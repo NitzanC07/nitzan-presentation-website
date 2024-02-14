@@ -1,6 +1,7 @@
 {
   "courseId": "master-course",
   "courseName": "בניית אתרי אינטרנט מתקדם",
+  "courseDescription": "תקציר הקורס",
   "courseContent": [
     {
       "module": 1,
@@ -8,11 +9,13 @@
       "lessons": [
         {
           "lessonId": 1.1,
-          "title": "אודות הקורס"
+          "title": "אודות הקורס",
+          "sections": []
         },
         {
           "lessonId": 1.2,
-          "title": "מה נלמד בקורס הזה?"
+          "title": "מה נלמד בקורס הזה?",
+          "sections": []
         }
       ]
     },
@@ -22,11 +25,13 @@
       "lessons": [
         {
           "lessonId": 2.1,
-          "title": "מה זה HTML, ומה החשיבות שלו בבניית אתרי אינטרנט?"
+          "title": "מה זה HTML, ומה החשיבות שלו בבניית אתרי אינטרנט?",
+          "sections": []
         },
         {
           "lessonId": 2.2,
-          "title": "מבנה עמוד HTML בסיסי."
+          "title": "מבנה עמוד HTML בסיסי.",
+          "sections": []
         }
       ]
     },
@@ -36,15 +41,18 @@
       "lessons": [
         {
           "lessonId": 3.1,
-          "title": "useState"
+          "title": "useState",
+          "sections": []
         },
         {
           "lessonId": 3.2,
-          "title": "useEffect"
+          "title": "useEffect",
+          "sections": []
         },
         {
           "lessonId": 3.3,
-          "title": "useContext"
+          "title": "useContext",
+          "sections": []
         }
       ]
     },
@@ -54,15 +62,18 @@
       "lessons": [
         {
           "lessonId": 4.1,
-          "title": "בחירת נושא לפרויקט"
+          "title": "בחירת נושא לפרויקט",
+          "sections": []
         },
         {
           "lessonId": 4.2,
-          "title": "תכנון הפרויקט"
+          "title": "תכנון הפרויקט",
+          "sections": []
         },
         {
           "lessonId": 4.3,
-          "title": "ביצוע הפרויקט"
+          "title": "ביצוע הפרויקט",
+          "sections": []
         }
       ]
     },
@@ -72,15 +83,18 @@
       "lessons": [
         {
           "lessonId": 5.1,
-          "title": "דעתי על הקורס"
+          "title": "דעתי על הקורס",
+          "sections": []
         },
         {
           "lessonId": 5.2,
-          "title": "מידת הקושי"
+          "title": "מידת הקושי",
+          "sections": []
         },
         {
           "lessonId": 5.3,
-          "title": "מידת העניין"
+          "title": "מידת העניין",
+          "sections": []
         }
       ]
     }

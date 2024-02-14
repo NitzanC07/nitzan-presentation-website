@@ -13,9 +13,10 @@ import {
 function CoursesPage() {
   const coursesLink = [
     {
-      title: "קורס בניית אתרים בסיסי",
-      description: "HTML, CSS, JS",
-      link: "/courses/basic-course/1.1",
+      title: "מסע בזמן דרך פיתוח אתרי אינטרנט",
+      description:
+        "קורס הבסיס לפיתוח אתרי אינטרנט בעזרת שפת HTML, עיצוב אתרים בעזרת CSS, ופיתוח פונקציונלי בעזרת שפת Java Script הפופולרית. את הקורס מלווים תרגולים רבים לחומר התאורתי בהשראת ההיסטוריה של מדינת ישראל.",
+      link: "/courses/time-journey-through-web-developmental/1.1",
       imagePath: "/images/little_stalk_erupts_from_the_g.jpeg",
       imageAlt: "Little stalk erupts from the ground.",
     },

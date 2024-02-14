@@ -26,7 +26,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
   const toggleShowOutput = () => {
     setShowOutput(!showOutput);
   };
-
+  
   return (
     <Grid
       templateColumns={"30px 1fr"}
@@ -96,6 +96,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
           <Text bgColor={"gray.200"} px={2}>
             Output:
           </Text>
+
           {outputCode?.map((element, i) => {
             const { type, content, style } = element;
             const props = { key: i, style };

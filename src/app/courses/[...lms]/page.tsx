@@ -1,42 +1,10 @@
 import path from "path";
 import fs from "fs";
-import LessonContent from "@/components/LearningManagementSystem/LessonContent/LessonContent";
 import LessonTitle from "@/components/LearningManagementSystem/LessonTitle/LessonTitle";
 import NavLessonsList from "@/components/LearningManagementSystem/NavLessonsList/NavLessonsList";
 import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import LessonSections from "@/components/LearningManagementSystem/LessonContent/LessonSections";
-
-export interface Lesson {
-  lessonId: string;
-  title: string;
-  sections: {
-    sectionTitle?: string;
-    textBlock?: string[];
-    image?: { url: string; altText: string; descText: string; width: number[] };
-    frameClause?: { frameTitle: string; paragraphs: string[] };
-    codeBox?: {
-      lines: { element: string; spaces: number; color: string }[];
-      outputCode?: {type: string; content: string; style: {}}[]
-      codeLang: string;
-    };
-    listBlock?: string[];
-    imagesGallery?: { srcUrl: string; altText: string; descText: string }[];
-    BigButton?: { urlLink: string; text: string };
-  }[];
-}
-export interface CourseContent {
-  module: string;
-  title: string;
-  lessons: Lesson[];
-}
-export interface ModuleCourse {
-  courseId: string;
-  courseName: string;
-  courseContent: CourseContent[];
-}
-// interface LmsProps {
-//   courseData: ModuleCourse;
-// }
+import { ModuleCourse } from "@/types/coursesTypes";
 
 async function getCourseData(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
@@ -106,29 +74,9 @@ export default async function LearningManagementSystemPage({
           px={"auto"}
           m={0}
         >
-          {/* <LessonContent courseData={courseData} lessonId={params.lms[1]} /> */}
           <LessonSections courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
       </Grid>
     </Flex>
   );
 }
-
-// export async function getStaticProps({ params }: {params: {selectedCourse: string}}) {
-//   console.log("PARAMS", params);
-
-//   const { selectedCourse } = params;
-//   console.log(selectedCourse);
-//   const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
-//   const fileData = fs.readFileSync(filePath, "utf-8");
-//   const courseData: ModuleCourse[] = JSON.parse(fileData);
-//   return { props: { courseData } };
-// }
-
-// export async function getStaticPaths() {
-//   const courses = ["basic-course", "master-course"];
-//   const paths = courses.map((course) => ({
-//     params: { selectedCourse: course },
-//   }));
-//   return { paths, fallback: false };
-// }

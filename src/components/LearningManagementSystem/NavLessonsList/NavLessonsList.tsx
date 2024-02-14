@@ -8,7 +8,7 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
-import { ModuleCourse } from "@/app/courses/[...lms]/page";
+import { ModuleCourse } from "@/types/coursesTypes";
 
 interface NavLessonsListProps {
   courseData: ModuleCourse;

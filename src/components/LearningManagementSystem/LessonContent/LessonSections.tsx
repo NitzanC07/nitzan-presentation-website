@@ -1,5 +1,5 @@
 "use client";
-import { ModuleCourse } from "@/app/courses/[...lms]/page";
+import { ModuleCourse } from "@/types/coursesTypes";
 import { useEffect, useState } from "react";
 import ParagraphBox from "./ParagraphBox";
 import SubHeadingBox from "./SubHeadingBox";
@@ -10,6 +10,7 @@ import Gallery from "./Gallery";
 import ULbox from "./ULbox";
 import { Box } from "@chakra-ui/react";
 import BigButton from "./BigButton";
+import DecorativeLine from "./DecorativeLine";
 
 interface LessonSectionsProps {
   lessonId: string;
@@ -32,9 +33,8 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
     (lesson) => lesson.lessonId == lessonId
   );
 
-
   return (
-    <Box as='article'w={"100%"} maxW={"750px"} mx={'auto'}>
+    <Box as="article" w={"100%"} maxW={"750px"} mx={"auto"}>
       {currentLesson?.sections?.map((section, i) => (
         <div key={i}>
           {section.sectionTitle && (
@@ -44,7 +44,12 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
             <ParagraphBox textContent={section.textBlock} />
           )}
           {section.listBlock && <ULbox content={section.listBlock} />}
-          {section.BigButton && <BigButton urlLink={section.BigButton.urlLink} text={section.BigButton.text} />}
+          {section.BigButton && (
+            <BigButton
+              urlLink={section.BigButton.urlLink}
+              text={section.BigButton.text}
+            />
+          )}
           {section.frameClause && (
             <FrameClause
               textContent={section.frameClause.paragraphs}
@@ -62,11 +67,13 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
             <ImageContainer
               srcUrl={section.image.url}
               altText={section.image.altText}
+              imageSubject={section.image.imageSubject}
               descText={section.image.descText}
               width={section.image.width}
             />
           )}
           {section.imagesGallery && <Gallery images={section.imagesGallery} />}
+          {section.decorativeLine && <DecorativeLine />}
         </div>
       ))}
     </Box>
