@@ -1,5 +1,5 @@
 "use client";
-import { ModuleCourse } from "@/app/courses/[...lms]/page";
+import { ModuleCourse } from "@/types/coursesTypes";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
