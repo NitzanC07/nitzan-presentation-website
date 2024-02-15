@@ -8,10 +8,10 @@ import { ModuleCourse } from "@/types/coursesTypes";
 
 async function getCourseData(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
-  const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
-  const fileData = fs.readFileSync(filePath, "utf-8");
-  const courseData: ModuleCourse = JSON.parse(fileData);
-  return courseData;
+    const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
+    const fileData = fs.readFileSync(filePath, "utf-8");
+    const courseData: ModuleCourse = JSON.parse(fileData);
+    return courseData;
 }
 
 export default async function LearningManagementSystemPage({
