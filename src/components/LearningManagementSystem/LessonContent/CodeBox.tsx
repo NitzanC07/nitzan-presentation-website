@@ -10,8 +10,8 @@ interface LineCode {
 
 interface LineOutput {
   type: string;
-  content: string | LineOutput[];
-  style: {};
+  content: React.ReactNode | LineOutput[];
+  style?: React.CSSProperties;
 }
 
 interface CodeContentProps {
@@ -25,6 +25,28 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
 
   const toggleShowOutput = () => {
     setShowOutput(!showOutput);
+  };
+
+  const renderHTMLFromJSON = (outputCode: LineOutput[]): React.ReactElement[] => {
+    return outputCode?.map((element, index) => {
+      return createHTMLElement(element, index);
+    }) || [];
+  };
+
+  const createHTMLElement = (element: LineOutput, index: number): React.ReactElement => {
+    const { type, content, style } = element;
+
+    const props = { key: index, style };
+
+    if (Array.isArray(content)) {
+      const nestedElements = content.map((nestedElement, nestedIndex) => {
+        return createHTMLElement(nestedElement, nestedIndex);
+      });
+
+      return React.createElement(type, props, nestedElements);
+    } else {
+      return React.createElement(type, props, content);
+    }
   };
   
   return (
@@ -96,8 +118,9 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
           <Text bgColor={"gray.200"} px={2}>
             Output:
           </Text>
+          {renderHTMLFromJSON(outputCode)}
 
-          {outputCode?.map((element, i) => {
+          {/* {outputCode?.map((element, i) => {
             const { type, content, style } = element;
             const props = { key: i, style };
             if (Array.isArray(content)) {
@@ -124,7 +147,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
             } else {
               return React.createElement(type, props, content);
             }
-          })}
+          })} */}
         </GridItem>
       )}
     </Grid>
