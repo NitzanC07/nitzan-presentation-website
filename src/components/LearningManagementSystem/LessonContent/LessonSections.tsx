@@ -11,6 +11,7 @@ import ULbox from "./ULbox";
 import { Box } from "@chakra-ui/react";
 import BigButton from "./BigButton";
 import DecorativeLine from "./DecorativeLine";
+import BibliographyBox from "./BibliographyBox";
 
 interface LessonSectionsProps {
   lessonId: string;
@@ -34,7 +35,12 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
   );
 
   return (
-    <Box as="article" w={"100%"} maxW={"750px"} mx={"auto"}>
+    <Box
+      as="article"
+      w={"100%"}
+      maxW={"750px"}
+      mx={"auto"}
+    >
       {currentLesson?.sections?.map((section, i) => (
         <div key={i}>
           {section.sectionTitle && (
@@ -74,6 +80,10 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
           )}
           {section.imagesGallery && <Gallery images={section.imagesGallery} />}
           {section.decorativeLine && <DecorativeLine />}
+
+          {section.resources && (
+            <BibliographyBox resources={section.resources} />
+          )}
         </div>
       ))}
     </Box>

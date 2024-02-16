@@ -1,23 +1,31 @@
 import { varelaRound } from "@/app/fonts";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 
 function Header() {
   return (
     <Flex
-      as='header'
+      as="header"
       justifyContent={"space-between"}
       alignItems={"center"}
       bgColor={"gray.300"}
-      pos={'fixed'}
-      w={'100%'}
-      h={'70px'}
-      px={10}
+      pos={"fixed"}
+      w={"100%"}
+      px={[5, 10]}
+      // py={3}
+      h="60px"
       zIndex={1}
     >
-      <Heading style={{'fontFamily': 'Varela Round, sans-serif'}} fontSize={50}>
-        ניצן כהן
+      <Heading
+        style={{ fontFamily: "Varela Round, sans-serif" }}
+        fontSize={[18, 25, 30]}
+      >
+        NC Learning
       </Heading>
-      <Box className={varelaRound.className} fontSize={20} bgColor={"gray.200"}>
+      <Box
+        className={varelaRound.className}
+        fontSize={[17, 20]}
+        bgColor={"gray.200"}
+      >
         Navigator
       </Box>
     </Flex>

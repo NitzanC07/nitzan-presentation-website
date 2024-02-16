@@ -33,7 +33,7 @@ export default async function LearningManagementSystemPage({
         as="section"
         templateColumns={["1fr", "1fr", "1fr 2fr", "1fr 4fr"]}
         templateRows={["80px 1fr"]}
-        mt="70px"
+        mt="60px"
         w="100%"
         gap={0}
       >

@@ -1,6 +1,6 @@
 "use client";
 import { Button, Code, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { createElement, useState } from "react";
 
 interface LineCode {
   element: string;
@@ -17,7 +17,7 @@ interface LineOutput {
 interface CodeContentProps {
   codeLanguage: string;
   codeBlock: LineCode[];
-  outputCode?: LineOutput[];
+  outputCode?: LineOutput[] | undefined;
 }
 
 function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
@@ -27,13 +27,20 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
     setShowOutput(!showOutput);
   };
 
-  const renderHTMLFromJSON = (outputCode: LineOutput[]): React.ReactElement[] => {
-    return outputCode?.map((element, index) => {
-      return createHTMLElement(element, index);
-    }) || [];
+  const renderHTMLFromJSON = (
+    outputCode?: LineOutput[]
+  ): React.ReactElement[] => {
+    return (
+      (outputCode || []).map((element, index) => {
+        return createHTMLElement(element, index);
+      }) || []
+    );
   };
 
-  const createHTMLElement = (element: LineOutput, index: number): React.ReactElement => {
+  const createHTMLElement = (
+    element: LineOutput,
+    index: number
+  ): React.ReactElement => {
     const { type, content, style } = element;
 
     const props = { key: index, style };
@@ -48,7 +55,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
       return React.createElement(type, props, content);
     }
   };
-  
+
   return (
     <Grid
       templateColumns={"30px 1fr"}
@@ -63,20 +70,22 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
     >
       <GridItem colSpan={2} bgColor={"gray.600"} color={"white"}>
         <Flex justifyContent={"space-between"}>
-          {codeLanguage}
-          <Button
-            px={1}
-            py={0}
-            h={5}
-            m={1}
-            colorScheme="teal"
-            color="white"
-            style={{ fontFamily: "Varela Round, sans-serif" }}
-            onClick={toggleShowOutput}
-            tabIndex={1}
-          >
-            הצג פלט
-          </Button>
+          <Text color={'gray.300'} fontWeight={'bold'} mx={2}>{codeLanguage}</Text>
+          {outputCode && (
+            <Button
+              px={1}
+              py={0}
+              h={5}
+              m={1}
+              colorScheme="teal"
+              color="white"
+              style={{ fontFamily: "Varela Round, sans-serif" }}
+              onClick={toggleShowOutput}
+              tabIndex={1}
+            >
+              הצג פלט
+            </Button>
+          )}
         </Flex>
       </GridItem>
 
@@ -84,10 +93,10 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
         {codeBlock.map((line, i) => (
           <Flex key={i}>
             <Code
-              color={"white"}
+              color={"gray.300"}
               variant="subtle"
-              bgColor={"gray.600"}
-              p={0}
+              bgColor={"gray.600"}              
+              px={2}
               m={0}
             >
               {i + 1}
@@ -118,36 +127,8 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
           <Text bgColor={"gray.200"} px={2}>
             Output:
           </Text>
-          {renderHTMLFromJSON(outputCode)}
 
-          {/* {outputCode?.map((element, i) => {
-            const { type, content, style } = element;
-            const props = { key: i, style };
-            if (Array.isArray(content)) {
-              let nestedElements = [];
-              for (let j = 0; j < content.length; j++) {
-                const {
-                  type: nestedType,
-                  content: nestedContent,
-                  style: nestedStyle,
-                } = content[j];
-                const nestedElement = React.createElement(
-                  nestedType,
-                  { key: j, ...nestedStyle },
-                  nestedContent as React.ReactNode
-                );
-                nestedElements.push(nestedElement);
-              }
-              const parentElement = React.createElement(
-                type,
-                props,
-                nestedElements
-              );
-              return parentElement;
-            } else {
-              return React.createElement(type, props, content);
-            }
-          })} */}
+          {renderHTMLFromJSON(outputCode)}
         </GridItem>
       )}
     </Grid>

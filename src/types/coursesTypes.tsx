@@ -20,7 +20,8 @@ export interface Lesson {
     listBlock?: string[];
     imagesGallery?: { srcUrl: string; altText: string; descText: string }[];
     BigButton?: { urlLink: string; text: string };
-    decorativeLine: boolean;
+    resources?: { title: string; url: string }[];
+    decorativeLine?: boolean;
   }[];
 }
 export interface CourseContent {

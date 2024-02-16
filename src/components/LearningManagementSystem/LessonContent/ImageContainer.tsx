@@ -17,7 +17,15 @@ function ImageContainer({
   width,
 }: ImageContainerProps) {
   return (
-    <Card p={2} mx="auto" my={7} bgColor={"gray.100"} w={width}>
+    <Card
+      p={2}
+      mx="auto"
+      my={7}
+      bgColor={"gray.100"}
+      w={width}
+      variant={"elevated"}
+      // boxShadow={"revert"}
+    >
       {imageSubject && (
         <Text
           style={{ fontFamily: "Varela Round" }}
@@ -28,7 +36,14 @@ function ImageContainer({
           {imageSubject}
         </Text>
       )}
-      <Image src={srcUrl} alt={altText} w={"100%"} m={0} tabIndex={1} />
+      <Image
+        src={srcUrl}
+        alt={altText}
+        w={"100%"}
+        m={0}
+        tabIndex={1}
+        title={altText}
+      />
       <Text as="p" fontSize={11} pt={2} tabIndex={1}>
         {descText}
       </Text>

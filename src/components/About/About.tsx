@@ -10,7 +10,7 @@ function About() {
       justifyContent={"center"}
       alignItems={"flex-start"}
       m={0}
-      mt={'70px'}
+      mt='60px'
       p={5}
     >
       <Text className={varelaRound.className} fontSize={20}>אודות</Text>

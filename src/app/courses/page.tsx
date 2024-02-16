@@ -41,8 +41,9 @@ function CoursesPage() {
       flexDir={"column"}
       justifyContent={"flex-start"}
       alignItems={"center"}
+      bgColor={"orange.50"}
     >
-      <Box mt="70px">
+      <Box mt="60px">
         <Heading
           as="h2"
           style={{ fontFamily: "Varela Round, sans-serif" }}
@@ -63,12 +64,12 @@ function CoursesPage() {
             borderColor="yellow.500"
             bgColor={"gray.200"}
             mb={5}
-            w={800}
+            w={[200, 400, 600, 800]}
           >
             <Image
               src={`${course.imagePath}`}
               alt={`${course.imageAlt}`}
-              width={250}
+              width={[200]}
             />
             <CardBody pos={"relative"}>
               <Heading

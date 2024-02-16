@@ -190,7 +190,7 @@
               ]
             },
             {
-              "sectionTitle": "כותרות - Headings",
+              "sectionTitle": "כותרות (Headings)",
               "textBlock": [
                 "עומדות לרשותנו שישה סוגי כותרות שאנחנו יכולים להשתמש בהן בתוך המסמך. התג שמגדיר כותרת מכיל את האות \"h\" וספרה בין 1 ל-6. כאשר <h1> היא כותרת ראשית, והכותרות הבאות הן תתי-כותרות ברמה חשיבות שהולכת וקטנה.",
                 "בנוסף לזאת, כותרות הן מה שנקרא רכיב block-level, כלומר רכיב שכברירת מחדל מופיע בעמוד בשורה חדשה ותופס את כל רוחב השורה. אך דבר אינו גזירת גורל, שכן אנחנו יכולים לשנות תכונות שונות של הכותרת באמצעות מאפיינים עיצוביים, שנלמד להם מעט ביחידה זו של הקורס, ובהרחבה ביחידה הבאה.",
@@ -316,14 +316,14 @@
               }
             },
             {
-              "sectionTitle": "פסקה - Paragraph",
+              "sectionTitle": "פסקאות (Paragraphs)",
               "textBlock": [
                 "כמו בעיתון מודפס, גם בעמוד אינטרנט אנחנו משתשמים פעמים רבות בתוכן מילולי. לצורך כך יש לרשותנו כמה רכיבי תוכן מילולי שלכל אחד יש תכונות ייחודיות."
               ],
               "listBlock": [
                 "<p></p> - פסקה רגילה.",
                 "<pre></pre> - פסקה מרובת שורות.",
-                "<span></span> - תוכן מילולי מוחרג"
+                "<span></span> - תוכן מילולי מוחרג."
               ]
             },
             {
@@ -331,7 +331,7 @@
                 "בדומה לכותרות, גם פסקה היא רכיב block-level אשר תופס את כל רוחב המסך האפשרי. כמו כן, כל התוכן של הפסקה שיופיע בין תגית הפתיחה לתגית הסגירה גם הוא יישאף למלא את כל רוחב המסך ויירד  שורה רק כאשר התוכן מגיע לקצה רוחב המסך.",
                 "סוג נוסף של תגית ליצירת פסקה אלה צמד התגיות <pre></pre>, אשר בין תגיות אלה אנחנו יכולים להכניס מלל עם שבירת שורות. כלומר נוכל להשתמש בסוג זה של פסקה כשאנחנו רוצים לשמור על תוכן מילולי עם שורות קצרות, כמו שיר לדוגמא.",
                 "אם אנחנו רוצים להתייחס לקטע מסוים בתוך פסקה באופן שונה משאר הפסקה, לדוגמא להדגיש מילה אחת או כמה מילים, בהבלטה, בצבע שונה, בהטיית המלל, בקו תחתון, או כל סוג אחר של הדגשה שמחריג את המילים האלו משאר התוכן של הפסקה, אז אנחנו נשתמש בתגית span. תגית זו היא רכיב מסוג inline, שבשונה מהשתיים הקודמות זו תגית שכברירת מחדל אינה מתחילה שורה חדשה, והיא משתדלת, עד כמה שאפשר להשתלב בתוך שורה קיימת.",
-                "אנחנו יכולים גם להוסיף תכונות עיצוב לרכיבי המלל השונים (ולרכיבי HTML בכלל). נעשה את זה פשוט על-ידי הוספת התכונה style בתוך תגית הפתיחה ונקבע איזה מאפיין ייחודי של עיצוב אנחנו רוצים להציג. בבלוק הקוד הבא אפשר לראות את השימוש בסוגי התגיות של פסקאות ואת השימוש בעיצוב, אך ביחידה הבאה של הקורס נעסוק בעיצוב העמוד בצורה יותר מעמיקה. כרגע בעזרת הוספת העיצוב אפשר לראות את ההבלטה המיוחדת של חלק מהמלל, ואת המשמעות של ההבדלים בין רכיב inline לרכיב block-level."
+                "אנחנו יכולים גם להוסיף תכונות עיצוב לרכיבי המלל השונים (ולרכיבי HTML בכלל). נעשה את זה פשוט על-ידי הוספת התכונה style בתוך תגית הפתיחה ונקבע את מאפיין העיצוב שאנו רוצים להכיל על הרכיב. אנחנו ניגע קלות בנושא של עיצוב עכשיו, אך יחידת הלימוד הבאה מוקדשת כולה לכל נושא העיצוב, ולכן שם אנחנו נכנס יותר לעומק לנושא זה."
               ],
               "codeBox": {
                 "codeLang": "HTML",
@@ -341,14 +341,18 @@
                     "spaces": 0,
                     "color": "white"
                   },
-                  { "element": "<p>", "spaces": 2, "color": "yellow.300" },
+                  {
+                    "element": "<p style='background-color: lightcyan'>",
+                    "spaces": 2,
+                    "color": "cyan.300"
+                  },
                   {
                     "element": "אספת עם גדולה שהשתתפו בה",
                     "spaces": 4,
                     "color": "white"
                   },
                   {
-                    "element": "<span style='font-weight: bold'>ארבעים אלף יהודים</span>",
+                    "element": "<span style='font-weight: bold'>ארבעים אלף יהודים,</span>",
                     "spaces": 4,
                     "color": "white"
                   },
@@ -357,28 +361,54 @@
                     "spaces": 4,
                     "color": "white"
                   },
-                  { "element": "</p>", "spaces": 2, "color": "yellow.300" },
+                  { "element": "</p>", "spaces": 2, "color": "cyan.300" },
                   {
-                    "element": "<pre style='background-color: lightgoldenrodyellow'>",
+                    "element": "<pre style='background-color: lightgreen'>",
+                    "spaces": 2,
+                    "color": "green.300"
+                  },
+                  {
+                    "element": "כשההוא אוהב את ההיא",
+                    "spaces": 4,
+                    "color": "white"
+                  },
+                  {
+                    "element": "תמיד הוא אומר לה,",
+                    "spaces": 4,
+                    "color": "white"
+                  },
+                  {
+                    "element": "חוזר ואומר לה",
+                    "spaces": 4,
+                    "color": "white"
+                  },
+                  {
+                    "element": "כמה היא אלוהית.",
+                    "spaces": 4,
+                    "color": "white"
+                  },
+                  {
+                    "element": "ורק אני מרוב אהבה",
+                    "spaces": 4,
+                    "color": "white"
+                  },
+                  {
+                    "element": "שותק.",
+                    "spaces": 4,
+                    "color": "white"
+                  },
+                  { "element": "</pre>", "spaces": 2, "color": "green.300" },
+                  {
+                    "element": "<p style=\"background-color: lightyellow; width: 400px;\">",
                     "spaces": 2,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "אספת עם גדולה שהשתתפו בה ארבעים אלף יהודים,",
+                    "element": "אספת עם גדולה שהשתתפו בה ארבעים אלף יהודים, קבלה החלטה הדורשת מאת בריטניה כי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור.",
                     "spaces": 4,
                     "color": "white"
                   },
-                  {
-                    "element": "קבלה החלטה הדורשת מאת בריטניה,",
-                    "spaces": 4,
-                    "color": "white"
-                  },
-                  {
-                    "element": "כי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
-                    "spaces": 4,
-                    "color": "white"
-                  },
-                  { "element": "</pre>", "spaces": 2, "color": "yellow.300" },
+                  { "element": "</p>", "spaces": 2, "color": "yellow.300" },
                   { "element": "</body>", "spaces": 0, "color": "white" }
                 ],
                 "outputCode": [
@@ -392,41 +422,59 @@
                       },
                       {
                         "type": "span",
-                        "content": "ארבעים אלף יהודים",
+                        "content": "ארבעים אלף יהודים,",
                         "style": {
                           "fontWeight": "bold"
                         }
                       },
                       {
                         "type": "span",
-                        "content": ",\n קבלה החלטה הדורשת מאת בריטניה,\n כי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
+                        "content": "\n קבלה החלטה הדורשת מאת בריטניה,\n כי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
                         "style": {}
                       }
                     ],
                     "style": {
+                      "direction": "rtl",
+                      "backgroundColor": "lightcyan",
                       "marginTop": "1em",
                       "marginBottom": "1em",
                       "marginLeft": "0",
-                      "marginRight": "0",
-                      "direction": "rtl"
+                      "marginRight": "0"
                     }
                   },
                   {
                     "type": "pre",
-                    "content": "אספת עם גדולה שהשתתפו בה ארבעים אלף יהודים,\nקבלה החלטה הדורשת מאת בריטניה,\nכי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
+                    "content": "כשההוא אוהב את ההיא\nתמיד הוא אומר לה,\nחוזר ואומר לה\nכמה היא אלוהית.\nורק אני מרוב אהבה\nשותק.",
                     "style": {
                       "display": "block",
                       "fontFamily": "monospace",
                       "margin": "1em 0",
                       "whiteSpace": "pre",
-                      "backgroundColor": "lightgoldenrodyellow",
+                      "backgroundColor": "lightgreen",
                       "direction": "rtl"
+                    }
+                  },
+                  {
+                    "type": "p",
+                    "content": "אספת עם גדולה שהשתתפו בה ארבעים אלף יהודים, קבלה החלטה הדורשת מאת בריטניה, כי עליה להצהיר מחדש את רצונה להגשים את הצהרת בלפור",
+                    "style": {
+                      "direction": "rtl",
+                      "width": "40%",
+                      "margin": "0 50%",
+                      "backgroundColor": "lightyellow",
+                      "marginTop": "1em",
+                      "marginBottom": "1em",
+                      "marginLeft": "0",
+                      "marginRight": "0"
                     }
                   }
                 ]
               }
             },
             {
+              "textBlock": [
+                "בבלוק הקוד שלמעלה אפשר לראות את השימוש בסוגי התגיות של פסקאות ואת השימוש בעיצוב. בפסקה הראשונה השתמשנו בתוך התוכן בתגית span על מנת להבליט חלק מהתוכן. בפסקה השנייה השתמשנו בתגית pre כדי ליצור פסקה עם שורות קצרות. בנוסף הוספנו רקע לפסקאות, וגם קבענו את רוחב הבלוק בחלקן, כדי לראות בצורה מוחשית את ההבדל בין בלוק מסוג block-level לבין בלוק מסוג inline."
+              ],
               "frameClause": {
                 "frameTitle": "עברית ואנגלית באינטרנט",
                 "paragraphs": [
@@ -435,10 +483,11 @@
               }
             },
             {
-              "sectionTitle": "רשימות - Lists",
+              "sectionTitle": "רשימות (Lists) ויחסי הורים-ילדים",
               "textBlock": [
                 "כשעסקנו קודם בכותרות ופסקאות למדנו שיש צמד תגיות, פתיחה וסגירה, ובינהן התוכן שאנחנו רוצים להציג. אך ישנם רכיבים שלא מכילים בהכרח תוכן מילולי, אלא הם מכילים בתוך עצמם רכיבים אחרים. בדיוק כמו שאת הכותרות והפסקאות הכנסו לתוך תגי ה-<body>. רשימות הן סוג כזה של רכיבים, ואנחנו קוראים להם רכיבים מקוננים - Nested elements.",
-                "למעשה רשימות נחלקות לשני סוגים עיקריים. סוג אחד הוא רשימה של פריטים בדידים, כלומר שאין חשיבות לסדר של הפריטים (Unorder list). כמו לדוגמא רשימת מכולת. בשביל להגדיר אותה במסמך HTML אנחנו נשתמש בתגי האם <ul></ul> ובינהם נכניס את תגי הפריטים עצמם <li></li>, כאשר בינהם נרשום את התוכן המילולי שאנחנו רוצים להציג על המסך."
+                "אפשר להסתכל כמו על יחסים של הורה וילד. יש את תג הראשי, שהוא האבא (Parent), ובתוכו יש תגים משניים, שהם הילדים (Children). בתכנות אנחנו נוהגים להשתמש במושגים האלה כדי להמחיש את הרעיון של יחסים בין רכיבים שונים בעמוד האינטרנט.",
+                "רשימות נחלקות לשני סוגים עיקריים. סוג אחד הוא רשימה של פריטים בדידים, כלומר שאין חשיבות לסדר של הפריטים (Unorder list). כמו לדוגמא רשימת מכולת. בשביל להגדיר אותה במסמך HTML אנחנו נשתמש בתגי האם <ul></ul> ובינהם נכניס את תגי הפריטים עצמם <li></li>, כאשר בינהם נרשום את התוכן המילולי שאנחנו רוצים להציג על המסך."
               ],
               "codeBox": {
                 "codeLang": "HTML",
@@ -588,20 +637,15 @@
             {
               "sectionTitle": "זמן תרגול",
               "textBlock": [
-                "אחרי שלמדנו את המבנה הבסיסי, השלד של כל עמוד אינטרנט באשר הוא, בשיעור הראשון. עשינו גם היכרות עם רכיבי מלל עיקריים בשיעור השני, הגיע העת לתרגל את מה שלמדנו.",
-                "אז לצורך התרגול הראשון הכינו לעצמכם תיקייה ייעודית במחשב שתשמש אתכם לכתיבת כל התרגולים לאורך הקורס הזה. בתוך התיקייה צרו תיקיות משנה לכל יחידת לימוד, ופעלו לפי הנחיות התרגילים. את הקוד לצורך התרגילים הראשונים כיתבו בקובץ Notepad פשוט ושמרו אותו בתיקייה שיצרתם."
-              ],
-              "listBlock": [
-                "ראשית בתוך תיקיית השיעור שיצרתם צרו קובץ טקסט חדש עם סיומת 'txt.'",
-                "שנו את הסיומת של הקובץ שנוצר לסיומת 'html.' (כדי שהדפדפן יידע לקרוא את הקוד ולפענח אותו).",
-                "כתבו קוד HTML בתוך הקובץ שיצרתם ושמרו אותו.",
-                "פתחו את הדפדפן המועדף עליכם והזינו בשורת הכתובת את הנתיב (path) לקובץ שזה עתה יצרתם. "
+                "אחרי שהכרנו את השלד, המבנה הבסיסי של כל עמוד אינטרנט באשר הוא, בשיעור הראשון. עשינו גם היכרות עם רכיבי מלל עיקריים בשיעור השני, הגיע העת לתרגל את מה שלמדנו עד כה.",
+                "אז לפני התרגול הראשון צרו תיקייה חדשה ופיתחו אותה בתוכנת VS-Code שהורדתם בשיעורים הקודמים. בתוך התיקייה צרו תיקיית משנה עם שם השיעור ועבדו בתיקייה זו על התרגיל הקרוב (מומלץ להשתמש רק בשמות באנגלית).",
+                "בתיקיית השיעור צרו קובץ חדש עם סיומת \"html.\" וכיתבו בקובץ זה את הקוד שלכם בהתאם להנחיית התרגיל."
               ]
             },
             {
               "sectionTitle": "תרגיל - עיתונות דיגיטלית",
               "textBlock": [
-                "בתרגיל הראשון אתם מתבקשים לבחור כתבה מעיתון יומי מודפס ולהפוך אותה לדיגיטלית. אתם יכולים לבחור כתבה אחת מתוך האפשרויות שמוצעות כאן למטה, או לבחור כתבה אחרת קצרה שמצאתם בעיתון יומי.",
+                "בתרגיל הראשון אתם מתבקשים לבחור כתבה מעיתון יומי מודפס ולהפוך אותה לדיגיטלית. אפשר לבחור כתבה אחת מתוך האפשרויות שמוצעות כאן, או לבחור כתבה קצרה אחרת מתוך אוסף העיתונות באתר הספריה הלאומית.",
                 "שימו לב למבנה הכתבה ולשימוש בכותרות, פסקאות ורשימות (אם קיימות). דאגו להשתמש בכל מה שלמדתם עד עכשיו, בשיעור הראשון על מבנה מסמך HTML, וכל מה שלמדתם בשיעור השני על סוגי טקסטים. התאימו את הרכיבים השונים למה שאתם מוצאים בכתבה שבחרתם."
               ],
               "imagesGallery": [
@@ -660,6 +704,30 @@
                   "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"דבר\", 20 בנובמבר 1977."
                 }
               ]
+            },
+            {
+              "resources": [
+                {
+                  "title": "HTML text fundamentals / Article by MDN Web docs.",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+                },
+                {
+                  "title": "HTML Headings / Article by W3Schools.",
+                  "url": "https://www.w3schools.com/html/html_headings.asp"
+                },
+                {
+                  "title": "HTML Paragraphs / Article by W3Schools.",
+                  "url": "https://www.w3schools.com/html/html_paragraphs.asp"
+                },
+                {
+                  "title": "HTML Lists / Article by W3Schools.",
+                  "url": "https://www.w3schools.com/html/html_lists.asp"
+                },
+                {
+                  "title": "אוסף העיתונות בספריה הלאומית של ישראל.",
+                  "url": "https://www.nli.org.il/he/newspapers/titles?"
+                }
+              ]
             }
           ]
         },
@@ -696,8 +764,7 @@
                     "spaces": 0,
                     "color": "white"
                   }
-                ],
-                "outputCode": []
+                ]
               }
             },
             {
@@ -861,6 +928,7 @@
                     ],
                     "style": {
                       "display": "block",
+                      "direction": "rtl",
                       "marginTop": "1em",
                       "marginBottom": "1em",
                       "marginLeft": "0",
@@ -874,8 +942,8 @@
             {
               "sectionTitle": "זמן תרגול",
               "textBlock": [
-                "לסיכום, הכרנו בשיעור הזה את אחת התגיות הכי חשובות ושימושיות בתהליך בניית אתר. אפשר לומר שבלי קישורים האתר יהיה דומה יותר לספר, או לעיתון. הקישורים מאפשרים לנו לנווט בקלות במרחב העמוד, האתר והאינטרנט בכלל",
-                "התרגיל של השיעור הזה יהיה המשך ישיר לתרגיל הקודם. הוסיפו למאמר שבחרתם ויצרתם ממנו עותק דיגטלי קישורים בתוך הטקסט, והפכו את הכתבה שהשתמשתם לקטע בסגנון ויקיפדיה. כלומר ביחרו מילים מסוימות וקשרו בעזרתן את הטקסט שלכם למקורות נוספים ברחבי האינטרנט. ",
+                "לסיכום, הכרנו בשיעור הזה את אחת התגיות הכי חשובות ושימושיות בתהליך בניית אתר. אפשר לומר שבלי קישורים האתר יהיה דומה יותר לספר, או לעיתון. הקישורים מאפשרים לנו לנווט בקלות במרחב העמוד, האתר והאינטרנט בכלל.",
+                "התרגיל של השיעור הזה יהיה המשך ישיר לתרגיל הקודם. הוסיפו למאמר שבחרתם ויצרתם ממנו עותק דיגיטלי קישורים בתוך הטקסט, והפכו את הכתבה שהשתמשתם לקטע בסגנון ויקיפדיה. כלומר ביחרו מילים מסוימות וקשרו בעזרתן את הטקסט שלכם למקורות נוספים ברחבי האינטרנט. ",
                 "לדוגמא, אם בחרתם בטקסט כמו זה:"
               ],
               "frameClause": {
@@ -889,6 +957,26 @@
               "textBlock": [
                 "אתם יכולים להפוך את המילה \"צ'ר'צ'יל\" לקישור ולשלוח את המשתמש לעמוד בויקיפדיה שמפרט מי הוא היה. או לבחור את המילה \"קנדה\" ולקשר אותה למקור מידע קשור כפי ראות עיניכם. אפשר גם כמובן להפוך כמה מילים ביחד לקישור אחד.",
                 "מתוך הכתבה שברשותכם צרו לפחות 7 קישורים."
+              ]
+            },
+            {
+              "resources": [
+                {
+                  "title": "Creating hyperlinks / Article by MDN Web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+                },
+                {
+                  "title": "a>: The Anchor element / Article by MDN Web docs>",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"
+                },
+                {
+                  "title": "HTML Link / Article by W3Schools",
+                  "url": "https://www.w3schools.com/html/html_links.asp"
+                },
+                {
+                  "title": "HTML Attributes / Article by W3schools",
+                  "url": "https://www.w3schools.com/html/html_attributes.asp"
+                }
               ]
             }
           ]
@@ -920,48 +1008,48 @@
                 "codeLang": "HTML",
                 "lines": [
                   {
-                    "element": "<body dir='rtl'>",
+                    "element": "<body>",
                     "spaces": 0,
                     "color": "white"
                   },
                   { "element": "<table>", "spaces": 2, "color": "red.300" },
                   {
-                    "element": "<caption>סוגי פירות וירקות</caption>",
+                    "element": "<caption>Types of vegetables and fruits</caption>",
                     "spaces": 4,
                     "color": "orange.300"
                   },
                   { "element": "<tr>", "spaces": 4, "color": "green.300" },
                   {
-                    "element": "<th>ירקות</th>",
+                    "element": "<th>Fruits</th>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<th>פירות</th>",
-                    "spaces": 6,
-                    "color": "yellow.300"
-                  },
-                  { "element": "</tr>", "spaces": 4, "color": "green.300" },
-                  { "element": "<tr>", "spaces": 4, "color": "green.300" },
-                  {
-                    "element": "<td>גזר</td>",
-                    "spaces": 6,
-                    "color": "yellow.300"
-                  },
-                  {
-                    "element": "<td>עגבניה</td>",
+                    "element": "<th>Vegetables</th>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   { "element": "</tr>", "spaces": 4, "color": "green.300" },
                   { "element": "<tr>", "spaces": 4, "color": "green.300" },
                   {
-                    "element": "<td>חסה</td>",
+                    "element": "<td>Tomato</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<td>תפוז</td>",
+                    "element": "<td>Carrot</td>",
+                    "spaces": 6,
+                    "color": "yellow.300"
+                  },
+                  { "element": "</tr>", "spaces": 4, "color": "green.300" },
+                  { "element": "<tr>", "spaces": 4, "color": "green.300" },
+                  {
+                    "element": "<td>Orange</td>",
+                    "spaces": 6,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<td>Lettuce</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
@@ -971,9 +1059,84 @@
                 ],
                 "outputCode": [
                   {
-                    "type": "p",
-                    "content": "Run the code in your local machine to see the result.",
-                    "style": {}
+                    "type": "table",
+                    "content": [
+                      {
+                        "type": "caption",
+                        "content": "Types of vegetables and fruits",
+                        "style": {}
+                      },
+                      {
+                        "type": "tr",
+                        "content": [
+                          {
+                            "type": "th",
+                            "content": "Fruits",
+                            "style": {
+                              "borderWidth": "1px",
+                              "borderColor": "black"
+                            }
+                          },
+                          {
+                            "type": "th",
+                            "content": "Vegetables",
+                            "style": {
+                              "borderWidth": "1px",
+                              "borderColor": "black"
+                            }
+                          }
+                        ],
+                        "style": {}
+                      },
+                      {
+                        "type": "tr",
+                        "content": [
+                          {
+                            "type": "td",
+                            "content": "Tomato",
+                            "style": {
+                              "borderWidth": "1px",
+                              "borderColor": "black"
+                            }
+                          },
+                          {
+                            "type": "td",
+                            "content": "Carrot",
+                            "style": {
+                              "borderWidth": "1px",
+                              "borderColor": "black"
+                            }
+                          }
+                        ],
+                        "style": {}
+                      },
+                      {
+                        "type": "tr",
+                        "content": [
+                          {
+                            "type": "td",
+                            "content": "Orange",
+                            "style": {
+                              "borderWidth": "1px",
+                              "borderColor": "black"
+                            }
+                          },
+                          {
+                            "type": "td",
+                            "content": "Lettuce",
+                            "style": {
+                              "borderWidth": "1px",
+                              "borderColor": "black"
+                            }
+                          }
+                        ],
+                        "style": {}
+                      }
+                    ],
+                    "style": {
+                      "borderWidth": "1px",
+                      "borderColor": "black"
+                    }
                   }
                 ]
               }
@@ -1001,7 +1164,7 @@
                     "color": "red.300"
                   },
                   {
-                    "element": "<caption>מערכת שעות שבועית</caption>",
+                    "element": "<caption>Weekly schedule</caption>",
                     "spaces": 4,
                     "color": "orange.300"
                   },
@@ -1012,17 +1175,17 @@
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<th>ראשון</th>",
+                    "element": "<th>Sunday</th>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<th>שני</th>",
+                    "element": "<th>Monday</th>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<th>שלישי</th>",
+                    "element": "<th>Tuesday</th>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
@@ -1034,17 +1197,17 @@
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<td>מתמטיקה</td>",
+                    "element": "<td rowspan=2>Math</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<td>אומנות</td>",
+                    "element": "<td>Arts</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<td>חינוך גופני</td>",
+                    "element": "<td>Sport</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
@@ -1056,12 +1219,12 @@
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<td colspan=2>ארוחת צהריים</td>",
+                    "element": "<td>English</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<td rowspan=2>אנגלית</td>",
+                    "element": "<td>Finnance</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
@@ -1073,12 +1236,12 @@
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<td>גאוגרפיה</td>",
+                    "element": "<td>Geography</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
                   {
-                    "element": "<td>היסטוריה</td>",
+                    "element": "<td>History</td>",
                     "spaces": 6,
                     "color": "yellow.300"
                   },
@@ -1088,9 +1251,125 @@
                 ],
                 "outputCode": [
                   {
-                    "type": "p",
-                    "content": "Run the code in your local machine to see the result.",
-                    "style": {}
+                    "type": "table",
+                    "content": [
+                      {
+                        "type": "caption",
+                        "content": "Weekly schedule",
+                        "style": {}
+                      },
+                      {
+                        "type": "tr",
+                        "content": [
+                          {
+                            "type": "th",
+                            "content": "",
+                            "style": {}
+                          },
+                          {
+                            "type": "th",
+                            "content": "Sunday",
+                            "style": {}
+                          },
+                          {
+                            "type": "th",
+                            "content": "Monday",
+                            "style": {}
+                          },
+                          {
+                            "type": "th",
+                            "content": "Tuesday",
+                            "style": {}
+                          }
+                        ],
+                        "style": {}
+                      },
+                      {
+                        "type": "tr",
+                        "content": [
+                          {
+                            "type": "td",
+                            "content": "8:00",
+                            "style": {}
+                          },
+                          {
+                            "type": "td",
+                            "content": "Math",
+                            "style": {
+                              "rowspan": "2"
+                            }
+                          },
+                          {
+                            "type": "td",
+                            "content": "Arts",
+                            "style": {}
+                          },
+                          {
+                            "type": "td",
+                            "content": "Sport",
+                            "style": {}
+                          }
+                        ],
+                        "style": {}
+                      },
+                      {
+                        "type": "tr",
+                        "content": [
+                          {
+                            "type": "td",
+                            "content": "12:00",
+                            "style": {}
+                          },
+                          {
+                            "type": "td",
+                            "content": "",
+                            "style": {}
+                          },
+                          {
+                            "type": "td",
+                            "content": "English",
+                            "style": {}
+                          },
+                          {
+                            "type": "td",
+                            "content": "Finnance",
+                            "style": {}
+                          }
+                        ],
+                        "style": {}
+                      },
+                      {
+                        "type": "tr",
+                        "content": [
+                          {
+                            "type": "td",
+                            "content": "14:00",
+                            "style": {}
+                          },
+                          {
+                            "type": "td",
+                            "content": "Geography",
+                            "style": {}
+                          },
+                          {
+                            "type": "td",
+                            "content": "History",
+                            "style": {
+                              "rowspan": "2"
+                            }
+                          },
+                          {
+                            "type": "td",
+                            "content": "",
+                            "style": {}
+                          }
+                        ],
+                        "style": {}
+                      }
+                    ],
+                    "style": {
+                      "width": "50%"
+                    }
                   }
                 ]
               }
@@ -1105,6 +1384,66 @@
                 "<tfoot></tfoot> - תג זה מציין את החלק התחתון בטבלה. לרוב נשתמש בתג הזה כאשר יש לנו איזו שורת סיכום או שורה תחתונה אחרת שהיא שונה משאר השורות של גוף הטבלה.",
                 "<tbody></tbody> - תג זה מציין את החלק העיקרי של הטבלה. כלומר בשונה משני התגים האחרים, בתג הזה אנחנו תמיד נשתמש כדי לציין את התוכן העיקרי של כל הטבלה. "
               ],
+              "codeBox": {
+                "codeLang": "HTML",
+                "lines": [
+                  { "element": "<body>", "spaces": 0, "color": "white" },
+                  { "element": "<table>", "spaces": 2, "color": "white" },
+                  {
+                    "element": "<caption>Incomes vs Outcomes<caption>",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  { "element": "<thead>", "spaces": 2, "color": "yellow.300" },
+                  { "element": "<tr>", "spaces": 4, "color": "white" },
+                  {
+                    "element": "<th>Incomes</th>",
+                    "spaces": 6,
+                    "color": "white"
+                  },
+                  {
+                    "element": "<th>Outcomes</th>",
+                    "spaces": 6,
+                    "color": "white"
+                  },
+                  { "element": "</tr>", "spaces": 4, "color": "white" },
+                  { "element": "</thead>", "spaces": 2, "color": "yellow.300" },
+                  { "element": "<tbody>", "spaces": 2, "color": "yellow.300" },
+                  { "element": "<tr>", "spaces": 4, "color": "white" },
+                  { "element": "<td>500</td>", "spaces": 6, "color": "white" },
+                  { "element": "<td>200</td>", "spaces": 6, "color": "white" },
+                  { "element": "</tr>", "spaces": 4, "color": "white" },
+                  { "element": "<tr>", "spaces": 4, "color": "white" },
+                  { "element": "<td>300</td>", "spaces": 6, "color": "white" },
+                  { "element": "<td>50</td>", "spaces": 6, "color": "white" },
+                  { "element": "</tr>", "spaces": 4, "color": "white" },
+                  { "element": "</tbody>", "spaces": 2, "color": "yellow.300" },
+                  {
+                    "element": "<tfooter>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  { "element": "<tr>", "spaces": 4, "color": "white" },
+                  {
+                    "element": "<td>200</td>",
+                    "spaces": 6,
+                    "color": "white"
+                  },
+                  {
+                    "element": "<td>150</td>",
+                    "spaces": 6,
+                    "color": "white"
+                  },
+                  { "element": "</tr>", "spaces": 4, "color": "white" },
+                  {
+                    "element": "</tfooter>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  { "element": "</table>", "spaces": 2, "color": "white" },
+                  { "element": "</body>", "spaces": 0, "color": "white" }
+                ]
+              },
               "decorativeLine": true
             },
             {
@@ -1145,12 +1484,32 @@
                   "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"הארץ\", 14 בספטמבר 1952."
                 }
               ]
+            },
+            {
+              "resources": [
+                {
+                  "title": "HTML Table basics / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics"
+                },
+                {
+                  "title": "HTML Table advanced features and accessibility / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced"
+                },
+                {
+                  "title": "HTML Tables / Article by W3Schools",
+                  "url": "https://www.w3schools.com/html/html_tables.asp"
+                },
+                {
+                  "title": "אוסף העיתונות בספריה הלאומית של ישראל",
+                  "url": "https://www.nli.org.il/he/newspapers/titles?"
+                }
+              ]
             }
           ]
         },
         {
           "lessonId": "2.5",
-          "title": "אובייקטים חזותיים: תמונות ווידאו (Images & Videos)",
+          "title": "אובייקטים חזותיים ושמעתיים (Images, Videos & Audios)",
           "sections": [
             {
               "sectionTitle": "אובייקטים חזותיים - לא רק מילים",
@@ -1158,10 +1517,10 @@
                 "יש משפט שאומר שתמונה שווה אלף מילים. ואכן, פעמים רבות אנחנו יכולים למצוא בעיתונים הישנים לצד הכתבות תמונות בשחור לבן או בצבע שנותנות נקודת מבט נוספת על מה שכתוב. התמונה יכולה גם להמחיש את מה שמתואר באותה כתבה. "
               ],
               "image": {
-                "url": "/images/lessonsContents/module2/lesson5/cars-sussita.jpg",
-                "altText": "מכונית סוסיתא ישראלית, 1969",
-                "descText": "תצלום של מכונית סוסיתא מתוך ארכיון דן הדני, האוסף הלאומי לתצלומים על שם משפחת פריצקר, הספריה הלאומית.",
-                "width": [300, 400]
+                "url": "/images/lessonsContents/module2/lesson5/jerusalem_1968.jpg",
+                "altText": "View of Jerusalem in 1968",
+                "descText": "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית השיטה, משרד ירושלים ומורשת והספריה הלאומית של ישראל.",
+                "width": [300, 400, 500]
               }
             },
             {
@@ -1182,7 +1541,7 @@
                 "lines": [
                   { "element": "<body>", "color": "white", "spaces": 0 },
                   {
-                    "element": "<img src='/images/cars-sussita.jpg' alt='Sussita - Israeli car' />",
+                    "element": "<img src='/images/jerusalem_1968.jpg' alt='View of Jerusalem in 1968' />",
                     "color": "yellow.300",
                     "spaces": 2
                   },
@@ -1193,7 +1552,8 @@
             {
               "listBlock": [
                 "מקור התמונה (src, קיצור של Source) - תכונה זו מגדירה את הנתיב שממנו אנחנו רוצים להטמיע את התמונה בעמוד ה-HTML שאנחנו בונים. באופן דומה לדרך בה אנחנו מגדירים קישורים באמצעות התכונה href, גם עבור תמונה אנחנו יכולים להשתמש בנתיב המלא של התמונה, או בנתיב יחסי.",
-                "טקסט חלופי (alt, קיצור של Alternate) - תכונה זו היא הכרחית בהגדרת התמונה, משתי סיבות עיקריות. הסיבה הראשונה נובעת מעניין טכני, למקרה שעלולה לקרות תקלה באתר, לדוגמא כישלון בטעינה תמונות, או טעינה איטית מדי. במקרה כזה במקום התמונה יופיע הטקסט החלופי שמוגדר באותה תגית. הסיבה השניה הנובעת מעניין של נגישות האתר. כאשר קוראי מסכים (Screen readers) ומנועי חיפוש (Search Engines) עוברים על הרכיבים הקיימים בעמוד, ויודעים לזהות את מה שמוצג בתמונות לפי הטקסט החלופי שאנחנו מגדירים."
+                "טקסט חלופי (alt, קיצור של Alternate) - תכונה זו היא הכרחית בהגדרת התמונה, משתי סיבות עיקריות. הסיבה הראשונה נובעת מעניין טכני, למקרה שעלולה לקרות תקלה באתר, לדוגמא כישלון בטעינה תמונות, או טעינה איטית מדי. במקרה כזה במקום התמונה יופיע הטקסט החלופי שמוגדר באותה תגית. הסיבה השניה הנובעת מעניין של נגישות האתר. כאשר קוראי מסכים (Screen readers) ומנועי חיפוש (Search Engines) עוברים על הרכיבים הקיימים בעמוד, ויודעים לזהות את מה שמוצג בתמונות לפי הטקסט החלופי שאנחנו מגדירים.",
+                "כותרת תמונה (title) - באמצעות תכונה זו אנחנו יכולים כותרת לתמונה שתופיעה בעת ריחוף של העכבר (hover) על גבי התמונה. חשוב לציין שתכונה זו אינה הכרחית ולא נמצאת בשימוש נרחב, מכיוון שהיא לא נתמכת על-ידי חלק מהדפדפנים, וגם עשויה להוות בעיה ולבלבל קוראי מסכים (Screen Readers) בפענוח תוכן העמוד, לכן ההמלצה היא שלא להשתמש בתכונה זו."
               ]
             },
             {
@@ -1207,12 +1567,12 @@
                     "spaces": 2
                   },
                   {
-                    "element": "src='/images/cars-sussita.jpg'",
+                    "element": "src='/images/jerusalem_1968.jpg'",
                     "color": "yellow.300",
                     "spaces": 4
                   },
                   {
-                    "element": "alt='Sussita - Israeli car'",
+                    "element": "alt='View of Jerusalem in 1968'",
                     "color": "yellow.300",
                     "spaces": 4
                   },
@@ -1223,6 +1583,11 @@
                   },
                   {
                     "element": "height='600px'",
+                    "color": "yellow.300",
+                    "spaces": 4
+                  },
+                  {
+                    "element": "title='View of Jerusalem in 1968'",
                     "color": "yellow.300",
                     "spaces": 4
                   },
@@ -1242,17 +1607,41 @@
               "frameClause": {
                 "frameTitle": "אופטימיזציה (Optimization)",
                 "paragraphs": [
-                  "בעת שאנחנו משתמשים בתמונות באתר, חשוב להבין ולקחת בחשבון את משקל התמונה. תמונות, בשונה מתוכן מילולי עשויות להיטען לאט יותר בעמוד מה שיכול לגרום למצב שכל התוכן של העמוד נטען מהר מאוד ורק לאחר כמה שניות התמונות מופיעות.",
+                  "בעת שאנחנו משתמשים בתמונות באתר, חשוב להבין ולקחת בחשבון את משקל התמונה. תמונות, בשונה מתוכן מילולי עשויות להיטען לאט יותר בעמוד, מה שיכול לגרום למצב שכל התוכן של העמוד נטען מהר מאוד ורק לאחר כמה שניות התמונות מופיעות.",
                   "ישנן מספר דרכים לייעל את תהליך טעינת העמוד, ולעבוד עם תמונות בצורה אופטימלית. הדרך הכי פשוטה היא להשתמש בתמונות קטנות יחסית שלא שוקלות הרבה. אבל ישנן דרכים נוספות שנלמד עליהן בהמשך הקורס ובקורסים מתקדמים יותר."
                 ]
               }
             },
             {
-              "sectionTitle": "קטעי וידאו (Videos)",
+              "sectionTitle": "קטעי וידאו וקול (Videos & Audios)",
               "decorativeLine": "true"
             },
             {
               "sectionTitle": "זמן תרגול"
+            },
+            {
+              "resources": [
+                {
+                  "title": "Images in HTML / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+                },
+                {
+                  "title": "Video and audio content / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"
+                },
+                {
+                  "title": "HTML Video / Article by W3Schools",
+                  "url": "https://www.w3schools.com/html/html5_video.asp"
+                },
+                {
+                  "title": "התמונה של ירושלים מתחילת השיעור מתוך אוסף התמונות של הספריה הלאומית של ישראל",
+                  "url": "https://www.nli.org.il/he/archives/NNL_ARCHIVE_AL997009875765405171/NLI#$FL77606146"
+                },
+                {
+                  "title": "אוסף התמונות של הספריה הלאומית של ישראל",
+                  "url": "https://www.nli.org.il/he/search?projectName=NLI#&q=any,contains,NNL&bulkSize=60&index=60&sort=rank&multiFacets=facet_local50,include,%D7%A9%D7%99%D7%9E%D7%95%D7%A9%20%D7%9E%D7%95%D7%AA%D7%A8%20%D7%9C%D7%9C%D7%90%20%D7%9B%D7%9C%20%D7%9E%D7%92%D7%91%D7%9C%D7%94,1|,|facet_local50,include,%D7%A9%D7%99%D7%9E%D7%95%D7%A9%20%D7%9E%D7%95%D7%AA%D7%A8%20%D7%9C%D7%9E%D7%98%D7%A8%D7%94%20%D7%9C%D7%90-%D7%9E%D7%A1%D7%97%D7%A8%D7%99%D7%AA,1&t=photos"
+                }
+              ]
             }
           ]
         },
@@ -1272,11 +1661,16 @@
         },
         {
           "lessonId": "2.8",
-          "title": "מידע על העמוד ו-Meta Data",
+          "title": "מחלקות וזהויות (Classes & Identifires)",
           "sections": []
         },
         {
           "lessonId": "2.9",
+          "title": "מידע על העמוד ו-Meta Data",
+          "sections": []
+        },
+        {
+          "lessonId": "2.10",
           "title": "תרגיל מסכם",
           "sections": []
         }
@@ -1307,9 +1701,52 @@
       "module": 4,
       "title": "Java Script",
       "lessons": [
-        { "lessonId": "4.1", "title": "מבוא ל-Java Script", "sections": [] },
-        { "lessonId": "4.2", "title": "שיעור 2", "sections": [] },
-        { "lessonId": "4.3", "title": "שיעור 3", "sections": [] }
+        {
+          "lessonId": "4.1",
+          "title": "מבוא ל-Java Script",
+          "sections": [
+            {
+              "resources": [
+                {
+                  "title": "Introduction / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lessonId": "4.2",
+          "title": "משתנים, מחרוזות וסוגי נתונים אחרים",
+          "sections": [
+            {
+              "resources": [
+                {
+                  "title": "Grammer and types / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lessonId": "4.4",
+          "title": "מערכים (Arrays)",
+          "sections": []
+        },
+        {
+          "lessonId": "4.5",
+          "title": "אובייקטים (Objects)",
+          "sections": []
+        },
+        { "lessonId": "4.6", "title": "לולאות (Loops)", "sections": [] },
+        { "lessonId": "4.7", "title": "פונקציות (Functions)", "sections": [] },
+        { "lessonId": "4.8", "title": "מחלקות (Classes)", "sections": [] },
+        {
+          "lessonId": "4.9",
+          "title": "פונקציות א-סינכרוניות (Promises)",
+          "sections": []
+        }
       ]
     },
     {
