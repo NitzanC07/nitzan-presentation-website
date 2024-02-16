@@ -13,7 +13,8 @@ function ULbox({ content }: ULboxProps) {
           as="li"
           style={{ fontFamily: "Varela Round, sans-serif" }}
           fontSize={18}
-          py={0}
+          pt={0}
+          pb={4}
           mx={[3, 3, 7, 0]}
           m={0}
           tabIndex={1}

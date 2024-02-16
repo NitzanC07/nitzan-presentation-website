@@ -17,14 +17,14 @@ function CoursesPage() {
       description:
         "קורס הבסיס לפיתוח אתרי אינטרנט בעזרת שפת HTML, עיצוב אתרים בעזרת CSS, ופיתוח פונקציונלי בעזרת שפת Java Script הפופולרית. את הקורס מלווים תרגולים רבים לחומר התאורתי בהשראת ההיסטוריה של מדינת ישראל.",
       link: "/courses/time-journey-through-web-developmental/1.1",
-      imagePath: "/images/little_stalk_erupts_from_the_g.jpeg",
+      imagePath: "/images/stylingImages/ThreeStones-html-css-js.png",
       imageAlt: "Little stalk erupts from the ground.",
     },
     {
       title: "קורס בניית אתרים מתקדם",
       description: "React",
       link: "/courses/master-course/1.1",
-      imagePath: "/images/Young_tree_grow_up_on_the_grou.jpeg",
+      imagePath: "/images/stylingImages/WallReact.png",
       imageAlt: "Young tree grow up on the groud.",
     },
     {
@@ -60,7 +60,7 @@ function CoursesPage() {
             overflow="hidden"
             variant="outline"
             borderWidth={2}
-            borderColor="green.300"
+            borderColor="yellow.500"
             bgColor={"gray.200"}
             mb={5}
             w={800}
@@ -97,7 +97,7 @@ function CoursesPage() {
               >
                 <Button
                   style={{ fontFamily: "Varela Round, sans-serif" }}
-                  colorScheme="green"
+                  colorScheme="yellow"
                   tabIndex={-1}
                 >
                   כניסה לקורס

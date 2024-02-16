@@ -12,6 +12,7 @@ function FrameClause({ textContent, title }: FrameClauseProps) {
       w="90%"
       mx="auto"
       p={4}
+      mt={10}
       mb={5}
       borderWidth={2}
       borderColor="orange.200"
