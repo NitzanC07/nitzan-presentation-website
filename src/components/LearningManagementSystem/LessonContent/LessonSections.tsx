@@ -12,6 +12,7 @@ import { Box } from "@chakra-ui/react";
 import BigButton from "./BigButton";
 import DecorativeLine from "./DecorativeLine";
 import BibliographyBox from "./BibliographyBox";
+import TableData from "./TableData";
 
 interface LessonSectionsProps {
   lessonId: string;
@@ -35,12 +36,7 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
   );
 
   return (
-    <Box
-      as="article"
-      w={"100%"}
-      maxW={"750px"}
-      mx={"auto"}
-    >
+    <Box as="article" w={"100%"} maxW={"750px"} mx={"auto"}>
       {currentLesson?.sections?.map((section, i) => (
         <div key={i}>
           {section.sectionTitle && (
@@ -50,6 +46,13 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
             <ParagraphBox textContent={section.textBlock} />
           )}
           {section.listBlock && <ULbox content={section.listBlock} />}
+          {section.tableData && (
+            <TableData
+              caption={section.tableData.caption}
+              headingRow={section.tableData.headingRow}
+              rows={section.tableData.rows}
+            />
+          )}
           {section.BigButton && (
             <BigButton
               urlLink={section.BigButton.urlLink}

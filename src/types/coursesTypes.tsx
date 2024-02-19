@@ -4,6 +4,12 @@ export interface Lesson {
   sections: {
     sectionTitle?: string;
     textBlock?: string[];
+    listBlock?: string[];
+    tableData?: {
+      caption: string;
+      headingRow: string[];
+      rows: (string | number)[][];
+    };
     image?: {
       url: string;
       altText: string;
@@ -17,7 +23,6 @@ export interface Lesson {
       outputCode?: { type: string; content: string; style: {} }[];
       codeLang: string;
     };
-    listBlock?: string[];
     imagesGallery?: { srcUrl: string; altText: string; descText: string }[];
     BigButton?: { urlLink: string; text: string };
     resources?: { title: string; url: string }[];
