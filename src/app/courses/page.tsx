@@ -17,7 +17,7 @@ function CoursesPage() {
       description:
         "קורס הבסיס לפיתוח אתרי אינטרנט בעזרת שפת HTML, עיצוב אתרים בעזרת CSS, ופיתוח פונקציונלי בעזרת שפת Java Script הפופולרית. את הקורס מלווים תרגולים רבים לחומר התאורתי בהשראת אירועים היסטוריים משמעותיים.",
       link: "/courses/time-journey-through-web-developmental/1.1",
-      imagePath: "/images/stylingImages/ThreeStones-html-css-js.png",
+      imagePath: "/images/stylingImages/HTMLCSSJS-on-bricks-wall.png",
       imageAlt: "Little stalk erupts from the ground.",
     },
     {
