@@ -1822,12 +1822,100 @@
             {
               "sectionTitle": "רכיבי HTML של טפסים",
               "listBlock": [
-                "<form> - תגית המעטפת של טופס, הרכיב הראשי שמגדיר את הבלוק הסמנטי שמשמעותו - טופס, ובתוכו יכנסו כל רכיבי הטופס.",
-                "<fieldset> - תגית סמנטית שמציינת אזור בטופס שמכיל רכיבים מאותה קבוצה.",
-                "<input> - ",
-                "<label> -",
-                "<textarea> - ",
-                "<button> - "
+                "<form> - תגית סמנטית שמהווה את מעטפת לטופס. בתוכה יכנסו כל רכיבי הטופס.",
+                "<fieldset> - תגית סמנטית פנימית שמקבצת כמה רכיבי טופס עם איזה שהוא מכנה משותף בינהם. לדוגמא, אם אנחנו בונים סקר דעת קהל בכמה נושאים, אנחנו יכולים לקבץ כל מספר שאלות שקשורות לתת נושא מסוים בקבוצה נפרדת.",
+                "<input> - תגית שמסמנת שדה קלט שלתוכה המשתמש יכול להזין מידע מסוים. שדה קלט יכול להיות מסוגים שונים, וכדאי מאוד לקבוע את סוג הקלט של אותו שדה משתי סיבות עיקריות: חוויית המשתמש ויצירת טופס פשוט, קריא ונגיש, וגם מטעמים של אבטחת מידע באינטרנט ומניעה של פירצות אבטחה. אנחנו יכולים לסווג את הקלט באמצעות התכונה type.",
+                "<label> - תגית זו מצטרפת ביחד לשדה הקלט על מנת לספר למשתמש מה עליו להזין בשדה הרלוונטי. שני הרכיבים האלה - input ו-label מקושרים בינהם באמצעות תכונה שמוסיפים לכל אחד מהם - id ו-for בהתאמה. "
+              ],
+              "tableData": {
+                "caption": "סיווגים אפשריים של שדה קלט - input types",
+                "headingRow": ["type", "הסבר"],
+                "rows": [
+                  ["text", "קלט מילולי - ערך ברירת המחדל של רכיב input."],
+                  ["number", "קלט מספרי בלבד."],
+                  [
+                    "password",
+                    "הזנת סיסמא, המידע שהמשמש יזין יופיע בתור כוכביות."
+                  ],
+                  ["date", "הזנת תאריך לפי פורמט קבוע."],
+                  ["time", "הזנת קלט זמן בפורמט של שעות ודקות."],
+                  ["range", "קלט לפי טווח מסוים."],
+                  ["radio", "בחירה בודדת של פריט בין רשימת פריטים."],
+                  ["checkbox", "בחירה מרובה של פריט בין רשימת פריטים."],
+                  ["color", "בחירת צבע בתוך פלטה של צבעים."]
+                ]
+              }
+            },
+            {
+              "listBlock": [
+                "<textarea> - שדה קלט שמקבל תוכן עם ריבוי שורות. כברירת מחדל, input מהווה שדה קלט של שורה אחת. כשאנחנו רוצים לתת למשתמש אפשרות לכתוב תוכן ארוך ומפורט יותר, אנחנו יכולים להשתמש ברכיב זה. כמו כן, רכיב זה מקבל תכונות יחודיות המאפשרות לקבוע את גודל השדה, מבחינת שורות (rows) ועמודות (cols).",
+                "<button> - תגית זו מאפשרת להוסיף כפתור לטופס שלנו. כפתורים גם הם יכולים להיות עם כמה סיווגים. בראש ובראשונה, טופס צריך את האפשרות לשלוח את המידע שהמשתמש מזין בו, ואת אנחנו יכולים לעשות באמצעות כפתור שתפקידו יהיה אישור ושליחה של תוכן הטופס (submit). במצבים אחרים אנחנו יכולים להשתמש גם בכפתור רגיל (button) כדי לעשות פעולות אחרות שאנחנו רוצים לאפשר למשתמש לעשות."
+              ],
+              "tableData": {
+                "caption": "סיווגים אפשריים של כפתורים - button types",
+                "headingRow": ["type", "הסבר"],
+                "rows": [
+                  ["button", "ערך ברירת המחדל. כפתור רגיל."],
+                  ["submit", "מאתחל את כל תהליך שליחת המידע מהטופס."],
+                  ["reset", "איפוס כל התוכן שמוזן בטופס לערכי ברירת המחדל."]
+                ]
+              },
+              "codeBox": {
+                "codeLang": "HTML",
+                "lines": [
+                  { "element": "<body>", "spaces": 0, "color": "white" },
+                  { "element": "<form>", "spaces": 2, "color": "red.300" },
+                  { "element": "<fieldset>", "spaces": 4, "color": "cyan.300" },
+                  { "element": "<legend>Fieldset title</legend>", "spaces": 6, "color": "yellow.300" },
+                  { "element": "<ul style='list-style: none; padding: 0'>", "spaces": 6, "color": "white" },
+                  { "element": "<li>", "spaces": 8, "color": "white" },
+                  { "element": "<label for='fullName'>Full Name: </label>", "spaces": 10, "color": "yellow.300" },
+                  { "element": "<input type='text' id='fullName' placeholder='Your full name...' />", "spaces": 10, "color": "yellow.300" },
+                  { "element": "</li>", "spaces": 8, "color": "white" },
+                  { "element": "<li>", "spaces": 8, "color": "white" },
+                  { "element": "<label for='email'>E-Mail: </label>", "spaces": 10, "color": "yellow.300" },
+                  { "element": "<input type='text' id='fullName' placeholder='Your E-mail' />", "spaces": 10, "color": "yellow.300" },
+                  { "element": "</li>", "spaces": 8, "color": "white" },
+                  { "element": "</ul>", "spaces": 6, "color": "white" },
+                  { "element": "</fieldset>", "spaces": 4, "color": "cyan.300" },
+                  { "element": "<fieldset>", "spaces": 4, "color": "cyan.300" },
+                  { "element": "<label for='multilineText'>message: </label>", "spaces": 6, "color": "yellow.300" },
+                  { "element": "<textarea id='multilineText' rows='4' cols='35' placeholder='Your message...' />", "spaces": 6, "color": "yellow.300" },
+                  { "element": "</fieldset>", "spaces": 4, "color": "cyan.300" },
+                  { "element": "<fieldset>", "spaces": 4, "color": "cyan.300" },
+                  { "element": "<button type='submit'>Send</button>", "spaces": 6, "color": "yellow.300" },
+                  { "element": "<button type='reset'>Reset</button>", "spaces": 6, "color": "yellow.300" },
+                  { "element": "</fieldset>", "spaces": 4, "color": "cyan.300" },
+                  { "element": "</form>", "spaces": 2, "color": "red.300" },
+                  { "element": "</body>", "spaces": 0, "color": "white" }
+                ]
+              }
+            },
+            {
+              "frameClause": {
+                "frameTitle": "שימו לב!",
+                "paragraphs": [
+                  "בשלב זה של הקורס אנחנו לומדים כיצד להוסיף טופס לעמוד האינטרנט, אבל אנחנו עדיין לא יודעים כיצד להפוך אותו לאינטראקטיבי. כלומר לשנות את עמוד האינטרנט באמצעות הטופס או לשלוח את המידע בתוכו ליעד אחר. את הדברים האלה נלמד בהמשך הקורס."
+                ],
+                "borderColor": "red.400"
+              },
+              "decorativeLine": true
+            },
+            {
+              "sectionTitle": "זמן תרגול",
+              "resources": [
+                {
+                  "title": "Your first form / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form"
+                },
+                {
+                  "title": "The Button element / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"
+                },
+                {
+                  "title": "The Input element / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"
+                }
               ]
             }
           ]

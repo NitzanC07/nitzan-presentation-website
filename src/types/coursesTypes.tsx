@@ -17,7 +17,11 @@ export interface Lesson {
       descText: string;
       width: number[];
     };
-    frameClause?: { frameTitle: string; paragraphs: string[] };
+    frameClause?: {
+      frameTitle: string;
+      paragraphs: string[];
+      borderColor: string;
+    };
     codeBox?: {
       lines: { element: string; spaces: number; color: string }[];
       outputCode?: { type: string; content: string; style: {} }[];

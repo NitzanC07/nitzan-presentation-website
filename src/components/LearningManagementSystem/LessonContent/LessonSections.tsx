@@ -63,6 +63,7 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
             <FrameClause
               textContent={section.frameClause.paragraphs}
               title={section.frameClause.frameTitle}
+              borderColor={section.frameClause.borderColor}
             />
           )}
           {section.codeBox && (

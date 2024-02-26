@@ -4,9 +4,10 @@ import SubHeadingBox from "./SubHeadingBox";
 interface FrameClauseProps {
   textContent: string[];
   title?: string;
+  borderColor?: string;
 }
 
-function FrameClause({ textContent, title }: FrameClauseProps) {
+function FrameClause({ textContent, title, borderColor }: FrameClauseProps) {
   return (
     <Box
       w="90%"
@@ -15,7 +16,7 @@ function FrameClause({ textContent, title }: FrameClauseProps) {
       mt={10}
       mb={5}
       borderWidth={2}
-      borderColor="orange.200"
+      borderColor={borderColor ? `${borderColor}` : "orange.200"}
       borderRadius={15}
       bgColor="white"
     >

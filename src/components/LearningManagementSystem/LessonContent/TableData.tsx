@@ -18,16 +18,28 @@ interface TableDataProps {
 
 function TableData({ caption, headingRow, rows }: TableDataProps) {
   return (
-    <TableContainer overflowX={'auto'} maxW={'70%'} mx={'auto'}>
+    <TableContainer overflowX={"auto"} maxW={"70%"} mx={"auto"}>
       <Table
         variant={"striped"}
-        colorScheme="orange"
+        colorScheme={'orange'}
         width={"100%"}
         mx={"auto"}
-        my={5}
+        mt={0}
+        mb={10}
         size="sm"
       >
-        {caption && <TableCaption placement="top">{caption}</TableCaption>}
+        {caption && (
+          <TableCaption
+            placement="top"
+            style={{
+              fontFamily: "Varela Round",
+              fontSize: "15px",
+              fontWeight: "bold",
+            }}
+          >
+            {caption}
+          </TableCaption>
+        )}
         <Thead>
           <Tr bgColor={"gray.200"}>
             {headingRow.map((cell, i) => (
@@ -38,7 +50,6 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
                   fontSize: "15px",
                   fontWeight: "bold",
                 }}
-                
               >
                 {cell}
               </Th>
@@ -49,7 +60,10 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
           {rows.map((row, i) => (
             <Tr key={i}>
               {row.map((cell, j) => (
-                <Td key={j} style={{ fontFamily: "Varela Round", 'fontSize': '15px'}}>
+                <Td
+                  key={j}
+                  style={{ fontFamily: "Varela Round", fontSize: "15px" }}
+                >
                   {cell}
                 </Td>
               ))}

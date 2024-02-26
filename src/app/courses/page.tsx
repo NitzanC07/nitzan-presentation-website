@@ -24,7 +24,7 @@ function CoursesPage() {
       title: "קורס בניית אתרים מתקדם",
       description: "בקרוב...",
       link: "/courses/master-course/1.1",
-      imagePath: "/images/stylingImages/WallReact.png",
+      imagePath: "/images/stylingImages/Reactjs.png",
       imageAlt: "Young tree grow up on the groud.",
     },
     {
