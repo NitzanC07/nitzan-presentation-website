@@ -17,21 +17,21 @@ function CoursesPage() {
       description:
         "קורס הבסיס לפיתוח אתרי אינטרנט בעזרת שפת HTML, עיצוב אתרים בעזרת CSS, ופיתוח פונקציונלי בעזרת שפת Java Script הפופולרית. את הקורס מלווים תרגולים רבים לחומר התאורתי בהשראת אירועים היסטוריים משמעותיים.",
       link: "/courses/time-journey-through-web-developmental/1.1",
-      imagePath: "/images/stylingImages/HTMLCSSJS-on-bricks-wall.png",
+      imagePath: "/images/stylingImages/HTMLCSSJS-on-bricks-wall.jpg",
       imageAlt: "Little stalk erupts from the ground.",
     },
     {
       title: "קורס בניית אתרים מתקדם",
       description: "בקרוב...",
       link: "/courses/master-course/1.1",
-      imagePath: "/images/stylingImages/Reactjs.png",
+      imagePath: "/images/stylingImages/Reactjs.jpg",
       imageAlt: "Young tree grow up on the groud.",
     },
     {
       title: "סדנת כתיבה יצירתית",
       description: "בקרוב...",
       link: "/courses/creative-writing/1.1",
-      imagePath: "/images/Colorful_tree_with_rainbow_lea2.jpeg",
+      imagePath: "/images/stylingImages/Colorful_tree_with_rainbow_lea2.jpeg",
       imageAlt: "Colorful tree with rainbow leaves.",
     },
   ];
