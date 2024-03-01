@@ -1771,7 +1771,10 @@
               "decorativeLine": "true"
             },
             {
-              "sectionTitle": "זמן תרגול - לצקת משמעות לתוכן"
+              "sectionTitle": "זמן תרגול - לצקת משמעות לתוכן",
+              "textBlock": [
+                "בהמשך לתרגיל המתגלגל שעבדת עליו מתחילת יחידת הלימוד הזאת, החלף את כל תגי ה-div שהשתמשת בהם בתגיות בעלות משמעות סמנטית בהתאם למשמעות התוכן שבתוכן."
+              ]
             },
             {
               "resources": [
@@ -1946,7 +1949,106 @@
         {
           "lessonId": "2.8",
           "title": "מידע על העמוד ו-Meta Data",
-          "sections": []
+          "sections": [
+            {
+              "sectionTitle": "מה בראש?",
+              "textBlock": [
+                "אחרי שלמדנו על כל הרכיבים והעצמים של גוף העמוד (body), וראינו איזה איברים נפלאים הוא יכול להכיל, הגיע הזמן לדבר קצת על הראש. אחרי הכל בלי הראש, כל הגוף לא יכול לתפקד. אז מה יש לנו בראש העמוד?",
+                "בראש מסמך ה-HTML, כלומר בין תגיות ה-head אנחנו נמצא אם המידע שלא מוצג למשתמש שלנו. ונכלל בו כל המידע אודות האתר, פרטים טכניים, שם האתר, קישורים לקבצים שנדרשים כדי להריץ את האתר כהלכה, שפת הפיתוח של האתר ושפת התוכן שבו, שפת קידוד האתר, מילות מפתח למנועי חיפוש, ועוד תכנים שמוסרים מידע על האתר.",
+                "המידע הזה אמנם נסתר מעיני המשתמש, אבל הוא חשוב מאוד שכן מי שכן עושה בו שימוש הם הדפדפנים שמקבלים מידע רלוונטי כיצד לקודד את האתר ולהציגו בדיוק כפי שאנחנו תכננו, מנועי החיפוש סורקים את האתרים, קודם כל לפי מילות המפתח שהם מוצאים, וככה הם יודעים לתת לנו תוצאות מדויקות של מה שאנחנו מחפשים. וגם אם אנחנו משתמשים בקבצים שונים באתר שהכרחיים לניראות ולתפקוד שלו, אז אנחנו נקשר אותם בדיוק במקום הזה - בראש.",
+                "יש לנו כמה תגיות שכדאי לנו להכיר בתוך ה-head. אך ראשית, בואו ניזכר במה שלמדנו בשיעור הראשון של היחידה הזאת על המבנה האנטומי של מסמך HTML, ואז נעבור על כל התגיות הבסיסיות בנפרד."
+              ],
+              "codeBox": {
+                "codeLang": "HTML",
+                "lines": [
+                  {
+                    "element": "<!DOCTYPE html>",
+                    "spaces": 0,
+                    "color": "white"
+                  },
+                  { "element": "<html>", "spaces": 0, "color": "white" },
+                  { "element": "<head>", "spaces": 2, "color": "blue.300" },
+                  {
+                    "element": "<meta charset=\"UTF-8\" />",
+                    "spaces": 4,
+                    "color": "pink.200"
+                  },
+                  {
+                    "element": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+                    "spaces": 4,
+                    "color": "pink.200"
+                  },
+                  { 
+                    "element": "<meat name='Nitzan Cohen' content='Learning Web Development' />",
+                    "spaces": 4,
+                    "color": "pink.200"
+                  },
+                  {
+                    "element": "<title>Document</title>",
+                    "spaces": 4,
+                    "color": "green.300"
+                  },
+                  { "element": "<link rel='icon' href='favicon.ico' type='image/x-icon' />", "spaces": 4, "color": "yellow.300" },
+                  { "element": "<link rel='stylesheet' href='styling-file.css' />", "spaces": 4, "color": "cyan.300" },
+                  { "element": "<style></style>", "spaces": 4, "color": "cyan.300" },
+                  { "element": "<script src='script-file.js' defer></script>", "spaces": 4, "color": "orange.300" },
+                  { "element": "</head>", "spaces": 2, "color": "blue.300" },
+                  { "element": "<body>", "spaces": 2, "color": "white" },
+                  { "element": "", "spaces": 2, "color": "white" },
+                  { "element": "<script src='script-file.js'></script>", "spaces": 4, "color": "orange.300" },
+                  { "element": "</body>", "spaces": 2, "color": "white" },
+                  { "element": "</html>", "spaces": 0, "color": "white" }
+                ]
+              }
+            },
+            {
+              "sectionTitle": "title - כותרת העמוד",
+              "textBlock": [
+                "צמד תגיות אלה, תגית פותחת ותגית סוגרת, מציינות את כותרת העמוד. אבל שימו לב להבדל כותרת זו לבין הכותרת בגוף העמוד שלמדנו בשיעורים הקודמים (h1), הכותרת title שמופיעה בראש מוסרת מידע על נושא האתר ולא מוצגת בתוך גוף העמוד. למעשה, אנחנו כן יכולים לראות את התוכן שנמצא בין תגיות אלה בכותרת החלון של האתר, אך זה המקום היחיד שאפשר לראות כותרת זו."
+              ]
+            },
+            {
+              "sectionTitle": "meta - פרטים על העמוד (metadata)",
+              "textBlock": [
+                "metadata (מטא-דאטה) זה למעשה נתונים שמתארים נתונים. בתגית meta אנחנו יכולים למצוא את כל הנתונים על הנתונים של האתר. ובשיעור הזה אנחנו נראה חלק מהנתונים שכתובים שם ואת הבסיסיים שבהם."
+              ],
+              "listBlock": [
+                "שפת הקידוד - charset='utf-8' - המחרוזת הזאת utf-8 מוסרת מידע שהאתר שאנחנו בונים מכיל תווים אוניברסליים, אותיות ומספרים, מכל השפות האנושיות הקיימות בעולם. משמעות הדבר היא שכאשר אנחנו משתמשים בשיטת קידוד זו אנחנו יכולים ליצור אתר באיזו שפה אנושית שאנחנו רק רוצים. אם מעניין אתכם ללמוד על utf-8 ועל שיטות קידוד נוספות, אתם יותר ממוזמנים להציץ ברשימת המקורות להרחבת הידע שמופיעה בסוף השיעור הזה.",
+                "תג ה-meta השני שאנחנו מוצאים בדוגמא שלמעלה מוסר לנו מידע על גודל חלון התצוגה והיחס רוחב-גובה האופטימלי לתצוגה של האתר.",
+                "התג השלישי שאנחנו יכולים לראות מוסר מידע ופרטים על מחבר האתר, או שם האתר, ועל התוכן שלו בצורה תמציתית וקצרה. וכמובן במידע זה מנועי החיפוש עושים כאשר הם סורקים את האתר, לכן בתגית זו ההמלצה היא להוסיך מילות מפתח רלוונטיות לאתר ומופרדות בפסיקים."
+              ]
+            },
+            {
+              "sectionTitle": "Style - וקישורים לקבצים נוספים",
+              "textBlock": [
+                "אנחנו יכולים להוסיף עיצוב לאתר ישירות בתוך מסמך ה-HTML בין תגיות ה-style, ואנחנו יכולים גם לכתוב קובץ עיצוב נפרד ולקשר אותו למסמך ה-HTML באמצעות תגית ה-link. בעניין הזה אנחנו נרחיב כמובן יותר ביחידת הלימוד הבאה של הקורס, אבל בינתיים אפשר כבר להכיר את האפשרויות האלו.",
+                "בהזדמנות זו חשוב לציין ולהבין שאתר אינטרנט לא מורכב ממסמך HTML בודד, אלא למעשה זה אתר אינטרנט אחד הוא אוסף של הרבה קבצים מסוגים שונים, בינהם דפי HTML, קבצי עיצוב וסגנון, קבצי פונקציות ותפקודיות, תמונות, סרטונים, אייקונים ועוד, ועוד ועוד. כמובן שבין כל הקבצים האלה צריכה להיות קישוריות, וחלק מהקישוריות הזאת באה לידי ביטוי כאן בין תגי ה-head, באמצעות תגית ה-link."
+              ]
+            },
+            {
+              "sectionTitle": "Script",
+              "textBlock": [
+                "כמו כן, בין הקבצים המקושרים אנחנו יכולים גם לקשר קובץ של סקריפטים (Scripts). גם אותם כמו עיצוב אנחנו יכולים ליצור בתוך מסמך ה-HTML, אך דבר זה אינו מומלץ, ועדיף ליצור את קובץ נפרד ולקשר אותו לדף ה-HTML.",
+                "כמו כן, כשאנחנו מחברים קובץ script חשוב שהקובץ ייטען אחרי שכל רכיבי ה-HTML נטענו, ומומלץ גם אחרי שקבצי העיצוב נטענו. זאת על מנת להמנע משגיאות אפשריות שעלולות להתרחש במקרה שפונקציה אמורה לפעול על רכיב מסוים שעדיין לא נטען בעמוד. מהסיבה הזאת הוספנו את מילת המפתח defer בקישור של קובץ ה-script, ובדרך זו הדפדפן יודע שהוא צריך לטעון את הקובץ הזה אחרון. אפשרות נוספת היא לקשר את קובץ ה-script בסוף מסמך ה-HTML, בתחתית ה-body."
+              ]
+            },
+            {
+              "resources": [
+                {
+                  "title": "What's in the head? Metadata in HTML / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"                
+                },
+                {
+                  "title": "UTF-8 / Article by Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/UTF-8"
+                },
+                {
+                  "title": "UTF-8 code page / Table of all characters and their unicode",
+                  "url": "https://www.charset.org/utf-8/2"
+                }
+              ]
+            }
+          ]
         },
         {
           "lessonId": "2.9",
@@ -2088,6 +2190,32 @@
               "sectionTitle": "זמן תרגול",
               "textBlock": [
                 "בהמשך לתרגיל המתגלגל מתחילת הקורס, הוסיפו לכל רכיב במסמך ה-HTML שלכם מחלקה (class) ייעודית בעלת שם משמעותי שמתאר בצורה תמציתית את קבוצת הרכיבים אליה אותו רכיב משתייך."
+              ],
+              "resources": [
+                {
+                  "title": "class / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class"
+                },
+                {
+                  "title": "id / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"
+                },
+                {
+                  "title": "HTML class attribute / Article by W3School",
+                  "url": "https://www.w3schools.com/html/html_classes.asp"
+                },
+                {
+                  "title": "HTML id attribute / Article by W3School",
+                  "url": "https://www.w3schools.com/html/html_id.asp"
+                },
+                {
+                  "title": "HTML Class Attribute / Article by Geeks for Geeks",
+                  "url": "https://www.geeksforgeeks.org/html-class-attribute/"
+                },
+                {
+                  "title": "HTML Id Attribute / Article by Geeks for Geeks",
+                  "url": "https://www.geeksforgeeks.org/html-id-attribute/?ref=lbp"
+                }
               ]
             }
           ]
@@ -2150,7 +2278,16 @@
         {
           "lessonId": "4.2",
           "title": "משתנים, מחרוזות וסוגי נתונים אחרים",
-          "sections": []            
+          "sections": [
+            {
+              "resources": [
+                {
+                  "title": "Grammer and types / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations"
+                }
+              ]
+            }
+          ]            
         },
         {
           "lessonId": "4.3",
@@ -2179,13 +2316,7 @@
                   ["15", "1111", "F"],
                   ["16", "10000", "10"]
                 ]
-              },
-              "resources": [
-                {
-                  "title": "Grammer and types / Article by MDN web docs",
-                  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations"
-                }
-              ]
+              }              
             }
           ]
         },
