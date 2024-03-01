@@ -18,11 +18,13 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
   const courseContent = courseData.courseContent;
   const courseId = courseData.courseId;
 
+  const navigateToLesson = () => {}
+
   return (
     <Accordion>
       {courseContent.map((moduleCourse: any) => (
         <AccordionItem key={moduleCourse.module}>
-          <AccordionButton tabIndex={2}>
+          <AccordionButton tabIndex={2} _hover={{bgColor: "rgba(255, 255, 255, 0.3)"}}>
             <Heading
               as="h3"
               fontSize={18}
@@ -40,18 +42,20 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
                 <ListItem
                   key={lesson.lessonId}
                   tabIndex={-1}
-                  mb={1}
-                  p={1}
+                  mb={2}
+                  p={2}
                   borderWidth={0}
                   borderRadius={4}
                   style={{
                     fontFamily: "Varela Round, sans-serif",
                   }}
                   bgColor={"rgba(255, 255, 255, 0.1)"}
+                  _hover={{bgColor: "rgba(255, 255, 255, 0.3)"}}
                 >
                   <Link
                     href={`/courses/${courseId}/${lesson.lessonId}`}
                     color="white"
+                    display={'block'}
                     tabIndex={1}
                   >
                     <b>שיעור {lesson.lessonId}:</b> {lesson.title}

@@ -2086,17 +2086,17 @@
       "lessons": [
         {
           "lessonId": "3.1",
-          "title": "מה זה CSS, ועל מה הוא אחראי בבניית אתרי אינטרנט?",
+          "title": "מה זה CSS?",
           "sections": []
         },
         {
           "lessonId": "3.2",
-          "title": "הגדרות כלליות של CSS.",
+          "title": "מאפייני עיצוב בסיסיים",
           "sections": []
         },
         {
           "lessonId": "3.3",
-          "title": "מאפייני עיצוב בסיסיים",
+          "title": "צבעוניות ו-RGB",
           "sections": []
         }
       ]
@@ -2122,10 +2122,15 @@
         {
           "lessonId": "4.2",
           "title": "משתנים, מחרוזות וסוגי נתונים אחרים",
+          "sections": []            
+        },
+        {
+          "lessonId": "4.3",
+          "title": "בסיסי ספירה",
           "sections": [
             {
               "tableData": {
-                "caption": "מספרים עשרוניים ובינאריים",
+                "caption": "מספרים עשרוניים, בינאריים והקסא-דצימליים",
                 "headingRow": ["בסיס 10", "בסיס 2", "בסיס 16"],
                 "rows": [
                   ["0", "0", "0"],
@@ -2167,10 +2172,11 @@
           "sections": []
         },
         { "lessonId": "4.6", "title": "לולאות (Loops)", "sections": [] },
-        { "lessonId": "4.7", "title": "פונקציות (Functions)", "sections": [] },
-        { "lessonId": "4.8", "title": "מחלקות (Classes)", "sections": [] },
+        { "lessonId": "4.7", "title": "תכנות מונחה עצמים, Object Oriented Programming (OOP)", "sections": [] },
+        { "lessonId": "4.8", "title": "פונקציות (Functions)", "sections": [] },
+        { "lessonId": "4.9", "title": "מחלקות (Classes)", "sections": [] },
         {
-          "lessonId": "4.9",
+          "lessonId": "4.10",
           "title": "פונקציות א-סינכרוניות (Promises)",
           "sections": []
         }

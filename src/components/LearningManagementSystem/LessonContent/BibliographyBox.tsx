@@ -32,7 +32,7 @@ function BibliographyBox({ resources }: BibliographyBoxProps) {
       <List>
         {resources.map((resource, i) => (
           <ListItem key={i} listStyleType={"initial"} mx={7}>
-            <Link href={resource.url} target="_blank">
+            <Link href={resource.url} isExternal>
               {resource.title}
             </Link>
           </ListItem>
