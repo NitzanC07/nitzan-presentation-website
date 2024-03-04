@@ -8,11 +8,14 @@ import FrameClause from "./FrameClause";
 import CodeBox from "./CodeBox";
 import Gallery from "./Gallery";
 import ULbox from "./ULbox";
-import { Box } from "@chakra-ui/react";
+import { Box, Button, Flex, FormControl, FormLabel, HStack, Radio, RadioGroup, VStack } from "@chakra-ui/react";
 import BigButton from "./BigButton";
 import DecorativeLine from "./DecorativeLine";
 import BibliographyBox from "./BibliographyBox";
 import TableData from "./TableData";
+import FormRadioButtons from "./FormQuestion";
+import FormQuestion from "./FormQuestion";
+import FormParent from "./FormParent";
 
 interface LessonSectionsProps {
   lessonId: string;
@@ -88,6 +91,10 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
           {section.resources && (
             <BibliographyBox resources={section.resources} />
           )}
+          {section.formQuestion && (
+            <FormParent />
+          )}         
+          
         </div>
       ))}
     </Box>

@@ -2222,8 +2222,13 @@
         },
         {
           "lessonId": "2.10",
-          "title": "תרגיל מסכם",
-          "sections": []
+          "title": "בחן את עצמך",
+          "sections": [
+            {
+              "sectionTitle": "בחן את עצמך",
+              "formQuestion": true
+            }
+          ]
         }
       ]
     },
