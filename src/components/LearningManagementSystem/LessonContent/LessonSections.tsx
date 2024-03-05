@@ -101,7 +101,7 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
           {section.resources && (
             <BibliographyBox resources={section.resources} />
           )}
-          {section.testYourself && <FormParent />}
+          {section.testYourself && <FormParent testYourself={section.testYourself} />}
         </div>
       ))}
     </Box>

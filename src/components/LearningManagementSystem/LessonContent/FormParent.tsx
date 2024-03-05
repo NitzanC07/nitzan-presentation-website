@@ -1,22 +1,19 @@
 import React from "react";
 import TestYourself from "./TestYourself";
 
-function FormParent() {
-  const test = [
-    {
-      question: "שאלה 1",
-      options: ["אפשרות 1", "אפשרות 2", "אפשרות 3"],
-      correctAnswer: "אפשרות 1",
-      explainAnswer: "התשובה הנכונה היא, כי..."
-    },
-    {
-      question: "שאלה 2",
-      options: ["אפשרות 1", "אפשרות 2", "אפשרות 3", "אפשרות 4"],
-      correctAnswer: "אפשרות 1",
-      explainAnswer: "התשובה הנכונה היא, כי..."
-    },
-  ];
-
+interface TestYourselfProps {
+  testYourself: {
+    question: string;
+    options: string[];
+    correctAnswer: string;
+    explainAnswer: string;
+    codeBox?: {
+      lines: { element: string; spaces: number; color: string }[];
+      codeLang: string;
+    };
+  }[];
+}
+function FormParent({ testYourself }: TestYourselfProps) {
   const shuffleAnswers = (options: string[]) => {
     const copiedOptions = options.map((x) => x);
     for (let i = copiedOptions.length - 1; i > 0; i--) {
@@ -29,12 +26,13 @@ function FormParent() {
     return copiedOptions;
   };
 
-  const shuffledTest = test.map((sectionTest) => {
+  const shuffledTest = testYourself.map((sectionTest) => {
     return {
       question: sectionTest.question,
       options: shuffleAnswers(sectionTest.options),
       correctAnswer: sectionTest.correctAnswer,
-      explainAnswer: sectionTest.explainAnswer
+      explainAnswer: sectionTest.explainAnswer,
+      codeBox: sectionTest.codeBox || undefined,
     };
   });
 

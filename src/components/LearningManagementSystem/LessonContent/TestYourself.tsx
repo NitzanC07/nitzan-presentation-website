@@ -5,13 +5,27 @@ import {
   Flex,
   FormControl,
   FormLabel,
+  Heading,
   Radio,
   RadioGroup,
   Text,
 } from "@chakra-ui/react";
+import CodeBox from "./CodeBox";
 
 interface TestYourselfProps {
-  testQue: { question: string; options: string[]; correctAnswer: string ; explainAnswer: string; }[];
+  testQue: {
+    question: string;
+    options: string[];
+    correctAnswer: string;
+    explainAnswer: string;
+    codeBox?:
+      | {
+          lines: { element: string; spaces: number; color: string }[];
+          outputCode?: { type: string; content: string; style: {} }[];
+          codeLang: string;
+        }
+      | undefined;
+  }[];
 }
 
 function TestYourself({ testQue }: TestYourselfProps) {
@@ -34,11 +48,29 @@ function TestYourself({ testQue }: TestYourselfProps) {
 
   return (
     <form onSubmit={checkAnswers}>
-      <FormControl>
+      <FormControl px={3}>
         {testQue.map((testSection, i) => (
           <Box key={i} my={4}>
-            <FormLabel style={{ fontFamily: "Varela Round, sans-serif" }}>
+            <Heading
+              style={{ fontFamily: "Varela Round, sans-serif" }}
+              tabIndex={1}
+              fontSize={18}
+              mb={4}
+              >
+              שאלה {`${i + 1}`}
+            </Heading>
+            <FormLabel
+              style={{ fontFamily: "Varela Round, sans-serif" }}
+              fontSize={16}
+              tabIndex={1}
+            >
               {testSection.question}
+              {testSection.codeBox && (
+                <CodeBox
+                  codeLanguage={testSection.codeBox.codeLang}
+                  codeBlock={testSection.codeBox.lines}
+                />
+              )}
             </FormLabel>
             <RadioGroup
               onChange={(value) => {
@@ -58,32 +90,66 @@ function TestYourself({ testQue }: TestYourselfProps) {
                   return (
                     <Radio
                       key={j}
+                      tabIndex={1}
                       value={option}
-                      py={1}
+                      py={2}
+                      px={5}
                       colorScheme="orange"
                       isDisabled={showAnswer ? true : false}
-                    >
-                      <Text style={{ fontFamily: "Varela Round, sans-serif" }}>
+                      bgColor={"orange.200"}
+                      >
+                      <Text
+                        style={{ fontFamily: "Varela Round, sans-serif" }}
+                        fontSize={16}
+                        tabIndex={1}
+                      >
                         {option}
                       </Text>
                     </Radio>
                   );
                 })}
                 {showAnswer && (
-                  <Text
-                    style={{ fontFamily: "Varela Round, sans-serif" }}
-                    bgColor={`${isCorrect[i] ? "green" : "red"}`}
-                    color={`yellow.200`}
+                  <Box
+                    my={3}
+                    p={2}
+                    bgColor={"white"}
+                    borderRadius={5}
+                    borderColor={`${isCorrect[i] ? "green.400" : "red.400"}`}
+                    borderWidth={2}
                   >
-                    הסבר לשאלה: {testSection.explainAnswer}
-                  </Text>
+                    <Heading
+                      fontSize={20}
+                      tabIndex={1}
+                      style={{ fontFamily: "Varela Round, sans-serif" }}
+                      color={`${isCorrect[i] ? "green.400" : "red.400"}`}
+                      >
+                      {isCorrect[i] ? "נכון מאוד!" : "טעות"}
+                    </Heading>
+                    <Text
+                      fontSize={16}
+                      style={{ fontFamily: "Varela Round, sans-serif" }}
+                      color={`black`}
+                      tabIndex={1}
+                    >
+                      {testSection.explainAnswer}
+                    </Text>
+                  </Box>
                 )}
               </Flex>
             </RadioGroup>
           </Box>
         ))}
 
-        <Button type="submit">בדיקה</Button>
+        <Flex justifyContent={"flex-end"}>
+          <Button
+            type="submit"
+            colorScheme="orange"
+            style={{ fontFamily: "Varela Round, sans-serif" }}
+            tabIndex={1}
+          >
+            בדיקה
+          </Button>
+        </Flex>
       </FormControl>
     </form>
   );

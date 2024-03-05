@@ -30,8 +30,13 @@ export interface Lesson {
     imagesGallery?: { srcUrl: string; altText: string; descText: string }[];
     BigButton?: { urlLink: string; text: string };
     resources?: { title: string; url: string }[];
+    testYourself?: {
+      question: string;
+      options: string[];
+      correctAnswer: string;
+      explainAnswer: string;
+    }[];
     decorativeLine?: boolean;
-    testYourself?: boolean;
   }[];
 }
 export interface CourseContent {
