@@ -2226,7 +2226,7 @@
           "sections": [
             {
               "sectionTitle": "בחן את עצמך",
-              "formQuestion": true
+              "testYourself": true
             }
           ]
         }

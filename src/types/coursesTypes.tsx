@@ -31,7 +31,7 @@ export interface Lesson {
     BigButton?: { urlLink: string; text: string };
     resources?: { title: string; url: string }[];
     decorativeLine?: boolean;
-    formQuestion?: boolean;
+    testYourself?: boolean;
   }[];
 }
 export interface CourseContent {
