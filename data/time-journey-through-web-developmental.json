@@ -84,7 +84,7 @@
             {
               "sectionTitle": "מה זה HTML?",
               "image": {
-                "url": "/images/stylingImages/Firefly Close-up of an ancient colonnaded structure in ancient Greek style on a hill with a backdrop.jpg",
+                "url": "/images/stylingImages/logo-html.png",
                 "altText": "Firefly Close-up of an ancient colonnaded structure in ancient Greek style on a hill with a backdrop",
                 "width": [300, 400]
               }
@@ -2367,26 +2367,295 @@
       "lessons": [
         {
           "lessonId": "3.1",
-          "title": "מה זה CSS?",
+          "title": "תחביר וצעדים ראשונים עם CSS?",
           "sections": [
             {
               "sectionTitle": "מה זה CSS?",
+              "textBlock": [
+                "בפרק הקודם למדנו את הרכיבים הבסיסיים של שפת HTML. אם נדמה זאת לגוף האדם, אז עכשיו אנחנו יודעים לבנות את העצמות והשלד של הגוף. ביחידת לימוד זו נלמד להוסיף על השלד את העור. כמו שהעור בגוף האדם מבטא את הצד החזותי שלנו, כך גם באמצעות שפת CSS אנחנו מבטאים את הצד החזותי של האתר."
+              ],
               "image": {
-                "url": "/images/stylingImages/sorting-gemstones-into-four-ancient-bricks.jpeg",
+                "url": "/images/stylingImages/logo-css.png",
                 "altText": "Colorful gemstones on bricks.",
                 "width": [300, 400]
               }
+            },
+            {
+              "textBlock": [
+                "CSS (Cascading Style Sheets, דפי סגנון מדורגים) זו שפה שמשתמשים בה כדי לעצב ולסגנן דפי אינטרנט שנכתבים באמצעות שפת HTML. שפת CSS מתארת למעשה את אופן הצגתם של רכיבי ה-HTML בתוך העמוד ואת הסידור שלהם ביחד לעמוד כולו, וביחס לרכיבי אחרים שנמצאים בו. בשונה משפת HTML, שפת CSS היא לא שפת markup, כלומר היא לא בנויה על תגיות כמו שלמדנו בפרק הקודם, אלא היא שפה שמתבססת על בחירת רכיב HTML מסוים ועיצובו."                
+              ]              
+            },
+            {
+              "sectionTitle": "יישום CSS בתוך מסמך HTML",
+              "textBlock": [
+                "כמו שלמדנו לקראת סוף יחידת הלימוד הקודמת, את העיצוב אנחנו יכולים להוסיף בתגיות הראש (head) בתוך צמד תגיות style ייעודיות לכל נושא ה-CSS והכלת העיצוב של האתר, באופן הבא:"
+              ],
+              "codeBox": {
+                "codeLang":"HTML",
+                "lines": [
+                  {"element": "<head>", "spaces": 0, "color": "white"},
+                  {"element": "<style>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "...", "spaces": 4, "color": "gray.500"},
+                  {"element": "css rules", "spaces": 4, "color": "gray.500"},
+                  {"element": "...", "spaces": 4, "color": "gray.500"},
+                  {"element": "</style>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "</head>", "spaces": 0, "color": "white"}
+                ]
+              }
+            },
+            {
+              "sectionTitle": "תחביר שפת CSS",
+              "textBlock":[
+                "כמו שראינו בדוגמא האחרונה צורת הכתיבה של שפת CSS היא שונה ממה שלמדנו עד עכשיו. למעשה היא בנויה ממצביע (Selector) ומהגדרה (Declaration). הגדרה מורכבת אף היא משני חלקים - מאפיין (Property) וערך (Value). כפי שהאיור הבא ממחיש זאת."
+              ],
+              "image": {
+                "url": "/images/lessonsContents/module3/lesson1/declaration-css.png",
+                "altText": "Declaration of CSS rule.",
+                "width": [300, 400]
+              }
+            },
+            {
+              "textBlock": [
+                "Selector הוא למעשה המצביע שמסמן רכיב HTML מסוים שאותו אנחנו רוצים לעצב. אנחנו יכולים לבחור גם כמה רכיבים שונים ולהכיל על כולם את אותו עיצוב אם פשוט נוסיף לפני פתיחת הסוגריים המסולסלים את כל הרכיבים שאנחנו רוצים להצביע. בדוגמא להלן בחרנו לקבוע שגם כותרת ראשית וגם טקסט רגיל של פסקה יהיו בגודל 18 פיקסלים."
+              ],
+              "codeBox": {
+                "codeLang": "CSS",
+                "lines": [
+                  {"element": "h1, p {", "color": "white", "spaces": 0},
+                  {"element": "font-size: 18px;", "color": "white", "spaces": 2},
+                  {"element": "}", "color": "white", "spaces": 0}
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "Declaration היא למעשה הגדרה של חוקיות בודדת שקיימת במאפיינים של הרכיב הנבחר. בהגדרה זו אנחנו בוחרים את המאפיין שאותו אנחנו רוצים לשנות או לקבוע, ואת הערך אנחנו רוצים לעצב את הרכיב לפיו. כל הגדרה כזאת חייבת להכיל מאפיין וערך מופרדים בינהם בנקודותיים ומסתיימים בסימן נקודה ופסיק (;)."
+              ]
+            },
+            {
+              "textBlock": [
+                "לדוגמא, בואו וניקח את קוד ה-HTML הבא שמכיל כותרת ראשית, כפי שלמדנו ביחידת הלימוד הקודמת."
+              ],
+              "codeBox": {
+                "codeLang": "HTML",
+                "lines": [
+                  { "element": "<h1>Sample Heading</h1>", "spaces": 0, "color": "white" }
+                ],
+                "outputCode":[
+                  {
+                    "type": "h1",
+                    "content": "Sample Heading",
+                    "style": {
+                      "fontSize": "2em",
+                      "marginTop": "0.67em",
+                      "marginBottom": "0.67em",
+                      "marginLeft": "0",
+                      "marginRight": "0",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "אנחנו יכולים להשתמש בשפת CSS ולהכיל על כותרת זו עיצוב ייחודי באמצעות בחירת סוג הרכיב (h1) והגדרת צבע הטקסט לכחול."
+              ],
+              "codeBox": {
+                "codeLang": "CSS",
+                "lines": [
+                  {"element": "h1 { color: blue; }", "spaces": 0, "color": "white"}
+                ],
+                "outputCode": [
+                  {
+                    "type": "h1",
+                    "content": "Sample Heading",
+                    "style": {
+                      "color": "blue",
+                      "fontSize": "2em",
+                      "marginTop": "0.67em",
+                      "marginBottom": "0.67em",
+                      "marginLeft": "0",
+                      "marginRight": "0",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "sectionTitle": "שיטות הצבעת Selectors",
+              "textBlock": [
+                "כשאנחנו מצביעים על רכיב p ומשתמשים בו כ-selector אנחנו למעשה קובעים שמרגע זה העיצוב החדש שקבענו יוכל בכל הפסקאות שאנחנו כותבים בעמוד. הדבר הזה עלול להוות בעיה במקרים שבהם יש לנו באתר טקסטים מסוגים שונים, שאנחנו מעוניינים לעצב בצורות שונות. לכן ישנן שיטות נוספות לבחירת אלמנטים שהן לא מצביעות על סוג האלמנט, אלא על המחלקה (class) שלו או על הזהות (id) שלו.",
+                "לפי השיטה הזאת, אנחנו פשוט מציינים את שם המחלקה או הזהות כ-selector, ואז מגדירים כרגיל את כל הגדרות העיצוב. אך כדי להבדיל בין שם של רכיב HTML (לדוגמא, <ul>) לבין שם של מחלקה או זהות יש כמה סימנים שאנחנו צריכים להכיר.",
+                "אם ברצוננו להצביע על שם של מחלקה, נוסף את הסימן נקודה (.) בתחילת ה-selector. אם אנחנו רוצים להצביע על רכיב מסוים לפי הזהות (id) שלו, אז נתחיל את ה-selector בסימן סולמית (#)."
+              ],
+              "codeBox": {
+                "codeLang": "HTML",
+                "lines": [
+                  {"element": "<body>", "spaces": 0, "color": "white"},
+                  {"element": "<p class='paragraphArticle'>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "We are learning <b id='boldText'>CSS</b>.", "spaces": 4, "color": "white"},
+                  {"element": "</p>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "</body>", "spaces": 0, "color": "white"}
+                ]
+              }
+            },
+            {
+              "codeBox":{
+                "codeLang": "CSS",
+                "lines":[
+                  {"element": "<style>", "spaces": 0, "color": "white"},
+                  {"element": ".paragraphArticle {", "spaces": 2, "color": "cyan.300"},
+                  {"element": "font-size: 22px;", "spaces": 4, "color": "cyan.300"},
+                  {"element": "color: orange;", "spaces": 4, "color": "cyan.300"},
+                  {"element": "}", "spaces": 2, "color": "cyan.300"},
+                  {"element": " ", "spaces": 2, "color": "cyan.300"},
+                  {"element": "#boldText {", "spaces": 2, "color": "cyan.300"},
+                  {"element": "color: red;", "spaces": 4, "color": "cyan.300"},
+                  {"element": "}", "spaces": 2, "color": "cyan.300"},
+                  {"element": "</style>", "spaces": 0, "color": "white"}
+                ],
+                "outputCode":[
+                  {
+                    "type": "div",
+                    "style": {},
+                    "content": [
+                      {
+                        "type": "p",
+                        "style": {
+                          "display": "inline",
+                          "color": "orange",
+                          "fontSize": "22px"
+                        },
+                        "content": "We are learning"
+                      },
+                      {
+                        "type": "b",
+                        "style": {
+                          "color": "red",
+                          "fontSize": "22px"
+                        },
+                        "content": " CSS"
+                      },
+                      {
+                        "type": "p",
+                        "style": {
+                          "display": "inline",
+                          "color": "orange",
+                          "fontSize": "22px"
+                        },
+                        "content": "."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "sectionTitle": "קישוריות ועבודה עם קבצים מרובים",
+              "textBlock": [
+                "אם נכתוב את כל חוקי העיצוב שאנחנו רוצים בתוך מסמך ה-HTML שאנחנו יוצרים, אנחנו יכולים להיתקל בבעיה קשה כבר בתחילת העבודה. מה יקרה אם נרצה להוסיף עמוד לאתר שלנו? איזה עיצוב נחיל עליו? סביר להניח שנרצה שכל העמודים באתר שלנו יהיו מעוצבים בצורה אחידה. לכן אין זה יהיה יעיל לקבוע את חוקי העיצוב עבור כל עמוד בנפרד.",
+                "יותר חכם יהיה ליצור קובץ עיצוב נפרד בתוך תיקיית הפרויקט שלנו ולקשר אותו למסמך ה-HTML באמצעות תגית ה-link שאנחנו יכולים להוסיף בין תגי הראש (head). בצורה הזאת אנחנו יכולים ליצור קובץ עיצוב אחד וליישם אותו לכל העמודים שנבנה בעתיד באתר שלנו בדרך פשוט ויעילה."
+              ],
+              "codeBox": {
+                "codeLang": "Files structure",
+                "lines": [
+                  { "element": "/root", "color": "white", "spaces": 0 },
+                  { "element": "index.html", "color": "white", "spaces": 3 },
+                  { "element": "style.css", "color": "white", "spaces": 3 }
+                ]
+              }
+            },
+            {
+              "codeBox": {
+                "codeLang": "index.html",
+                "lines": [
+                  { "element": "<html>", "spaces": 0, "color": "white" },
+                  { "element": "<head>", "spaces": 2, "color": "white" },
+                  { "element": "<link rel='stylesheet' href='style.css' />", "spaces": 4, "color": "cyan.300" },
+                  { "element": "</head>", "spaces": 2, "color": "white" },
+                  { "element": "<body>", "spaces": 2, "color": "white" },
+                  { "element": " ... ", "spaces": 4, "color": "white" },
+                  { "element": "</body>", "spaces": 2, "color": "white" },
+                  { "element": "</html>", "spaces": 0, "color": "white" }
+                ]
+              }
+            },
+            {
+              "resources": [
+                {
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started", 
+                  "title": "Getting started with CSS / Article by MDN Web docs"
+                },
+                {
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics", 
+                  "title": "CSS Basics / Article by MDN Web docs"
+                },
+                {
+                  "url": "https://www.w3schools.com/css/default.asp", 
+                  "title": "CSS Tutorial / Article by W3Schools"
+                },
+                {
+                  "url": "https://www.w3schools.com/css/css_syntax.asp", 
+                  "title": "CSS Syntax / Article by W3Schools"
+                },
+                {
+                  "url": "https://www.w3schools.com/css/css_selectors.asp", 
+                  "title": "CSS Selectors / Article by W3Schools"
+                }
+              ]
             }
           ]
         },
         {
           "lessonId": "3.2",
-          "title": "מאפייני עיצוב בסיסיים",
+          "title": "תכנים טקסטואלים ועיצוב גופן",
           "sections": []
         },
         {
           "lessonId": "3.3",
-          "title": "צבעוניות ו-RGB",
+          "title": "סוגי צבעים ב-CSS",
+          "sections": []
+        },
+        {
+          "lessonId": "3.4",
+          "title": "עיצוב העמוד הכללי",
+          "sections": []
+        },
+        {
+          "lessonId": "3.5",
+          "title": "תיבות עיצוב (Box Model) וריווח",
+          "sections": []
+        },
+        {
+          "lessonId": "3.6",
+          "title": "CSS3: Flexbox",
+          "sections": []
+        },
+        {
+          "lessonId": "3.7",
+          "title": "CSS3: Grid",
+          "sections": []
+        },
+        {
+          "lessonId": "3.8",
+          "title": "מיקום בעמוד, Position",
+          "sections": []
+        },
+        {
+          "lessonId": "3.9",
+          "title": "SASS",
+          "sections": []
+        },
+        {
+          "lessonId": "3.10",
+          "title": "מבוא לאנימציות",
+          "sections": []
+        },
+        {
+          "lessonId": "3.11",
+          "title": "בחן את עצמך",
           "sections": []
         }
       ]
