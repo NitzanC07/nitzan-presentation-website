@@ -35,13 +35,14 @@
             {
               "sectionTitle": "סביבות עבודה ועורכי קוד",
               "textBlock": [
-                "בשיעורים הקודמים למדנו לבנות עמוד אינטרנט, ואפילו הצגנו אותו בדפדפן (Browser) של מערכת ההפעלה שלנו. כתבנו את הקוד ויצרנו כתבה דיגיטלית בעזרת תוכנת עיבוד תמלילים הבסיסית שמסופקת עם מערכת ההפעלה Windows - קובץ txt. של Notepad. אבל כשכותבים קוד יש סביבות עבודה אחרות נוחות יותר לשימוש וידידותיות הרבה יותר. בשיעור הקרוב נכיר את סביבת העבודה Virtual Studio Code, שאיתה אנחנו נעבוד לאורך כל הקורס הזה."
+                "לפני שאנחנו ניגשים למלאכת כתיבת הקוד ובניית אתר אינטרנט, בואו ונכיר את סביבות העבודה שאנחנו יכולים לעבוד בהן. חשוב להבין קודם כל שקוד הוא פשוט מאוד - טקסט. זה בסך הכל קובץ טקסטואלי שבתהליכים מסוימים המחשב יודע לתרגם את הטקסט הזה לשפת מכונה ולתת לנו את התוצאה הרצויה (בקורס הזה אנחנו לא נלמד לתכנת בשפת המכונה). לכן, אנחנו יכולים לכתוב קוד HTML אפילו בקובץ Notepad עם סיומת txt הכי פשוט שיש.",
+                "יחד עם זאת, קיימות מספר תוכנות לכתיבה ועריכת קוד שהופכות את החיים שלנו כמתכנתים להרבה יותר קלים. התוכנות האלה כבר מכירות את שפת הפיתוח ויודעות להשלים מילות מפתח, הן יודעות לסמן מילות מפתח מסוגים שונים בצבעים שונים וכך להפוך את הקוד לקריא וברור יותר. והן מתממשקות בצורה קלה ופשוט עם הדפדפן ומאפשרות לנו לראות את התוצאה של מה שכתבנו באופן מיידי."
               ]
             },
             {
               "sectionTitle": "Virtual Studio Code",
               "textBlock": [
-                "Virtual Studio Code, או בשמה המקוצר - VS-Code, היא תוכנת עריכת קוד שפותחה על-ידי חברת Microsoft נפוצה מאוד בקרב מפתחים רבים בתחום פיתוח Web, והיא חופשית לשימוש ללא דמי תשלום.",
+                "אחת התוכנות הנפוצות ביותר והשימושיות היא Virtual Studio Code, או בשמה המקוצר - VS-Code, היא תוכנת עריכת קוד שפותחה על-ידי חברת Microsoft והיא חופשית לשימוש ללא דמי תשלום.",
                 "את תוכנת עריכת הקוד VS-Code ניתן להוריד מהאתר הרשמי שלה. ישנן מספר גרסאות של התוכנה שמותאמות למערכות הפעלה. הקורס הזה מותאם למערכת הפעלה Windows, אבל בהחלט אפשר ללמוד בקורס גם עם מערכות הפעלה שונות ולעשות את ההתאמות הדרושות."
               ],
               "BigButton": {
@@ -51,8 +52,8 @@
             },
             {
               "textBlock": [
-                "לאחר ההורדה וההתקנה של עורך הקוד במחשב אנחנו נדרשים לעוד שני כלי עבודה חשובים שיהפכו לנו את החיים כמתכנתים לקלים יותר. הראשון הוא כמובן דפדפן (Browser) בדיוק כמו שהשתמשנו בשיעורים הקודמים כדי לראות איך יצאה הכתבה הדיגיטלית שיצרנו. ההמלצה היא להשתמש לפחות בשני דפדפנים שונים, בין הדפדפנים הפופולריים, כדי לראות שהאתר שאנחנו בונים נראה כפי שאנחנו רוצים. הדפדפנים הפופולריים והנפוצים שמומלץ להשתמש בהם הם Google Chrome, Microsoft Edge ו-Firefox.",
-                "כמו כן, כלי נוסף וחשוב שכדאי להתקין מתוך תוכנת VS-Code הוא כלי ה-Live Server. כלי זה הוא למעשה תוכנת הרחבה שנמצאת בתוך ה-VS-Code, וכדי להתקין אותה אנחנו צריכים לגשת לספריית ההרחבות (Extentions) שנמצאת בסרגל שבצד שמאל של חלון התוכנה, לכתוב בשורת החיפוש Live Server ולבצע התקנה."
+                "לאחר ההורדה וההתקנה של עורך הקוד במחשב אנחנו נדרשים לעוד שני כלי עבודה חשובים שיהפכו לנו את החיים כמתכנתים לקלים יותר. הראשון הוא כמובן דפדפן (Browser) שככל הנראה יש לכולנו אחד כזה במחשב, בדיוק אותו דפדפן שאתם גולשים באמצעותו באינטרנט. ההמלצה היא להשתמש לפחות בשני דפדפנים שונים, בין הדפדפנים הפופולריים, כדי לראות שהאתר שאנחנו בונים נראה כפי שאנחנו רוצים שיראה. הדפדפנים הפופולריים והנפוצים שמומלץ להשתמש בהם הם Google Chrome, Microsoft Edge ו-Firefox.",
+                "כמו כן, כלי נוסף וחשוב שכדאי להתקין בתוך תוכנת VS-Code הוא כלי ה-Live Server. כלי זה הוא למעשה תוכנת הרחבה שנמצאת בתוך ה-VS-Code, וכדי להתקין אותה אנחנו צריכים לגשת לספריית ההרחבות (Extentions) שנמצאת בסרגל שבצד שמאל של חלון התוכנה, לכתוב בשורת החיפוש Live Server ולבצע התקנה."
               ],
               "BigButton": {
                 "urlLink": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
@@ -173,6 +174,37 @@
               "sectionTitle": "תגיות <div></div>",
               "textBlock": [
                 "כל הרכיבים שאנחנו נבחר לשים בתוך עמוד האינטרנט יהיו אף הם בבלוקים משלהם. בשביל ליצור את הבלוקים האלה אנחנו נשתמש בתגית הבלוק הכללית (The Content Division element) בעזרת התגיות <div> ו-<div/>. בעזרתן אנחנו נוכל לחלק את העמוד לאזורים מוגדרים ונפרדים, לעצב כל איזור בעיצוב ייחודי, למקם את הבלוקים במיקומים מוגדרים, ולמעשה לשחק איתם כרצוננו ולקבוע הכל. "
+              ]
+            },
+            {
+              "sectionTitle": "הערות מְפַתֵּחַ (Comments)",
+              "textBlock": [
+                "עבודת המתכנת היא עבודה שדורשת זמן רב, יש פעמים שאנחנו נעבוד לבד על פרויקט במשך תקופה מסוימת, ויש פעמים שנעבוד בקבוצה עם עוד אנשים על אותו פרויקט. לכן כדאי שנסגל לעצמנו הרגלים נכונים בכתיבת הקוד שיעזרו לנו ולמתכנתים אחרים להבין מה כתבנו, כדי שיהיה אפשר להשתלב בקוד שלנו בצורה מהירה. בין אם זה מתכנתים אחרים שרואים את הקוד שלנו בפעם הראשונה, ובין אם זה אנחנו בעצמנו שרוצים לחזור לקוד שלנו אחרי מספר ימים, שבועות ואפילו חודשים, כדי לתקן או לשפר קטע מסוים בו. לתכונה הזאת קוראים קריאות של הקוד (Readablity) ככל שהקוד שלנו יהיה יותר נקי, מסודר ומפורט, למעשה הוא יהיה קריא יותר, ויהיה לנו ולאחרים יותר קל לעבוד איתו ולהשתלב בו.",
+                "אחד הדברים החשובים שאנחנו צריכים להכיר הן הערות מְפַתֵּחַ (Comments). אלה קטעים בקוד שאנחנו יכולים לכתוב כל מה שאנחנו רוצים בשפה פשוטה כדי לתאר מה עשינו, או להסביר כמה מילים על מה שכתבנו. אנחנו יכולים לכתוב אפילו בעברית את ההערות האלו, והן לא ישפיעו במאום על הניראות או על התוכן של עמוד האינטרנט בדפדפן.",
+                "את ההערכות בשפת HTML אנחנו יכולים להוסיף באופן הבא:"
+              ],
+              "codeBox": {
+                "codeLang":"HTML",
+                "lines": [
+                  {"element": "<body>", "spaces": 0, "color": "white"},
+                  {"element": "<!-- This is a comment, doesn't show in the output -->", "spaces": 2, "color": "yellow.300"},
+                  {"element": "<p>This is a paragraph.</p>", "spaces": 2, "color": "white"},
+                  {"element": "</body>", "spaces": 0, "color": "white"}
+                ],
+                "outputCode": [
+                  {"type": "p", "content": "This is a paragraph.", "style": {}}
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "מלבד זאת להערות יכול להיות שימוש נוסף בתהליך כתיבת הקוד. אם התחלנו לכתוב קטע קוד מסוים שהעבודה עליו טרם הושלמה, מחד איננו רוצים שהוא יוצג בדפדפן, ומאידך אנחנו לא רוצים למחוק אותו. הפתרון הוא להכניס את אותו קטע קוד להערה ולהמשיך לעבוד עליו בפעמים הבאות שנחזור לקוד."
+              ]
+            },
+            {
+              "resources": [
+                {"title": "HTML doctype declaration / Article by W3Schools", "url": "https://www.w3schools.com/tags/tag_doctype.ASP"},
+                {"title": "HTML Comments / Article by W3Schools", "url": "https://www.w3schools.com/html/html_comments.asp"}
               ]
             }
           ]
@@ -755,6 +787,10 @@
                   "url": "https://www.w3schools.com/html/html_lists.asp"
                 },
                 {
+                  "title": "HTML Block and Inline Elements / Article by W3Schools",
+                  "url": "https://www.w3schools.com/html/html_blocks.asp"
+                },
+                {
                   "title": "אוסף העיתונות בספריה הלאומית של ישראל.",
                   "url": "https://www.nli.org.il/he/newspapers/titles?"
                 }
@@ -1098,76 +1134,68 @@
                         "style": {}
                       },
                       {
-                        "type": "tr",
+                        "type": "thead",
                         "content": [
                           {
-                            "type": "th",
-                            "content": "Fruits",
-                            "style": {
-                              "borderWidth": "1px",
-                              "borderColor": "black"
-                            }
-                          },
-                          {
-                            "type": "th",
-                            "content": "Vegetables",
-                            "style": {
-                              "borderWidth": "1px",
-                              "borderColor": "black"
-                            }
-                          }
+                            "type": "tr",
+                            "content": [
+                              {
+                                "type": "th",
+                                "content": "Fruits",
+                                "style": {}
+                              },
+                              {
+                                "type": "th",
+                                "content": "Vegetables",
+                                "style": {}
+                              }
+                            ],
+                            "style": {}
+                          }                          
                         ],
                         "style": {}
                       },
                       {
-                        "type": "tr",
+                        "type": "tbody",
                         "content": [
                           {
-                            "type": "td",
-                            "content": "Tomato",
-                            "style": {
-                              "borderWidth": "1px",
-                              "borderColor": "black"
-                            }
+                            "type": "tr",
+                            "content": [
+                              {
+                                "type": "td",
+                                "content": "Tomato",
+                                "style": {}
+                              },
+                              {
+                                "type": "td",
+                                "content": "Carrot",
+                                "style": {}
+                              }
+                            ],
+                            "style": {}
                           },
                           {
-                            "type": "td",
-                            "content": "Carrot",
-                            "style": {
-                              "borderWidth": "1px",
-                              "borderColor": "black"
-                            }
-                          }
-                        ],
-                        "style": {}
-                      },
-                      {
-                        "type": "tr",
-                        "content": [
-                          {
-                            "type": "td",
-                            "content": "Orange",
-                            "style": {
-                              "borderWidth": "1px",
-                              "borderColor": "black"
-                            }
-                          },
-                          {
-                            "type": "td",
-                            "content": "Lettuce",
-                            "style": {
-                              "borderWidth": "1px",
-                              "borderColor": "black"
-                            }
+                            "type": "tr",
+                            "content": [
+                              {
+                                "type": "td",
+                                "content": "Orange",
+                                "style": {}
+                              },
+                              {
+                                "type": "td",
+                                "content": "Lettuce",
+                                "style": {}
+                              }
+                            ],
+                            "style": {}
                           }
                         ],
                         "style": {}
                       }
+                      
                     ],
-                    "style": {
-                      "borderWidth": "1px",
-                      "borderColor": "black"
-                    }
+                    "style": {}
                   }
                 ]
               }
@@ -1979,7 +2007,12 @@
                     "color": "pink.200"
                   },
                   { 
-                    "element": "<meat name='Nitzan Cohen' content='Learning Web Development' />",
+                    "element": "<meat name='description' content='This is website of learning web development course.' />",
+                    "spaces": 4,
+                    "color": "pink.200"
+                  },
+                  { 
+                    "element": "<meat name='keywords' content='web development, Learning HTML, Learning CSS, Learning JS' />",
                     "spaces": 4,
                     "color": "pink.200"
                   },
@@ -2014,8 +2047,8 @@
               ],
               "listBlock": [
                 "שפת הקידוד - charset='utf-8' - המחרוזת הזאת utf-8 מוסרת מידע שהאתר שאנחנו בונים מכיל תווים אוניברסליים, אותיות ומספרים, מכל השפות האנושיות הקיימות בעולם. משמעות הדבר היא שכאשר אנחנו משתמשים בשיטת קידוד זו אנחנו יכולים ליצור אתר באיזו שפה אנושית שאנחנו רק רוצים. אם מעניין אתכם ללמוד על utf-8 ועל שיטות קידוד נוספות, אתם יותר ממוזמנים להציץ ברשימת המקורות להרחבת הידע שמופיעה בסוף השיעור הזה.",
-                "תג ה-meta השני שאנחנו מוצאים בדוגמא שלמעלה מוסר לנו מידע על גודל חלון התצוגה והיחס רוחב-גובה האופטימלי לתצוגה של האתר.",
-                "התג השלישי שאנחנו יכולים לראות מוסר מידע ופרטים על מחבר האתר, או שם האתר, ועל התוכן שלו בצורה תמציתית וקצרה. וכמובן במידע זה מנועי החיפוש עושים כאשר הם סורקים את האתר, לכן בתגית זו ההמלצה היא להוסיך מילות מפתח רלוונטיות לאתר ומופרדות בפסיקים."
+                "תג ה-meta השני שאנחנו מוצאים בדוגמא שלמעלה מוסר לנו מידע על גודל חלון התצוגה והיחס רוחב-גובה האופטימלי לתצוגה של האתר. בנושא זה אנחנו נרחיב את הלמידה ביחידת הלימוד הבאה כשנלמד על השימוש ב-CSS ועל תצוגת האתר והתאמת האתר למסכים בגדלים שונים.",
+                "שתי תגיות ה-meta הבאות הן תגיות שמנועי החיפוש (Google, Bing ועוד) עושים בהן שימוש משמעותי, ולמעשה מבינים במה האתר שלנו עוסק, ויכולים להציג תוצאות רלוונטיות לכל משתמש שמחפש תכנים דומים. בתגים אלה אנחנו צריכים לתת מידע קצר ותמציתי ככל הניתן על האתר שלנו, אך גם להיות מאוד מדוייקים. בתוכן של תג ה-description נכתוב משפט קצר ותמציתי על האתר שלנו. בעוד שבתג ה-keywords אנחנו נוסיף מספר מילות מפתח מופרדות בפסיקים עבור מנועי החיפוש."
               ]
             },
             {
@@ -2037,6 +2070,10 @@
                 {
                   "title": "What's in the head? Metadata in HTML / Article by MDN web docs",
                   "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"                
+                },
+                {
+                  "title": "HTML Meta tag / Article by W3Schools",
+                  "url": "https://www.w3schools.com/tags/tag_meta.asp"
                 },
                 {
                   "title": "UTF-8 / Article by Wikipedia",
@@ -2388,7 +2425,20 @@
             {
               "sectionTitle": "יישום CSS בתוך מסמך HTML",
               "textBlock": [
-                "כמו שלמדנו לקראת סוף יחידת הלימוד הקודמת, את העיצוב אנחנו יכולים להוסיף בתגיות הראש (head) בתוך צמד תגיות style ייעודיות לכל נושא ה-CSS והכלת העיצוב של האתר, באופן הבא:"
+                "אנחנו יכולים להחיל עיצוב על מסמך HTML בשלוש דרכים שונות. דרך אחת והפחות מומלצת וטובה היא באמצעות שילוב הוראות ה-CSS בתוך תגיות ה-HTML באמצעות התכונה style. במילים אחרות, דרך זאת נקראת inline style, אך כאמור דרך זו פחות טובה מכיוון שגם ככה מסמך HTML יכול להיות עמוס במידע, ואנחנו מעדיפים שלא לערבב בו גם תכונות עיצוביות. אך לשם ההמחשה, הוספת עיצוב בשיטה זו תראה כך:"
+              ],
+              "codeBox": {
+                "codeLang": "HTML",
+                "lines": [
+                  {"element": "<body>", "spaces": 0, "color": "white"},
+                  {"element": "<h1 style='...css rule...'>Main Heading</h1>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "</body>", "spaces": 0, "color": "white"}
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "הדרך השניה להחיל עיצוב על מסמך HTML בודד היא באמצעות הוספת חוקי העיצוב בין תגיות הראש (head) באמצעות צמד תגיות style ייעודיות. שיטה זו טובה אם האתר שלנו מכיל עמוד אינטרנט אחד, שאנחנו רוצים להחיל רק עליו את העיצוב. אך אם האתר שלנו מכיל כמה עמודים אזי אנחנו נצטרך להעתיק את העיצוב שבין התגיות לכל העמודים באתר כדי שהם יקבלו את אותו עיצוב אחיד."
               ],
               "codeBox": {
                 "codeLang":"HTML",
@@ -2400,6 +2450,35 @@
                   {"element": "...", "spaces": 4, "color": "gray.500"},
                   {"element": "</style>", "spaces": 2, "color": "yellow.300"},
                   {"element": "</head>", "spaces": 0, "color": "white"}
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "הדרך השלישית, והעדיפה מכולן, להחיל עיצוב על מסמך HTML היא בשיטת עבודה עם מסמכים מרובים. לפי שיטה זו אנחנו נפצל את העבודה שלנו לשני סוגים של קבצים. קבצי HTML שאחראים על הרכיבים והתוכן שיש לנו באתר, וקבצי CSS שאחראים על העיצוב והניראות של האתר. את הקישוריות בין הקבצים נעשה באמצעות תגית ה-link שנוסיף בין תגי הראש (head) בתוך מסמך ה-HTML.",
+                "בשיטה זו אנחנו נוכל להחיל עיצוב אחיד על כל העמודים שנוסיף לאתר שלנו בצורה פשוטה. יתר על כן, שיטה זו תסייע לנו רבות לבצע שינויים חזותיים באתר באופן יותר יעיל ונכון. שכן אם אנחנו רוצים לשנות את הצבע של הכותרות המשניות בכל האתר, אם נעבוד בשיטה השניה נצטרך לעבור עמוד אחר עמוד ולעדכן את הצבע החדש. לעומת זאת, בשיטה של פיצול הקבצים, מספיק שנעדכן את הקובץ הנפרד והעמודים בכל האתר יתעדכנו מיד. "
+              ],
+              "codeBox": {
+                "codeLang": "Files structure",
+                "lines": [
+                  { "element": "/root", "color": "white", "spaces": 0 },
+                  { "element": "index.html", "color": "white", "spaces": 3 },
+                  { "element": "style.css", "color": "white", "spaces": 3 }
+                ]
+              }
+            },
+            {
+              "codeBox": {
+                "codeLang": "index.html",
+                "lines": [
+                  { "element": "<html>", "spaces": 0, "color": "white" },
+                  { "element": "<head>", "spaces": 2, "color": "white" },
+                  { "element": "<link rel='stylesheet' href='style.css' />", "spaces": 4, "color": "cyan.300" },
+                  { "element": "</head>", "spaces": 2, "color": "white" },
+                  { "element": "<body>", "spaces": 2, "color": "white" },
+                  { "element": " ... ", "spaces": 4, "color": "white" },
+                  { "element": "</body>", "spaces": 2, "color": "white" },
+                  { "element": "</html>", "spaces": 0, "color": "white" }
                 ]
               }
             },
@@ -2429,12 +2508,12 @@
             },
             {
               "textBlock": [
-                "Declaration היא למעשה הגדרה של חוקיות בודדת שקיימת במאפיינים של הרכיב הנבחר. בהגדרה זו אנחנו בוחרים את המאפיין שאותו אנחנו רוצים לשנות או לקבוע, ואת הערך אנחנו רוצים לעצב את הרכיב לפיו. כל הגדרה כזאת חייבת להכיל מאפיין וערך מופרדים בינהם בנקודותיים ומסתיימים בסימן נקודה ופסיק (;)."
+                "Declaration היא למעשה הגדרה של חוקיות בודדת שקיימת במאפיינים של הרכיב הנבחר. בהגדרה זו אנחנו בוחרים את המאפיין (Property) שאותו אנחנו רוצים לשנות או לקבוע, ואת הערך (Value) שאנחנו רוצים לעצב את הרכיב לפיו. כל הגדרה כזאת חייבת להכיל מאפיין וערך מופרדים בינהם בנקודותיים (:) ומסתיימים בסימן נקודה ופסיק (;)."
               ]
             },
             {
               "textBlock": [
-                "לדוגמא, בואו וניקח את קוד ה-HTML הבא שמכיל כותרת ראשית, כפי שלמדנו ביחידת הלימוד הקודמת."
+                "לדוגמא, ניקח את קוד ה-HTML הבא שמכיל כותרת ראשית, כפי שלמדנו ביחידת הלימוד הקודמת."
               ],
               "codeBox": {
                 "codeLang": "HTML",
@@ -2459,7 +2538,7 @@
             },
             {
               "textBlock": [
-                "אנחנו יכולים להשתמש בשפת CSS ולהכיל על כותרת זו עיצוב ייחודי באמצעות בחירת סוג הרכיב (h1) והגדרת צבע הטקסט לכחול."
+                "ונחיל עליה באמצעות שפת CSS עיצוב ייחודי. תחילה נצביע על סוג הרכיב (h1) ואז נגדיר את המאפיין (Property) שאותו אנחנו רוצים לקבוע (color) ולבסוף נקבע את הערך (Value) שלו לכחול."
               ],
               "codeBox": {
                 "codeLang": "CSS",
@@ -2486,17 +2565,20 @@
             {
               "sectionTitle": "שיטות הצבעת Selectors",
               "textBlock": [
-                "כשאנחנו מצביעים על רכיב p ומשתמשים בו כ-selector אנחנו למעשה קובעים שמרגע זה העיצוב החדש שקבענו יוכל בכל הפסקאות שאנחנו כותבים בעמוד. הדבר הזה עלול להוות בעיה במקרים שבהם יש לנו באתר טקסטים מסוגים שונים, שאנחנו מעוניינים לעצב בצורות שונות. לכן ישנן שיטות נוספות לבחירת אלמנטים שהן לא מצביעות על סוג האלמנט, אלא על המחלקה (class) שלו או על הזהות (id) שלו.",
-                "לפי השיטה הזאת, אנחנו פשוט מציינים את שם המחלקה או הזהות כ-selector, ואז מגדירים כרגיל את כל הגדרות העיצוב. אך כדי להבדיל בין שם של רכיב HTML (לדוגמא, <ul>) לבין שם של מחלקה או זהות יש כמה סימנים שאנחנו צריכים להכיר.",
-                "אם ברצוננו להצביע על שם של מחלקה, נוסף את הסימן נקודה (.) בתחילת ה-selector. אם אנחנו רוצים להצביע על רכיב מסוים לפי הזהות (id) שלו, אז נתחיל את ה-selector בסימן סולמית (#)."
+                "הצבעה על שם של תגית HTML כללית היא לא ממש תרגול טוב ונכון. הרגל יותר חכם יהיה להשתמש ב-class או ב-id כדי להחיל עיצוב על רכיב מסוים במסמך HTML. זאת משום ששמות התגיות ב-HTML נועדו בעיקר להבחנה סמנטית, והן כלליות מדי ואם נשתמש בהן כדי לעצב את העמוד שלנו, אנו עלולים למצוא את עצמנו מהר מאוד מסתבכים עם עיצובים שונים שאנחנו רוצים להחיל על רכיבים דומים. למשל של סוגי טקסטים שבשניהם אנחנו משתמשים בתגית פסקה p.",
+                "לפי השיטה הזאת, אנחנו נציין את שם המחלקה (class) או הזהות (id) כ-selector, ואז נגדיר כרגיל את כל תכונות העיצוב הרצוי. כדי להבדיל בין שם של רכיב HTML (לדוגמא, <ul>) לבין שם של מחלקה או זהות נוסיף סימנים מיוחדים לפני שם המצביע (Selector).",
+                "עבור מצביע מסוג class נוסיף לפניו את הסימן נקודה (.), ועבור מצביע מסוג id נוסיף את הסימן סולמית (#). "
               ],
               "codeBox": {
                 "codeLang": "HTML",
                 "lines": [
                   {"element": "<body>", "spaces": 0, "color": "white"},
-                  {"element": "<p class='paragraphArticle'>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "We are learning <b id='boldText'>CSS</b>.", "spaces": 4, "color": "white"},
-                  {"element": "</p>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "<div class='box'>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "<p id='one-article'>Any content of long article...</p>", "spaces": 4, "color": "pink.200"},
+                  {"element": "</div>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "<div class='box'>", "spaces": 2, "color": "yellow.300"},
+                  {"element": "<p id='one-comment'>One comment of a user.</p>", "spaces": 4, "color": "pink.200"},
+                  {"element": "</div>", "spaces": 2, "color": "yellow.300"},
                   {"element": "</body>", "spaces": 0, "color": "white"}
                 ]
               }
@@ -2506,79 +2588,53 @@
                 "codeLang": "CSS",
                 "lines":[
                   {"element": "<style>", "spaces": 0, "color": "white"},
-                  {"element": ".paragraphArticle {", "spaces": 2, "color": "cyan.300"},
-                  {"element": "font-size: 22px;", "spaces": 4, "color": "cyan.300"},
-                  {"element": "color: orange;", "spaces": 4, "color": "cyan.300"},
-                  {"element": "}", "spaces": 2, "color": "cyan.300"},
-                  {"element": " ", "spaces": 2, "color": "cyan.300"},
-                  {"element": "#boldText {", "spaces": 2, "color": "cyan.300"},
-                  {"element": "color: red;", "spaces": 4, "color": "cyan.300"},
-                  {"element": "}", "spaces": 2, "color": "cyan.300"},
+                  {"element": ".box {", "spaces": 2, "color": "yellow.300"},
+                  {"element": "border: 1px solid blue;", "spaces": 4, "color": "yellow.300"},
+                  {"element": "margin: 5px;", "spaces": 4, "color": "yellow.300"},
+                  {"element": "}", "spaces": 2, "color": "yellow.300"},
+                  {"element": " ", "spaces": 2, "color": "white"},
+                  {"element": "#one-article {", "spaces": 2, "color": "pink.200"},
+                  {"element": "color: red;", "spaces": 4, "color": "pink.200"},
+                  {"element": "}", "spaces": 2, "color": "pink.200"},
+                  {"element": " ", "spaces": 2, "color": "white"},
+                  {"element": "#one-comment {", "spaces": 2, "color": "pink.200"},
+                  {"element": "color: green;", "spaces": 4, "color": "pink.200"},
+                  {"element": "}", "spaces": 2, "color": "pink.200"},
                   {"element": "</style>", "spaces": 0, "color": "white"}
                 ],
                 "outputCode":[
                   {
                     "type": "div",
-                    "style": {},
+                    "style": {
+                      "border": "1px solid blue",
+                      "margin": "5px"
+                    },
                     "content": [
                       {
                         "type": "p",
                         "style": {
-                          "display": "inline",
-                          "color": "orange",
-                          "fontSize": "22px"
+                          "color": "red"
                         },
-                        "content": "We are learning"
-                      },
-                      {
-                        "type": "b",
-                        "style": {
-                          "color": "red",
-                          "fontSize": "22px"
-                        },
-                        "content": " CSS"
-                      },
+                        "content": "Any content of long article..."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "div",
+                    "style": {
+                      "border": "1px solid blue",
+                      "margin": "5px"
+                    },
+                    "content": [
                       {
                         "type": "p",
                         "style": {
-                          "display": "inline",
-                          "color": "orange",
-                          "fontSize": "22px"
+                          "color": "green"
                         },
-                        "content": "."
+                        "content": "One comment of a user."
                       }
                     ]
                   }
-                ]
-              }
-            },
-            {
-              "sectionTitle": "קישוריות ועבודה עם קבצים מרובים",
-              "textBlock": [
-                "אם נכתוב את כל חוקי העיצוב שאנחנו רוצים בתוך מסמך ה-HTML שאנחנו יוצרים, אנחנו יכולים להיתקל בבעיה קשה כבר בתחילת העבודה. מה יקרה אם נרצה להוסיף עמוד לאתר שלנו? איזה עיצוב נחיל עליו? סביר להניח שנרצה שכל העמודים באתר שלנו יהיו מעוצבים בצורה אחידה. לכן אין זה יהיה יעיל לקבוע את חוקי העיצוב עבור כל עמוד בנפרד.",
-                "יותר חכם יהיה ליצור קובץ עיצוב נפרד בתוך תיקיית הפרויקט שלנו ולקשר אותו למסמך ה-HTML באמצעות תגית ה-link שאנחנו יכולים להוסיף בין תגי הראש (head). בצורה הזאת אנחנו יכולים ליצור קובץ עיצוב אחד וליישם אותו לכל העמודים שנבנה בעתיד באתר שלנו בדרך פשוט ויעילה."
-              ],
-              "codeBox": {
-                "codeLang": "Files structure",
-                "lines": [
-                  { "element": "/root", "color": "white", "spaces": 0 },
-                  { "element": "index.html", "color": "white", "spaces": 3 },
-                  { "element": "style.css", "color": "white", "spaces": 3 }
-                ]
-              }
-            },
-            {
-              "codeBox": {
-                "codeLang": "index.html",
-                "lines": [
-                  { "element": "<html>", "spaces": 0, "color": "white" },
-                  { "element": "<head>", "spaces": 2, "color": "white" },
-                  { "element": "<link rel='stylesheet' href='style.css' />", "spaces": 4, "color": "cyan.300" },
-                  { "element": "</head>", "spaces": 2, "color": "white" },
-                  { "element": "<body>", "spaces": 2, "color": "white" },
-                  { "element": " ... ", "spaces": 4, "color": "white" },
-                  { "element": "</body>", "spaces": 2, "color": "white" },
-                  { "element": "</html>", "spaces": 0, "color": "white" }
                 ]
               }
             },
