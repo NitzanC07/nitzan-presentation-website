@@ -85,9 +85,10 @@
             {
               "sectionTitle": "מה זה HTML?",
               "image": {
-                "url": "/images/stylingImages/logo-html.png",
-                "altText": "Firefly Close-up of an ancient colonnaded structure in ancient Greek style on a hill with a backdrop",
-                "width": [300, 400]
+                "url": "/images/stylingImages/cover-html.png",
+                "altText": "Architecture- classical. Corinthian column detail.",
+                "descText": "Architecture- classical. Corinthian column detail. Photo by Paulina Milde-Jachowska on Unsplash.",
+                "width": [300, 500]
               }
             },
             {
@@ -2412,9 +2413,10 @@
                 "בפרק הקודם למדנו את הרכיבים הבסיסיים של שפת HTML. אם נדמה זאת לגוף האדם, אז עכשיו אנחנו יודעים לבנות את העצמות והשלד של הגוף. ביחידת לימוד זו נלמד להוסיף על השלד את העור. כמו שהעור בגוף האדם מבטא את הצד החזותי שלנו, כך גם באמצעות שפת CSS אנחנו מבטאים את הצד החזותי של האתר."
               ],
               "image": {
-                "url": "/images/stylingImages/logo-css.png",
-                "altText": "Colorful gemstones on bricks.",
-                "width": [300, 400]
+                "url": "/images/stylingImages/cover-css.png",
+                "altText": "Seven Magic Mountains, South Las Vegas Boulevard, Las Vegas, NV, USA.",
+                "width": [300, 500],
+                "descText": "Seven Magic Mountains, South Las Vegas Boulevard, Las Vegas, NV, USA. Photo by AJ Elgammal on Unsplash"
               }
             },
             {
@@ -2724,6 +2726,15 @@
           "lessonId": "4.1",
           "title": "מבוא ל-Java Script",
           "sections": [
+            {
+              "sectionTitle": "מבוא ל-Java Script",
+              "image": {
+                "url": "/images/stylingImages/cover-js.png",
+                "altText": "A steam train travels on an ancient bridge that crosses a green valley.",
+                "descText":"A steam train travels on an ancient bridge that crosses a green valley. Photo by Simon Franz Hochleitner on Unsplash.",
+                "width": [300, 500]
+              }
+            },
             {
               "resources": [
                 {
