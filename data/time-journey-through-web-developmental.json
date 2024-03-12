@@ -2641,6 +2641,13 @@
               }
             },
             {
+              "sectionTitle": "הערות מְפַתֵּחַ (Comments)",
+              "textBlock": [
+                "כמו ב-HTML, גם בשפת CSS אנחנו יכולים להוסיף הערות ולשלב אותן בתוך הקוד בלי שהן ישפיעו על הקוד. אך ב-CSS התחביר שלהן קצת שונה."
+              ]
+              "codeBox": 
+            },
+            {
               "resources": [
                 {
                   "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started", 
