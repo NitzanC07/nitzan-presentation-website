@@ -2700,18 +2700,165 @@
               "sectionTitle": "עיצוב מילים",
               "textBlock": [
                 "אחרי שלמדנו את התחביר של שפת CSS בשיעור הקודם (ואפילו ראינו כמה הוא כל כך פשוט), ולמדנו על לבחור ולהצביע על אלמנטים מסוימים במסמך HTML שלנו, הגיע הזמן להתחיל ללמוד לעצב. את המסע שלנו בעיצוב אתרי אינטרנט נתחיל עם הדבר הכי נפוץ  באינטרנט - טקסט.",
-                "אז איך בעצם מעצבים טקסט? ומה יש לעצב בו? למעשה, אנחנו יכולים להתייחס לעיצוב טקסט בשני אופנים נפרדים שמשתלבים בינהם. בהיבט אחד של העיצוב אנחנו נתייחס לטקסט כגוף אחד שלם, ובהיבט השני אנו נתייחס למרכיבים השונים שהטקסט בנוי מהם. "
-              ],
-              "listBlock": [
-                "עיצוב גופן - בהיבט אחד של העיצוב אנחנו נתייחס למרכיבי הטקסט. כלומר בכלל זאת אפשר לקבוע את צורת וסוג הגופן, את גודל האותיות, מידת ההדגשה שלהן, הטייה של האותיות, יצירת קו תחתי ועוד מאפיינים שנוגעים למרכיבי הטקסט, וכמובן צבע הטקסט או הרקע.",
-                "עיצוב הטקסט כגוף שלם - בהיבט זה של עיצוב אנו יכולים להתייחס לריווח בין האותיות, בין המילים או בין השורות. או לגבי יישור השורות ביחס לאובייקט שבו הטקסט מופיעה."
+                "לטקסט יש מגוון רחב של מאפיינים ותכונות שאנחנו יכולים לשים דגש עליהם ולעצב אותם. יתר על כן, להופעה של הטקסט יש ערך חשוב ביותר עבור חוויית המשתמש. למשל האם יצא לכם לבקר באתר אינטרנט שכל הטקסט בו נכתב באותיות קטנות וצפופות? אם לא, חפשו במאגרי הספריה הלאומית עיתונים ישנים. איך זה גורם לכם להרגיש? האם הקריאה זורמת או מתאמצת? האם צורת הטקסט מעודדת אתכם להמשיך לקרוא או להפסיק את הקריאה?",
+                "כל השאלות האלה הן חשובות ונוגעות בנושא רחב שנקרא - טיפוגרפיה - שיכול בקלות למלא קורס שלם, לכן אנחנו לא נכנס לעומקו, אלא נתמקד בצד הטכני של שימוש בגופנים ועיצובם עבור אתר אינטרנט."
               ]
             },
             {
-              "sectionTitle": "אותיות פורחות באוויר",
+              "sectionTitle": "גופנים ומרכיבי עיצוב",
               "textBlock": [
-                "המרכיב הראשון שנעסוק בו הוא עיצוב מרכיבי הטקסט, כלומר האותיות והמילים, והמאפיין הראשון שנכיר הוא הגופן (Font). כמו שאתם בטח מכירים כשאתם כותבים עבודה או מסמך אחר בתוכנת Word של Microsoft Office, יש הרבה סוגים של גופנים (Fonts). אנחנו לא נכנס בקורס הזה לעומק של הנושא הזה, כי זה יכול להיות קורס בפני עצמו, אבל חשוב שנכיר איך הדפדפנים מתייחסים לגופנים, ואילו גופנים עדיפים לשימוש באינטרנט.",
-                ""
+                "כמו שכבר הבנו, טקסטים ניתן לעיצוב במגוון מאפיינים ותכונות, ולשמחתנו אנחנו יכולים לשלוט בהם באמצעות כמה מאפיינים יעודיים שקיימים ב-CSS. אנחנו יכולים לקבוע את הצבע של הטקסט, את הגופן, את מידת ההדגשה ועוד תכונות. חוץ מאלה אנחנו יכולים לקבוע גם את הריווח של האותיות, המילים והשורות, את הרוחב של כל גוף הטקסט ביחס לעמוד או לרכיב שבו הוא נמצא, או את היישור של הטקסט לאחד הצדדים. במילים אחרות, אנחנו יכולים להבחין בין שני סוגים של מאפייני עיצוב, מאפיינים הנוגעים לאותיות ולמרכיבי הטקסט, בדרך-כלל יזוהו עם תחילת '-font', ומאפיינים שנוגעים לטקסט כגוף אחיד ושלם אשר יזוהו עם תחילית '-text'.",
+                "אז הגיע הזמן להכיר את מאפייני CSS שעוזרים בתחום הזה."
+              ],
+              "tableData": {
+                "caption": "מאפייני מרכיבי הטקסט",
+                "headingRow": ["מאפיין (Property)", "ערכים אפשריים (Values)"],
+                "rows":[
+                  ["color", "black / white / blue"],
+                  ["font-family", "Arial, Verdana, sans-serif"],
+                  ["font-size", "12px / 1em / 1.2rem"],
+                  ["line-height", "12px / 1.5em / 1.6rem"],
+                  ["font-weight", "normal / bold / 100-900"],
+                  ["font-style", "normal / italic / oblique"]
+                ]
+              }
+            },
+            {
+              "listBlock": [
+                "color - צבע הטקסט יכול לקבל ערכים מסוגים שונים. סוג אחד הוא פשוט שמות הצבעים כפי שמתואר בטבלה. אפשר לראות פירוט מלא של כל שמות הצבעים בקישורים שמופיעים בסוף שיעור זה בקוביית \"מקורות והרחבת הידע\". בשיעור הבא נרחיב את הידע בנושא צבעים ונראה שיטות נוספות להגדרת צבע.",
+                "font-size ו-line-height קובעים את גודל האותיות וגובה השורה בהתאמה, והשילוב של שניהם משפיע על ניראות הטקסט ועל יכולת הקריאות (Readability) שלו.",
+                "בכל הנוגע לסוג הגופן - font-family - הדפדפן יכול להשתמש בגופן שקבענו רק אם אותו גופן קיים במחשב שבו הוא רץ או בהגדרת ברירת המחדל של הדפדפן עצמו. אם הוא לא מוצא את הגופן הנדרש הוא ישתמש בגופן ברירת המחדל שלו. לכן אנחנו נוהגים לציין עבור מאפיין זה מספר סוגים של גופנים, והדפדפן יודע כבר לבדוק כל אחד מהם לפי סדר החשיבות שלהם. יתר על כן, דבר חשוב נוסף שכדאי להכיר הוא שלא כל גופן הוא בהכרח ידידותי לאתרי אינטרנט, ואנחנו נשתמש לרוב בגופנים שנמצאים ברשימת ה-Web safe fonts, שאפשר למצוא קישור אליהם ברשימת המקורות שבסוף השיעור."
+              ]
+            },
+            {
+              "tableData": {
+                "caption": "מאפייני הטקסט כגוף שלם",
+                "headingRow": ["מאפיין (Prperty)", "ערכים אפשריים (Values)"],
+                "rows": [
+                  ["text-transform", "none / uppercase / lowercase / capitalize / full-width"],
+                  ["text-decoration", "none / underline / overline / line-through"],
+                  ["text-align", "left / right / center / jusify"],
+                  ["letter-spacing", "4px / 0.2em"],
+                  ["word-spacing", "4px / 0.2em"],
+                  ["overflow", "visible / hidden / clip / scroll / auto"],
+                  ["word-break", "normal / break-all / keep-all / break-word"],
+                  ["text-shadow", "H-offset V-offset blur color"]
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "בואו ונראה איך מיישמים הלכה למעשה את כל המאפיינים האלה בקוד עצמו. ניקח לדוגמא כותרת ראשית ופסקה, עברו על קוד ה-CSS ונסו לנחש איך יראה הפלט. לאחר מכן הציגו את הפלט ובידקו אם הוא נראה כמו שחשבתם."
+              ],
+              "codeBox": {
+                "codeLang": "HTML",
+                "lines": [
+                  {"element": "<body>", "spaces": 0, "color": "white"},
+                  {"element": "<h1 class='mainTitle'>Lorem ipsum dolor sit.</h1>", "spaces": 2, "color": "white"},
+                  {"element": "<p class='textArticle'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deleniti magni quasi natus voluptas debitis magnam beatae cumque fugit, necessitatibus sunt eligendi animi reprehenderit laboriosam vitae amet suscipit ad facere incidunt! Quo, temporibus aut! Neque vel repudiandae modi aliquid similique placeat rem dolore dicta, eaque quia incidunt aliquam natus magni culpa sit facere eum voluptas aut nobis. Pariatur accusantium earum maiores? Nulla, repellat? Vero architecto eligendi animi? Odio reprehenderit vitae consectetur quae doloribus quam nihil labore cupiditate, in vel facilis unde numquam perferendis ipsa corrupti, nam aperiam harum velit atque. Officiis est culpa quia autem. Repudiandae suscipit atque vel dicta?</p>", "spaces": 2, "color": "white"},
+                  {"element": "</body>", "spaces": 0, "color": "white"}
+                ],
+                "outputCode": [
+                  {
+                    "type": "h1",
+                    "style": {
+                      "display": "block",
+                      "fontSize": "2em",
+                      "marginTop": "0.67em",
+                      "marginBottom": "0.67em",
+                      "marginLeft": "0",
+                      "marginRight": "0",
+                      "fontWeight": "bold"
+                    },
+                    "content": "Lorem ipsum dolor"
+                  },
+                  {
+                    "type": "p",
+                    "style": {
+                      "marginTop": "1em",
+                      "marginBottom": "1em",
+                      "marginLeft": "0",
+                      "marginRight": "0"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deleniti magni quasi natus voluptas debitis magnam beatae cumque fugit, necessitatibus sunt eligendi animi reprehenderit laboriosam vitae amet suscipit ad facere incidunt! Quo, temporibus aut! Neque vel repudiandae modi aliquid similique placeat rem dolore dicta, eaque quia incidunt aliquam natus magni culpa sit facere eum voluptas aut nobis. Pariatur accusantium earum maiores? Nulla, repellat? Vero architecto eligendi animi? Odio reprehenderit vitae consectetur quae doloribus quam nihil labore cupiditate, in vel facilis unde numquam perferendis ipsa corrupti, nam aperiam harum velit atque. Officiis est culpa quia autem. Repudiandae suscipit atque vel dicta?"
+                  }
+                ]
+              }
+            },
+            {
+              "codeBox": {
+                "codeLang": "CSS",
+                "lines": [
+                  {"element": ".mainTitle {", "spaces": 0, "color": "white"},
+                  {"element": "font-family: Verdana, Geneva, Tahoma, sans-serif;", "spaces": 2, "color": "white"},
+                  {"element": "font-size: 1.5em;", "spaces": 2, "color": "white"},
+                  {"element": "line-height: 2em;", "spaces": 2, "color": "white"},
+                  {"element": "text-align: center;", "spaces": 2, "color": "white"},
+                  {"element": "word-spacing: 0.1em;", "spaces": 2, "color": "white"},
+                  {"element": "text-transform: uppercase;", "spaces": 2, "color": "white"},
+                  {"element": "text-shadow: -2px 2px 1px white, -4px 4px 1px gray;", "spaces": 2, "color": "white"},
+                  {"element": "}", "spaces": 0, "color": "white"},
+                  {"element": " ", "spaces": 2, "color": "white"},
+                  {"element": ".textArticle {", "spaces": 0, "color": "white"},
+                  {"element": "width: 95%;", "spaces": 2, "color": "white"},
+                  {"element": "font-family: Verdana, Geneva, Tahoma, sans-serif;", "spaces": 2, "color": "white"},
+                  {"element": "font-size: 1.1em;", "spaces": 2, "color": "white"},
+                  {"element": "line-height: 1.5em;", "spaces": 2, "color": "white"},
+                  {"element": "text-align: justify;", "spaces": 2, "color": "white"},
+                  {"element": "word-spacing: 0.4em;", "spaces": 2, "color": "white"},
+                  {"element": "word-break: break-all;", "spaces": 2, "color": "white"},
+                  {"element": "}", "spaces": 0, "color": "white"}
+                ],
+                "outputCode": [
+                  {
+                    "type": "h1",
+                    "style": {
+                      "fontFamily": "Verdana, Geneva, Tahoma, sans-serif",
+                      "fontSize": "1.5em",
+                      "lineHeight": "2em",
+                      "textAlign": "center",
+                      "wordSpacing": "0.1em",
+                      "textTransform": "uppercase",
+                      "textShadow": "-2px 2px 1px white, -4px 4px 1px gray"
+                    },
+                    "content": "Lorem ipsum dolor"
+                  },
+                  {
+                    "type": "p",
+                    "style": {
+                      "fontFamily": "Verdana, Geneva, Tahoma, sans-serif",
+                      "width": "95%",
+                      "fontSize": "1.1em",
+                      "lineHeight": "1.5em",
+                      "textAlign": "justify",
+                      "wordSpacing": "0.4em",
+                      "wordBreak": "breakAll"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deleniti magni quasi natus voluptas debitis magnam beatae cumque fugit, necessitatibus sunt eligendi animi reprehenderit laboriosam vitae amet suscipit ad facere incidunt! Quo, temporibus aut! Neque vel repudiandae modi aliquid similique placeat rem dolore dicta, eaque quia incidunt aliquam natus magni culpa sit facere eum voluptas aut nobis. Pariatur accusantium earum maiores? Nulla, repellat? Vero architecto eligendi animi? Odio reprehenderit vitae consectetur quae doloribus quam nihil labore cupiditate, in vel facilis unde numquam perferendis ipsa corrupti, nam aperiam harum velit atque. Officiis est culpa quia autem. Repudiandae suscipit atque vel dicta?"
+                  }
+                ]
+              }
+            },
+            {
+              "sectionTitle": "יחידות מידה"
+            },
+            {
+              "sectionTitle": "יישום הגופן הנבחר במסמך HTML"
+            },
+            {
+              "resources": [
+                {
+                  "title": "The 20 Best HTML Fonts to Use in 2024 / Article by Hostinger Tutorials",
+                  "url": "https://www.hostinger.com/tutorials/best-html-web-fonts"
+                },
+                {
+                  "title": "Fundamentals text and font styling / Article by MDN web docs",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
+                },
+                {
+                  "title": "HTML Color Names / Article by W3Schools",
+                  "url": "https://www.w3schools.com/tags/ref_colornames.asp"
+                }
               ]
             }
           ]
