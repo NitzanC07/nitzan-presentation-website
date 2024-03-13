@@ -2754,33 +2754,67 @@
                 "codeLang": "HTML",
                 "lines": [
                   {"element": "<body>", "spaces": 0, "color": "white"},
-                  {"element": "<h1 class='mainTitle'>Lorem ipsum dolor sit.</h1>", "spaces": 2, "color": "white"},
-                  {"element": "<p class='textArticle'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deleniti magni quasi natus voluptas debitis magnam beatae cumque fugit, necessitatibus sunt eligendi animi reprehenderit laboriosam vitae amet suscipit ad facere incidunt! Quo, temporibus aut! Neque vel repudiandae modi aliquid similique placeat rem dolore dicta, eaque quia incidunt aliquam natus magni culpa sit facere eum voluptas aut nobis. Pariatur accusantium earum maiores? Nulla, repellat? Vero architecto eligendi animi? Odio reprehenderit vitae consectetur quae doloribus quam nihil labore cupiditate, in vel facilis unde numquam perferendis ipsa corrupti, nam aperiam harum velit atque. Officiis est culpa quia autem. Repudiandae suscipit atque vel dicta?</p>", "spaces": 2, "color": "white"},
+                  {"element": "<h1 class='mainTitle'>מגילת העצמאות</h1>", "spaces": 2, "color": "cyan.300"},
+                  {"element": "<p class='textArticle'>בארץ ישראל קם העם היהודי, בה עוצבה דמותו הרוחנית, הדתית והמדינית, בה חי חיי קוממיות ממלכתית, בה יצר נכסי תרבות לאומיים וכלל אנושיים והוריש לעולם כולו את ספר הספרים הנצחי.</p>", "spaces": 2, "color": "pink.200"},
+                  {"element": "<p class='textArticle'>לאחר שהוגלה העם מארצו בכוח הזרוע שמר לה אמונים בכל ארצות פזוריו, ולא חדל מתפילה ומתקוה לשוב לארצו ולחדש בתוכה את חירותו המדינית.</p>", "spaces": 2, "color": "pink.200"},
+                  {"element": "<p class='textArticle'>מתוך קשר היסטורי ומסורתי זה חתרו היהודים בכל דור לשוב ולהאחז במולדתם העתיקה; ובדורות האחרונים שבו לארצם בהמונים, וחלוצים, מעפילים ומגינים הפריחו נשמות, החיו שפתם העברית, בנו כפרים וערים, והקימו ישוב גדל והולך השליט על משקו ותרבותו, שוחר שלום ומגן על עצמו, מביא ברכת הקידמה לכל תושבי הארץ ונושא נפשו לעצמאות ממלכתית.</p>", "spaces": 2, "color": "pink.200"},
                   {"element": "</body>", "spaces": 0, "color": "white"}
                 ],
                 "outputCode": [
                   {
-                    "type": "h1",
+                    "type": "div",
                     "style": {
-                      "display": "block",
-                      "fontSize": "2em",
-                      "marginTop": "0.67em",
-                      "marginBottom": "0.67em",
-                      "marginLeft": "0",
-                      "marginRight": "0",
-                      "fontWeight": "bold"
+                      "direction": "rtl"
                     },
-                    "content": "Lorem ipsum dolor"
-                  },
-                  {
-                    "type": "p",
-                    "style": {
-                      "marginTop": "1em",
-                      "marginBottom": "1em",
-                      "marginLeft": "0",
-                      "marginRight": "0"
-                    },
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deleniti magni quasi natus voluptas debitis magnam beatae cumque fugit, necessitatibus sunt eligendi animi reprehenderit laboriosam vitae amet suscipit ad facere incidunt! Quo, temporibus aut! Neque vel repudiandae modi aliquid similique placeat rem dolore dicta, eaque quia incidunt aliquam natus magni culpa sit facere eum voluptas aut nobis. Pariatur accusantium earum maiores? Nulla, repellat? Vero architecto eligendi animi? Odio reprehenderit vitae consectetur quae doloribus quam nihil labore cupiditate, in vel facilis unde numquam perferendis ipsa corrupti, nam aperiam harum velit atque. Officiis est culpa quia autem. Repudiandae suscipit atque vel dicta?"
+                    "content": [
+                      {
+                        "type": "h1",
+                        "style": {
+                          "dir": "rtl",
+                          "display": "block",
+                          "fontSize": "2em",
+                          "marginTop": "0.67em",
+                          "marginBottom": "0.67em",
+                          "marginLeft": "0",
+                          "marginRight": "0",
+                          "fontWeight": "bold"
+                        },
+                        "content": "מגילת העצמאות"
+                      },
+                      {
+                        "type": "p",
+                        "style": {
+                          "dir": "rtl",
+                          "marginTop": "1em",
+                          "marginBottom": "1em",
+                          "marginLeft": "0",
+                          "marginRight": "0"
+                        },
+                        "content": "בארץ ישראל קם העם היהודי, בה עוצבה דמותו הרוחנית, הדתית והמדינית, בה חי חיי קוממיות ממלכתית, בה יצר נכסי תרבות לאומיים וכלל אנושיים והוריש לעולם כולו את ספר הספרים הנצחי."
+                      },
+                      {
+                        "type": "p",
+                        "style": {
+                          "dir": "rtl",
+                          "marginTop": "1em",
+                          "marginBottom": "1em",
+                          "marginLeft": "0",
+                          "marginRight": "0"
+                        },
+                        "content": "לאחר שהוגלה העם מארצו בכוח הזרוע שמר לה אמונים בכל ארצות פזוריו, ולא חדל מתפילה ומתקוה לשוב לארצו ולחדש בתוכה את חירותו המדינית."
+                      },
+                      {
+                        "type": "p",
+                        "style": {
+                          "dir": "rtl",
+                          "marginTop": "1em",
+                          "marginBottom": "1em",
+                          "marginLeft": "0",
+                          "marginRight": "0"
+                        },
+                        "content": "מתוך קשר היסטורי ומסורתי זה חתרו היהודים בכל דור לשוב ולהאחז במולדתם העתיקה; ובדורות האחרונים שבו לארצם בהמונים, וחלוצים, מעפילים ומגינים הפריחו נשמות, החיו שפתם העברית, בנו כפרים וערים, והקימו ישוב גדל והולך השליט על משקו ותרבותו, שוחר שלום ומגן על עצמו, מביא ברכת הקידמה לכל תושבי הארץ ונושא נפשו לעצמאות ממלכתית."
+                      }
+                    ]
                   }
                 ]
               }
@@ -2789,17 +2823,18 @@
               "codeBox": {
                 "codeLang": "CSS",
                 "lines": [
-                  {"element": ".mainTitle {", "spaces": 0, "color": "white"},
+                  {"element": ".mainTitle {", "spaces": 0, "color": "cyan.300"},
                   {"element": "font-family: Verdana, Geneva, Tahoma, sans-serif;", "spaces": 2, "color": "white"},
-                  {"element": "font-size: 1.5em;", "spaces": 2, "color": "white"},
-                  {"element": "line-height: 2em;", "spaces": 2, "color": "white"},
+                  {"element": "font-size: 1.7em;", "spaces": 2, "color": "white"},
+                  {"element": "line-height: 1.5em;", "spaces": 2, "color": "white"},
                   {"element": "text-align: center;", "spaces": 2, "color": "white"},
                   {"element": "word-spacing: 0.1em;", "spaces": 2, "color": "white"},
                   {"element": "text-transform: uppercase;", "spaces": 2, "color": "white"},
-                  {"element": "text-shadow: -2px 2px 1px white, -4px 4px 1px gray;", "spaces": 2, "color": "white"},
-                  {"element": "}", "spaces": 0, "color": "white"},
+                  {"element": "color: blue;", "spaces": 2, "color": "white"},
+                  {"element": "text-shadow: 2px -2px 1px white, 4px -4px 2px lightskyblue;", "spaces": 2, "color": "white"},
+                  {"element": "}", "spaces": 0, "color": "cyan.300"},
                   {"element": " ", "spaces": 2, "color": "white"},
-                  {"element": ".textArticle {", "spaces": 0, "color": "white"},
+                  {"element": ".textArticle {", "spaces": 0, "color": "pink.200"},
                   {"element": "width: 95%;", "spaces": 2, "color": "white"},
                   {"element": "font-family: Verdana, Geneva, Tahoma, sans-serif;", "spaces": 2, "color": "white"},
                   {"element": "font-size: 1.1em;", "spaces": 2, "color": "white"},
@@ -2807,40 +2842,102 @@
                   {"element": "text-align: justify;", "spaces": 2, "color": "white"},
                   {"element": "word-spacing: 0.4em;", "spaces": 2, "color": "white"},
                   {"element": "word-break: break-all;", "spaces": 2, "color": "white"},
-                  {"element": "}", "spaces": 0, "color": "white"}
+                  {"element": "}", "spaces": 0, "color": "pink.200"}
                 ],
                 "outputCode": [
                   {
-                    "type": "h1",
-                    "style": {
-                      "fontFamily": "Verdana, Geneva, Tahoma, sans-serif",
-                      "fontSize": "1.5em",
-                      "lineHeight": "2em",
-                      "textAlign": "center",
-                      "wordSpacing": "0.1em",
-                      "textTransform": "uppercase",
-                      "textShadow": "-2px 2px 1px white, -4px 4px 1px gray"
-                    },
-                    "content": "Lorem ipsum dolor"
-                  },
-                  {
-                    "type": "p",
-                    "style": {
-                      "fontFamily": "Verdana, Geneva, Tahoma, sans-serif",
-                      "width": "95%",
-                      "fontSize": "1.1em",
-                      "lineHeight": "1.5em",
-                      "textAlign": "justify",
-                      "wordSpacing": "0.4em",
-                      "wordBreak": "breakAll"
-                    },
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deleniti magni quasi natus voluptas debitis magnam beatae cumque fugit, necessitatibus sunt eligendi animi reprehenderit laboriosam vitae amet suscipit ad facere incidunt! Quo, temporibus aut! Neque vel repudiandae modi aliquid similique placeat rem dolore dicta, eaque quia incidunt aliquam natus magni culpa sit facere eum voluptas aut nobis. Pariatur accusantium earum maiores? Nulla, repellat? Vero architecto eligendi animi? Odio reprehenderit vitae consectetur quae doloribus quam nihil labore cupiditate, in vel facilis unde numquam perferendis ipsa corrupti, nam aperiam harum velit atque. Officiis est culpa quia autem. Repudiandae suscipit atque vel dicta?"
+                    "type": "div",
+                    "style": { "direction": "rtl"},
+                    "content": [
+                      {
+                        "type": "h1",
+                        "style": {
+                          "marginTop": "0.67em",
+                          "marginBottom": "0.67em",
+                          "marginLeft": "0",
+                          "marginRight": "0",
+                          "fontWeight": "bold",
+                          "fontFamily": "Verdana, Geneva, Tahoma, sans-serif",
+                          "fontSize": "1.7em",
+                          "lineHeight": "1.5em",
+                          "textAlign": "center",
+                          "wordSpacing": "0.1em",
+                          "color": "blue",
+                          "textShadow": "2px -2px 1px white, 4px -4px 2px lightskyblue"
+                        },
+                        "content": "מגילת העצמאות"
+                      },
+                      {
+                        "type": "p",
+                        "style": {
+                          "marginTop": "1em",
+                          "marginBottom": "1em",
+                          "marginLeft": "0",
+                          "marginRight": "0",
+                          "fontFamily": "Verdana, Geneva, Tahoma, sans-serif",
+                          "width": "95%",
+                          "fontSize": "1.1em",
+                          "lineHeight": "1.5em",
+                          "textAlign": "justify",
+                          "wordSpacing": "0.4em",
+                          "wordBreak": "breakAll"
+                        },
+                        "content": "בארץ ישראל קם העם היהודי, בה עוצבה דמותו הרוחנית, הדתית והמדינית, בה חי חיי קוממיות ממלכתית, בה יצר נכסי תרבות לאומיים וכלל אנושיים והוריש לעולם כולו את ספר הספרים הנצחי."
+                      },
+                      {
+                        "type": "p",
+                        "style": {
+                          "marginTop": "1em",
+                          "marginBottom": "1em",
+                          "marginLeft": "0",
+                          "marginRight": "0",
+                          "fontFamily": "Verdana, Geneva, Tahoma, sans-serif",
+                          "width": "95%",
+                          "fontSize": "1.1em",
+                          "lineHeight": "1.5em",
+                          "textAlign": "justify",
+                          "wordSpacing": "0.4em",
+                          "wordBreak": "breakAll"
+                        },
+                        "content": "לאחר שהוגלה העם מארצו בכוח הזרוע שמר לה אמונים בכל ארצות פזוריו, ולא חדל מתפילה ומתקוה לשוב לארצו ולחדש בתוכה את חירותו המדינית."
+                      },
+                      {
+                        "type": "p",
+                        "style": {
+                          "marginTop": "1em",
+                          "marginBottom": "1em",
+                          "marginLeft": "0",
+                          "marginRight": "0",
+                          "fontFamily": "Verdana, Geneva, Tahoma, sans-serif",
+                          "width": "95%",
+                          "fontSize": "1.1em",
+                          "lineHeight": "1.5em",
+                          "textAlign": "justify",
+                          "wordSpacing": "0.4em",
+                          "wordBreak": "breakAll"
+                        },
+                        "content": "מתוך קשר היסטורי ומסורתי זה חתרו היהודים בכל דור לשוב ולהאחז במולדתם העתיקה; ובדורות האחרונים שבו לארצם בהמונים, וחלוצים, מעפילים ומגינים הפריחו נשמות, החיו שפתם העברית, בנו כפרים וערים, והקימו ישוב גדל והולך השליט על משקו ותרבותו, שוחר שלום ומגן על עצמו, מביא ברכת הקידמה לכל תושבי הארץ ונושא נפשו לעצמאות ממלכתית."
+                      }
+                    ]
                   }
                 ]
               }
             },
             {
-              "sectionTitle": "יחידות מידה"
+              "sectionTitle": "יחידות מידה",
+              "textBlock": [
+                "כמו שיכולתם לשים לב, השתמשנו בקטע הקוד במספר יחידות מידה עבור מאפיינים שונים בשביל רכיבי הטקסט שלנו. בשפת CSS יחידות המידה האלה נחלקות לשני סוגים עיקריים"
+              ],
+              "listBlock": [
+                "יחידות מידה מוחלטות (Absolute Length Units)", "יחידות מידה יחסיות (Relative Length Units)"
+              ]
+            },
+            {
+              "textBlock": [
+                "יחידות מידה מוחלטות הן קובעות את גודל האותיות, או גודל הרכיבים שאנחנו משתמשים בהם בעמוד, בצורה מוחלטת. ללא קשר והתייחסות למשתנים אחרים שקיימים בעמוד, כמו רכיבים אחרים, תוכן אחר או אפילו גודל המסך וסוג הדפדפן. יש כמה יחידות מידה כאלה, אך לרוב כשנרצה להשתמש ביחידות מידה מוחלטות אנחנו נציין את המידה בפיקסלים, או בקיצור - px.",
+                "יחידות מידה יחסיות, הן יחידות שכן מתחשבות בגורמים שונים שקיימים בעמוד, כמו רכיבים שעוטפים אותם (רכיבי ההורה), או תוכן מילולי אחר וכדומה. בתוך יחידות מידה, אנחנו נכיר שתי יחידות יותר שימושיות - em ו-rem.",
+                "יחידת המידה em קובעת את גודל הטקסט בהתאם ליחידת המידה המוחלטת של הרכיב ההורה שבה היא נמצאת. לעומתה, יחידת המידה rem קובעת את גודל הטקסט לפי יחידת המידה המוחלטת הראשית."
+              ]
             },
             {
               "sectionTitle": "יישום הגופן הנבחר במסמך HTML"
@@ -2858,6 +2955,10 @@
                 {
                   "title": "HTML Color Names / Article by W3Schools",
                   "url": "https://www.w3schools.com/tags/ref_colornames.asp"
+                },
+                {
+                  "title": "מגילת העצמאות / מתוך אתר כנסת ישראל",
+                  "url": "https://main.knesset.gov.il/about/occasion/pages/declaration.aspx"
                 }
               ]
             }
