@@ -19,11 +19,10 @@ async function getCourseData(selectedCourse: string) {
 async function getCourseDataDB(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
   // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
-  const res = await fetch("http://http://localhost:3000/api/courses", {cache: "no-store"});
+  const res = await fetch("http://localhost:3000/api/courses", {cache: "no-store"});
   if (!res.ok) return notFound();
-  const allCourses = res.json()
-  return allCourses.find({courseName: selectedCourse});
-  
+  const allCourses = res.json();  
+  return allCourses
 }
 
 export default async function LearningManagementSystemPage({
@@ -31,8 +30,10 @@ export default async function LearningManagementSystemPage({
 }: {
   params: { lms: string };
 }) {
+  
   // * Call the function of reading course data appropriate to params url.
-  const courseData = await getCourseDataDB(params.lms[0]);
+  const allCourseData = await getCourseDataDB(params.lms[0]);
+  const courseData = allCourseData.find(select => select.courseId === params.lms[0])  
 
   return (
     <Flex
