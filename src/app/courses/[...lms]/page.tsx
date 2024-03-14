@@ -5,13 +5,25 @@ import NavLessonsList from "@/components/LearningManagementSystem/NavLessonsList
 import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import LessonSections from "@/components/LearningManagementSystem/LessonContent/LessonSections";
 import { ModuleCourse } from "@/types/coursesTypes";
+import { notFound } from "next/navigation";
 
 async function getCourseData(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
+  // * Get the data from a local file inside the project structure.
   const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
   const fileData = fs.readFileSync(filePath, "utf-8");
   const courseData: ModuleCourse = JSON.parse(fileData);
   return courseData;
+}
+
+async function getCourseDataDB(selectedCourse: string) {
+  // * Function that read the data of the selected course as SSG method.
+  // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
+  const res = await fetch("http://http://localhost:3000/api/courses", {cache: "no-store"});
+  if (!res.ok) return notFound();
+  const allCourses = res.json()
+  return allCourses.find({courseName: selectedCourse});
+  
 }
 
 export default async function LearningManagementSystemPage({
@@ -20,7 +32,7 @@ export default async function LearningManagementSystemPage({
   params: { lms: string };
 }) {
   // * Call the function of reading course data appropriate to params url.
-  const courseData = await getCourseData(params.lms[0]);
+  const courseData = await getCourseDataDB(params.lms[0]);
 
   return (
     <Flex
