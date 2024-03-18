@@ -10,6 +10,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+/**
+ * Pass the fetch all courses data to this page,
+ * and then when the user click to enter to any selected course
+ * call to function that filter that course,
+ * check if the specific user has authrized to this course,
+ * and navigate to it.
+ */
+
 function CoursesPage() {
   const coursesLink = [
     {

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 /**
  * * Explaination:
- * ? 'course' mean to the specific collection in the DB.
+ * ? 'courses' mean to the specific collection in the DB.
  * ? The second argument call to CourseSchema class and
  * ? create a model with the types in it.
  * ? And finally, the model return and save in Course constant variable.

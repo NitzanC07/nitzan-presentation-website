@@ -31,10 +31,13 @@ export default async function LearningManagementSystemPage({
   params: { lms: string };
 }) {
   
-  // * Call the function of reading course data appropriate to params url.
-  const allCourseData = await getCourseDataDB(params.lms[0]);
-  const courseData = allCourseData.find(select => select.courseId === params.lms[0])  
-
+  // * Call the function of reading course data appropriate to params url from DB
+  // const allCourseData = await getCourseData(params.lms[0]);
+  // const courseData = allCourseData.find(select => select.courseId === params.lms[0])  
+  
+  // * Call the function of reading course data appropriate to params url from local file.
+  const courseData = await getCourseData(params.lms[0]);
+  
   return (
     <Flex
       as="main"

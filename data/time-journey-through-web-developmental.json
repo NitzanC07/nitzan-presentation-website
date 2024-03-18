@@ -2937,11 +2937,140 @@
                 "יחידות מידה מוחלטות הן קובעות את גודל האותיות, או גודל הרכיבים שאנחנו משתמשים בהם בעמוד, בצורה מוחלטת. ללא קשר והתייחסות למשתנים אחרים שקיימים בעמוד, כמו רכיבים אחרים, תוכן אחר או אפילו גודל המסך וסוג הדפדפן. יש כמה יחידות מידה כאלה, אך לרוב כשנרצה להשתמש ביחידות מידה מוחלטות אנחנו נציין את המידה בפיקסלים, או בקיצור - px.",
                 "יחידות מידה יחסיות, הן יחידות שכן מתחשבות בגורמים שונים שקיימים בעמוד, כמו רכיבים שעוטפים אותם (רכיבי ההורה), או תוכן מילולי אחר וכדומה. בתוך יחידות מידה, אנחנו נכיר שתי יחידות יותר שימושיות - em ו-rem.",
                 "יחידת המידה em קובעת את גודל הטקסט בהתאם ליחידת המידה המוחלטת של הרכיב ההורה שבה היא נמצאת. לעומתה, יחידת המידה rem קובעת את גודל הטקסט לפי יחידת המידה המוחלטת הראשית."
-              ]
+              ],
+              "codeBox": {
+                "codeLang": "HTML",
+                "lines": [
+                  {"element": "<div class='parent-element'>", "spaces": 0, "color": "pink.300"},
+                  {"element": "Parent element", "spaces": 2, "color": "pink.300"},
+                  {"element": "<div class='child-element__rem'>", "spaces": 2, "color": "cyan.300"},
+                  {"element": "Child element", "spaces": 4, "color": "cyan.300"},
+                  {"element": "<div class='child-element__rem'>", "spaces": 4, "color": "cyan.100"},
+                  {"element": "Grandson element", "spaces": 6, "color": "cyan.100"},
+                  {"element": "</div>", "spaces": 4, "color": "cyan.100"},
+                  {"element": "</div>", "spaces": 2, "color": "cyan.300"},
+                  {"element": "</div>", "spaces": 0, "color": "pink.300"},
+                  {"element": " ", "spaces": 2, "color": "white"},
+                  {"element": "<div class='parent-element'>", "spaces": 0, "color": "pink.300"},
+                  {"element": "Parent element", "spaces": 2, "color": "pink.300"},
+                  {"element": "<div class='child-element__em'>", "spaces": 2, "color": "cyan.300"},
+                  {"element": "Child element", "spaces": 4, "color": "cyan.300"},
+                  {"element": "<div class='child-element__em'>", "spaces": 4, "color": "cyan.100"},
+                  {"element": "Grandson element", "spaces": 6, "color": "cyan.100"},
+                  {"element": "</div>", "spaces": 4, "color": "cyan.100"},
+                  {"element": "</div>", "spaces": 2, "color": "cyan.300"},
+                  {"element": "</div>", "spaces": 0, "color": "pink.300"}
+                ]
+              }
             },
             {
-              "sectionTitle": "יישום הגופן הנבחר במסמך HTML"
+              "codeBox": {
+                "codeLang": "CSS",
+                "lines": [
+                  {"element": ".parent-element {", "spaces": 0, "color": "pink.300"},
+                  {"element": "font-size: 22px;", "spaces": 2, "color": "pink.300"},
+                  {"element": "}", "spaces": 0, "color": "pink.300"},
+                  {"element": ".child-element__rem {", "spaces": 0, "color": "cyan.300"},
+                  {"element": "font-size: 1.5em;", "spaces": 2, "color": "cyan.300"},
+                  {"element": "}", "spaces": 0, "color": "cyan.300"},
+                  {"element": ".child-element__em {", "spaces": 0, "color": "cyan.300"},
+                  {"element": "font-size: 0.7em;", "spaces": 2, "color": "cyan.300"},
+                  {"element": "}", "spaces": 0, "color": "cyan.300"}
+                ],
+                "outputCode": [
+                  {
+                    "type": "p",
+                    "content": "Parent element - rem",
+                    "style": {"fontSize": "22px"}
+                  },
+                  {
+                    "type": "p",
+                    "content": "Child element - rem",
+                    "style": {"fontSize": "33px"}
+                  },
+                  {
+                    "type": "p",
+                    "content": "Grandson element - rem",
+                    "style": {"fontSize": "33px"}
+                  },
+                  {
+                    "type": "p",
+                    "content": "Parent element - em",
+                    "style": {"fontSize": "22px"}
+                  },
+                  {
+                    "type": "p",
+                    "content": "Child element - em",
+                    "style": {"fontSize": "15.4px"}
+                  },
+                  {
+                    "type": "p",
+                    "content": "Grandson element - em",
+                    "style": {"fontSize": "10.78px"}
+                  }
+                ]
+              },
+              "decorativeLine": true
             },
+            {
+              "sectionTitle": "זמן תרגול - יישום הגופן הנבחר במסמך HTML",
+              "textBlock": [
+                "כדי להשתמש בגופנים באתר שלנו אנחנו ניצור תיקייה ייעודית לכך בתוך התיקייה הראשית של הפרויקט ונקרא לה fonts. בתוך התיקייה הזאת למעשה נשמור את כל הגופנים שאנחנו רוצים להשתמש בהם באותו פרויקט. ונגדיר אותם בקובץ css נפרד עבור כל הגופנים."
+              ],
+              "codeBox": {
+                "codeLang": "Files structure",
+                "lines": [
+                  {"element": "/root", "spaces": 0, "color": "white"},
+                  {"element": "index.html", "spaces": 2, "color": "white"},
+                  {"element": "style.css", "spaces": 2, "color": "white"},
+                  {"element": "/fonts", "spaces": 2, "color": "yellow.300"},
+                  {"element": "fonts.css", "spaces": 4, "color": "yellow.300"}
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "אנחנו יכולים למצוא מאגר גדול של גופנים ברחבי הרשת. בקורס הזה נשתמש בגופנים מתוך Google Fonts, שרובם ניתנים לשימוש באופן חינמי ובלי צורך בתשלום על שימוש והגנת זכויות יוצרים.",
+                "חפשו את הגופנים הבאים:"
+              ],
+              "listBlock": ["Rubik", "Rubik Dirt", "Secular One"]
+            },
+            {
+              "textBlock": [
+                "בקובץ font.css הוסיפו סט של חוקים שמגדירים את הגופנים שהורדתם ושמרתם בתיקייה הייעודית לפי הדוגמא הבאה:"
+              ],
+              "codeBox": {
+                "codeLang": "fonts.css",
+                "lines": [
+                  {"element": "@font-face {", "spaces": 0, "color": "white"},
+                  {"element": "font-family: 'FONT-NAME'", "spaces": 2, "color": "white"},
+                  {"element": "src: url('./fonts/FONT-NAME.ttf') format('truetype')", "spaces": 2, "color": "white"},
+                  {"element": "font-style: normal", "spaces": 2, "color": "white"},
+                  {"element": "font-weight: normal", "spaces": 2, "color": "white"},
+                  {"element": "}", "spaces": 0, "color": "white"}
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "לאחר מכן, בקובץ ה-CSS הראשי יש לייבא (import) את קובץ הגופנים שיצרנו זה עתה, על מנת שנוכל להשתמש בגופן החדש בהתאם לשם שנתנו לו בקובץ הגופנים, כמו כל גופן אחר."
+              ],
+              "codeBox": {
+                "codeLang": "styles.css",
+                "lines": [
+                  {"element": ".text-element {", "spaces": 0, "color": "white"},
+                  {"element": "font-family: 'FONT-NAME', Arial, sans-serif", "spaces": 2, "color": "white"},
+                  {"element": "}", "spaces": 0, "color": "white"}
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "לבסוף השתמשו בגופנים אלה בכתבות שיצרתם. עבור כותרות השתמשו בגופן Rubik Dirt, עבור תוכן הכתבות השתמשו בגופן Secular One, ועבור כל תוכן אחר השתמשו בגופן Rubik.",
+                "מלבד זאת, קיבעו את הכותרות שתהיינה בגודל של 40px, עם גובה שורה (line height) של 42px, ללא הדגשה, ממורכז, ריווח בין מילים 10px וריווח בין אותיות של 5px.",
+                "עבור תוכן של כתבות הגדירו גודל אות 18px, גובה שורה 20px, טקסט מימין לשמאל ומיושר לשני הצדדים, ריווח בין מילים של 4px, ריווח בין אותיות של 2px, ובשביל להפוך את הכתבות לאותנטיות ונאמנות למקור הוסיפו אפשרות של שבירת מילה בשורה חדשה (word-break)."
+              ]
+            },            
             {
               "resources": [
                 {
@@ -2955,6 +3084,14 @@
                 {
                   "title": "HTML Color Names / Article by W3Schools",
                   "url": "https://www.w3schools.com/tags/ref_colornames.asp"
+                },
+                {
+                  "title": "Difference between em and rem units in CSS / Article by Geeks for geeks",
+                  "url": "https://www.geeksforgeeks.org/difference-between-em-and-rem-units-in-css/"
+                },
+                {
+                  "title": "Google Fonts",
+                  "url": "https://fonts.google.com/"
                 },
                 {
                   "title": "מגילת העצמאות / מתוך אתר כנסת ישראל",
