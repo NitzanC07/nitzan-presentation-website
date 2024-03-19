@@ -16,7 +16,10 @@ function BigButton({urlLink, text}: BigButtonProps) {
         >
           <Button
             style={{ fontFamily: "Varela Round, sans-serif" }}
-            colorScheme="yellow"
+            bgColor={"#C5A880"}
+            _hover={{bgColor: "#C5A880aa"}}
+            color={"black"}
+            shadow={"3px 3px 5px #888"}
           >
             {text}
           </Button>

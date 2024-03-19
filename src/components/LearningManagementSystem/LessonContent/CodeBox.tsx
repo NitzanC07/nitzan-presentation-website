@@ -77,7 +77,8 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
               py={0}
               h={5}
               m={1}
-              colorScheme="teal"
+              bgColor={"#C5A880"}
+              _hover={{bgColor: "#C5A88088"}}
               color="white"
               style={{ fontFamily: "Varela Round, sans-serif" }}
               onClick={toggleShowOutput}

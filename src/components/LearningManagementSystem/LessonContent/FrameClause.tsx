@@ -16,7 +16,7 @@ function FrameClause({ textContent, title, borderColor }: FrameClauseProps) {
       mt={10}
       mb={5}
       borderWidth={2}
-      borderColor={borderColor ? `${borderColor}` : "orange.200"}
+      borderColor={borderColor ? `${borderColor}` : "#C5A880"}
       borderRadius={15}
       bgColor="white"
     >
@@ -28,6 +28,7 @@ function FrameClause({ textContent, title, borderColor }: FrameClauseProps) {
           mx={[3, 3, 7, 0]}
           mb={3}
           p={0}
+          color={borderColor ? `${borderColor}` : "#C5A880"}
           tabIndex={1}
         >
           {title}
@@ -43,6 +44,7 @@ function FrameClause({ textContent, title, borderColor }: FrameClauseProps) {
           my={0}
           p={0}
           pb={2}
+          color={"#0F0F0F"}
           tabIndex={1}
         >
           {paragraph}

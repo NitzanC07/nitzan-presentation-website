@@ -21,7 +21,7 @@ function ImageContainer({
       p={2}
       mx="auto"
       my={7}
-      bgColor={"gray.100"}
+      bgColor={"#532E1C"}
       w={width}
       variant={"elevated"}
       // boxShadow={"revert"}
@@ -30,6 +30,7 @@ function ImageContainer({
         <Text
           style={{ fontFamily: "Varela Round" }}
           fontSize={15}
+          color={'white'}
           px={2}
           pb={4}
         >
@@ -44,7 +45,7 @@ function ImageContainer({
         tabIndex={1}
         title={altText}
       />
-      <Text as="p" fontSize={11} pt={2} tabIndex={1}>
+      <Text as="p" fontSize={11} color={'white'} pt={2} tabIndex={1}>
         {descText}
       </Text>
     </Card>

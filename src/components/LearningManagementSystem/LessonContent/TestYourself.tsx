@@ -56,7 +56,7 @@ function TestYourself({ testQue }: TestYourselfProps) {
               tabIndex={1}
               fontSize={18}
               mb={4}
-              >
+            >
               שאלה {`${i + 1}`}
             </Heading>
             <FormLabel
@@ -96,8 +96,9 @@ function TestYourself({ testQue }: TestYourselfProps) {
                       px={5}
                       colorScheme="orange"
                       isDisabled={showAnswer ? true : false}
-                      bgColor={"orange.200"}
-                      >
+                      bgColor={"#C5A880"}
+                      _checked={{ bgColor: "#532E1C" }}
+                    >
                       <Text
                         style={{ fontFamily: "Varela Round, sans-serif" }}
                         fontSize={16}
@@ -122,7 +123,7 @@ function TestYourself({ testQue }: TestYourselfProps) {
                       tabIndex={1}
                       style={{ fontFamily: "Varela Round, sans-serif" }}
                       color={`${isCorrect[i] ? "green.400" : "red.400"}`}
-                      >
+                    >
                       {isCorrect[i] ? "נכון מאוד!" : "טעות"}
                     </Heading>
                     <Text
@@ -145,6 +146,10 @@ function TestYourself({ testQue }: TestYourselfProps) {
             type="submit"
             colorScheme="orange"
             style={{ fontFamily: "Varela Round, sans-serif" }}
+            bgColor={"#C5A880"}
+            _hover={{bgColor: "#C5A880aa"}}
+            color={"white"}
+            shadow={"3px 3px 5px #888"}
             tabIndex={1}
           >
             בדיקה

@@ -20,8 +20,7 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
   return (
     <TableContainer overflowX={"auto"} maxW={"70%"} mx={"auto"}>
       <Table
-        variant={"striped"}
-        colorScheme={'orange'}
+        variant={"simple"}
         width={"100%"}
         mx={"auto"}
         mt={0}
@@ -35,13 +34,14 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
               fontFamily: "Varela Round",
               fontSize: "15px",
               fontWeight: "bold",
+              color: "#532E1C"
             }}
           >
             {caption}
           </TableCaption>
         )}
         <Thead>
-          <Tr bgColor={"gray.200"}>
+          <Tr bgColor={"#532E1C"}>
             {headingRow.map((cell, i) => (
               <Th
                 key={i}
@@ -49,6 +49,8 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
                   fontFamily: "Varela Round",
                   fontSize: "15px",
                   fontWeight: "bold",
+                  color: 'white',
+                  border: 0
                 }}
               >
                 {cell}
@@ -58,11 +60,24 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
         </Thead>
         <Tbody>
           {rows.map((row, i) => (
-            <Tr key={i}>
+            <Tr 
+              key={i} 
+              // bgColor={i%2 === 0 ? '#C5A88044' : '#C5A88077'} 
+              bgColor={i%2 === 0 ? '#ffffff66' : '#ffffff88'} 
+              _hover={{bgColor: '#C5A88044'}}
+              borderBottom={'1px solid #532E1C'}
+            >
               {row.map((cell, j) => (
                 <Td
                   key={j}
-                  style={{ fontFamily: "Varela Round", fontSize: "15px" }}
+                  style={{ 
+                    fontFamily: "Varela Round", 
+                    fontSize: "15px",
+                    lineHeight: "20px",
+                    textWrap: "wrap",
+                    textAlign: "start"
+                  }}
+                  border={0}
                 >
                   {cell}
                 </Td>

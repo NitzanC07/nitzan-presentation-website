@@ -19,10 +19,12 @@ async function getCourseData(selectedCourse: string) {
 async function getCourseDataDB(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
   // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
-  const res = await fetch("http://localhost:3000/api/courses", {cache: "no-store"});
+  const res = await fetch("http://localhost:3000/api/courses", {
+    cache: "no-store",
+  });
   if (!res.ok) return notFound();
-  const allCourses = res.json();  
-  return allCourses
+  const allCourses = res.json();
+  return allCourses;
 }
 
 export default async function LearningManagementSystemPage({
@@ -30,14 +32,13 @@ export default async function LearningManagementSystemPage({
 }: {
   params: { lms: string };
 }) {
-  
   // * Call the function of reading course data appropriate to params url from DB
   // const allCourseData = await getCourseData(params.lms[0]);
-  // const courseData = allCourseData.find(select => select.courseId === params.lms[0])  
-  
+  // const courseData = allCourseData.find(select => select.courseId === params.lms[0])
+
   // * Call the function of reading course data appropriate to params url from local file.
   const courseData = await getCourseData(params.lms[0]);
-  
+
   return (
     <Flex
       as="main"
@@ -57,7 +58,9 @@ export default async function LearningManagementSystemPage({
           as="nav"
           rowSpan={2}
           colSpan={1}
-          bgColor={"orange.700"}
+          // bgColor={"orange.700"}
+          // bgColor={"#815B5B"}
+          bgColor={"#532E1C"}
           p={4}
           tabIndex={1}
         >
@@ -75,14 +78,25 @@ export default async function LearningManagementSystemPage({
           <NavLessonsList courseData={courseData} />
         </GridItem>
 
-        <GridItem as="section" colSpan={1} bgColor={"orange.200"} py={3} px={5}>
+        <GridItem 
+          as="section" 
+          colSpan={1} 
+          // bgColor={"orange.200"} 
+          // bgColor={"#9E7676"} 
+          bgColor={"#C5A880"} 
+          color={'white'}
+          py={3} 
+          px={5}
+        >
           <LessonTitle courseData={courseData} lessonId={params.lms[1]} />
         </GridItem>
 
         <GridItem
           as="section"
           colSpan={1}
-          bgColor={"orange.50"}
+          // bgColor={"orange.50"}
+          // bgColor={"#FFF8EA"}
+          bgColor={"#E6E6E6"}
           w="100%"
           minH={"700px"}
           pt={0}

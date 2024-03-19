@@ -10,11 +10,13 @@ interface BibliographyBoxProps {
 function BibliographyBox({ resources }: BibliographyBoxProps) {
   return (
     <Box
-      bgColor={"red.50"}
+      // bgColor={"red.50"}
+      bgColor={"#C5A88088"}
       borderWidth={2}
-      borderColor={"red.400"}
+      borderColor={"#532E1C"}
       borderStyle={"dotted"}
       borderRadius={10}
+      color={"#532E1C"}
       p={2}
       mt={20}
       mb={10}

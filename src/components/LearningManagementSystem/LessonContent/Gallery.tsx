@@ -32,7 +32,9 @@ function Gallery({ images }: GalleryProps) {
       <Flex justifyContent="space-evenly" alignItems="center">
         <Button
           onClick={prevPracticeArticleHandler}
-          colorScheme="yellow"
+          bgColor="#532E1C"
+          _hover={{bgColor: "#532E1C88"}}
+          color={'white'}
           tabIndex={1}
         >
           <ArrowRightIcon />
@@ -47,7 +49,9 @@ function Gallery({ images }: GalleryProps) {
         >{`${visibleArticle + 1}/${images.length}`}</Text>
         <Button
           onClick={nextPracticeArticleHandler}
-          colorScheme="yellow"
+          bgColor="#532E1C"
+          _hover={{bgColor: "#532E1C88"}}
+          color={'white'}
           tabIndex={1}
         >
           <ArrowLeftIcon />

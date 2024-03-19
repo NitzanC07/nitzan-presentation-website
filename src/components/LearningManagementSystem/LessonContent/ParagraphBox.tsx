@@ -18,6 +18,7 @@ function ParagraphBox({ textContent }: ParagraphBoxProps) {
           mt={0}
           mb={4}
           p={0}
+          color={"#0F0F0F"}
           tabIndex={1}
         >
           {par}

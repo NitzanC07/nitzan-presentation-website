@@ -17,6 +17,7 @@ function ULbox({ content }: ULboxProps) {
           pb={4}
           mx={[3, 3, 7, 0]}
           m={0}
+          color={"#0F0F0F"}
           tabIndex={1}
         >
           {item}
