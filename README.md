@@ -11,36 +11,19 @@ Author: Nitzan Cohen
   - Special education teacher
   - Running coach
 
-## Courses structure
+## Learning Managment System
 
-### Lesson structure
+I present the courses that I teach in schools with a Learning Managment System (LMS) that I develop.
 
-Every lesson contains three properties: lessonId, title and sections.
+### Color palette:
 
-```typescript
-{
-  lessonId: string;
-  title: string;
-  sections: {}[];
-}
-```
+|Hex | RGB | Features|
+|:----|:----|:----|
+|#E6E6E6 | rgb(230, 230, 230) | Main background |
+|#C5A880 | rgb(197, 168, 128) | Title background, Buttons, Resources, Frame clause boxes |
+|#532E1C | rgb(83, 46, 28) | Lessons' navigator, Headings, Images' background, gallery's buttons|
+|#0F0F0F | rgb(230, 230, 230) | Regular text |
 
-Every section contains these properties:
-
-```typescript
-sections: {
-  sectionTitle?: string;
-  textBlock?: string[];
-  image?: { url: string; altText: string; descText: string; width: number[] };
-  frameClause?: { frameTitle: string; paragraphs: string[] };
-  codeBox?: { 
-      lines: { element: string; spaces: number; color: string }[];
-      codeLang: string;
-    };
-  listBlock?: string[];
-  imagesGallery?: { srcUrl: string; altText: string; descText: string }[];
-}[];
-```
 
 ## Articles and Resouces
 
