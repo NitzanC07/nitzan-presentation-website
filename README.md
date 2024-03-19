@@ -24,6 +24,7 @@ I present the courses that I teach in schools with a Learning Managment System (
 |#532E1C | rgb(83, 46, 28) | Lessons' navigator, Headings, Images' background, gallery's buttons|
 |#0F0F0F | rgb(230, 230, 230) | Regular text |
 
+[Palette in Color Hunt](https://colorhunt.co/palette/e6e6e6c5a880532e1c0f0f0f)
 
 ## Articles and Resouces
 
