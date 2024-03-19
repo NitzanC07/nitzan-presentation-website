@@ -11,7 +11,6 @@ function ULbox({ content }: ULboxProps) {
         <ListItem
           key={i}
           as="li"
-          style={{ fontFamily: "Varela Round, sans-serif" }}
           fontSize={18}
           pt={0}
           pb={4}

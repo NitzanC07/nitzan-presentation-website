@@ -23,7 +23,7 @@ function BibliographyBox({ resources }: BibliographyBoxProps) {
       mx={3}
     >
       <Heading
-        style={{ fontFamily: "Varela Round" }}
+        fontFamily="var(--font-varela_round)"
         fontSize={20}
         mt={2}
         mb={4}

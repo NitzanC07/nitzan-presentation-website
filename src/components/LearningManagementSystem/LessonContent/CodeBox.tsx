@@ -80,7 +80,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
               bgColor={"#C5A880"}
               _hover={{bgColor: "#C5A88088"}}
               color="white"
-              style={{ fontFamily: "Varela Round, sans-serif" }}
+              // style={{ fontFamily: "Varela Round, sans-serif" }}
               onClick={toggleShowOutput}
               tabIndex={1}
             >

@@ -1,3 +1,4 @@
+import { varela_round, varela_round_var } from "@/utils/fonts";
 import { AddIcon } from "@chakra-ui/icons";
 import { Heading, Icon } from "@chakra-ui/react";
 
@@ -9,8 +10,9 @@ function SubHeadingBox({ textHeading }: SubHeadingBoxProps) {
   return (
     <Heading
       as="h3"
-      style={{ fontFamily: "Varela Round, sans-serif" }}
-      // color={"orange.600"}
+      // style={{ fontFamily: "Varela Round, sans-serif" }}
+      // className={`${varela_round}`}
+      fontFamily="var(--font-varela_round)"
       color={"#815B5B"}
       fontSize={21}
       py={4}

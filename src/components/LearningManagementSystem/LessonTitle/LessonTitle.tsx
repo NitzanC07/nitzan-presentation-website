@@ -28,7 +28,6 @@ function LessonTitle({ courseData, lessonId }: LessonTitleProps) {
     <Flex flexDir="column" p={0}>
       <Text
         as="p"
-        style={{ fontFamily: "Varela Round, sans-serif" }}
         fontSize={18}
         tabIndex={1}
       >
@@ -36,7 +35,7 @@ function LessonTitle({ courseData, lessonId }: LessonTitleProps) {
       </Text>
       <Heading
         as="h2"
-        style={{ fontFamily: "Varela Round, sans-serif" }}
+        fontFamily="var(--font-varela_round)"
         fontSize={23}
         tabIndex={1}
       >

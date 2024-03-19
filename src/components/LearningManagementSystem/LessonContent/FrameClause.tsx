@@ -23,7 +23,7 @@ function FrameClause({ textContent, title, borderColor }: FrameClauseProps) {
       {title && (
         <Heading
           as="h3"
-          style={{ fontFamily: "Varela Round, sans-serif" }}
+          fontFamily="var(--font-varela_round)"
           fontSize={19}
           mx={[3, 3, 7, 0]}
           mb={3}
@@ -38,7 +38,6 @@ function FrameClause({ textContent, title, borderColor }: FrameClauseProps) {
         <Text
           key={i}
           as="p"
-          style={{ fontFamily: "Varela Round, sans-serif" }}
           fontSize={15}
           mx={[3, 3, 7, 0]}
           my={0}

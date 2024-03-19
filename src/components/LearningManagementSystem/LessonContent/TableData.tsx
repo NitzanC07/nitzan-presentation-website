@@ -31,11 +31,11 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
           <TableCaption
             placement="top"
             style={{
-              fontFamily: "Varela Round",
               fontSize: "15px",
               fontWeight: "bold",
               color: "#532E1C"
             }}
+            fontFamily="var(--font-varela_round)"
           >
             {caption}
           </TableCaption>
@@ -46,12 +46,12 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
               <Th
                 key={i}
                 style={{
-                  fontFamily: "Varela Round",
                   fontSize: "15px",
                   fontWeight: "bold",
                   color: 'white',
                   border: 0
                 }}
+                fontFamily="var(--font-varela_round)"
               >
                 {cell}
               </Th>
@@ -62,7 +62,6 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
           {rows.map((row, i) => (
             <Tr 
               key={i} 
-              // bgColor={i%2 === 0 ? '#C5A88044' : '#C5A88077'} 
               bgColor={i%2 === 0 ? '#ffffff66' : '#ffffff88'} 
               _hover={{bgColor: '#C5A88044'}}
               borderBottom={'1px solid #532E1C'}
@@ -70,8 +69,7 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
               {row.map((cell, j) => (
                 <Td
                   key={j}
-                  style={{ 
-                    fontFamily: "Varela Round", 
+                  style={{
                     fontSize: "15px",
                     lineHeight: "20px",
                     textWrap: "wrap",

@@ -54,7 +54,7 @@ function CoursesPage() {
       <Box mt="60px">
         <Heading
           as="h2"
-          style={{ fontFamily: "Varela Round, sans-serif" }}
+          fontFamily="var(--font-varela_round)"
           fontSize={26}
           my={10}
           tabIndex={1}
@@ -83,7 +83,8 @@ function CoursesPage() {
             <CardBody pos={"relative"}>
               <Flex flexDir={["column", "row"]} justifyContent="space-between">
                 <Heading
-                  style={{ fontFamily: "Varela Round, sans-serif" }}
+                  // style={{ fontFamily: "Varela Round, sans-serif" }}
+                  fontFamily="var(--font-varela_round)"
                   fontSize={[15, 19, 20, 24]}
                   mb={5}
                   tabIndex={1}
@@ -92,12 +93,12 @@ function CoursesPage() {
                 </Heading>
                 <Link
                   href={`${course.link}`}
-                  style={{ fontFamily: "Varela Round, sans-serif" }}
+                  // style={{ fontFamily: "Varela Round, sans-serif" }}
                   mb={[4, 0]}
                   tabIndex={1}
                 >
                   <Button
-                    style={{ fontFamily: "Varela Round, sans-serif" }}
+                    // style={{ fontFamily: "Varela Round, sans-serif" }}
                     colorScheme="yellow"
                     tabIndex={-1}
                   >
@@ -106,7 +107,7 @@ function CoursesPage() {
                 </Link>
               </Flex>
               <Text
-                style={{ fontFamily: "Varela Round, sans-serif" }}
+                // style={{ fontFamily: "Varela Round, sans-serif" }}
                 fontSize={[14, 16, 16, 18]}
                 mb={5}
                 tabIndex={1}

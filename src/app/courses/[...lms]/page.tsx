@@ -66,7 +66,7 @@ export default async function LearningManagementSystemPage({
         >
           <Heading
             as="h2"
-            style={{ fontFamily: "Varela Round, sans-serif" }}
+            fontFamily="var(--font-varela_round)"
             fontSize={23}
             color="white"
             mb={5}

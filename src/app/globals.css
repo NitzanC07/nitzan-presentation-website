@@ -1,2 +1,5 @@
 /* Global Style CSS */
 
+.varela_round {
+  font-family: var(--font-varela_round);
+}

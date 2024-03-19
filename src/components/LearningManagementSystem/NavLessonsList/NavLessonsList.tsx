@@ -29,7 +29,7 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
               as="h3"
               fontSize={18}
               textAlign={"right"}
-              style={{ fontFamily: "Varela Round, sans-serif" }}
+              fontFamily="var(--font-varela_round)"
               tabIndex={1}
               color={"white"}
             >
@@ -46,9 +46,6 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
                   p={2}
                   borderWidth={0}
                   borderRadius={4}
-                  style={{
-                    fontFamily: "Varela Round, sans-serif",
-                  }}
                   bgColor={"rgba(255, 255, 255, 0.1)"}
                   _hover={{bgColor: "rgba(255, 255, 255, 0.3)"}}
                 >

@@ -52,7 +52,7 @@ function TestYourself({ testQue }: TestYourselfProps) {
         {testQue.map((testSection, i) => (
           <Box key={i} my={4}>
             <Heading
-              style={{ fontFamily: "Varela Round, sans-serif" }}
+              fontFamily="var(--font-varela_round)"
               tabIndex={1}
               fontSize={18}
               mb={4}
@@ -60,7 +60,6 @@ function TestYourself({ testQue }: TestYourselfProps) {
               שאלה {`${i + 1}`}
             </Heading>
             <FormLabel
-              style={{ fontFamily: "Varela Round, sans-serif" }}
               fontSize={16}
               tabIndex={1}
             >
@@ -100,7 +99,6 @@ function TestYourself({ testQue }: TestYourselfProps) {
                       _checked={{ bgColor: "#532E1C" }}
                     >
                       <Text
-                        style={{ fontFamily: "Varela Round, sans-serif" }}
                         fontSize={16}
                         tabIndex={1}
                       >
@@ -121,14 +119,13 @@ function TestYourself({ testQue }: TestYourselfProps) {
                     <Heading
                       fontSize={20}
                       tabIndex={1}
-                      style={{ fontFamily: "Varela Round, sans-serif" }}
+                      fontFamily="var(--font-varela_round)"
                       color={`${isCorrect[i] ? "green.400" : "red.400"}`}
                     >
                       {isCorrect[i] ? "נכון מאוד!" : "טעות"}
                     </Heading>
                     <Text
                       fontSize={16}
-                      style={{ fontFamily: "Varela Round, sans-serif" }}
                       color={`black`}
                       tabIndex={1}
                     >
@@ -145,7 +142,6 @@ function TestYourself({ testQue }: TestYourselfProps) {
           <Button
             type="submit"
             colorScheme="orange"
-            style={{ fontFamily: "Varela Round, sans-serif" }}
             bgColor={"#C5A880"}
             _hover={{bgColor: "#C5A880aa"}}
             color={"white"}

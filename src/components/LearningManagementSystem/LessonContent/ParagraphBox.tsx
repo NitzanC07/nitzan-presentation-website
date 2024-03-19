@@ -12,7 +12,7 @@ function ParagraphBox({ textContent }: ParagraphBoxProps) {
         <Text
           key={i}
           as="p"
-          style={{ fontFamily: "Varela Round, sans-serif" }}
+          // style={{ fontFamily: "Varela Round, sans-serif" }}
           fontSize={18}
           mx={[3, 3, 7, 0]}
           mt={0}

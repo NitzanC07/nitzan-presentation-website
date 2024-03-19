@@ -1,4 +1,3 @@
-import { varelaRound } from "@/app/fonts";
 import { Flex, Text } from "@chakra-ui/react";
 
 function CoursesOverview() {
@@ -12,7 +11,7 @@ function CoursesOverview() {
       m={0}
       p={5}
     >
-      <Text className={varelaRound.className} fontSize={20}>
+      <Text fontSize={20}>
         קורסים
       </Text>
     </Flex>

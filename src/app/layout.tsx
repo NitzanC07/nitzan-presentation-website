@@ -1,26 +1,27 @@
-import type { Metadata } from 'next'
-import './globals.css';
-import { varelaRound, inter, rubik  } from './fonts';
+import type { Metadata } from "next";
+import "./globals.css";
+import { Varela_Round } from "next/font/google";
 
-import { Providers } from './providers'
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
-import { useState } from 'react';
+import { Providers } from "./providers";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import { varela_round } from "@/utils/fonts";
+
+
 
 export const metadata: Metadata = {
-  title: 'Nitzan Cohen',
-  description: 'Nitzan Cohen portfolio',
-}
+  title: "Nitzan Cohen",
+  description: "Nitzan Cohen portfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-
   return (
-    <html lang="he" dir='rtl' className={varelaRound.className}>
-      <body>
+    <html lang="he" dir="rtl">
+      <body className={varela_round}>
         <Providers>
           <Header />
           {children}
@@ -28,5 +29,5 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
-  )
+  );
 }

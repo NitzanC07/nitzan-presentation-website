@@ -1,4 +1,3 @@
-import { varelaRound } from "@/app/fonts";
 import { Box, Flex, Heading } from "@chakra-ui/react";
 
 function Header() {
@@ -14,18 +13,15 @@ function Header() {
       // py={3}
       h="60px"
       zIndex={1}
-    >
+      
+      >
       <Heading
-        style={{ fontFamily: "Varela Round, sans-serif" }}
+        fontFamily="var(--font-varela_round)"
         fontSize={[18, 25, 30]}
       >
         NC Learning
       </Heading>
-      <Box
-        className={varelaRound.className}
-        fontSize={[17, 20]}
-        bgColor={"gray.200"}
-      >
+      <Box fontSize={[17, 20]} bgColor={"gray.200"}>
         Navigator
       </Box>
     </Flex>
