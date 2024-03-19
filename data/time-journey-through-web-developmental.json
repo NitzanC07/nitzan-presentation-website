@@ -185,15 +185,27 @@
                 "את ההערכות בשפת HTML אנחנו יכולים להוסיף באופן הבא:"
               ],
               "codeBox": {
-                "codeLang":"HTML",
+                "codeLang": "HTML",
                 "lines": [
-                  {"element": "<body>", "spaces": 0, "color": "white"},
-                  {"element": "<!-- This is a comment, doesn't show in the output -->", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p>This is a paragraph.</p>", "spaces": 2, "color": "white"},
-                  {"element": "</body>", "spaces": 0, "color": "white"}
+                  { "element": "<body>", "spaces": 0, "color": "white" },
+                  {
+                    "element": "<!-- This is a comment, doesn't show in the output -->",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p>This is a paragraph.</p>",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  { "element": "</body>", "spaces": 0, "color": "white" }
                 ],
                 "outputCode": [
-                  {"type": "p", "content": "This is a paragraph.", "style": {}}
+                  {
+                    "type": "p",
+                    "content": "This is a paragraph.",
+                    "style": {}
+                  }
                 ]
               }
             },
@@ -204,8 +216,14 @@
             },
             {
               "resources": [
-                {"title": "HTML doctype declaration / Article by W3Schools", "url": "https://www.w3schools.com/tags/tag_doctype.ASP"},
-                {"title": "HTML Comments / Article by W3Schools", "url": "https://www.w3schools.com/html/html_comments.asp"}
+                {
+                  "title": "HTML doctype declaration / Article by W3Schools",
+                  "url": "https://www.w3schools.com/tags/tag_doctype.ASP"
+                },
+                {
+                  "title": "HTML Comments / Article by W3Schools",
+                  "url": "https://www.w3schools.com/html/html_comments.asp"
+                }
               ]
             }
           ]
@@ -762,7 +780,7 @@
                   "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"הארץ\", 12 באפריל 1961."
                 },
                 {
-                  "srcUrl": "\images\lessonsContents\module2\lesson2\davar_20-11-1977_sadat-visit-israel.png",
+                  "srcUrl": "/images/lessonsContents/module2/lesson2/davar_20-11-1977_sadat-visit-israel.png",
                   "altText": "כתבה מעיתון \"דבר\" כתבה על ביקור סאדאת בישראל. 20.11.1977.",
                   "imageSubject": "כתבה בעיתון \"דבר\" על ביקור נשיא מצרים אנואר סאדאת בישראל ונאומו בכנסת.",
                   "descText": "מתוך אתר \"עתונות יהודית היסטורית\". הספריה הלאומית ואוניברסיטת ת\"א. עיתון \"דבר\", 20 בנובמבר 1977."
@@ -1152,7 +1170,7 @@
                               }
                             ],
                             "style": {}
-                          }                          
+                          }
                         ],
                         "style": {}
                       },
@@ -1194,7 +1212,6 @@
                         ],
                         "style": {}
                       }
-                      
                     ],
                     "style": {}
                   }
@@ -1905,26 +1922,78 @@
                   { "element": "<body>", "spaces": 0, "color": "white" },
                   { "element": "<form>", "spaces": 2, "color": "red.300" },
                   { "element": "<fieldset>", "spaces": 4, "color": "cyan.300" },
-                  { "element": "<legend>Fieldset title</legend>", "spaces": 6, "color": "yellow.300" },
-                  { "element": "<ul style='list-style: none; padding: 0'>", "spaces": 6, "color": "white" },
+                  {
+                    "element": "<legend>Fieldset title</legend>",
+                    "spaces": 6,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<ul style='list-style: none; padding: 0'>",
+                    "spaces": 6,
+                    "color": "white"
+                  },
                   { "element": "<li>", "spaces": 8, "color": "white" },
-                  { "element": "<label for='fullName'>Full Name: </label>", "spaces": 10, "color": "yellow.300" },
-                  { "element": "<input type='text' id='fullName' placeholder='Your full name...' />", "spaces": 10, "color": "yellow.300" },
+                  {
+                    "element": "<label for='fullName'>Full Name: </label>",
+                    "spaces": 10,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<input type='text' id='fullName' placeholder='Your full name...' />",
+                    "spaces": 10,
+                    "color": "yellow.300"
+                  },
                   { "element": "</li>", "spaces": 8, "color": "white" },
                   { "element": "<li>", "spaces": 8, "color": "white" },
-                  { "element": "<label for='email'>E-Mail: </label>", "spaces": 10, "color": "yellow.300" },
-                  { "element": "<input type='text' id='fullName' placeholder='Your E-mail' />", "spaces": 10, "color": "yellow.300" },
+                  {
+                    "element": "<label for='email'>E-Mail: </label>",
+                    "spaces": 10,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<input type='text' id='fullName' placeholder='Your E-mail' />",
+                    "spaces": 10,
+                    "color": "yellow.300"
+                  },
                   { "element": "</li>", "spaces": 8, "color": "white" },
                   { "element": "</ul>", "spaces": 6, "color": "white" },
-                  { "element": "</fieldset>", "spaces": 4, "color": "cyan.300" },
+                  {
+                    "element": "</fieldset>",
+                    "spaces": 4,
+                    "color": "cyan.300"
+                  },
                   { "element": "<fieldset>", "spaces": 4, "color": "cyan.300" },
-                  { "element": "<label for='multilineText'>message: </label>", "spaces": 6, "color": "yellow.300" },
-                  { "element": "<textarea id='multilineText' rows='4' cols='35' placeholder='Your message...' />", "spaces": 6, "color": "yellow.300" },
-                  { "element": "</fieldset>", "spaces": 4, "color": "cyan.300" },
+                  {
+                    "element": "<label for='multilineText'>message: </label>",
+                    "spaces": 6,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<textarea id='multilineText' rows='4' cols='35' placeholder='Your message...' />",
+                    "spaces": 6,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "</fieldset>",
+                    "spaces": 4,
+                    "color": "cyan.300"
+                  },
                   { "element": "<fieldset>", "spaces": 4, "color": "cyan.300" },
-                  { "element": "<button type='submit'>Send</button>", "spaces": 6, "color": "yellow.300" },
-                  { "element": "<button type='reset'>Reset</button>", "spaces": 6, "color": "yellow.300" },
-                  { "element": "</fieldset>", "spaces": 4, "color": "cyan.300" },
+                  {
+                    "element": "<button type='submit'>Send</button>",
+                    "spaces": 6,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<button type='reset'>Reset</button>",
+                    "spaces": 6,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "</fieldset>",
+                    "spaces": 4,
+                    "color": "cyan.300"
+                  },
                   { "element": "</form>", "spaces": 2, "color": "red.300" },
                   { "element": "</body>", "spaces": 0, "color": "white" }
                 ]
@@ -2007,12 +2076,12 @@
                     "spaces": 4,
                     "color": "pink.200"
                   },
-                  { 
+                  {
                     "element": "<meat name='description' content='This is website of learning web development course.' />",
                     "spaces": 4,
                     "color": "pink.200"
                   },
-                  { 
+                  {
                     "element": "<meat name='keywords' content='web development, Learning HTML, Learning CSS, Learning JS' />",
                     "spaces": 4,
                     "color": "pink.200"
@@ -2022,14 +2091,34 @@
                     "spaces": 4,
                     "color": "green.300"
                   },
-                  { "element": "<link rel='icon' href='favicon.ico' type='image/x-icon' />", "spaces": 4, "color": "yellow.300" },
-                  { "element": "<link rel='stylesheet' href='styling-file.css' />", "spaces": 4, "color": "cyan.300" },
-                  { "element": "<style></style>", "spaces": 4, "color": "cyan.300" },
-                  { "element": "<script src='script-file.js' defer></script>", "spaces": 4, "color": "orange.300" },
+                  {
+                    "element": "<link rel='icon' href='favicon.ico' type='image/x-icon' />",
+                    "spaces": 4,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<link rel='stylesheet' href='styling-file.css' />",
+                    "spaces": 4,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "<style></style>",
+                    "spaces": 4,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "<script src='script-file.js' defer></script>",
+                    "spaces": 4,
+                    "color": "orange.300"
+                  },
                   { "element": "</head>", "spaces": 2, "color": "blue.300" },
                   { "element": "<body>", "spaces": 2, "color": "white" },
                   { "element": "", "spaces": 2, "color": "white" },
-                  { "element": "<script src='script-file.js'></script>", "spaces": 4, "color": "orange.300" },
+                  {
+                    "element": "<script src='script-file.js'></script>",
+                    "spaces": 4,
+                    "color": "orange.300"
+                  },
                   { "element": "</body>", "spaces": 2, "color": "white" },
                   { "element": "</html>", "spaces": 0, "color": "white" }
                 ]
@@ -2070,7 +2159,7 @@
               "resources": [
                 {
                   "title": "What's in the head? Metadata in HTML / Article by MDN web docs",
-                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"                
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
                 },
                 {
                   "title": "HTML Meta tag / Article by W3Schools",
@@ -2119,27 +2208,35 @@
               "codeBox": {
                 "codeLang": "HTML",
                 "lines": [
-                  {"element": "<body>", "spaces": 0, "color": "white"},
-                  {"element": "<p class='textArticle'>תוכן הכתבה</p>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p class='textComment'>תגובה לכתבה</p>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "</body>", "spaces": 0, "color": "white"}
+                  { "element": "<body>", "spaces": 0, "color": "white" },
+                  {
+                    "element": "<p class='textArticle'>תוכן הכתבה</p>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p class='textComment'>תגובה לכתבה</p>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  { "element": "</body>", "spaces": 0, "color": "white" }
                 ],
                 "outputCode": [
-                  { 
-                    "type": "p", 
+                  {
+                    "type": "p",
                     "style": {
                       "class": "textArticle",
                       "direction": "rtl"
-                    }, 
-                    "content": "תוכן הכתבה" 
+                    },
+                    "content": "תוכן הכתבה"
                   },
-                  { 
-                    "type": "p", 
+                  {
+                    "type": "p",
                     "style": {
                       "class": "textComment",
                       "direction": "rtl"
-                    }, 
-                    "content": "תגובה לכתבה" 
+                    },
+                    "content": "תגובה לכתבה"
                   }
                 ]
               }
@@ -2157,63 +2254,87 @@
               "codeBox": {
                 "codeLang": "HTML",
                 "lines": [
-                  {"element": "<body>", "spaces": 0, "color": "white"},
-                  {"element": "<p class='textArticle' id='firstParagraph'>פסקה ראשונה</p>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p class='textArticle' id='secondParagraph'>פסקה שניה</p>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p class='textArticle' id='thirdParagraph'>פסקה שלישית</p>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p class='textComment' id='firstComment'>תגובה ראשונה</p>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p class='textComment' id='secondComment'>תגובה שניה</p>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p class='textComment' id='thirdComment'>תגובה שלישית</p>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "</body>", "spaces": 0, "color": "white"}
+                  { "element": "<body>", "spaces": 0, "color": "white" },
+                  {
+                    "element": "<p class='textArticle' id='firstParagraph'>פסקה ראשונה</p>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p class='textArticle' id='secondParagraph'>פסקה שניה</p>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p class='textArticle' id='thirdParagraph'>פסקה שלישית</p>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p class='textComment' id='firstComment'>תגובה ראשונה</p>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p class='textComment' id='secondComment'>תגובה שניה</p>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p class='textComment' id='thirdComment'>תגובה שלישית</p>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  { "element": "</body>", "spaces": 0, "color": "white" }
                 ],
                 "outputCode": [
-                  { 
-                    "type": "p", 
+                  {
+                    "type": "p",
                     "style": {
                       "class": "textArticle",
                       "direction": "rtl"
-                    }, 
-                    "content": "פסקה ראשונה" 
+                    },
+                    "content": "פסקה ראשונה"
                   },
-                  { 
-                    "type": "p", 
+                  {
+                    "type": "p",
                     "style": {
                       "class": "textArticle",
                       "direction": "rtl"
-                    }, 
-                    "content": "פסקה שניה" 
+                    },
+                    "content": "פסקה שניה"
                   },
-                  { 
-                    "type": "p", 
+                  {
+                    "type": "p",
                     "style": {
                       "class": "textArticle",
                       "direction": "rtl"
-                    }, 
-                    "content": "פסקה שלישית" 
+                    },
+                    "content": "פסקה שלישית"
                   },
-                  { 
-                    "type": "p", 
+                  {
+                    "type": "p",
                     "style": {
                       "class": "textComment",
                       "direction": "rtl"
-                    }, 
-                    "content": "תגובה ראשונה" 
+                    },
+                    "content": "תגובה ראשונה"
                   },
-                  { 
-                    "type": "p", 
+                  {
+                    "type": "p",
                     "style": {
                       "class": "textComment",
                       "direction": "rtl"
-                    }, 
-                    "content": "תגובה שניה" 
+                    },
+                    "content": "תגובה שניה"
                   },
-                  { 
-                    "type": "p", 
+                  {
+                    "type": "p",
                     "style": {
                       "class": "textComment",
                       "direction": "rtl"
-                    }, 
-                    "content": "תגובה שלישית" 
+                    },
+                    "content": "תגובה שלישית"
                   }
                 ]
               }
@@ -2269,14 +2390,18 @@
                   "question": "לפי המבנה האנטומי הבסיסי של מסמך HTML, באיזה חלק נכתוב את שורת הקוד הבאה?",
                   "codeBox": {
                     "codeLang": "HTML",
-                    "lines":[
-                      {"element": "<title>Website subject</title>", "color": "white", "spaces": 0}
+                    "lines": [
+                      {
+                        "element": "<title>Website subject</title>",
+                        "color": "white",
+                        "spaces": 0
+                      }
                     ]
                   },
                   "options": [
-                    "בין תגי הפתיחה והסגירה של הראש <head></head>", 
-                    "בין תגי הפתיחה והסגירה של הגוף <body></body>", 
-                    "בתוך התג הפותח <head>", 
+                    "בין תגי הפתיחה והסגירה של הראש <head></head>",
+                    "בין תגי הפתיחה והסגירה של הגוף <body></body>",
+                    "בתוך התג הפותח <head>",
                     "בתוך התג הפותח <body>"
                   ],
                   "correctAnswer": "בין תגי הפתיחה והסגירה של הראש <head></head>",
@@ -2288,7 +2413,7 @@
                     "נשתמש בה פעם אחת בלבד בכל עמוד שאנחנו בונים באתר, כדי לא לבלבל את מנועי החיפוש.",
                     "נשתמש בכותרת זו בכותרות של כתבות, על מנת להמחיש לקורא את ההבדל בין הכותרת לגוף הכתבה.",
                     "זה לא משנה באיזה סוג כותרת נשתמש, אנחנו יכולים להשתמש בכל סוג כותרת בהתאם לצרכי האתר."
-                    ],
+                  ],
                   "correctAnswer": "נשתמש בה פעם אחת בלבד בכל עמוד שאנחנו בונים באתר, כדי לא לבלבל את מנועי החיפוש.",
                   "explainAnswer": "לסוגי הכותרות יש משמעות סמנטית. הדפדפנים, מנועי החיפוש וכן קוראי מסכים מזהים את חשיבות הכותרות לפי המספור שלהן, לכן ההמלצה היא להשתמש בכותרת h1 פעם אחת בלבד בכל עמוד."
                 },
@@ -2316,7 +2441,11 @@
                   "codeBox": {
                     "codeLang": "HTML",
                     "lines": [
-                      {"element": "<a>Link to Wikipedia</a>", "color": "white", "spaces": 0}
+                      {
+                        "element": "<a>Link to Wikipedia</a>",
+                        "color": "white",
+                        "spaces": 0
+                      }
                     ]
                   }
                 },
@@ -2333,10 +2462,7 @@
                 },
                 {
                   "question": "ניתוב מלא מתייחס לדרך המלאה מהתיקייה הראשית ועד לאובייקט שאנחנו רוצים להתייחס אליו, ואילו ניתוב יחסי מתייחס לדרך מהתיקייה הנוכחית אל האובייקט הרצוי.",
-                  "options":[
-                    "נכון",
-                    "לא נכון"
-                  ],
+                  "options": ["נכון", "לא נכון"],
                   "correctAnswer": "נכון",
                   "explainAnswer": ""
                 },
@@ -2353,7 +2479,7 @@
                 },
                 {
                   "question": "איזה הבדל חזותי (Visual) נראה באתר שלנו אם נחליף את תגיות ה-div שאנחנו משתמשים בהן לתגיות סמנטיות כמו, header, section, article, main ו-footer?",
-                  "options":[
+                  "options": [
                     "לא נראה שום הבדל חזותי.",
                     "האתר יראה מעוצב יפה יותר ומחולק לאזורים נפרדים.",
                     "הגודל של הטקסטים ישתנו בהתאם לאופי של כל תגית סמנטית.",
@@ -2367,14 +2493,22 @@
                   "question": "בתוך תגי הראש (head) יש לנו כמה תגיות אפשריות שאנחנו יכולים להשתמש בהן כדי להוסיף עיצוב, כמו בדוגמא שלהלן. מה ההבדל בין התגיות האלה?",
                   "codeBox": {
                     "codeLang": "HTML",
-                    "lines":[
-                      {"element": "<head>", "color": "white", "spaces": 0},
-                      {"element": "<link rel='stylesheet' href='styling-file.css' />", "color": "white", "spaces": 2},
-                      {"element": "<style></style>", "color": "white", "spaces": 2},
-                      {"element": "</head>", "color": "white", "spaces": 0}
+                    "lines": [
+                      { "element": "<head>", "color": "white", "spaces": 0 },
+                      {
+                        "element": "<link rel='stylesheet' href='styling-file.css' />",
+                        "color": "white",
+                        "spaces": 2
+                      },
+                      {
+                        "element": "<style></style>",
+                        "color": "white",
+                        "spaces": 2
+                      },
+                      { "element": "</head>", "color": "white", "spaces": 0 }
                     ]
                   },
-                  "options":[
+                  "options": [
                     "התגית שבשורה 2 מיועדת כדי לחבר קובץ עיצוב נפרד למסמך ה-HTML, ואילו בין התגיות שבשורה 3 אפשר להוסיף תכונות עיצוביות בתוך המסמך עצמו.",
                     "אין שום הבדל בין התגיות הנתונות למעלה.",
                     "שתי השורות האלה קשורות לעיצוב של העמוד, שזה דבר חזותי, לכן בקטע הקוד הנ\"ל יש טעות והן צריכות להיות בתוך ה-body."
@@ -2421,8 +2555,8 @@
             },
             {
               "textBlock": [
-                "CSS (Cascading Style Sheets, דפי סגנון מדורגים) זו שפה שמשתמשים בה כדי לעצב ולסגנן דפי אינטרנט שנכתבים באמצעות שפת HTML. שפת CSS מתארת למעשה את אופן הצגתם של רכיבי ה-HTML בתוך העמוד ואת הסידור שלהם ביחד לעמוד כולו, וביחס לרכיבי אחרים שנמצאים בו. בשונה משפת HTML, שפת CSS היא לא שפת markup, כלומר היא לא בנויה על תגיות כמו שלמדנו בפרק הקודם, אלא היא שפה שמתבססת על בחירת רכיב HTML מסוים ועיצובו."                
-              ]              
+                "CSS (Cascading Style Sheets, דפי סגנון מדורגים) זו שפה שמשתמשים בה כדי לעצב ולסגנן דפי אינטרנט שנכתבים באמצעות שפת HTML. שפת CSS מתארת למעשה את אופן הצגתם של רכיבי ה-HTML בתוך העמוד ואת הסידור שלהם ביחד לעמוד כולו, וביחס לרכיבי אחרים שנמצאים בו. בשונה משפת HTML, שפת CSS היא לא שפת markup, כלומר היא לא בנויה על תגיות כמו שלמדנו בפרק הקודם, אלא היא שפה שמתבססת על בחירת רכיב HTML מסוים ועיצובו."
+              ]
             },
             {
               "sectionTitle": "יישום CSS בתוך מסמך HTML",
@@ -2432,9 +2566,13 @@
               "codeBox": {
                 "codeLang": "HTML",
                 "lines": [
-                  {"element": "<body>", "spaces": 0, "color": "white"},
-                  {"element": "<h1 style='...css rule...'>Main Heading</h1>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "</body>", "spaces": 0, "color": "white"}
+                  { "element": "<body>", "spaces": 0, "color": "white" },
+                  {
+                    "element": "<h1 style='...css rule...'>Main Heading</h1>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  { "element": "</body>", "spaces": 0, "color": "white" }
                 ]
               }
             },
@@ -2443,15 +2581,15 @@
                 "הדרך השניה להחיל עיצוב על מסמך HTML בודד היא באמצעות הוספת חוקי העיצוב בין תגיות הראש (head) באמצעות צמד תגיות style ייעודיות. שיטה זו טובה אם האתר שלנו מכיל עמוד אינטרנט אחד, שאנחנו רוצים להחיל רק עליו את העיצוב. אך אם האתר שלנו מכיל כמה עמודים אזי אנחנו נצטרך להעתיק את העיצוב שבין התגיות לכל העמודים באתר כדי שהם יקבלו את אותו עיצוב אחיד."
               ],
               "codeBox": {
-                "codeLang":"HTML",
+                "codeLang": "HTML",
                 "lines": [
-                  {"element": "<head>", "spaces": 0, "color": "white"},
-                  {"element": "<style>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "...", "spaces": 4, "color": "gray.500"},
-                  {"element": "css rules", "spaces": 4, "color": "gray.500"},
-                  {"element": "...", "spaces": 4, "color": "gray.500"},
-                  {"element": "</style>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "</head>", "spaces": 0, "color": "white"}
+                  { "element": "<head>", "spaces": 0, "color": "white" },
+                  { "element": "<style>", "spaces": 2, "color": "yellow.300" },
+                  { "element": "...", "spaces": 4, "color": "gray.500" },
+                  { "element": "css rules", "spaces": 4, "color": "gray.500" },
+                  { "element": "...", "spaces": 4, "color": "gray.500" },
+                  { "element": "</style>", "spaces": 2, "color": "yellow.300" },
+                  { "element": "</head>", "spaces": 0, "color": "white" }
                 ]
               }
             },
@@ -2475,7 +2613,11 @@
                 "lines": [
                   { "element": "<html>", "spaces": 0, "color": "white" },
                   { "element": "<head>", "spaces": 2, "color": "white" },
-                  { "element": "<link rel='stylesheet' href='style.css' />", "spaces": 4, "color": "cyan.300" },
+                  {
+                    "element": "<link rel='stylesheet' href='style.css' />",
+                    "spaces": 4,
+                    "color": "cyan.300"
+                  },
                   { "element": "</head>", "spaces": 2, "color": "white" },
                   { "element": "<body>", "spaces": 2, "color": "white" },
                   { "element": " ... ", "spaces": 4, "color": "white" },
@@ -2486,7 +2628,7 @@
             },
             {
               "sectionTitle": "תחביר שפת CSS",
-              "textBlock":[
+              "textBlock": [
                 "כמו שראינו בדוגמא האחרונה צורת הכתיבה של שפת CSS היא שונה ממה שלמדנו עד עכשיו. למעשה היא בנויה ממצביע (Selector) ומהגדרה (Declaration). הגדרה מורכבת אף היא משני חלקים - מאפיין (Property) וערך (Value). כפי שהאיור הבא ממחיש זאת."
               ],
               "image": {
@@ -2495,7 +2637,7 @@
                 "width": [300, 400]
               }
             },
-            
+
             {
               "textBlock": [
                 "Declaration היא למעשה הגדרה של חוקיות בודדת שקיימת במאפיינים של הרכיב הנבחר. בהגדרה זו אנחנו בוחרים את המאפיין (Property) שאותו אנחנו רוצים לשנות או לקבוע, ואת הערך (Value) שאנחנו רוצים לעצב את הרכיב לפיו. כל הגדרה כזאת חייבת להכיל מאפיין וערך מופרדים בינהם בנקודותיים (:) ומסתיימים בסימן נקודה ופסיק (;).",
@@ -2504,9 +2646,13 @@
               "codeBox": {
                 "codeLang": "HTML",
                 "lines": [
-                  { "element": "<h1>Sample Heading</h1>", "spaces": 0, "color": "white" }
+                  {
+                    "element": "<h1>Sample Heading</h1>",
+                    "spaces": 0,
+                    "color": "white"
+                  }
                 ],
-                "outputCode":[
+                "outputCode": [
                   {
                     "type": "h1",
                     "content": "Sample Heading",
@@ -2529,7 +2675,11 @@
               "codeBox": {
                 "codeLang": "CSS",
                 "lines": [
-                  {"element": "h1 { color: blue; }", "spaces": 0, "color": "white"}
+                  {
+                    "element": "h1 { color: blue; }",
+                    "spaces": 0,
+                    "color": "white"
+                  }
                 ],
                 "outputCode": [
                   {
@@ -2558,9 +2708,13 @@
               "codeBox": {
                 "codeLang": "CSS",
                 "lines": [
-                  {"element": "h1 {", "color": "white", "spaces": 0},
-                  {"element": "font-size: 18px;", "color": "white", "spaces": 2},
-                  {"element": "}", "color": "white", "spaces": 0}
+                  { "element": "h1 {", "color": "white", "spaces": 0 },
+                  {
+                    "element": "font-size: 18px;",
+                    "color": "white",
+                    "spaces": 2
+                  },
+                  { "element": "}", "color": "white", "spaces": 0 }
                 ]
               }
             },
@@ -2571,9 +2725,13 @@
               "codeBox": {
                 "codeLang": "CSS",
                 "lines": [
-                  {"element": "h1, p, a {", "color": "white", "spaces": 0},
-                  {"element": "font-size: 18px;", "color": "white", "spaces": 2},
-                  {"element": "}", "color": "white", "spaces": 0}
+                  { "element": "h1, p, a {", "color": "white", "spaces": 0 },
+                  {
+                    "element": "font-size: 18px;",
+                    "color": "white",
+                    "spaces": 2
+                  },
+                  { "element": "}", "color": "white", "spaces": 0 }
                 ]
               }
             },
@@ -2584,9 +2742,9 @@
               "codeBox": {
                 "codeLang": "CSS",
                 "lines": [
-                  {"element": "p a {", "color": "white", "spaces": 0},
-                  {"element": "color: green;", "color": "white", "spaces": 2},
-                  {"element": "}", "color": "white", "spaces": 0}
+                  { "element": "p a {", "color": "white", "spaces": 0 },
+                  { "element": "color: green;", "color": "white", "spaces": 2 },
+                  { "element": "}", "color": "white", "spaces": 0 }
                 ]
               }
             },
@@ -2600,37 +2758,77 @@
               "codeBox": {
                 "codeLang": "HTML",
                 "lines": [
-                  {"element": "<body>", "spaces": 0, "color": "white"},
-                  {"element": "<div class='box'>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p id='one-article'>Any content of long article...</p>", "spaces": 4, "color": "pink.200"},
-                  {"element": "</div>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<div class='box'>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "<p id='one-comment'>One comment of a user.</p>", "spaces": 4, "color": "pink.200"},
-                  {"element": "</div>", "spaces": 2, "color": "yellow.300"},
-                  {"element": "</body>", "spaces": 0, "color": "white"}
+                  { "element": "<body>", "spaces": 0, "color": "white" },
+                  {
+                    "element": "<div class='box'>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p id='one-article'>Any content of long article...</p>",
+                    "spaces": 4,
+                    "color": "pink.200"
+                  },
+                  { "element": "</div>", "spaces": 2, "color": "yellow.300" },
+                  {
+                    "element": "<div class='box'>",
+                    "spaces": 2,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "<p id='one-comment'>One comment of a user.</p>",
+                    "spaces": 4,
+                    "color": "pink.200"
+                  },
+                  { "element": "</div>", "spaces": 2, "color": "yellow.300" },
+                  { "element": "</body>", "spaces": 0, "color": "white" }
                 ]
               }
             },
             {
-              "codeBox":{
+              "codeBox": {
                 "codeLang": "CSS",
-                "lines":[
-                  {"element": "<style>", "spaces": 0, "color": "white"},
-                  {"element": ".box {", "spaces": 2, "color": "yellow.300"},
-                  {"element": "border: 1px solid blue;", "spaces": 4, "color": "yellow.300"},
-                  {"element": "margin: 5px;", "spaces": 4, "color": "yellow.300"},
-                  {"element": "}", "spaces": 2, "color": "yellow.300"},
-                  {"element": " ", "spaces": 2, "color": "white"},
-                  {"element": "#one-article {", "spaces": 2, "color": "pink.200"},
-                  {"element": "color: red;", "spaces": 4, "color": "pink.200"},
-                  {"element": "}", "spaces": 2, "color": "pink.200"},
-                  {"element": " ", "spaces": 2, "color": "white"},
-                  {"element": "#one-comment {", "spaces": 2, "color": "pink.200"},
-                  {"element": "color: green;", "spaces": 4, "color": "pink.200"},
-                  {"element": "}", "spaces": 2, "color": "pink.200"},
-                  {"element": "</style>", "spaces": 0, "color": "white"}
+                "lines": [
+                  { "element": "<style>", "spaces": 0, "color": "white" },
+                  { "element": ".box {", "spaces": 2, "color": "yellow.300" },
+                  {
+                    "element": "border: 1px solid blue;",
+                    "spaces": 4,
+                    "color": "yellow.300"
+                  },
+                  {
+                    "element": "margin: 5px;",
+                    "spaces": 4,
+                    "color": "yellow.300"
+                  },
+                  { "element": "}", "spaces": 2, "color": "yellow.300" },
+                  { "element": " ", "spaces": 2, "color": "white" },
+                  {
+                    "element": "#one-article {",
+                    "spaces": 2,
+                    "color": "pink.200"
+                  },
+                  {
+                    "element": "color: red;",
+                    "spaces": 4,
+                    "color": "pink.200"
+                  },
+                  { "element": "}", "spaces": 2, "color": "pink.200" },
+                  { "element": " ", "spaces": 2, "color": "white" },
+                  {
+                    "element": "#one-comment {",
+                    "spaces": 2,
+                    "color": "pink.200"
+                  },
+                  {
+                    "element": "color: green;",
+                    "spaces": 4,
+                    "color": "pink.200"
+                  },
+                  { "element": "}", "spaces": 2, "color": "pink.200" },
+                  { "element": "</style>", "spaces": 0, "color": "white" }
                 ],
-                "outputCode":[
+                "outputCode": [
                   {
                     "type": "div",
                     "style": {
@@ -2674,16 +2872,40 @@
               "codeBox": {
                 "codeLang": "CSS",
                 "lines": [
-                  {"element": "/* Comment is the place to explain a piece of code in simple words. */", "color": "yellow.300", "spaces": 0},
-                  {"element": "{ color: 'white'; }", "color": "white", "spaces": 0},
-                  {"element": " ", "color": "white", "spaces": 1},
-                  {"element": "/*", "color": "yellow.300", "spaces": 0},
-                  {"element": "You can also ", "color": "yellow.300", "spaces": 2},
-                  {"element": "write a comment", "color": "yellow.300", "spaces": 2},
-                  {"element": "with  multiple lines.", "color": "yellow.300", "spaces": 2},
-                  {"element": "*/", "color": "yellow.300", "spaces": 0},
-                  {"element": " ", "color": "white", "spaces": 1},
-                  {"element": "/* {background-color: 'pink'; } */", "color": "yellow.300", "spaces": 0}
+                  {
+                    "element": "/* Comment is the place to explain a piece of code in simple words. */",
+                    "color": "yellow.300",
+                    "spaces": 0
+                  },
+                  {
+                    "element": "{ color: 'white'; }",
+                    "color": "white",
+                    "spaces": 0
+                  },
+                  { "element": " ", "color": "white", "spaces": 1 },
+                  { "element": "/*", "color": "yellow.300", "spaces": 0 },
+                  {
+                    "element": "You can also ",
+                    "color": "yellow.300",
+                    "spaces": 2
+                  },
+                  {
+                    "element": "write a comment",
+                    "color": "yellow.300",
+                    "spaces": 2
+                  },
+                  {
+                    "element": "with  multiple lines.",
+                    "color": "yellow.300",
+                    "spaces": 2
+                  },
+                  { "element": "*/", "color": "yellow.300", "spaces": 0 },
+                  { "element": " ", "color": "white", "spaces": 1 },
+                  {
+                    "element": "/* {background-color: 'pink'; } */",
+                    "color": "yellow.300",
+                    "spaces": 0
+                  }
                 ]
               }
             },
@@ -2695,23 +2917,23 @@
             {
               "resources": [
                 {
-                  "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started", 
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started",
                   "title": "Getting started with CSS / Article by MDN Web docs"
                 },
                 {
-                  "url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics", 
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics",
                   "title": "CSS Basics / Article by MDN Web docs"
                 },
                 {
-                  "url": "https://www.w3schools.com/css/default.asp", 
+                  "url": "https://www.w3schools.com/css/default.asp",
                   "title": "CSS Tutorial / Article by W3Schools"
                 },
                 {
-                  "url": "https://www.w3schools.com/css/css_syntax.asp", 
+                  "url": "https://www.w3schools.com/css/css_syntax.asp",
                   "title": "CSS Syntax / Article by W3Schools"
                 },
                 {
-                  "url": "https://www.w3schools.com/css/css_selectors.asp", 
+                  "url": "https://www.w3schools.com/css/css_selectors.asp",
                   "title": "CSS Selectors / Article by W3Schools"
                 }
               ]
@@ -2739,7 +2961,7 @@
               "tableData": {
                 "caption": "מאפייני מרכיבי הטקסט",
                 "headingRow": ["מאפיין (Property)", "ערכים אפשריים (Values)"],
-                "rows":[
+                "rows": [
                   ["color", "black / white / blue"],
                   ["font-family", "Arial, Verdana, sans-serif"],
                   ["font-size", "12px / 1em / 1.2rem"],
@@ -2761,8 +2983,14 @@
                 "caption": "מאפייני הטקסט כגוף שלם",
                 "headingRow": ["מאפיין (Prperty)", "ערכים אפשריים (Values)"],
                 "rows": [
-                  ["text-transform", "none / uppercase / lowercase / capitalize / full-width"],
-                  ["text-decoration", "none / underline / overline / line-through"],
+                  [
+                    "text-transform",
+                    "none / uppercase / lowercase / capitalize / full-width"
+                  ],
+                  [
+                    "text-decoration",
+                    "none / underline / overline / line-through"
+                  ],
                   ["text-align", "left / right / center / jusify"],
                   ["letter-spacing", "4px / 0.2em"],
                   ["word-spacing", "4px / 0.2em"],
@@ -2779,12 +3007,28 @@
               "codeBox": {
                 "codeLang": "HTML",
                 "lines": [
-                  {"element": "<body>", "spaces": 0, "color": "white"},
-                  {"element": "<h1 class='mainTitle'>מגילת העצמאות</h1>", "spaces": 2, "color": "cyan.300"},
-                  {"element": "<p class='textArticle'>בארץ ישראל קם העם היהודי, בה עוצבה דמותו הרוחנית, הדתית והמדינית, בה חי חיי קוממיות ממלכתית, בה יצר נכסי תרבות לאומיים וכלל אנושיים והוריש לעולם כולו את ספר הספרים הנצחי.</p>", "spaces": 2, "color": "pink.200"},
-                  {"element": "<p class='textArticle'>לאחר שהוגלה העם מארצו בכוח הזרוע שמר לה אמונים בכל ארצות פזוריו, ולא חדל מתפילה ומתקוה לשוב לארצו ולחדש בתוכה את חירותו המדינית.</p>", "spaces": 2, "color": "pink.200"},
-                  {"element": "<p class='textArticle'>מתוך קשר היסטורי ומסורתי זה חתרו היהודים בכל דור לשוב ולהאחז במולדתם העתיקה; ובדורות האחרונים שבו לארצם בהמונים, וחלוצים, מעפילים ומגינים הפריחו נשמות, החיו שפתם העברית, בנו כפרים וערים, והקימו ישוב גדל והולך השליט על משקו ותרבותו, שוחר שלום ומגן על עצמו, מביא ברכת הקידמה לכל תושבי הארץ ונושא נפשו לעצמאות ממלכתית.</p>", "spaces": 2, "color": "pink.200"},
-                  {"element": "</body>", "spaces": 0, "color": "white"}
+                  { "element": "<body>", "spaces": 0, "color": "white" },
+                  {
+                    "element": "<h1 class='mainTitle'>מגילת העצמאות</h1>",
+                    "spaces": 2,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "<p class='textArticle'>בארץ ישראל קם העם היהודי, בה עוצבה דמותו הרוחנית, הדתית והמדינית, בה חי חיי קוממיות ממלכתית, בה יצר נכסי תרבות לאומיים וכלל אנושיים והוריש לעולם כולו את ספר הספרים הנצחי.</p>",
+                    "spaces": 2,
+                    "color": "pink.200"
+                  },
+                  {
+                    "element": "<p class='textArticle'>לאחר שהוגלה העם מארצו בכוח הזרוע שמר לה אמונים בכל ארצות פזוריו, ולא חדל מתפילה ומתקוה לשוב לארצו ולחדש בתוכה את חירותו המדינית.</p>",
+                    "spaces": 2,
+                    "color": "pink.200"
+                  },
+                  {
+                    "element": "<p class='textArticle'>מתוך קשר היסטורי ומסורתי זה חתרו היהודים בכל דור לשוב ולהאחז במולדתם העתיקה; ובדורות האחרונים שבו לארצם בהמונים, וחלוצים, מעפילים ומגינים הפריחו נשמות, החיו שפתם העברית, בנו כפרים וערים, והקימו ישוב גדל והולך השליט על משקו ותרבותו, שוחר שלום ומגן על עצמו, מביא ברכת הקידמה לכל תושבי הארץ ונושא נפשו לעצמאות ממלכתית.</p>",
+                    "spaces": 2,
+                    "color": "pink.200"
+                  },
+                  { "element": "</body>", "spaces": 0, "color": "white" }
                 ],
                 "outputCode": [
                   {
@@ -2849,31 +3093,91 @@
               "codeBox": {
                 "codeLang": "CSS",
                 "lines": [
-                  {"element": ".mainTitle {", "spaces": 0, "color": "cyan.300"},
-                  {"element": "font-family: Verdana, Geneva, Tahoma, sans-serif;", "spaces": 2, "color": "white"},
-                  {"element": "font-size: 1.7em;", "spaces": 2, "color": "white"},
-                  {"element": "line-height: 1.5em;", "spaces": 2, "color": "white"},
-                  {"element": "text-align: center;", "spaces": 2, "color": "white"},
-                  {"element": "word-spacing: 0.1em;", "spaces": 2, "color": "white"},
-                  {"element": "text-transform: uppercase;", "spaces": 2, "color": "white"},
-                  {"element": "color: blue;", "spaces": 2, "color": "white"},
-                  {"element": "text-shadow: 2px -2px 1px white, 4px -4px 2px lightskyblue;", "spaces": 2, "color": "white"},
-                  {"element": "}", "spaces": 0, "color": "cyan.300"},
-                  {"element": " ", "spaces": 2, "color": "white"},
-                  {"element": ".textArticle {", "spaces": 0, "color": "pink.200"},
-                  {"element": "width: 95%;", "spaces": 2, "color": "white"},
-                  {"element": "font-family: Verdana, Geneva, Tahoma, sans-serif;", "spaces": 2, "color": "white"},
-                  {"element": "font-size: 1.1em;", "spaces": 2, "color": "white"},
-                  {"element": "line-height: 1.5em;", "spaces": 2, "color": "white"},
-                  {"element": "text-align: justify;", "spaces": 2, "color": "white"},
-                  {"element": "word-spacing: 0.4em;", "spaces": 2, "color": "white"},
-                  {"element": "word-break: break-all;", "spaces": 2, "color": "white"},
-                  {"element": "}", "spaces": 0, "color": "pink.200"}
+                  {
+                    "element": ".mainTitle {",
+                    "spaces": 0,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "font-family: Verdana, Geneva, Tahoma, sans-serif;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "font-size: 1.7em;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "line-height: 1.5em;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "text-align: center;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "word-spacing: 0.1em;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "text-transform: uppercase;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  { "element": "color: blue;", "spaces": 2, "color": "white" },
+                  {
+                    "element": "text-shadow: 2px -2px 1px white, 4px -4px 2px lightskyblue;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  { "element": "}", "spaces": 0, "color": "cyan.300" },
+                  { "element": " ", "spaces": 2, "color": "white" },
+                  {
+                    "element": ".textArticle {",
+                    "spaces": 0,
+                    "color": "pink.200"
+                  },
+                  { "element": "width: 95%;", "spaces": 2, "color": "white" },
+                  {
+                    "element": "font-family: Verdana, Geneva, Tahoma, sans-serif;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "font-size: 1.1em;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "line-height: 1.5em;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "text-align: justify;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "word-spacing: 0.4em;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "word-break: break-all;",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  { "element": "}", "spaces": 0, "color": "pink.200" }
                 ],
                 "outputCode": [
                   {
                     "type": "div",
-                    "style": { "direction": "rtl"},
+                    "style": { "direction": "rtl" },
                     "content": [
                       {
                         "type": "h1",
@@ -2955,7 +3259,8 @@
                 "כמו שיכולתם לשים לב, השתמשנו בקטע הקוד במספר יחידות מידה עבור מאפיינים שונים בשביל רכיבי הטקסט שלנו. בשפת CSS יחידות המידה האלה נחלקות לשני סוגים עיקריים"
               ],
               "listBlock": [
-                "יחידות מידה מוחלטות (Absolute Length Units)", "יחידות מידה יחסיות (Relative Length Units)"
+                "יחידות מידה מוחלטות (Absolute Length Units)",
+                "יחידות מידה יחסיות (Relative Length Units)"
               ]
             },
             {
@@ -2967,25 +3272,73 @@
               "codeBox": {
                 "codeLang": "HTML",
                 "lines": [
-                  {"element": "<div class='parent-element'>", "spaces": 0, "color": "pink.300"},
-                  {"element": "Parent element", "spaces": 2, "color": "pink.300"},
-                  {"element": "<div class='child-element__rem'>", "spaces": 2, "color": "cyan.300"},
-                  {"element": "Child element", "spaces": 4, "color": "cyan.300"},
-                  {"element": "<div class='child-element__rem'>", "spaces": 4, "color": "cyan.100"},
-                  {"element": "Grandson element", "spaces": 6, "color": "cyan.100"},
-                  {"element": "</div>", "spaces": 4, "color": "cyan.100"},
-                  {"element": "</div>", "spaces": 2, "color": "cyan.300"},
-                  {"element": "</div>", "spaces": 0, "color": "pink.300"},
-                  {"element": " ", "spaces": 2, "color": "white"},
-                  {"element": "<div class='parent-element'>", "spaces": 0, "color": "pink.300"},
-                  {"element": "Parent element", "spaces": 2, "color": "pink.300"},
-                  {"element": "<div class='child-element__em'>", "spaces": 2, "color": "cyan.300"},
-                  {"element": "Child element", "spaces": 4, "color": "cyan.300"},
-                  {"element": "<div class='child-element__em'>", "spaces": 4, "color": "cyan.100"},
-                  {"element": "Grandson element", "spaces": 6, "color": "cyan.100"},
-                  {"element": "</div>", "spaces": 4, "color": "cyan.100"},
-                  {"element": "</div>", "spaces": 2, "color": "cyan.300"},
-                  {"element": "</div>", "spaces": 0, "color": "pink.300"}
+                  {
+                    "element": "<div class='parent-element'>",
+                    "spaces": 0,
+                    "color": "pink.300"
+                  },
+                  {
+                    "element": "Parent element",
+                    "spaces": 2,
+                    "color": "pink.300"
+                  },
+                  {
+                    "element": "<div class='child-element__rem'>",
+                    "spaces": 2,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "Child element",
+                    "spaces": 4,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "<div class='child-element__rem'>",
+                    "spaces": 4,
+                    "color": "cyan.100"
+                  },
+                  {
+                    "element": "Grandson element",
+                    "spaces": 6,
+                    "color": "cyan.100"
+                  },
+                  { "element": "</div>", "spaces": 4, "color": "cyan.100" },
+                  { "element": "</div>", "spaces": 2, "color": "cyan.300" },
+                  { "element": "</div>", "spaces": 0, "color": "pink.300" },
+                  { "element": " ", "spaces": 2, "color": "white" },
+                  {
+                    "element": "<div class='parent-element'>",
+                    "spaces": 0,
+                    "color": "pink.300"
+                  },
+                  {
+                    "element": "Parent element",
+                    "spaces": 2,
+                    "color": "pink.300"
+                  },
+                  {
+                    "element": "<div class='child-element__em'>",
+                    "spaces": 2,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "Child element",
+                    "spaces": 4,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "<div class='child-element__em'>",
+                    "spaces": 4,
+                    "color": "cyan.100"
+                  },
+                  {
+                    "element": "Grandson element",
+                    "spaces": 6,
+                    "color": "cyan.100"
+                  },
+                  { "element": "</div>", "spaces": 4, "color": "cyan.100" },
+                  { "element": "</div>", "spaces": 2, "color": "cyan.300" },
+                  { "element": "</div>", "spaces": 0, "color": "pink.300" }
                 ]
               }
             },
@@ -2993,46 +3346,70 @@
               "codeBox": {
                 "codeLang": "CSS",
                 "lines": [
-                  {"element": ".parent-element {", "spaces": 0, "color": "pink.300"},
-                  {"element": "font-size: 22px;", "spaces": 2, "color": "pink.300"},
-                  {"element": "}", "spaces": 0, "color": "pink.300"},
-                  {"element": ".child-element__rem {", "spaces": 0, "color": "cyan.300"},
-                  {"element": "font-size: 1.5em;", "spaces": 2, "color": "cyan.300"},
-                  {"element": "}", "spaces": 0, "color": "cyan.300"},
-                  {"element": ".child-element__em {", "spaces": 0, "color": "cyan.300"},
-                  {"element": "font-size: 0.7em;", "spaces": 2, "color": "cyan.300"},
-                  {"element": "}", "spaces": 0, "color": "cyan.300"}
+                  {
+                    "element": ".parent-element {",
+                    "spaces": 0,
+                    "color": "pink.300"
+                  },
+                  {
+                    "element": "font-size: 22px;",
+                    "spaces": 2,
+                    "color": "pink.300"
+                  },
+                  { "element": "}", "spaces": 0, "color": "pink.300" },
+                  {
+                    "element": ".child-element__rem {",
+                    "spaces": 0,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "font-size: 1.5em;",
+                    "spaces": 2,
+                    "color": "cyan.300"
+                  },
+                  { "element": "}", "spaces": 0, "color": "cyan.300" },
+                  {
+                    "element": ".child-element__em {",
+                    "spaces": 0,
+                    "color": "cyan.300"
+                  },
+                  {
+                    "element": "font-size: 0.7em;",
+                    "spaces": 2,
+                    "color": "cyan.300"
+                  },
+                  { "element": "}", "spaces": 0, "color": "cyan.300" }
                 ],
                 "outputCode": [
                   {
                     "type": "p",
                     "content": "Parent element - rem",
-                    "style": {"fontSize": "22px"}
+                    "style": { "fontSize": "22px" }
                   },
                   {
                     "type": "p",
                     "content": "Child element - rem",
-                    "style": {"fontSize": "33px"}
+                    "style": { "fontSize": "33px" }
                   },
                   {
                     "type": "p",
                     "content": "Grandson element - rem",
-                    "style": {"fontSize": "33px"}
+                    "style": { "fontSize": "33px" }
                   },
                   {
                     "type": "p",
                     "content": "Parent element - em",
-                    "style": {"fontSize": "22px"}
+                    "style": { "fontSize": "22px" }
                   },
                   {
                     "type": "p",
                     "content": "Child element - em",
-                    "style": {"fontSize": "15.4px"}
+                    "style": { "fontSize": "15.4px" }
                   },
                   {
                     "type": "p",
                     "content": "Grandson element - em",
-                    "style": {"fontSize": "10.78px"}
+                    "style": { "fontSize": "10.78px" }
                   }
                 ]
               },
@@ -3046,11 +3423,11 @@
               "codeBox": {
                 "codeLang": "Files structure",
                 "lines": [
-                  {"element": "/root", "spaces": 0, "color": "white"},
-                  {"element": "index.html", "spaces": 2, "color": "white"},
-                  {"element": "style.css", "spaces": 2, "color": "white"},
-                  {"element": "/fonts", "spaces": 2, "color": "yellow.300"},
-                  {"element": "fonts.css", "spaces": 4, "color": "yellow.300"}
+                  { "element": "/root", "spaces": 0, "color": "white" },
+                  { "element": "index.html", "spaces": 2, "color": "white" },
+                  { "element": "style.css", "spaces": 2, "color": "white" },
+                  { "element": "/fonts", "spaces": 2, "color": "yellow.300" },
+                  { "element": "fonts.css", "spaces": 4, "color": "yellow.300" }
                 ]
               }
             },
@@ -3068,12 +3445,28 @@
               "codeBox": {
                 "codeLang": "fonts.css",
                 "lines": [
-                  {"element": "@font-face {", "spaces": 0, "color": "white"},
-                  {"element": "font-family: 'FONT-NAME'", "spaces": 2, "color": "white"},
-                  {"element": "src: url('./fonts/FONT-NAME.ttf') format('truetype')", "spaces": 2, "color": "white"},
-                  {"element": "font-style: normal", "spaces": 2, "color": "white"},
-                  {"element": "font-weight: normal", "spaces": 2, "color": "white"},
-                  {"element": "}", "spaces": 0, "color": "white"}
+                  { "element": "@font-face {", "spaces": 0, "color": "white" },
+                  {
+                    "element": "font-family: 'FONT-NAME'",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "src: url('./fonts/FONT-NAME.ttf') format('truetype')",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "font-style: normal",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  {
+                    "element": "font-weight: normal",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  { "element": "}", "spaces": 0, "color": "white" }
                 ]
               }
             },
@@ -3084,9 +3477,17 @@
               "codeBox": {
                 "codeLang": "styles.css",
                 "lines": [
-                  {"element": ".text-element {", "spaces": 0, "color": "white"},
-                  {"element": "font-family: 'FONT-NAME', Arial, sans-serif", "spaces": 2, "color": "white"},
-                  {"element": "}", "spaces": 0, "color": "white"}
+                  {
+                    "element": ".text-element {",
+                    "spaces": 0,
+                    "color": "white"
+                  },
+                  {
+                    "element": "font-family: 'FONT-NAME', Arial, sans-serif",
+                    "spaces": 2,
+                    "color": "white"
+                  },
+                  { "element": "}", "spaces": 0, "color": "white" }
                 ]
               }
             },
@@ -3100,7 +3501,7 @@
                 "תוכן שמציין קרדיט, כלומר ציון מקור הכתבה יהיה אף הוא עם מאפיינים יחודיים. הגופן זהה לזה של הכתבה עצמה, גודל האותיות 10px, גובה השורה 12px, הטקסט יהיה מיושר לשני הצדדים עם שבירת מילה בירידת שורה, ריווח בין מילים ובין אותיות 0.1px.",
                 "תוכן של טבלה יהיה עם המאפיינים הבאים: גופן זהה לזה של הכתבה, גודל אותיות 12px, גובה שורה 14px, יישור הטקסט לימין."
               ]
-            },            
+            },
             {
               "resources": [
                 {
@@ -3141,10 +3542,7 @@
           "sections": [
             {
               "sectionTitle": "צבעוניות",
-              "textBlock": [
-                "רקע",
-                "שלושת צבעי היסוד - אדום, ירוק וכחול."
-              ]
+              "textBlock": ["רקע", "שלושת צבעי היסוד - אדום, ירוק וכחול."]
             },
             {
               "sectionTitle": "צורות הצגה של צבעים",
@@ -3156,15 +3554,11 @@
             },
             {
               "sectionTitle": "צללים וגווני אפור",
-              "textBlock": [
-                "גווני אפור"
-              ]
+              "textBlock": ["גווני אפור"]
             },
             {
               "sectionTitle": "מילים ורקע",
-              "textBlock": [
-                "color vs background-color"
-              ]
+              "textBlock": ["color vs background-color"]
             },
             {
               "sectionTitle": "תבניות צבע",
@@ -3246,7 +3640,7 @@
               "image": {
                 "url": "/images/stylingImages/cover-js.png",
                 "altText": "A steam train travels on an ancient bridge that crosses a green valley.",
-                "descText":"A steam train travels on an ancient bridge that crosses a green valley. Photo by Simon Franz Hochleitner on Unsplash.",
+                "descText": "A steam train travels on an ancient bridge that crosses a green valley. Photo by Simon Franz Hochleitner on Unsplash.",
                 "width": [300, 500]
               }
             },
@@ -3272,7 +3666,7 @@
                 }
               ]
             }
-          ]            
+          ]
         },
         {
           "lessonId": "4.3",
@@ -3301,7 +3695,7 @@
                   ["15", "1111", "F"],
                   ["16", "10000", "10"]
                 ]
-              }              
+              }
             }
           ]
         },
@@ -3316,7 +3710,11 @@
           "sections": []
         },
         { "lessonId": "4.6", "title": "לולאות (Loops)", "sections": [] },
-        { "lessonId": "4.7", "title": "תכנות מונחה עצמים, Object Oriented Programming (OOP)", "sections": [] },
+        {
+          "lessonId": "4.7",
+          "title": "תכנות מונחה עצמים, Object Oriented Programming (OOP)",
+          "sections": []
+        },
         { "lessonId": "4.8", "title": "פונקציות (Functions)", "sections": [] },
         { "lessonId": "4.9", "title": "מחלקות (Classes)", "sections": [] },
         {
