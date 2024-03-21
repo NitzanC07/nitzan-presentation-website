@@ -66,10 +66,10 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
               rows={section.tableData.rows}
             />
           )}
-          {section.BigButton && (
+          {section.bigButton && (
             <BigButton
-              urlLink={section.BigButton.urlLink}
-              text={section.BigButton.text}
+              urlLink={section.bigButton.urlLink}
+              text={section.bigButton.text}
             />
           )}
           {section.frameClause && (

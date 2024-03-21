@@ -45,7 +45,7 @@
                 "אחת התוכנות הנפוצות ביותר והשימושיות היא Virtual Studio Code, או בשמה המקוצר - VS-Code, היא תוכנת עריכת קוד שפותחה על-ידי חברת Microsoft והיא חופשית לשימוש ללא דמי תשלום.",
                 "את תוכנת עריכת הקוד VS-Code ניתן להוריד מהאתר הרשמי שלה. ישנן מספר גרסאות של התוכנה שמותאמות למערכות הפעלה. הקורס הזה מותאם למערכת הפעלה Windows, אבל בהחלט אפשר ללמוד בקורס גם עם מערכות הפעלה שונות ולעשות את ההתאמות הדרושות."
               ],
-              "BigButton": {
+              "bigButton": {
                 "urlLink": "https://code.visualstudio.com/",
                 "text": "Virtual Studio Code - Code Editor"
               }
@@ -55,7 +55,7 @@
                 "לאחר ההורדה וההתקנה של עורך הקוד במחשב אנחנו נדרשים לעוד שני כלי עבודה חשובים שיהפכו לנו את החיים כמתכנתים לקלים יותר. הראשון הוא כמובן דפדפן (Browser) שככל הנראה יש לכולנו אחד כזה במחשב, בדיוק אותו דפדפן שאתם גולשים באמצעותו באינטרנט. ההמלצה היא להשתמש לפחות בשני דפדפנים שונים, בין הדפדפנים הפופולריים, כדי לראות שהאתר שאנחנו בונים נראה כפי שאנחנו רוצים שיראה. הדפדפנים הפופולריים והנפוצים שמומלץ להשתמש בהם הם Google Chrome, Microsoft Edge ו-Firefox.",
                 "כמו כן, כלי נוסף וחשוב שכדאי להתקין בתוך תוכנת VS-Code הוא כלי ה-Live Server. כלי זה הוא למעשה תוכנת הרחבה שנמצאת בתוך ה-VS-Code, וכדי להתקין אותה אנחנו צריכים לגשת לספריית ההרחבות (Extentions) שנמצאת בסרגל שבצד שמאל של חלון התוכנה, לכתוב בשורת החיפוש Live Server ולבצע התקנה."
               ],
-              "BigButton": {
+              "bigButton": {
                 "urlLink": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
                 "text": "Live Server Extention"
               }
@@ -3547,31 +3547,313 @@
           "title": "צבעים וצללים",
           "sections": [
             {
-              "sectionTitle": "צבעוניות",
-              "textBlock": ["רקע", "שלושת צבעי היסוד - אדום, ירוק וכחול."]
+              "sectionTitle": "צִבְעוֹנִיוּת",
+              "image": {
+                "url": "/images/lessonsContents/module3/lesson3/photo-by-belinda-fewings-on-unsplash.jpg",
+                "altText": "ציור קיר של הצייר Hendog של ילד בונה חומה מלבנים צבעוניות. התמונה צולמה ע\"י Belinda Fewings מתוך אתר Unsplash",
+                "descText": "ציור קיר של הצייר Hendog של ילד בונה חומה מלבנים צבעוניות. התמונה צולמה ע\"י Belinda Fewings מתוך אתר Unsplash",
+                "width": [300, 400]
+              }
+            },
+            {
+              "textBlock": [
+                "בעיתונים של פעם יכולנו למצוא הכל בשחור ולבן, אפילו תמונות אם הוצגו בעיתון היו בשחור ולבן. לפעמים אם ממש רצו להציג יותר פירוט אז התמונות היו בגווני אפור. אבל מאז ועד היום העיתונות התקדמה בכמה צעדים ויכולה להדפיס תוכן צבעוני, גם בטקסט וגם בתמונות.", 
+                "לצבעוניות יש משמעות חשובה וייחודית מאוד לא רק בפן האסתטי והחיצוני של איך נראה עיתון, ספר, דף אינטרנט או אתר בכלל. מחד צבעוניות יכולה לתרום לחוויית משתמש נעימה וטובה ולסדר את רכיבי התוכן באופן ברור ובולט, אך מאידך היא יכולה גם לפגום בה מאוד ולהעמיס על העיניים בלגן של צבעים.",
+                "צבעוניות טובה חשובה לא רק לחוויית משתמש נעימה, אלא היא קריטית גם עבור משתמשים בעלי לקויות שונות. לדוגמא, ישנם שילובי צבעים שעיוורי צבעים לא מסוגלים לראות, ניגודיות חלשה בין צבע הטקסט לצבע הרקע יכולה לפגום, ואף גרוע מכך, מאוד ביכולתו של אדם לקוי ראיה לקרוא את תוכן האתר. חולי אפליפסיה עשויים לחוות קושי גדול עם צבעוניות יתר. יש כמובן עוד מוגבלויות וצרכים משתנים של אנשים שונים והנושא הזה ללא ספק יכול למלא קורס בפני עצמו. בשיעור הזה אנחנו נלמד על דרכים להוסיף צבע לאתר שלנו."
+              ]
+            },
+            {
+              "sectionTitle": "צבעים באתר אינטרנט",
+              "textBlock": [
+                "כפי שראינו בשיעור הקודם, אחד המאפיינים שאנחנו יכולים להגדיר עבור גופנים הוא צבע (color) שקובע את צבע הטקסט. ראינו גם שאנחנו יכולים פשוט לרשום את שם הצבע הרצוי (black, white, yellow, green, cyan and etc) ולקבל את התוצאה הרצויה בדפדפן.",
+                "אכן זו שיטה נהדרת, קלה ופשוטה להשתמש בשמות הצבעים המוכנים והמובנים בשפת CSS, ולמעשה יש 140 שמות שונים של צבעים שמוכנים לשימוש ומחכים שנשתמש בהם. אפשר לראות את הרשימה המלאה באתר הבא."
+              ],
+              "bigButton": {
+                "urlLink": "https://www.w3schools.com/colors/colors_names.asp",
+                "text": "שמות הצבעים"
+              }
+            },
+            {
+              "textBlock": [
+                "אבל זה לא הכל, יש צורה נוספת שאנחנו יכולים לייצג בעזרתה אפילו יותר צבעים. השיטה הזאת מבוססת על שלושת צבעי היסוד - אדום, ירוק וכחול, אשר במינונים שונים של כל אחד מהם אנחנו יכולים לקבל כל צבע שאנחנו יכולים לחשוב עליו הקיים בספקטרום הצבעים הנראה. לשיטה הזאת אנחנו קוראים RGB - כשמם של שלושת צבעי היסוד באנגלית - Red, Green, Blue."
+              ],
+              "image": {
+                "url": "/images/lessonsContents/module3/lesson3/three-primary-colors.jpeg",
+                "altText": "Three lanterns in the primary colors, red, green and blue, shine on a black wall and create the entire color spectrum.",
+                "width": [300, 400]
+              }
+            },
+            {
+              "textBlock": [
+                "למעשה לפי השיטה הזאת לכל צבע יש 256 רמות, בין 0 ל-255, כאשר 0 משמעו היעדר מוחלט של הצבע, ו-255 משמעו עוצמה מלאה של אותו צבע. אפשר לדמיין שלושה פנסים שמאירים כל אחד בצבע אחר, פנס אדום, פנס ירוק ופנס כחול, ובאמצעות הארה של שלושתם על נקודה מסוימת בעוצמות שונות נקבל צבעים שונים. "                
+              ]
             },
             {
               "sectionTitle": "צורות הצגה של צבעים",
               "textBlock": [
-                "שמות הצבעים",
-                "עשרוני - RGB",
-                "הקסא-דצימלי (Hexadecimal)"
-              ]
+                "אם כן, אנחנו יכולים לייצג צבע מסוים בעזרת הגדרת כל אחד מצבעי היסוד בתכונה color בעזרת שימוש במתודה rgb והגדרת שלושה פרמטרים מספריים שמייצגים את שלושת צבעי היסוד. הפרמטר הראשון - אדום, הפרמטר השני - ירוק, והפרמטר השלישי - כחול. בקטע הקוד הבא ניתן לראות את אופן השימוש בקוד."
+              ],
+              "codeBox": {
+                "codeLang": "HTML + CSS",
+                "lines": [
+                  {"element": "<head>", "color": "white", "spaces": 0},
+                  {"element": "<style>", "color": "yellow.300", "spaces": 2},
+                  {"element": "#firstText { color: rgb(255, 0, 0); }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#secondText { color: rgb(0, 255, 0); }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#thirdText { color: rgb(0, 0, 255); }", "color": "yellow.300", "spaces": 4},
+                  {"element": "</style>", "color": "yellow.300", "spaces": 2},
+                  {"element": "</head>", "color": "white", "spaces": 0},
+                  {"element": "<body>", "color": "white", "spaces": 0},
+                  {"element": "<p id='firstText'>Text</p>", "color": "white", "spaces": 2},
+                  {"element": "<p id='secondText'>Text</p>", "color": "white", "spaces": 2},
+                  {"element": "<p id='thirdText'>Text</p>", "color": "white", "spaces": 2},
+                  {"element": "</body>", "color": "white", "spaces": 0}
+                ],
+                "outputCode": [
+                  {
+                    "type": "p",
+                    "style": {
+                      "color": "rgb(255, 0, 0)",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  },
+                  {
+                    "type": "p",
+                    "style": {
+                      "color": "rgb(0, 255, 0)",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  },
+                  {
+                    "type": "p",
+                    "style": {
+                      "color": "rgb(0, 0, 255)",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  }
+                ]
+              }
             },
             {
-              "sectionTitle": "צללים וגווני אפור",
-              "textBlock": ["גווני אפור"]
+              "textBlock": [
+                "נסו לשחק עם מערבל הצבעים וצרו בעזרתו צבעים שונים. נסו ליצור צבעים שהם לא צבעי יסוד. למשל איך אפשר ליצור צהוב, סגול, כתום, חום?"
+              ],
+              "bigButton": {
+                "urlLink": "https://www.w3schools.com/colors/colors_rgb.asp",
+                "text": "מערבל צבעים"
+              }
+            },
+            {
+              "textBlock": [
+                "אפשרות נוספת היא לייצג את הצבע באמצעות ספרות הקסא-דצימליות (Hexadecimal numbers). לצורך כך נתחיל עם סימן סולמית, ומיד אחריה שש ספרות שכל שתיים מהן מייצגות צבע יסוד אחר. שתי הספרות הראשונות מייצגות את רמת האדום, שתי הספרות המרכזיות מייצגות את רמת הצבע הירוק, ושתי הספרות האחרונות מייצגות את רמת הצבע הכחול."
+              ],
+              "codeBox": {
+                "codeLang": "HTML + CSS",
+                "lines": [
+                  {"element": "<head>", "color": "white", "spaces": 0},
+                  {"element": "<style>", "color": "yellow.300", "spaces": 2},
+                  {"element": "#firstText { color: #ff0000; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#secondText { color: #00ff00; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#thirdText { color: #0000ff; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "</style>", "color": "yellow.300", "spaces": 2},
+                  {"element": "</head>", "color": "white", "spaces": 0},
+                  {"element": "<body>", "color": "white", "spaces": 0},
+                  {"element": "<p id='firstText'>Text</p>", "color": "white", "spaces": 2},
+                  {"element": "<p id='secondText'>Text</p>", "color": "white", "spaces": 2},
+                  {"element": "<p id='thirdText'>Text</p>", "color": "white", "spaces": 2},
+                  {"element": "</body>", "color": "white", "spaces": 0}
+                ],
+                "outputCode": [
+                  {
+                    "type": "p",
+                    "style": {
+                      "color": "#ff0000",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  },
+                  {
+                    "type": "p",
+                    "style": {
+                      "color": "#00ff00",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  },
+                  {
+                    "type": "p",
+                    "style": {
+                      "color": "#0000ff",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  }
+                ]
+              }
             },
             {
               "sectionTitle": "מילים ורקע",
-              "textBlock": ["color vs background-color"]
+              "textBlock": [
+                "ראינו שאפשר לצבוע טקסט בכל צבע שרק נרצה, אבל מה עם הרקע? גם אותו אנחנו יכולים להגדיר כרצוננו בעזרת תכונה נוספת שנמצאת בשפה ורק מחכה שנשתמש בה. התבוננו בקטע הקוד ונסו לנחש אילו צבעים תראו בפלט  לפני שתפתחו את חלון הפלט."
+              ],
+              "codeBox": {
+                "codeLang": "HTML + CSS",
+                "lines": [
+                  {"element": "<head>", "color": "white", "spaces": 0},
+                  {"element": "<style>", "color": "yellow.300", "spaces": 2},
+                  {"element": "#firstBox { background-color: #ff0000; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#firstText { color: #00ffff; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#secondBox { background-color: #00ff00; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#secondText { color: #ff00ff; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#thirdBox { background-color: #0000ff; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "#thirdText { color: #ffff00; }", "color": "yellow.300", "spaces": 4},
+                  {"element": "</style>", "color": "yellow.300", "spaces": 2},
+                  {"element": "</head>", "color": "white", "spaces": 0},
+                  {"element": "<body>", "color": "white", "spaces": 0},
+                  {"element": "<div id='firstBox'>", "color": "white", "spaces": 2},
+                  {"element": "<p id='firstText'>Text</p>", "color": "white", "spaces": 4},
+                  {"element": "</div>", "color": "white", "spaces": 2},
+                  {"element": "<div id='secondBox'>", "color": "white", "spaces": 2},
+                  {"element": "<p id='secondText'>Text</p>", "color": "white", "spaces": 4},
+                  {"element": "</div>", "color": "white", "spaces": 2},
+                  {"element": "<div id='thirdBox'>", "color": "white", "spaces": 2},
+                  {"element": "<p id='thirdText'>Text</p>", "color": "white", "spaces": 4},
+                  {"element": "</div>", "color": "white", "spaces": 2},
+                  {"element": "</body>", "color": "white", "spaces": 0}
+                ],
+                "outputCode": [
+                  {
+                    "type": "p",
+                    "style": {
+                      "backgroundColor": "#ff0000",
+                      "color": "#00ffff",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  },
+                  {
+                    "type": "p",
+                    "style": {
+                      "backgroundColor": "#00ff00",
+                      "color": "#ff00ff",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  },
+                  {
+                    "type": "p",
+                    "style": {
+                      "backgroundColor": "#0000ff",
+                      "color": "#ffff00",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  }
+                ]
+              }
+            },
+            {
+              "frameClause": {
+                "frameTitle": "גווני אפור",
+                "paragraphs" : [
+                  "כאמור, בעזרת שילוב של שלושת הצבעים ברמות שונות אנחנו יכולים ליצור את כל צבעי הקשת. אך מה אם אנחנו רוצים ליצור את הצבע האפור, ובכלל כמה גוונים של אפור אנחנו יכולים ליצור בעזרת השיטה הזאת שלמדנו עכשיו? (רמז, יש יותר מחמישים גוונים של אפור).",
+                  "בדקו זאת באמצעות מערבל הצבעים וחישבו על כך, האם באופן תאורתי אנחנו יכולים ליצור אפילו יותר גווני אפור ממה שמצאתם?"
+                ]
+              }
+            },
+            {
+              "sectionTitle": "אזור הדמדומים והצללים",
+              "textBlock": [
+                "תכונה נוספת שיכולה להוסיף מימד נוסף לאתר שלנו ולהפוך לכמעט תלת מימדי. ראשית כל, ברור שהאתר שלנו מיועד לתצוגה במסכים דו-מימדיים בלבד, והדבר הזה לא צפוי להשתנות, אך בעזרת תכונות חזותיות אנחנו יכולים לתת למשתמש את התחושה של תלת מימדיות על-ידי הוספת אפקט חזותי שמדמה צל.",
+                "לצורך כך אנחנו יכולים להשתמש בתכונה text-shadow כדי להוסיף את האפקט החזותי המעניין הזה ולתת תחושה שבזמן לחיצה על כפתור שאנחנו מוסיפים לאתר, הכפתור באמת נלחץ. או לתת לכותרות באתר שלנו אפקט מרשים יותר. אך לצד זאת, כדי גם טיפה להזהר עם שימוש יתר באפקט הזה, מכיוון שזה גם יכול להעמיס יותר על עיצוב האתר ולהפוך אותו לבנאלי ומשעמם."
+              ],
+              "codeBox": {
+                "codeLang": "HTML + CSS",
+                "lines": [
+                  {"element": "<head>", "color": "white", "spaces": 0},
+                  {"element": "<style>", "color": "yellow.300", "spaces": 2},
+                  {"element": "#sampleText {", "color": "yellow.300", "spaces": 4},
+                  {"element": "color: rgb(255, 0, 0);", "color": "yellow.300", "spaces": 6},
+                  {"element": "text-shadow: 3px -3px 2px rgb(168, 168, 168);", "color": "yellow.300", "spaces": 6},
+                  {"element": "}", "color": "yellow.300", "spaces": 4},
+                  {"element": "</style>", "color": "yellow.300", "spaces": 2},
+                  {"element": "</head>", "color": "white", "spaces": 0},
+                  {"element": "<body>", "color": "white", "spaces": 0},
+                  {"element": "<p id='sampleText'>Text</p>", "color": "white", "spaces": 2},
+                  {"element": "</body>", "color": "white", "spaces": 0}
+                ],
+                "outputCode": [
+                  {
+                    "type": "p",
+                    "style": {
+                      "color": "rgb(255, 0, 0)",
+                      "textShadow":"3px -3px 2px rgb(168, 168, 168)",
+                      "paddingTop": "10px",
+                      "paddingBottom": "10px",
+                      "fontWeight": "bold",
+                      "fontSize": "24px",
+                      "textAlign": "center"
+                    },
+                    "content": "Text"
+                  }
+                ]
+              }
+            },
+            {
+              "textBlock": [
+                "למעשה התכונה text-shadow מקבלת ארבעה פרמטרים שקובעים, כל פרמטר מופרד באמצעות רווח. הפרמטר הראשון מציין את מרחק הצל מהאובייקט על הציר האופקי כאשר סימן חיובי מציין שמאלה וסימן שלילי מציין ימינה מהאובייקט. הפרמטר השני מציין את אותו דבר רק על הציר האנכי, כאשר סימן חיובי מציין מתחת לאובייקט, ואילו סימן שלילי מעליו. הפרמטר השלישי מציין את מידת החדות של הצל, ככל שהערך גבוה יותר החדות תהיה כהה יותר. והפרמטר הרביעי מציין את הצבע."
+              ]
             },
             {
               "sectionTitle": "תבניות צבע",
               "textBlock": [
-                "רקע כללי על התאמה בין צבעים והתייחסות למותגים ידועים.",
-                "כלים למציאת תבניות צבעים."
-              ]
+                "כמפתחים אנחנו יודעים עכשיו איך להוסיף צבע לאתר שלנו, אבל חשוב לדעת שזהו נושא שיכול למלא מספר קורסים שלמים, ואף יש בעלי מקצוע כמו מעצבים גרפיים, מעצבי UI, וגרפקאים שמתעסקים רק עם הנושאים האלה. לכן עבודתנו כמפתחים לא צריכה להתמקד בשילוב הצבעים האידאלי, כי ברוב הפעמים אנחנו כבר נקבל תבנית מסוימת של צבעים מהמומחים בדבר.",
+                "באופן דומה, אם אנחנו עובדים על פרויקט אישי, ולא כחלק מצוות רב מקצועי, אנחנו יכולים להעזר בשלל אתרים באינטרנט שדואגים לנו בדיוק בשביל למצוא את שילוב הצבעים שאנחנו מחפשים. שתי דוגמאות טובות לאתרים כאלה הם Canva ו-Color Hunt. בשניהם אנחנו יכולים למצוא מאות תבניות צבעים מוכנות ולהשתמש בהן.",
+                "מעניין לדעת על מותגים שכולנו מכירים איך הם קבעו את הצבעים של המותג שלהם. למשל, חשבתם פעם איך Google בחרו את צבעי הלוגו שלהם? או למה Facebook בחרו דווקא בצבע הכחול? אז לשאלות כמו אלה אנחנו לא נכנס כאן בקורס הזה, כי אפשר להעמיק את הדיבור על ההשפעה של צבעים על הפסיכולוגיה של האדם, אבל אנחנו כן יכולים לראות באיזה צבעים מדויקים מותגים שונים משתמשים."
+              ],
+              "bigButton": {
+                "text": "צבעי מותגים",
+                "urlLink": "https://www.w3schools.com/colors/colors_brands.asp"
+              }
             },
             {
               "resources": [
@@ -3630,6 +3912,37 @@
           "lessonId": "3.11",
           "title": "בחן את עצמך",
           "sections": []
+        },
+        {
+          "lessonId": "3.12",
+          "title": "הרחבה: בסיסי ספירה",
+          "sections": [
+            {
+              "tableData": {
+                "caption": "מספרים עשרוניים, בינאריים והקסא-דצימליים",
+                "headingRow": ["בסיס 10", "בסיס 2", "בסיס 16"],
+                "rows": [
+                  ["0", "0", "0"],
+                  ["1", "1", "1"],
+                  ["2", "10", "2"],
+                  ["3", "11", "3"],
+                  ["4", "100", "4"],
+                  ["5", "101", "5"],
+                  ["6", "110", "6"],
+                  ["7", "111", "7"],
+                  ["8", "1000", "8"],
+                  ["9", "1001", "9"],
+                  ["10", "1010", "A"],
+                  ["11", "1011", "B"],
+                  ["12", "1100", "C"],
+                  ["13", "1101", "D"],
+                  ["14", "1110", "E"],
+                  ["15", "1111", "F"],
+                  ["16", "10000", "10"]
+                ]
+              }
+            }
+          ]
         }
       ]
     },
@@ -3676,55 +3989,24 @@
         },
         {
           "lessonId": "4.3",
-          "title": "בסיסי ספירה",
-          "sections": [
-            {
-              "tableData": {
-                "caption": "מספרים עשרוניים, בינאריים והקסא-דצימליים",
-                "headingRow": ["בסיס 10", "בסיס 2", "בסיס 16"],
-                "rows": [
-                  ["0", "0", "0"],
-                  ["1", "1", "1"],
-                  ["2", "10", "2"],
-                  ["3", "11", "3"],
-                  ["4", "100", "4"],
-                  ["5", "101", "5"],
-                  ["6", "110", "6"],
-                  ["7", "111", "7"],
-                  ["8", "1000", "8"],
-                  ["9", "1001", "9"],
-                  ["10", "1010", "A"],
-                  ["11", "1011", "B"],
-                  ["12", "1100", "C"],
-                  ["13", "1101", "D"],
-                  ["14", "1110", "E"],
-                  ["15", "1111", "F"],
-                  ["16", "10000", "10"]
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "lessonId": "4.4",
           "title": "מערכים (Arrays)",
           "sections": []
         },
         {
-          "lessonId": "4.5",
+          "lessonId": "4.4",
           "title": "אובייקטים (Objects)",
           "sections": []
         },
-        { "lessonId": "4.6", "title": "לולאות (Loops)", "sections": [] },
+        { "lessonId": "4.5", "title": "לולאות (Loops)", "sections": [] },
         {
-          "lessonId": "4.7",
+          "lessonId": "4.6",
           "title": "תכנות מונחה עצמים, Object Oriented Programming (OOP)",
           "sections": []
         },
-        { "lessonId": "4.8", "title": "פונקציות (Functions)", "sections": [] },
-        { "lessonId": "4.9", "title": "מחלקות (Classes)", "sections": [] },
+        { "lessonId": "4.7", "title": "פונקציות (Functions)", "sections": [] },
+        { "lessonId": "4.8", "title": "מחלקות (Classes)", "sections": [] },
         {
-          "lessonId": "4.10",
+          "lessonId": "4.9",
           "title": "פונקציות א-סינכרוניות (Promises)",
           "sections": []
         }

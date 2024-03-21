@@ -28,7 +28,7 @@ export interface Lesson {
       codeLang: string;
     };
     imagesGallery?: { srcUrl: string; altText: string; descText: string }[];
-    BigButton?: { urlLink: string; text: string };
+    bigButton?: { urlLink: string; text: string };
     resources?: { title: string; url: string }[];
     testYourself?: {
       question: string;
