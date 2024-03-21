@@ -35,7 +35,15 @@ function CoursesPage() {
       description: "בקרוב...",
       link: "/courses/master-course/1.1",
       imagePath: "/images/stylingImages/js_cover.png",
-      imageAlt: "A gate in style of Herodes building.",
+      imageAlt: "Close up on a wall of Jerusalem bricks with a cyan door on the center and three steps before this door",
+      isActive: false,
+    },
+    {
+      title: "קורס פיתוח בסביבת עבודה React",
+      description: "בקרוב...",
+      link: "/courses/master-course/1.1",
+      imagePath: "/images/stylingImages/js_cover.png",
+      imageAlt: "Close up on a wall of Jerusalem bricks with a cyan door on the center and three steps before this door",
       isActive: false,
     },
     {
@@ -102,8 +110,9 @@ function CoursesPage() {
                   {course.title}
                 </Heading>
                 <Link
-                  href={`${course.isActive ? course.link : '/courses'}`}
+                  href={`${course.isActive ? course.link : "/courses"}`}
                   mb={[4, 0]}
+                  cursor={course.isActive ? "pointer" : "default"}
                   tabIndex={1}
                 >
                   <Button
@@ -113,6 +122,7 @@ function CoursesPage() {
                     shadow={course.isActive ? "2px 2px 5px #888": 0}
                     marginRight={2}
                     tabIndex={-1}
+                    cursor={course.isActive ? "pointer" : "default"}
                   >
                     {course.isActive ? "כניסה לקורס" : "קורס סגור"}
                   </Button>
