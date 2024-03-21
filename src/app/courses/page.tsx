@@ -28,13 +28,15 @@ function CoursesPage() {
       imagePath: "/images/stylingImages/HTMLCSS_cover.png",
       imageAlt:
         "A realistic image of a wall in style of Jerusalem bricks, with close up on two bricks.",
+      isActive: true,
     },
     {
       title: "פיתוח אתרי אינטרנט עם Java Script",
       description: "בקרוב...",
       link: "/courses/master-course/1.1",
-      imagePath: "/images/stylingImages/JS_cover.png",
+      imagePath: "/images/stylingImages/js_cover.png",
       imageAlt: "A gate in style of Herodes building.",
+      isActive: false,
     },
     {
       title: "סדנת כתיבה יצירתית",
@@ -42,21 +44,25 @@ function CoursesPage() {
       link: "/courses/creative-writing/1.1",
       imagePath: "/images/stylingImages/Colorful_tree_with_rainbow_lea2.jpeg",
       imageAlt: "Colorful tree with rainbow leaves.",
+      isActive: false,
     },
   ];
+
+  
 
   return (
     <Flex
       flexDir={"column"}
       justifyContent={"flex-start"}
       alignItems={"center"}
-      bgColor={"orange.50"}
+      bgColor={"#E6E6E6"}
     >
       <Box mt="60px">
         <Heading
           as="h2"
           fontFamily="var(--font-varela_round)"
           fontSize={26}
+          color={'#532E1C'}
           my={10}
           tabIndex={1}
         >
@@ -66,13 +72,15 @@ function CoursesPage() {
         {coursesLink.map((course, i) => (
           <Card
             key={i}
-            // direction={{ base: "column", sm: "row" }}
             direction={["column", "column", "row", "row"]}
             overflow="hidden"
             variant="outline"
             borderWidth={2}
-            borderColor="yellow.500"
-            bgColor={"orange.100"}
+            borderColor="#532E1C"
+            bgColor={"#C5A88088"}
+            _hover={{
+              shadow: "1px 1px 5px #888"
+            }}
             mb={5}
             w={[200, 400, 600, 800]}
           >
@@ -87,29 +95,33 @@ function CoursesPage() {
                   // style={{ fontFamily: "Varela Round, sans-serif" }}
                   fontFamily="var(--font-varela_round)"
                   fontSize={[15, 19, 20, 24]}
+                  color={"#532E1C"}
                   mb={5}
                   tabIndex={1}
                 >
                   {course.title}
                 </Heading>
                 <Link
-                  href={`${course.link}`}
-                  // style={{ fontFamily: "Varela Round, sans-serif" }}
+                  href={`${course.isActive ? course.link : '/courses'}`}
                   mb={[4, 0]}
                   tabIndex={1}
                 >
                   <Button
-                    // style={{ fontFamily: "Varela Round, sans-serif" }}
-                    colorScheme="yellow"
+                    bgColor={ course.isActive ? "#532E1C" : "#532E1C33"}
+                    _hover={{bgColor: course.isActive ? "#532E1Caa" : "#532E1C33"}}
+                    color={course.isActive ? "white" : "#532E1C55"}
+                    shadow={course.isActive ? "2px 2px 5px #888": 0}
+                    marginRight={2}
                     tabIndex={-1}
                   >
-                    כניסה לקורס
+                    {course.isActive ? "כניסה לקורס" : "קורס סגור"}
                   </Button>
                 </Link>
               </Flex>
               <Text
                 // style={{ fontFamily: "Varela Round, sans-serif" }}
                 fontSize={[14, 16, 16, 18]}
+                color={"#0F0F0F"}
                 mb={5}
                 tabIndex={1}
               >
