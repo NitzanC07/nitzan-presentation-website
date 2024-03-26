@@ -3801,6 +3801,127 @@
               }
             },
             {
+              "sectionTitle": "שקיפות",
+              "textBlock": [
+                "בהמשך יחידת הלימוד הזאת אנחנו נלמד על שכבות בעמוד האינטרנט שמאפשרות לנו לקבוע מיקום של רכיבים מסויימים בעמוד, לא רק בממדים של הגובה והרוחב של המסך, אלא לקבוע גם רכיב שימוקמו מלפנים או מאחורי רכיבים אחרים. בשיעור הזה לא נלמד על התכונה הזאת, אלא רק נכיר את האפשרות של שקיפות הצבע של אובייקט מסוים.",
+                "שקיפות משמעה שניתן לראות את האובייקט שנמצא מתחת לאובייקט שעליו אנחנו עובדים כרגע. כברירת מחדל כשאנחנו מגדירים צבע באחת הדרכים שלמדנו, השקיפות היא 0% (או במילים אחרות 100% אטימות). כדי לשנות את השקיפות, אנחנו צריכים להשתמש בפונקציה rgba (במקום ב-rgb), שמקבלת פרמטר רביעי שמציין את מידת השקיפות בערכים שנעים בין 0 ל-1. כאשר הערך 1 מציין 100% אטימות, והערך 0 מציין 0% אטימות."
+              ],
+              "codeBox": {
+                "codeLang":"HTML + CSS",
+                "lines": [
+                  {"element": "<head>", "spaces": 0, "color": "white"},
+                  {"element": "<style>", "spaces": 2, "color": "white"},
+                  {"element": ".container {", "spaces": 4, "color": "white"},
+                  {"element": "background-color: rgb(168, 168, 168);", "spaces": 6, "color": "white"},
+                  {"element": "}", "spaces": 4, "color": "white"},
+                  {"element": ".box {", "spaces": 4, "color": "white"},
+                  {"element": "width: 100%", "spaces": 6, "color": "white"},
+                  {"element": "height: 70px", "spaces": 6, "color": "white"},
+                  {"element": "border: 1px solid rgb(0, 0, 0)", "spaces": 6, "color": "white"},
+                  {"element": "}", "spaces": 4, "color": "white"},
+                  {"element": "#box1 { background-color: rgba(255, 0, 0, 1) };", "spaces": 4, "color": "yellow.300"},                  
+                  {"element": "#box2 { background-color: rgba(255, 0, 0, 0.8) };", "spaces": 4, "color": "yellow.300"},
+                  {"element": "#box3 { background-color: rgba(255, 0, 0, 0.6) };", "spaces": 4, "color": "yellow.300"},                  
+                  {"element": "#box4 { background-color: rgba(255, 0, 0, 0.4) };", "spaces": 4, "color": "yellow.300"},                  
+                  {"element": "#box5 { background-color: rgba(255, 0, 0, 0.2) };", "spaces": 4, "color": "yellow.300"},                  
+                  {"element": "#box6 { background-color: rgba(255, 0, 0, 0) };", "spaces": 4, "color": "yellow.300"},                  
+                  {"element": "</style>", "spaces": 2, "color": "white"},
+                  {"element": "</head>", "spaces": 0, "color": "white"},
+                  {"element": "<body>", "spaces": 0, "color": "white"},
+                  {"element": "<div class='container'>", "spaces": 2, "color": "white"},
+                  {"element": "<div class='box' id='box1'>Box 1</div>", "spaces": 4, "color": "white"},
+                  {"element": "<div class='box' id='box2'>Box 2</div>", "spaces": 4, "color": "white"},
+                  {"element": "<div class='box' id='box3'>Box 3</div>", "spaces": 4, "color": "white"},
+                  {"element": "<div class='box' id='box3'>Box 4</div>", "spaces": 4, "color": "white"},
+                  {"element": "<div class='box' id='box3'>Box 5</div>", "spaces": 4, "color": "white"},
+                  {"element": "<div class='box' id='box3'>Box 6</div>", "spaces": 4, "color": "white"},
+                  {"element": "</div>", "spaces": 2, "color": "white"},
+                  {"element": "</body>", "spaces": 0, "color": "white"}
+                ],
+                "outputCode": [
+                  {
+                    "type": "div",
+                    "style": {
+                      "backgroundColor": "rgb(168, 168, 168)",
+                      "padding": "10px",
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    "content": [
+                      {
+                        "type": "div",
+                        "style": {
+                          "width": "80%",
+                          "height": "70px",
+                          "backgroundColor": "rgba(255, 0, 0, 1)",
+                          "marginBottom": "10px",
+                          "border":"1px solid black"
+                        },
+                        "content": "Box 1"
+                      },
+                      {
+                        "type": "div",
+                        "style": {
+                          "width": "80%",
+                          "height": "70px",
+                          "backgroundColor": "rgba(255, 0, 0, 0.8)",
+                          "marginBottom": "10px",
+                          "border":"1px solid black"
+                        },
+                        "content": "Box 2"
+                      },
+                      {
+                        "type": "div",
+                        "style": {
+                          "width": "80%",
+                          "height": "70px",
+                          "backgroundColor": "rgba(255, 0, 0, 0.6)",
+                          "marginBottom": "10px",
+                          "border":"1px solid black"
+                        },
+                        "content": "Box 3"
+                      },
+                      {
+                        "type": "div",
+                        "style": {
+                          "width": "80%",
+                          "height": "70px",
+                          "backgroundColor": "rgba(255, 0, 0, 0.4)",
+                          "marginBottom": "10px",
+                          "border":"1px solid black"
+                        },
+                        "content": "Box 4"
+                      },
+                      {
+                        "type": "div",
+                        "style": {
+                          "width": "80%",
+                          "height": "70px",
+                          "backgroundColor": "rgba(255, 0, 0, 0.2)",
+                          "marginBottom": "10px",
+                          "border":"1px solid black"
+                        },
+                        "content": "Box 5"
+                      },
+                      {
+                        "type": "div",
+                        "style": {
+                          "width": "80%",
+                          "height": "70px",
+                          "backgroundColor": "rgba(255, 0, 0, 0)",
+                          "marginBottom": "10px",
+                          "border":"1px solid black"
+                        },
+                        "content": "Box 6"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
               "sectionTitle": "אזור הדמדומים והצללים",
               "textBlock": [
                 "תכונה נוספת שיכולה להוסיף מימד נוסף לאתר שלנו ולהפוך לכמעט תלת מימדי. ראשית כל, ברור שהאתר שלנו מיועד לתצוגה במסכים דו-מימדיים בלבד, והדבר הזה לא צפוי להשתנות, אך בעזרת תכונות חזותיות אנחנו יכולים לתת למשתמש את התחושה של תלת מימדיות על-ידי הוספת אפקט חזותי שמדמה צל.",
@@ -3853,7 +3974,14 @@
               "bigButton": {
                 "text": "צבעי מותגים",
                 "urlLink": "https://www.w3schools.com/colors/colors_brands.asp"
-              }
+              },
+              "decorativeLine": "true"
+            },
+            {
+              "sectionTitle": "זמן תרגול",
+              "textBlock": [
+                "תרגיל מתגלגל"
+              ]
             },
             {
               "resources": [
