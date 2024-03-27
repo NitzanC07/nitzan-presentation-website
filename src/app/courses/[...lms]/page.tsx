@@ -6,6 +6,7 @@ import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import LessonSections from "@/components/LearningManagementSystem/LessonContent/LessonSections";
 import { ModuleCourse } from "@/types/coursesTypes";
 import { notFound } from "next/navigation";
+import NotFound from "@/app/not-found";
 
 async function getCourseData(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
@@ -24,6 +25,7 @@ async function getCourseDataDB(selectedCourse: string) {
   });
   if (!res.ok) return notFound();
   const allCourses = res.json();
+
   return allCourses;
 }
 
@@ -33,11 +35,16 @@ export default async function LearningManagementSystemPage({
   params: { lms: string };
 }) {
   // * Call the function of reading course data appropriate to params url from DB
-  // const allCourseData = await getCourseData(params.lms[0]);
-  // const courseData = allCourseData.find(select => select.courseId === params.lms[0])
+  const allCourses: ModuleCourse[] = await getCourseDataDB(params.lms[0]);
+  const courseData: ModuleCourse | undefined = allCourses.find(
+    (selected) => selected.courseId === params.lms[0]
+  );
+  if (!courseData) {
+    return <NotFound />
+  }
 
   // * Call the function of reading course data appropriate to params url from local file.
-  const courseData = await getCourseData(params.lms[0]);
+  // const courseData = await getCourseData(params.lms[0]);
 
   return (
     <Flex
@@ -78,14 +85,14 @@ export default async function LearningManagementSystemPage({
           <NavLessonsList courseData={courseData} />
         </GridItem>
 
-        <GridItem 
-          as="section" 
-          colSpan={1} 
-          // bgColor={"orange.200"} 
-          // bgColor={"#9E7676"} 
-          bgColor={"#C5A880"} 
-          color={'white'}
-          py={3} 
+        <GridItem
+          as="section"
+          colSpan={1}
+          // bgColor={"orange.200"}
+          // bgColor={"#9E7676"}
+          bgColor={"#C5A880"}
+          color={"white"}
+          py={3}
           px={5}
         >
           <LessonTitle courseData={courseData} lessonId={params.lms[1]} />
