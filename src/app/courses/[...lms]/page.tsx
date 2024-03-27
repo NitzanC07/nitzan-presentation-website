@@ -20,7 +20,7 @@ async function getCourseData(selectedCourse: string) {
 async function getCourseDataDB(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
   // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
-  const res = await fetch("http://localhost:3000/api/courses", {
+  const res = await fetch("/api/courses", {
     cache: "no-store",
   });
   if (!res.ok) return notFound();
