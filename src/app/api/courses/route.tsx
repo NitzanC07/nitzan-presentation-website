@@ -12,3 +12,4 @@ export const GET = async () => {
         return new NextResponse("Error in fetching course data. " + error, {status: 500})
     }
 }
+
