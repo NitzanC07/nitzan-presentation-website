@@ -1,5 +1,6 @@
 "use client";
 import Form from "@/components/Forms/Form";
+import NextLink from 'next/link';
 import SubHeadingBox from "@/components/LearningManagementSystem/LessonContent/SubHeadingBox";
 import {
   Box,
@@ -15,6 +16,16 @@ import {
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 
+interface FormValues {
+  firstName?: string;
+    lastName?: string;
+    gender?: string;
+    classLevel?: string;
+    email?: string;
+    password?: string;
+    password2?: string;
+}
+
 function Register() {
   const inputFields = [
     {
@@ -25,7 +36,7 @@ function Register() {
       placeholder: "שם פרטי",
     },
     {
-      fieldId: "latName",
+      fieldId: "lastName",
       label: "שם משפחה",
       inputType: "text",
       directionContent: "rtl",
@@ -37,7 +48,7 @@ function Register() {
       inputType: "select",
       directionContent: "rtl",
       placeholder: "זכר / נקבה",
-      options: ["זכר", "נקבה"]
+      options: ["זכר", "נקבה"],
     },
     {
       fieldId: "classLevel",
@@ -46,8 +57,7 @@ function Register() {
       directionContent: "rtl",
       placeholder: "כיתת לימוד",
       explain: "אם אינך לומד בבית ספר, ציין שאתה לומד עצמאי.",
-      options: ["ז'", "ח'", "ט'", "י'", "י\"א", "י\"ב", "לומד עצמאי"]
-
+      options: ["ז'", "ח'", "ט'", "י'", 'י"א', 'י"ב', "לומד עצמאי"],
     },
     {
       fieldId: "email",
@@ -57,33 +67,48 @@ function Register() {
       placeholder: "your-name@example.com",
     },
     {
-      fieldId: "password1",
+      fieldId: "password",
       label: "סיסמא",
       inputType: "password",
       directionContent: "ltr",
       placeholder: "Your password...",
-      explain: "הסיסמא צריכה להיות מורכבת מאותיות באנגלית (קטנות או גדולות) ומספרים בלבד."
+      explain:
+        "הסיסמא צריכה להיות מורכבת מאותיות באנגלית (קטנות או גדולות) ומספרים בלבד.",
     },
     {
       fieldId: "password2",
-      label: "אישור סיסמא",
+      label: "אימות סיסמא",
       inputType: "password",
       directionContent: "ltr",
       placeholder: "Your password...",
-      explain: "הקלד את אותה סיסמא פעם נוספת."
+      explain: "הקלד את אותה סיסמא פעם נוספת.",
     },
   ];
+
+  const createNewUser = (formValues: FormValues) => {
+    if (formValues.password !== formValues.password2) {
+      console.log("The passwords aren't corresponds.");
+      return;
+    }
+    console.log(`User ${formValues.firstName} ${formValues.lastName} created`, formValues);
+    return;
+  }
   return (
     <Flex
       flexDir={"column"}
       justifyContent={"flex-start"}
       alignItems={"center"}
       bgColor={"#E6E6E6"}
-      height={"91svh"}
     >
-      <Form title="הרשמה" submitButton="הרשם" inputFields={inputFields} />
-      <Text>
-        אתה כבר רשום? <Link href="/login">התחבר כאן</Link>
+      <Form 
+        title="הרשמה" 
+        submitButton="הרשם" 
+        inputFields={inputFields}
+        submitFunction={createNewUser} 
+      />
+
+      <Text mb={10}>
+        אתה כבר רשום? <Link as={NextLink} href="/login">התחבר כאן</Link>
       </Text>
     </Flex>
   );

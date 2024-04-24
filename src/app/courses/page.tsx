@@ -1,3 +1,5 @@
+import NextLink from 'next/link';
+// import Image from 'next/image';
 import {
   Box,
   Button,
@@ -96,6 +98,8 @@ function CoursesPage() {
               src={`${course.imagePath}`}
               alt={`${course.imageAlt}`}
               width={["100%", "100%", "30%"]}
+              // width={256}
+              // height={256}
             />
             <CardBody pos={"relative"}>
               <Flex flexDir={["column", "row"]} justifyContent="space-between">
@@ -110,6 +114,7 @@ function CoursesPage() {
                   {course.title}
                 </Heading>
                 <Link
+                  as={NextLink}
                   href={`${course.isActive ? course.link : "/courses"}`}
                   mb={[4, 0]}
                   cursor={course.isActive ? "pointer" : "default"}

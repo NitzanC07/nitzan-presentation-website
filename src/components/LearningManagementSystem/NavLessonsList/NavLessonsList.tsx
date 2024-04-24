@@ -1,3 +1,4 @@
+import NextLink from 'next/link';
 import {
   Accordion,
   AccordionButton,
@@ -50,6 +51,7 @@ function NavLessonsList({ courseData }: NavLessonsListProps) {
                   _hover={{bgColor: "rgba(255, 255, 255, 0.3)"}}
                 >
                   <Link
+                    as={NextLink}
                     href={`/courses/${courseId}/${lesson.lessonId}`}
                     color="white"
                     display={'block'}
