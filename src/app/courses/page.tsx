@@ -28,7 +28,7 @@ function CoursesPage() {
       title: "מסע בזמן דרך פיתוח אתרי אינטרנט",
       description:
         "בקורס זה לומדים את היסודות של בניית אתר אינטרנט בעזרת שילוב של שפות HTML ושפת עיצוב האתרים CSS. במסגרת הקורס, מלבד הידע הטכני, התלמידים גם יצרו אתר באמצעות תרגולים לאורך הקורס שנוגעים באירועים היסטוריים משמעותיים.",
-      link: "/courses/time-journey-through-web-developmental/1.1",
+      courseId: "time-journey-through-web-developmental",
       imagePath: "/images/stylingImages/HTMLCSS_cover.png",
       imageAlt:
         "A realistic image of a wall in style of Jerusalem bricks, with close up on two bricks.",
@@ -37,7 +37,7 @@ function CoursesPage() {
     {
       title: "קורס פיתוח בסביבת עבודה React",
       description: "בקרוב...",
-      link: "/courses/master-course/1.1",
+      courseId: "master-course",
       imagePath: "/images/stylingImages/js_cover.png",
       imageAlt: "Close up on a wall of Jerusalem bricks with a cyan door on the center and three steps before this door",
       isActive: false,
@@ -45,7 +45,7 @@ function CoursesPage() {
     {
       title: "סדנת כתיבה יצירתית",
       description: "בקרוב...",
-      link: "/courses/creative-writing/1.1",
+      courseId: "creative-writing",
       imagePath: "/images/stylingImages/Colorful_tree_with_rainbow_lea2.jpeg",
       imageAlt: "Colorful tree with rainbow leaves.",
       isActive: false,
@@ -109,7 +109,7 @@ function CoursesPage() {
                 </Heading>
                 <Link
                   as={NextLink}
-                  href={`${course.isActive ? course.link : "/courses"}`}
+                  href={`${course.isActive ? `/courses/${course.courseId}/1.1` : "/courses"}`}
                   mb={[4, 0]}
                   cursor={course.isActive ? "pointer" : "default"}
                   tabIndex={1}
