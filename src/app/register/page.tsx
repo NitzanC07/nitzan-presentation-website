@@ -90,14 +90,18 @@ function Register() {
     console.log("formValues", formValues);
     
     if (formValues.password !== formValues.confirmPassword) {
-      console.log("The passwords aren't corresponds.");
+      console.error("The passwords aren't corresponds.");
       return;
     }
     try {
-      fetch('/api/users', {
+      const response = await fetch('/api/users', {
+        method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(formValues)
       })
+      if (!response.ok) {
+        throw new Error (`HTTP error! status: ${response.status}`)
+      }
       console.log(`User ${formValues.firstName} created.`);      
 
     } catch (error) {

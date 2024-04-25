@@ -5,7 +5,6 @@ import CourseSchema from "../../../../models/CourseSchema";
 export const GET = async () => {
   try {
     await connect();
-    console.log("MongoDB Connection successful.");
     const courses = await CourseSchema.find();
     return new NextResponse(JSON.stringify(courses), { status: 200 });
   } catch (error) {

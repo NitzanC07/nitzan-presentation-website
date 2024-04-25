@@ -27,19 +27,20 @@ interface FormDetailsProps {
   submitFunction: ({}) => void;
 }
 
-function Form({ title, inputFields, submitButton, submitFunction }: FormDetailsProps) {
+function Form({
+  title,
+  inputFields,
+  submitButton,
+  submitFunction,
+}: FormDetailsProps) {
   const [formValues, setFormValues] = useState<{ [key: string]: string }>({});
 
-  // Function to handle input changes
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setFormValues((prevValues) => ({
-      ...prevValues,
-      [name]: value,
-    }));
-  };
-  // Function to handle input changes
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  // Function to handle input fields changes.
+  const handleInputChange = (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>
+  ) => {
     const { name, value } = event.target;
     setFormValues((prevValues) => ({
       ...prevValues,
@@ -86,7 +87,11 @@ function Form({ title, inputFields, submitButton, submitFunction }: FormDetailsP
             >
               {inputField.inputType !== "select" && (
                 <>
-                  <Tooltip label={inputField.explain} color={"#fff"} bgColor={"#815B5B"}>
+                  <Tooltip
+                    label={inputField.explain}
+                    color={"#fff"}
+                    bgColor={"#815B5B"}
+                  >
                     <FormLabel>{inputField.label}:</FormLabel>
                   </Tooltip>
                   <Input
@@ -111,14 +116,17 @@ function Form({ title, inputFields, submitButton, submitFunction }: FormDetailsP
               )}
               {inputField.inputType === "select" && (
                 <>
-                  <Tooltip 
-                    label={inputField.explain} color={"#fff"} bgColor={"#815B5B"}>
+                  <Tooltip
+                    label={inputField.explain}
+                    color={"#fff"}
+                    bgColor={"#815B5B"}
+                  >
                     <FormLabel w={"max-content"}>{inputField.label}:</FormLabel>
                   </Tooltip>
                   <Select
                     name={inputField.fieldId}
                     id={inputField.fieldId}
-                    onChange={handleSelectChange}
+                    onChange={handleInputChange}
                     required
                     isInvalid={false}
                     errorBorderColor="red.300"
