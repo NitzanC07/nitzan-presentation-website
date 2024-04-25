@@ -11,6 +11,7 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
+import { usePathname } from 'next/navigation';
 
 /**
  * Pass the fetch all courses data to this page,
@@ -21,6 +22,7 @@ import {
  */
 
 function CoursesPage() {
+
   const coursesLink = [
     {
       title: "מסע בזמן דרך פיתוח אתרי אינטרנט",
@@ -31,14 +33,6 @@ function CoursesPage() {
       imageAlt:
         "A realistic image of a wall in style of Jerusalem bricks, with close up on two bricks.",
       isActive: true,
-    },
-    {
-      title: "פיתוח אתרי אינטרנט עם Java Script",
-      description: "בקרוב...",
-      link: "/courses/master-course/1.1",
-      imagePath: "/images/stylingImages/js_cover.png",
-      imageAlt: "Close up on a wall of Jerusalem bricks with a cyan door on the center and three steps before this door",
-      isActive: false,
     },
     {
       title: "קורס פיתוח בסביבת עבודה React",

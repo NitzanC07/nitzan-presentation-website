@@ -15,6 +15,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
+import UserSchema from "../../../models/UserSchema";
 
 interface FormValues {
   firstName?: string;
@@ -23,7 +24,7 @@ interface FormValues {
     classLevel?: string;
     email?: string;
     password?: string;
-    password2?: string;
+    confirmPassword?: string;
 }
 
 function Register() {
@@ -52,7 +53,7 @@ function Register() {
     },
     {
       fieldId: "classLevel",
-      label: "כיתה",
+      label: "כיתה*",
       inputType: "select",
       directionContent: "rtl",
       placeholder: "כיתת לימוד",
@@ -68,7 +69,7 @@ function Register() {
     },
     {
       fieldId: "password",
-      label: "סיסמא",
+      label: "סיסמא*",
       inputType: "password",
       directionContent: "ltr",
       placeholder: "Your password...",
@@ -76,23 +77,34 @@ function Register() {
         "הסיסמא צריכה להיות מורכבת מאותיות באנגלית (קטנות או גדולות) ומספרים בלבד.",
     },
     {
-      fieldId: "password2",
-      label: "אימות סיסמא",
+      fieldId: "confirmPassword",
+      label: "אימות סיסמא*",
       inputType: "password",
       directionContent: "ltr",
-      placeholder: "Your password...",
+      placeholder: "Your password again...",
       explain: "הקלד את אותה סיסמא פעם נוספת.",
     },
   ];
 
-  const createNewUser = (formValues: FormValues) => {
-    if (formValues.password !== formValues.password2) {
+  const createNewUser = async (formValues: FormValues) => {
+    console.log("formValues", formValues);
+    
+    if (formValues.password !== formValues.confirmPassword) {
       console.log("The passwords aren't corresponds.");
       return;
     }
-    console.log(`User ${formValues.firstName} ${formValues.lastName} created`, formValues);
-    return;
+    try {
+      fetch('/api/users', {
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(formValues)
+      })
+      console.log(`User ${formValues.firstName} created.`);      
+
+    } catch (error) {
+      console.error("Error creating user:", error);
+    }
   }
+  
   return (
     <Flex
       flexDir={"column"}

@@ -1,6 +1,10 @@
+'use client';
 import { Box, Flex, Heading } from "@chakra-ui/react";
+import { usePathname } from "next/navigation";
 
 function Header() {
+  const path = usePathname();
+
   return (
     <Flex
       as="header"
@@ -19,7 +23,7 @@ function Header() {
         fontFamily="var(--font-varela_round)"
         fontSize={[18, 25, 30]}
       >
-        NC Learning
+        {path.startsWith("/courses") ? "NCL": "ניצן כהן"}
       </Heading>
       <Box fontSize={[17, 20]} bgColor={"gray.200"}>
         Navigator

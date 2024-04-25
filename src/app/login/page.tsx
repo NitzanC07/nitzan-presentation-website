@@ -1,6 +1,5 @@
 "use client";
 import Form from "@/components/Forms/Form";
-import SubHeadingBox from "@/components/LearningManagementSystem/LessonContent/SubHeadingBox";
 import NextLink from "next/link";
 import {
   Box,
