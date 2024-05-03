@@ -11,7 +11,8 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
-import { usePathname } from 'next/navigation';
+import { notFound, usePathname } from 'next/navigation';
+import { ModuleCourse } from '@/types/coursesTypes';
 
 /**
  * Pass the fetch all courses data to this page,
@@ -21,38 +22,22 @@ import { usePathname } from 'next/navigation';
  * and navigate to it.
  */
 
-function CoursesPage() {
+async function getCoursesDataDB() {
+  // * Function that read the data of the selected course as SSG method.
+  // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
+  const url = `${process.env.NODE_ENV === "development" ?  process.env.DEV_URL : process.env.NEXT_PUBLIC_VERCEL_URL}`
+    
+  const res = await fetch(`${url}/api/courses`, {
+    cache: "no-store",
+  });
+  if (!res.ok) return notFound();
+  const allCourses = res.json();
 
-  const coursesLink = [
-    {
-      title: "מסע בזמן דרך פיתוח אתרי אינטרנט",
-      description:
-        "בקורס זה לומדים את היסודות של בניית אתר אינטרנט בעזרת שילוב של שפות HTML ושפת עיצוב האתרים CSS. במסגרת הקורס, מלבד הידע הטכני, התלמידים גם יצרו אתר באמצעות תרגולים לאורך הקורס שנוגעים באירועים היסטוריים משמעותיים.",
-      courseId: "time-journey-through-web-developmental",
-      imagePath: "/images/stylingImages/HTMLCSS_cover.png",
-      imageAlt:
-        "A realistic image of a wall in style of Jerusalem bricks, with close up on two bricks.",
-      isActive: true,
-    },
-    {
-      title: "קורס פיתוח בסביבת עבודה React",
-      description: "בקרוב...",
-      courseId: "master-course",
-      imagePath: "/images/stylingImages/js_cover.png",
-      imageAlt: "Close up on a wall of Jerusalem bricks with a cyan door on the center and three steps before this door",
-      isActive: false,
-    },
-    {
-      title: "סדנת כתיבה יצירתית",
-      description: "בקרוב...",
-      courseId: "creative-writing",
-      imagePath: "/images/stylingImages/Colorful_tree_with_rainbow_lea2.jpeg",
-      imageAlt: "Colorful tree with rainbow leaves.",
-      isActive: false,
-    },
-  ];
+  return allCourses;
+}
 
-  
+async function CoursesPage() {
+  const allCourses: ModuleCourse[] = await getCoursesDataDB();
 
   return (
     <Flex
@@ -73,7 +58,7 @@ function CoursesPage() {
           קורסים
         </Heading>
 
-        {coursesLink.map((course, i) => (
+        {allCourses.map((course, i) => (
           <Card
             key={i}
             direction={["column", "column", "row", "row"]}
@@ -89,23 +74,20 @@ function CoursesPage() {
             w={[200, 400, 600, 800]}
           >
             <Image
-              src={`${course.imagePath}`}
-              alt={`${course.imageAlt}`}
+              src={`${course.courseCoverImage.path}`}
+              alt={`${course.courseCoverImage.alternateText}`}
               width={["100%", "100%", "30%"]}
-              // width={256}
-              // height={256}
             />
             <CardBody pos={"relative"}>
               <Flex flexDir={["column", "row"]} justifyContent="space-between">
                 <Heading
-                  // style={{ fontFamily: "Varela Round, sans-serif" }}
                   fontFamily="var(--font-varela_round)"
                   fontSize={[15, 19, 20, 24]}
                   color={"#532E1C"}
                   mb={5}
                   tabIndex={1}
                 >
-                  {course.title}
+                  {course.courseName}
                 </Heading>
                 <Link
                   as={NextLink}
@@ -128,13 +110,12 @@ function CoursesPage() {
                 </Link>
               </Flex>
               <Text
-                // style={{ fontFamily: "Varela Round, sans-serif" }}
                 fontSize={[14, 16, 16, 18]}
                 color={"#0F0F0F"}
                 mb={5}
                 tabIndex={1}
               >
-                {course.description}
+                {course.courseDescription}
               </Text>
             </CardBody>
           </Card>

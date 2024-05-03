@@ -11,7 +11,7 @@ const options:{} = {
 
 async function connect() {
   if (!process.env.MONGODB_URI) {
-    throw new Error('Add Mongo URI to .env.local')
+    throw new Error('Add Mongo URI to .env file.')
   }
   try {
     await mongoose.connect(process.env.MONGODB_URI, options);

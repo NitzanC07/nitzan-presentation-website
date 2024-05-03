@@ -8,19 +8,21 @@ import { ModuleCourse } from "@/types/coursesTypes";
 import { notFound } from "next/navigation";
 import NotFound from "@/app/not-found";
 
-async function getCourseData(selectedCourse: string) {
-  // * Function that read the data of the selected course as SSG method.
-  // * Get the data from a local file inside the project structure.
-  const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
-  const fileData = fs.readFileSync(filePath, "utf-8");
-  const courseData: ModuleCourse = JSON.parse(fileData);
-  return courseData;
-}
+// async function getCourseData(selectedCourse: string) {
+//   // * Function that read the data of the selected course as SSG method.
+//   // * Get the data from a local file inside the project structure.
+//   const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
+//   const fileData = fs.readFileSync(filePath, "utf-8");
+//   const courseData: ModuleCourse = JSON.parse(fileData);
+//   return courseData;
+// }
 
 async function getCourseDataDB(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
   // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
-  const res = await fetch(`${process.env.NODE_ENV === "development" ?  process.env.DEV_URL : process.env.NEXT_PUBLIC_VERCEL_URL}/api/courses`, {
+  const url = `${process.env.NODE_ENV === "development" ?  process.env.DEV_URL : process.env.NEXT_PUBLIC_VERCEL_URL}`
+    
+  const res = await fetch(`${url}/api/courses`, {
     cache: "no-store",
   });
   if (!res.ok) return notFound();
@@ -29,15 +31,14 @@ async function getCourseDataDB(selectedCourse: string) {
   return allCourses;
 }
 
-export default async function LearningManagementSystemPage({
-  params,
-}: {
-  params: { lms: string };
-}) {
+export default async function LearningManagementSystemPage({params,}: { params: { lms: string };}) {
+  const courseId = params.lms[0]
+  const lessonId = params.lms[1]
+
   // * Call the function of reading course data appropriate to params url from DB
-  const allCourses: ModuleCourse[] = await getCourseDataDB(params.lms[0]);
+  const allCourses: ModuleCourse[] = await getCourseDataDB(courseId);
   const courseData: ModuleCourse | undefined = allCourses.find(
-    (selected) => selected.courseId === params.lms[0]
+    (selected) => selected.courseId === courseId
   );
   if (!courseData) {
     return <NotFound />
@@ -95,7 +96,7 @@ export default async function LearningManagementSystemPage({
           py={3}
           px={5}
         >
-          <LessonTitle courseData={courseData} lessonId={params.lms[1]} />
+          <LessonTitle courseData={courseData} lessonId={lessonId} />
         </GridItem>
 
         <GridItem
@@ -111,7 +112,7 @@ export default async function LearningManagementSystemPage({
           px={"auto"}
           m={0}
         >
-          <LessonSections courseData={courseData} lessonId={params.lms[1]} />
+          <LessonSections courseData={courseData} lessonId={lessonId} />
         </GridItem>
       </Grid>
     </Flex>
