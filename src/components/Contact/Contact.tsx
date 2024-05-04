@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 function Contact() {
   return (
@@ -11,9 +11,21 @@ function Contact() {
       m={0}
       p={5}
     >
-      <Text fontSize={20}>
-        יצירת קשר
-      </Text>
+      <Box width={[280, 450, 600]} mt={[0, "40px"]}>
+      <Heading
+          fontFamily="var(--font-varela_round)"
+          color={"#815B5B"}
+          fontSize={24}
+          py={4}
+          mx={[3, 3, 7, 0]}
+          mt={5}
+          mb={1}
+          tabIndex={1}
+        >
+          יצירת קשר
+        </Heading>
+        
+      </Box>
     </Flex>
   );
 }

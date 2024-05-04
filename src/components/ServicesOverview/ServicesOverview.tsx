@@ -1,9 +1,8 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
-import React from "react";
 import ParagraphBox from "../LearningManagementSystem/LessonContent/ParagraphBox";
 import ULbox from "../LearningManagementSystem/LessonContent/ULbox";
 
-function Portfolio() {
+function ServicesOverview() {
   return (
     <Flex
       bgColor={"gray.100"}
@@ -15,7 +14,7 @@ function Portfolio() {
       p={5}
     >
       <Box width={[280, 450, 600]} mt={[0, "40px"]}>
-      <Heading
+        <Heading
           fontFamily="var(--font-varela_round)"
           color={"#815B5B"}
           fontSize={24}
@@ -25,12 +24,14 @@ function Portfolio() {
           mb={1}
           tabIndex={1}
         >
-          אנשים שסומכים עליי
+          מה אני נותן?
         </Heading>
-        <ULbox content={["נטלי ליה לביב - Happy Land", "שי-אל בורנשטיין", "איתן - כל אחד יכול", "תלמידים פרטיים"]} />
+        <ULbox
+          content={["אתר תדמית לעסק", "אימוני ריצה וכושר", "שיעור פרטי בתכנות", "קורס פיתוח אתרים לבתי ספר"]}
+        />
       </Box>
     </Flex>
   );
 }
 
-export default Portfolio;
+export default ServicesOverview;

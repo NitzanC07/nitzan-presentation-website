@@ -1,8 +1,9 @@
 import About from "@/components/About/About";
 import { Flex } from "@chakra-ui/react";
-import Courses from "@/components/CoursesOverview/CoursesOverview";
+import ServicesOverview from "@/components/ServicesOverview/ServicesOverview";
 import Contact from "@/components/Contact/Contact";
 import Portfolio from "@/components/Portfolio/Portfolio";
+import BlogArticles from "@/components/BlogArticles/BlogArticles";
 
 export default function Home() {
   return (
@@ -10,9 +11,11 @@ export default function Home() {
       flexDir={"column"}
       justifyContent={"flex-start"}
       alignItems={"center"}
+      bgColor={"#e6e6e6"}
     >
       <About />
-      <Courses />
+      <ServicesOverview />
+      <BlogArticles />
       <Portfolio />
       <Contact />
     </Flex>
