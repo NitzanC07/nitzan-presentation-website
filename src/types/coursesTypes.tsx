@@ -46,12 +46,12 @@ export interface CourseContent {
 }
 export interface ModuleCourse {
   courseId: string;
-  courseName: string;
-  courseDescription: string;
-  courseCoverImage: {
+  name: string;
+  description: string;
+  coverImage: {
     path: string;
     alternateText: string;
   }
-  courseContent: CourseContent[];
+  content: CourseContent[];
   isActive?: boolean
 }

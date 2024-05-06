@@ -10,20 +10,19 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import { ModuleCourse } from "@/types/coursesTypes";
+import { ArticlesTypes } from '@/types/articlesTypes';
 
 interface NavLessonsListProps {
-  courseData: ModuleCourse;
+  content?: ModuleCourse;
 }
 
-function NavLessonsList({ courseData }: NavLessonsListProps) {
-  const courseContent = courseData.courseContent;
-  const courseId = courseData.courseId;
-
-  const navigateToLesson = () => {}
+function NavLessonsList({ content }: NavLessonsListProps) {  
+  const courseContent = content?.content;
+  const courseId = content?.courseId; 
 
   return (
     <Accordion>
-      {courseContent.map((moduleCourse: any) => (
+      {courseContent?.map((moduleCourse: any) => (
         <AccordionItem key={moduleCourse.module}>
           <AccordionButton tabIndex={2} _hover={{bgColor: "rgba(255, 255, 255, 0.3)"}}>
             <Heading

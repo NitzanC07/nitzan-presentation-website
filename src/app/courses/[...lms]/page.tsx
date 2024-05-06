@@ -37,10 +37,10 @@ export default async function LearningManagementSystemPage({params,}: { params: 
 
   // * Call the function of reading course data appropriate to params url from DB
   const allCourses: ModuleCourse[] = await getCourseDataDB(courseId);
-  const courseData: ModuleCourse | undefined = allCourses.find(
+  const content: ModuleCourse | undefined = allCourses.find(
     (selected) => selected.courseId === courseId
   );
-  if (!courseData) {
+  if (!content) {
     return <NotFound />
   }
 
@@ -83,7 +83,7 @@ export default async function LearningManagementSystemPage({params,}: { params: 
             רשימת שיעורים
           </Heading>
 
-          <NavLessonsList courseData={courseData} />
+          <NavLessonsList content={content} />
         </GridItem>
 
         <GridItem
@@ -96,7 +96,7 @@ export default async function LearningManagementSystemPage({params,}: { params: 
           py={3}
           px={5}
         >
-          <LessonTitle courseData={courseData} lessonId={lessonId} />
+          <LessonTitle courseData={content} lessonId={lessonId} />
         </GridItem>
 
         <GridItem
@@ -112,7 +112,7 @@ export default async function LearningManagementSystemPage({params,}: { params: 
           px={"auto"}
           m={0}
         >
-          <LessonSections courseData={courseData} lessonId={lessonId} />
+          <LessonSections courseData={content} lessonId={lessonId} />
         </GridItem>
       </Grid>
     </Flex>

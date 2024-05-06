@@ -74,8 +74,8 @@ async function CoursesPage() {
             w={[200, 400, 600, 800]}
           >
             <Image
-              src={`${course.courseCoverImage.path}`}
-              alt={`${course.courseCoverImage.alternateText}`}
+              src={`${course.coverImage.path}`}
+              alt={`${course.coverImage.alternateText}`}
               width={["100%", "100%", "30%"]}
             />
             <CardBody pos={"relative"}>
@@ -87,7 +87,7 @@ async function CoursesPage() {
                   mb={5}
                   tabIndex={1}
                 >
-                  {course.courseName}
+                  {course.name}
                 </Heading>
                 <Link
                   as={NextLink}
@@ -115,7 +115,7 @@ async function CoursesPage() {
                 mb={5}
                 tabIndex={1}
               >
-                {course.courseDescription}
+                {course.description}
               </Text>
             </CardBody>
           </Card>

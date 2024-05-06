@@ -1,7 +1,11 @@
-import { Box, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
-import React from "react";
+import ArticleBody from "@/components/ArticlesSections/ArticleBody";
+import ArticleTitle from "@/components/ArticlesSections/ArticleTitle";
+import ArticlesList from "@/components/ArticlesSections/ArticlesList";
+import { ArticlesTypes } from "@/types/articlesTypes";
+import { Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import { notFound } from "next/navigation";
 
-function BlogArticlesPage() {
+function BlogArticlePage() {
   return (
     <Flex
       flexDir={"column"}
@@ -9,15 +13,15 @@ function BlogArticlesPage() {
       alignItems={"center"}
       bgColor={"#E6E6E6"}
     >
-          <Grid
-            as="section"
-            templateColumns={["1fr", "1fr", "1fr 2fr", "1fr 4fr"]}
-            templateRows={["80px 1fr"]}
-            mt="60px"
-            w="100%"
-            gap={0}
-          >
-            <GridItem
+      <Grid
+        as="section"
+        templateColumns={["1fr", "1fr", "1fr 2fr", "1fr 4fr"]}
+        templateRows={["80px 1fr"]}
+        mt="60px"
+        w="100%"
+        gap={0}
+      >
+        <GridItem
           as="nav"
           rowSpan={2}
           colSpan={1}
@@ -35,11 +39,8 @@ function BlogArticlesPage() {
           >
             מאמרים
           </Heading>
-            <Text color="white">רשימת המאמרים מסודרת לפי מועד פרסומם.</Text>
-            <Text color="white">מאמר 1</Text>
-            <Text color="white">מאמר 2</Text>
-            <Text color="white">מאמר 3</Text>
-          
+
+          <ArticlesList />
         </GridItem>
 
         <GridItem
@@ -50,8 +51,7 @@ function BlogArticlesPage() {
           py={3}
           px={5}
         >
-            <Text>כותרת המאמר</Text>
-          
+          <Text>מאמרים מקצועיים בנושא תכנות ופיתוח אתרים</Text>
         </GridItem>
 
         <GridItem
@@ -65,12 +65,11 @@ function BlogArticlesPage() {
           px={"auto"}
           m={0}
         >
-            <Text>גוף המאמר</Text>
-          
+          <Text>בחרו מאמר מרשימת המאמרים בצד שמאל, על מנת לקרוא.</Text>
         </GridItem>
-          </Grid>
+      </Grid>
     </Flex>
   );
 }
 
-export default BlogArticlesPage;
+export default BlogArticlePage;
