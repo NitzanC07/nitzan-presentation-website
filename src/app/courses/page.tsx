@@ -1,5 +1,4 @@
 import NextLink from 'next/link';
-// import Image from 'next/image';
 import {
   Box,
   Button,
@@ -25,7 +24,7 @@ import { ModuleCourse } from '@/types/coursesTypes';
 async function getCoursesDataDB() {
   // * Function that read the data of the selected course as SSG method.
   // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
-  const url = `${process.env.NODE_ENV === "development" ?  process.env.DEV_URL : process.env.NEXT_PUBLIC_VERCEL_URL}`
+  const url = `${process.env.NODE_ENV === "production" ?  process.env.NEXT_PUBLIC_VERCEL_URL : process.env.DEV_URL}`
     
   const res = await fetch(`${url}/api/courses`, {
     cache: "no-store",
