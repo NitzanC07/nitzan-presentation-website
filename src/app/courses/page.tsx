@@ -55,7 +55,6 @@ async function getCoursesData() {
 async function CoursesPage() {
   try {
     const allCourses: ModuleCourse[] = await getCoursesData();
-    console.log("### ALL COURSES ###", typeof(dataContent));
     
   return (
     <Flex
