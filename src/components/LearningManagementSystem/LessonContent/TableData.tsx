@@ -64,6 +64,7 @@ function TableData({ caption, headingRow, rows }: TableDataProps) {
               key={i} 
               bgColor={i%2 === 0 ? '#ffffff66' : '#ffffff88'} 
               _hover={{bgColor: '#C5A88044'}}
+              transition={"0.7s"}
               borderBottom={'1px solid #532E1C'}
             >
               {row.map((cell, j) => (

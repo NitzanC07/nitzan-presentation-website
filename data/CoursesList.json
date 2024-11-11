@@ -1,0 +1,32 @@
+[
+  {
+    "courseId": "001",
+    "courseName": "מסע בזמן דרך פיתוח אתרי אינטרנט",
+    "courseDescription": "קורס הבסיס לפיתוח אתרי אינטרנט בעזרת שפת HTML, עיצוב אתרים בעזרת CSS, ופיתוח פונקציונלי בעזרת שפת Java Script הפופולרית. את הקורס מלווים תרגולים רבים לחומר התאורתי בהשראת ההיסטוריה של מדינת ישראל.",
+    "coverImage": {
+      "path": "/images/stylingImages/HTMLCSS_cover.png",
+      "alternateText": "HTML & CSS Course"
+    },
+    "isActive": true
+  },
+  {
+    "courseId": "002",
+    "courseName": "בניית אתרי אינטרנט מתקדם",
+    "courseDescription": "תקציר הקורס",
+    "coverImage": {
+      "path": "/images/stylingImages/js_cover.png",
+      "alternateText": "JS Course"
+    },
+    "isActive": false
+  },
+  {
+    "courseId": "003",
+    "courseName": "כתיבה יצירתית",
+    "courseDescription": "תקציר הקורס",
+    "coverImage": {
+      "path": "/images/stylingImages/Colorful_tree_with_rainbow_lea2.jpeg",
+      "alternateText": "Creative writing"
+    },
+    "isActive": false
+  }
+]

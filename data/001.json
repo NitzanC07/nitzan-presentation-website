@@ -1,5 +1,5 @@
 {
-  "courseId": "time-journey-through-web-developmental",
+  "courseId": "001",
   "courseName": "מסע בזמן דרך פיתוח אתרי אינטרנט",
   "courseDescription": "קורס הבסיס לפיתוח אתרי אינטרנט בעזרת שפת HTML, עיצוב אתרים בעזרת CSS, ופיתוח פונקציונלי בעזרת שפת Java Script הפופולרית. את הקורס מלווים תרגולים רבים לחומר התאורתי בהשראת ההיסטוריה של מדינת ישראל.",
   "courseContent": [
@@ -40,14 +40,14 @@
               ]
             },
             {
-              "sectionTitle": "Virtual Studio Code",
+              "sectionTitle": "Visual Studio Code",
               "textBlock": [
-                "אחת התוכנות הנפוצות ביותר והשימושיות היא Virtual Studio Code, או בשמה המקוצר - VS-Code, היא תוכנת עריכת קוד שפותחה על-ידי חברת Microsoft והיא חופשית לשימוש ללא דמי תשלום.",
+                "אחת התוכנות הנפוצות ביותר והשימושיות היא Visual Studio Code, או בשמה המקוצר - VS-Code, היא תוכנת עריכת קוד שפותחה על-ידי חברת Microsoft והיא חופשית לשימוש ללא דמי תשלום.",
                 "את תוכנת עריכת הקוד VS-Code ניתן להוריד מהאתר הרשמי שלה. ישנן מספר גרסאות של התוכנה שמותאמות למערכות הפעלה. הקורס הזה מותאם למערכת הפעלה Windows, אבל בהחלט אפשר ללמוד בקורס גם עם מערכות הפעלה שונות ולעשות את ההתאמות הדרושות."
               ],
               "bigButton": {
                 "urlLink": "https://code.visualstudio.com/",
-                "text": "Virtual Studio Code - Code Editor"
+                "text": "Visual Studio Code - Code Editor"
               }
             },
             {

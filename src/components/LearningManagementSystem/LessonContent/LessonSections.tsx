@@ -39,8 +39,8 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
     setModuleNumber(lessonId.toString().split(".")[0]);
     setLessonNumber(lessonId.toString().split(".")[1]);
   }, [lessonId]);
-
-  const currentModule = courseData.content.find(
+  
+  const currentModule = courseData.courseContent?.find(
     (module) => module.module == moduleNumber
   );
 

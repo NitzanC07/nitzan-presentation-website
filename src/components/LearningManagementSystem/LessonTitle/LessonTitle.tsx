@@ -9,10 +9,10 @@ interface LessonTitleProps {
 }
 
 function LessonTitle({ courseData, lessonId }: LessonTitleProps) {
-  const courseTitle = courseData.name;
+  const courseTitle = courseData.courseName;
   const [moduleNumber, setModuleNumber] = useState("");
   const [lessonNumber, setLessonNumber] = useState("");
-  const currentModule = courseData.content.find(
+  const currentModule = courseData.courseContent.find(
     (module) => module.module == moduleNumber
   );
   const currentLesson = currentModule?.lessons.find(

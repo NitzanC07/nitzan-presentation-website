@@ -12,6 +12,8 @@ function ULbox({ content }: ULboxProps) {
           key={i}
           as="li"
           fontSize={18}
+          textAlign={"justify"}
+          letterSpacing={"0.03em"}
           pt={0}
           pb={4}
           mx={[3, 3, 7, 0]}

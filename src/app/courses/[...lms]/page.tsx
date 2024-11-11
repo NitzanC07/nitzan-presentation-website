@@ -8,44 +8,45 @@ import { ModuleCourse } from "@/types/coursesTypes";
 import { notFound } from "next/navigation";
 import NotFound from "@/app/not-found";
 
-// async function getCourseData(selectedCourse: string) {
-//   // * Function that read the data of the selected course as SSG method.
-//   // * Get the data from a local file inside the project structure.
-//   const filePath = path.join(process.cwd(), "data", `${selectedCourse}.json`);
-//   const fileData = fs.readFileSync(filePath, "utf-8");
-//   const courseData: ModuleCourse = JSON.parse(fileData);
-//   return courseData;
-// }
-
-async function getCourseDataDB(selectedCourse: string) {
+async function getCourseData(selectedCourse: string) {
   // * Function that read the data of the selected course as SSG method.
-  // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
-  const url = `${process.env.NODE_ENV === "development" ?  process.env.DEV_URL : process.env.NEXT_PUBLIC_VERCEL_URL}`
-    
-  const res = await fetch(`${url}/api/courses`, {
-    cache: "no-store",
-  });
-  if (!res.ok) return notFound();
-  const allCourses = res.json();
-
-  return allCourses;
+  // * Get the data from a local file inside the project structure.
+  const filePath = path.join(process.cwd(), "/data", `/${selectedCourse}.json`);
+  const fileData = fs.readFileSync(filePath, "utf-8");
+  const courseData: ModuleCourse = JSON.parse(fileData);
+  return courseData;
 }
+
+// async function getCourseDataDB(selectedCourse: string) {
+//   // * Function that read the data of the selected course as SSG method.
+//   // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
+//   const url = `${process.env.NODE_ENV === "development" ?  process.env.DEV_URL : process.env.NEXT_PUBLIC_VERCEL_URL}`
+    
+//   const res = await fetch(`${url}/api/courses`, {
+//     cache: "no-store",
+//   });
+//   if (!res.ok) return notFound();
+//   const allCourses = res.json();
+
+//   return allCourses;
+// }
 
 export default async function LearningManagementSystemPage({params,}: { params: { lms: string };}) {
   const courseId = params.lms[0]
   const lessonId = params.lms[1]
 
   // * Call the function of reading course data appropriate to params url from DB
-  const allCourses: ModuleCourse[] = await getCourseDataDB(courseId);
-  const content: ModuleCourse | undefined = allCourses.find(
-    (selected) => selected.courseId === courseId
-  );
-  if (!content) {
-    return <NotFound />
-  }
+  // const allCourses: ModuleCourse[] = await getCourseDataDB(courseId);
+  // const content: ModuleCourse | undefined = allCourses.find(
+  //   (selected) => selected.courseId === courseId
+  // );
+  // if (!content) {
+  //   return <NotFound />
+  // }
 
   // * Call the function of reading course data appropriate to params url from local file.
-  // const courseData = await getCourseData(params.lms[0]);
+  const courseData = (await getCourseData(params.lms[0]));
+  const content = courseData;
 
   return (
     <Flex

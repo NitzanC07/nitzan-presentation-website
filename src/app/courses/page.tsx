@@ -1,4 +1,4 @@
-import NextLink from 'next/link';
+import NextLink from "next/link";
 import {
   Box,
   Button,
@@ -10,8 +10,10 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
-import { notFound, usePathname } from 'next/navigation';
-import { ModuleCourse } from '@/types/coursesTypes';
+import { notFound, usePathname } from "next/navigation";
+import { ModuleCourse } from "@/types/coursesTypes";
+import fs from "fs/promises";
+import path from "path";
 
 /**
  * Pass the fetch all courses data to this page,
@@ -21,23 +23,40 @@ import { ModuleCourse } from '@/types/coursesTypes';
  * and navigate to it.
  */
 
-async function getCoursesDataDB() {
-  // * Function that read the data of the selected course as SSG method.
-  // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
-  const url = `${process.env.NODE_ENV === "production" ?  process.env.NEXT_PUBLIC_VERCEL_URL : process.env.DEV_URL}`
-    
-  const res = await fetch(`${url}/api/courses`, {
-    cache: "no-store",
-  });
-  if (!res.ok) return notFound();
-  const allCourses = res.json();
+// async function getCoursesDataDB() {
+//   // * Function that read the data of the selected course as SSG method.
+//   // * Get the data from the database of MongoDB => NitzanCourses => courses.courses
+//   const url = `${process.env.NODE_ENV === "production" ?  process.env.NEXT_PUBLIC_VERCEL_URL : process.env.DEV_URL}`
 
-  return allCourses;
+//   const res = await fetch(`${url}/api/courses`, {
+//     cache: "no-store",
+//   });
+//   if (!res.ok) return notFound();
+//   const allCourses = res.json();
+
+//   return allCourses;
+// }
+
+async function getCoursesData() {
+  const coursesDataDirectory = path.join(process.cwd(), "/data/");
+  try {
+    const dataContent = await fs.readFile(
+      coursesDataDirectory + "CoursesList.json",
+      "utf8"
+    );
+    const courseData = JSON.parse(dataContent)
+    return courseData;
+  } catch (error) {
+    console.error("Error reading CoursesList.json:", error);
+    throw error;
+  }
 }
 
 async function CoursesPage() {
-  const allCourses: ModuleCourse[] = await getCoursesDataDB();
-
+  try {
+    const allCourses: ModuleCourse[] = await getCoursesData();
+    console.log("### ALL COURSES ###", typeof(dataContent));
+    
   return (
     <Flex
       flexDir={"column"}
@@ -50,7 +69,7 @@ async function CoursesPage() {
           as="h2"
           fontFamily="var(--font-varela_round)"
           fontSize={26}
-          color={'#532E1C'}
+          color={"#532E1C"}
           my={10}
           tabIndex={1}
         >
@@ -67,7 +86,7 @@ async function CoursesPage() {
             borderColor="#532E1C"
             bgColor={"#C5A88088"}
             _hover={{
-              shadow: "1px 1px 5px #888"
+              shadow: "1px 1px 5px #888",
             }}
             mb={5}
             w={[200, 400, 600, 800]}
@@ -86,20 +105,26 @@ async function CoursesPage() {
                   mb={5}
                   tabIndex={1}
                 >
-                  {course.name}
+                  {course.courseName}
                 </Heading>
                 <Link
                   as={NextLink}
-                  href={`${course.isActive ? `/courses/${course.courseId}/1.1` : "/courses"}`}
+                  href={`${
+                    course.isActive
+                      ? `/courses/${course.courseId}/1.1`
+                      : "/courses"
+                  }`}
                   mb={[4, 0]}
                   cursor={course.isActive ? "pointer" : "default"}
                   tabIndex={1}
                 >
                   <Button
-                    bgColor={ course.isActive ? "#532E1C" : "#532E1C33"}
-                    _hover={{bgColor: course.isActive ? "#532E1Caa" : "#532E1C33"}}
+                    bgColor={course.isActive ? "#532E1C" : "#532E1C33"}
+                    _hover={{
+                      bgColor: course.isActive ? "#532E1Caa" : "#532E1C33",
+                    }}
                     color={course.isActive ? "white" : "#532E1C55"}
-                    shadow={course.isActive ? "2px 2px 5px #888": 0}
+                    shadow={course.isActive ? "2px 2px 5px #888" : 0}
                     marginRight={2}
                     tabIndex={-1}
                     cursor={course.isActive ? "pointer" : "default"}
@@ -114,7 +139,7 @@ async function CoursesPage() {
                 mb={5}
                 tabIndex={1}
               >
-                {course.description}
+                {course.courseDescription}
               </Text>
             </CardBody>
           </Card>
@@ -122,6 +147,19 @@ async function CoursesPage() {
       </Box>
     </Flex>
   );
+} catch (error) {
+    console.error('Error rendering CoursesPage:', error)
+    return (
+      <Flex
+      flexDir={"column"}
+      justifyContent={"flex-start"}
+      alignItems={"center"}
+      bgColor={"#E6E6E6"}
+    >
+      <Box mt='60px'>Error in loading courses page.</Box>
+    </Flex>
+    )
+  }
 }
 
 export default CoursesPage;

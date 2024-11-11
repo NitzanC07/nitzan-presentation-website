@@ -9,7 +9,7 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
-import { ModuleCourse } from "@/types/coursesTypes";
+import { CourseContent, ModuleCourse } from "@/types/coursesTypes";
 import { ArticlesTypes } from '@/types/articlesTypes';
 
 interface NavLessonsListProps {
@@ -17,8 +17,11 @@ interface NavLessonsListProps {
 }
 
 function NavLessonsList({ content }: NavLessonsListProps) {  
-  const courseContent = content?.content;
-  const courseId = content?.courseId; 
+  
+  const courseContent = content?.courseContent
+  const courseId = content?.courseId;
+  
+  console.log("## Navigator", content);
 
   return (
     <Accordion>

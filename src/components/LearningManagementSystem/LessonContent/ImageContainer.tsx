@@ -1,4 +1,5 @@
-import { Card, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Card, Text } from "@chakra-ui/react";
+// import Image from "next/image";
 import React from "react";
 
 interface ImageContainerProps {
@@ -37,17 +38,20 @@ function ImageContainer({
           {imageSubject}
         </Text>
       )}
-      <Image
-        src={srcUrl}
-        alt={altText}
-        w={"100%"}
-        m={0}
-        tabIndex={1}
-        title={altText}
-      />
-      <Text as="p" fontSize={11} color={'white'} pt={2} tabIndex={1}>
-        {descText}
-      </Text>
+      
+        <Image
+
+          src={srcUrl}
+          alt={altText}
+          width={'100%'}
+          // fill
+          // objectFit="contain"
+          tabIndex={1}
+          title={altText}
+        />
+        <Text as="p" fontSize={11} color={'white'} pt={2} tabIndex={1}>
+          {descText}
+        </Text>
     </Card>
   );
 }

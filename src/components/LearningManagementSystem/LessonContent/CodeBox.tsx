@@ -1,5 +1,13 @@
 "use client";
-import { Button, Code, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Code,
+  Flex,
+  Grid,
+  GridItem,
+  Text,
+  Box,
+} from "@chakra-ui/react";
 import React, { createElement, useState } from "react";
 
 interface LineCode {
@@ -70,7 +78,9 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
     >
       <GridItem colSpan={2} bgColor={"gray.600"} color={"white"}>
         <Flex justifyContent={"space-between"}>
-          <Text color={'gray.300'} fontWeight={'bold'} mx={2}>{codeLanguage}</Text>
+          <Text color={"gray.300"} fontWeight={"bold"} mx={2}>
+            {codeLanguage}
+          </Text>
           {outputCode && (
             <Button
               px={1}
@@ -78,7 +88,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
               h={5}
               m={1}
               bgColor={"#C5A880"}
-              _hover={{bgColor: "#C5A88088"}}
+              _hover={{ bgColor: "#C5A88088" }}
               color="white"
               // style={{ fontFamily: "Varela Round, sans-serif" }}
               onClick={toggleShowOutput}
@@ -96,7 +106,7 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
             <Code
               color={"gray.300"}
               variant="subtle"
-              bgColor={"gray.600"}              
+              bgColor={"gray.600"}
               px={2}
               m={0}
             >

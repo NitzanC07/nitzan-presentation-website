@@ -6,6 +6,7 @@ import Portfolio from "@/components/Portfolio/Portfolio";
 import BlogArticles from "@/components/BlogArticles/BlogArticles";
 
 export default function Home() {
+    
   return (
     <Flex
       flexDir={"column"}
@@ -14,6 +15,7 @@ export default function Home() {
       bgColor={"#e6e6e6"}
     >
       <About />
+      
       <ServicesOverview />
       <BlogArticles />
       <Portfolio />
