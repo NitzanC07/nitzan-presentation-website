@@ -8,6 +8,7 @@ interface ImageContainerProps {
   imageSubject?: string;
   descText: string;
   width: number[];
+  backgroundColor?: string;
 }
 
 function ImageContainer({
@@ -16,16 +17,17 @@ function ImageContainer({
   imageSubject,
   descText,
   width,
+  backgroundColor
 }: ImageContainerProps) {
   return (
     <Card
       p={2}
       mx="auto"
       my={7}
-      bgColor={"#532E1C"}
+      bgColor={backgroundColor ? backgroundColor : "#532E1C"}
       w={width}
       variant={"elevated"}
-      // boxShadow={"revert"}
+      boxShadow={0}
     >
       {imageSubject && (
         <Text
@@ -40,12 +42,9 @@ function ImageContainer({
       )}
       
         <Image
-
           src={srcUrl}
           alt={altText}
           width={'100%'}
-          // fill
-          // objectFit="contain"
           tabIndex={1}
           title={altText}
         />

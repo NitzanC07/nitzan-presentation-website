@@ -16,6 +16,7 @@ export interface Lesson {
       imageSubject: string;
       descText: string;
       width: number[];
+      backgroundColor: string;
     };
     frameClause?: {
       frameTitle: string;

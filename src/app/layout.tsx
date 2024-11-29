@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Varela_Round } from "next/font/google";
 
 import { Providers } from "./providers";
 import Header from "@/components/Header/Header";

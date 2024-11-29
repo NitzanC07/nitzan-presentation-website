@@ -93,6 +93,7 @@ function LessonSections({ courseData, lessonId }: LessonSectionsProps) {
               imageSubject={section.image.imageSubject}
               descText={section.image.descText}
               width={section.image.width}
+              backgroundColor={section.image.backgroundColor}
             />
           )}
           {section.imagesGallery && <Gallery images={section.imagesGallery} />}

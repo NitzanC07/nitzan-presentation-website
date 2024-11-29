@@ -13,6 +13,7 @@ function BlogArticles() {
       m={0}
       p={5}
       bgColor={"gray.200"}
+      blur={'70%'}
     >
       <Box width={[280, 450, 600]} mt={[0, "40px"]}>
       <Heading
