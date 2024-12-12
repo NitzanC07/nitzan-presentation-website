@@ -75,6 +75,10 @@ function CodeBox({ codeBlock, outputCode, codeLanguage }: CodeContentProps) {
       p={1}
       bgColor={"gray.700"}
       borderWidth={0}
+      borderRadius={"7px"}
+      boxShadow={"2px 2px 5px white, 4px 4px 5px gray"}
+      transition={"0.6s"}
+      _hover={{ boxShadow: "2px 2px 5px white, 7px 7px 15px gray" }}
     >
       <GridItem colSpan={2} bgColor={"gray.600"} color={"white"}>
         <Flex justifyContent={"space-between"}>
