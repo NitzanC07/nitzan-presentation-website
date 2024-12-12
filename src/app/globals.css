@@ -3,3 +3,8 @@
 .varela_round {
   font-family: var(--font-varela_round);
 }
+
+body {
+  font-family: var(--font-varela_round);
+  direction: rtl;
+}

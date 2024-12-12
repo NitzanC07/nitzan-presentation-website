@@ -1,8 +1,13 @@
 'use client';
+import { varela_round } from "@/utils/fonts";
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 
-function Header() {
+interface headerProps {
+  backgroundColor?: string;
+}
+
+function Header({backgroundColor}: headerProps) {
   const path = usePathname();
 
   return (
@@ -10,7 +15,7 @@ function Header() {
       as="header"
       justifyContent={"space-between"}
       alignItems={"center"}
-      bgColor={"gray.300"}
+      bgColor={backgroundColor || "gray.300" }
       pos={"fixed"}
       w={"100%"}
       px={[5, 10]}

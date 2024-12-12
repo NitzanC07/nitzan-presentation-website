@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
 function Footer() {
   return (
@@ -6,7 +6,7 @@ function Footer() {
       as="footer"
       justifyContent={"center"}
       alignItems={"center"}
-      bgColor={"gray.300"}
+      bgColor={"transparent"}
     >
       <Text my={7}>
         ניצן כהן &copy; 2024

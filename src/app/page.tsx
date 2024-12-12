@@ -4,6 +4,9 @@ import ServicesOverview from "@/components/ServicesOverview/ServicesOverview";
 import Contact from "@/components/Contact/Contact";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import BlogArticles from "@/components/BlogArticles/BlogArticles";
+import PresentMe from "@/components/PresentMe/PresentMe";
+import Header from "@/components/Header/Header";
+import { varela_round } from "@/utils/fonts";
 
 export default function Home() {
     
@@ -12,14 +15,10 @@ export default function Home() {
       flexDir={"column"}
       justifyContent={"flex-start"}
       alignItems={"center"}
-      // bgColor={"#e6e6e6"}
-      bgImage="linear-gradient(green.800, green.200)"
+      height={'100svh'}
     >
-      <About />
-      <ServicesOverview />
-      <BlogArticles />
-      <Portfolio />
-      <Contact />
+      <Header backgroundColor='transparent' />
+      <PresentMe />
     </Flex>
   );
 }

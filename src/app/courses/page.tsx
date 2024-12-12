@@ -61,7 +61,7 @@ async function CoursesPage() {
       flexDir={"column"}
       justifyContent={"flex-start"}
       alignItems={"center"}
-      bgColor={"#E6E6E6"}
+      // bgColor={"#E6E6E6"}
     >
       <Box mt="60px">
         <Heading
