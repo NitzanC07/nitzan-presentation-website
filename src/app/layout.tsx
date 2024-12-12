@@ -24,7 +24,7 @@ export default function RootLayout({
         <Providers>
           <Flex
             flexDir={"column"}
-            bgImage="linear-gradient(gray.300, gray.50, gray.300)"
+            bgImage="linear-gradient(#D4EBF8, #fff, #D4EBF8)"
           >
             {/* <Header backgroundColor='transparent' /> */}
             {children}

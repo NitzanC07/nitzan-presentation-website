@@ -16,27 +16,30 @@ function About() {
     >
       <Flex
         flexDirection={"row"}
-        justifyContent={"space-between"}
+        justifyContent={"flex-start"}
+        alignItems={"center"}
         width={"100%"}
-        // bgColor={"gray.200"}
+        mb={7}
       >
-        <Box>
-          <SubHeadingBox textHeading={"ניצן כהן"} />
-          <ParagraphBox textContent={["על עצמי"]} />
-        </Box>
         <Image
           src="/images/main-page/profile_picture.jpg"
           alt="Nitzan Cohen"
           borderRadius="full"
-          borderWidth={2}
-          borderColor={"gray.600"}
+          borderWidth={1}
+          borderColor={"#133E87"}
           borderStyle={"solid"}
-          boxSize={["3xs", "2xs"]}
+          boxSize={["100px", "150px", "200px"]}
           m={0}
-          ml={16}
+          ml={[3, 16]}
         />
+        <Box>
+          <SubHeadingBox textHeading={"ניצן כהן"} />
+          <ParagraphBox textContent={["על עצמי"]} />
+        </Box>
       </Flex>
-      <ParagraphBox textContent={["אודות 1", "אודות 2", "אודות 3", "אודות 4", "אודות 5", "אודות 6", "אודות 7", "אודות 8", "אודות 9", "אודות 10"]} />
+      <Box width={["100%", "90%", "80%", "70%", "60%"]} mx={'auto'}>
+        <ParagraphBox textContent={["אודות 1", "אודות 2", "אודות 3", "אודות 4", "אודות 5", "אודות 6", "אודות 7", "אודות 8", "אודות 9", "אודות 10"]} />
+      </Box>
     </Flex>
   );
 }

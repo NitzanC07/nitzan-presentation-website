@@ -3,6 +3,7 @@ import { Button, Flex } from "@chakra-ui/react";
 import TabButton from "../TabButton.tsx/TabButton";
 import { useEffect, useState } from "react";
 import About from "../About/About";
+import Courses from "../Courses/Courses";
 
 const tabButtonsInitial = [
   {
@@ -43,7 +44,7 @@ function PresentMe() {
 
   return (
     <Flex
-      w={["100%", "70%"]}
+      w={["100%", "80%", "70%", "60%"]}
       flexDirection={["column"]}
       justifyContent={["flex-start"]}
       alignItems={["flex-start"]}
@@ -72,17 +73,19 @@ function PresentMe() {
         py={5}
         px={3}        
         borderWidth={"7px"}
-        borderColor={"gray.400"}
+        borderColor={"#133E87"}
         width={"100%"}
-        height={"500px"}
+        height={"70svh"}
         justifyContent={"center"}
         alignItems={"flex-start"}
-        bgColor={"white"}
+        bgColor={"#fff"}
         overflowY={"scroll"}
       >
         {
           page === "about" ? 
             <About /> : 
+            page === "courses" ? 
+            <Courses /> :
             <p>Content</p>
         }
       </Flex>

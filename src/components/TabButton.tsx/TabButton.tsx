@@ -16,9 +16,9 @@ function TabButton({ id, content, isActive, handleClick }: TabButtonProps) {
       id={id}
       borderBottomRadius={0}
       borderTopRadius={"20px"}
-      bgColor={isActive ? "gray.400" : "gray.600"}
-      _hover={{ bgColor: "gray.500" }}
-      color={"white"}
+      bgColor={isActive ? "#133E87ff" : "#133E8777"}
+      _hover={{ bgColor: "#133E87aa" }}
+      color={"#F3F3E0"}
       pr={5}
       pl={5}
       onClick={() => handleClick()}
