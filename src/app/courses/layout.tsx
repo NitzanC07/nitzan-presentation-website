@@ -1,12 +1,11 @@
 import * as React from "react";
 import type { Metadata } from "next";
-import "../globals.css";
-
-import { Providers } from "../providers";
+import { useState } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { varela_round } from "@/utils/fonts";
 import { Flex } from "@chakra-ui/react";
+import SideNavigator from "@/components/SideNavigator/SideNavigator";
 
 export const metadata: Metadata = {
   title: "NCL courses",
@@ -23,7 +22,7 @@ export default function CoursesLayout({
       <Flex
         className={varela_round}
         flexDir={"column"}
-        bgImage="linear-gradient(gray.300, gray.50, gray.300)"
+        bgImage="linear-gradient(orange.100, white, orange.100)"
       >
         <Header backgroundColor="gray.300" />
         {children}
