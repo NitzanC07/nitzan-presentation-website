@@ -1,8 +1,7 @@
-"use client";
-import { Box, Flex, Heading, Highlight, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import ParagraphBox from "../LearningManagementSystem/LessonContent/ParagraphBox";
-import { useState } from "react";
 import SubHeadingBox from "../LearningManagementSystem/LessonContent/SubHeadingBox";
+import content from "./content.json";
 
 function About() {
   return (
@@ -33,12 +32,12 @@ function About() {
           ml={[3, 16]}
         />
         <Box>
-          <SubHeadingBox textHeading={"ניצן כהן"} />
-          <ParagraphBox textContent={["על עצמי"]} />
+          <SubHeadingBox textHeading={content.name} />
+          <ParagraphBox textContent={[content.title]} />
         </Box>
       </Flex>
-      <Box width={["100%", "90%", "80%", "70%", "60%"]} mx={'auto'}>
-        <ParagraphBox textContent={["אודות 1", "אודות 2", "אודות 3", "אודות 4", "אודות 5", "אודות 6", "אודות 7", "אודות 8", "אודות 9", "אודות 10"]} />
+      <Box width={["100%", "90%", "80%", "70%", "60%"]} mx={"auto"}>
+        <ParagraphBox textContent={content.AboutMe} />
       </Box>
     </Flex>
   );

@@ -3,6 +3,7 @@ import NextLink from "next/link";
 import React from "react";
 import ParagraphBox from "../LearningManagementSystem/LessonContent/ParagraphBox";
 import SubHeadingBox from "../LearningManagementSystem/LessonContent/SubHeadingBox";
+import content from "./content.json";
 
 function Courses() {
   return (
@@ -21,10 +22,10 @@ function Courses() {
         width={"100%"}
         mb={7}
       >
-        <SubHeadingBox textHeading={"קורסים"} />
+        <SubHeadingBox textHeading={content.title} />
       </Flex>
       <Box width={["100%", "90%", "80%", "70%", "60%"]} mx={"auto"}>
-        <ParagraphBox textContent={["קורסים"]} />
+        <ParagraphBox textContent={content.courses} />
         <Link as={NextLink} href="/courses">קורסים</Link>
       </Box>
     </Flex>

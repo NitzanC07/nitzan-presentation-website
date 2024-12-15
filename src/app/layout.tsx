@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { varela_round } from "@/utils/fonts";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
   title: "Nitzan Cohen",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="he" dir="rtl">
-      <body className={varela_round}>
+      <body className={`${varela_round.className}`}>
         <Providers>
           <Flex
             flexDir={"column"}

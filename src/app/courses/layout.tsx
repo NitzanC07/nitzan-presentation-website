@@ -18,16 +18,13 @@ export default function CoursesLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="he" dir="rtl">
-      <Flex
-        className={varela_round}
-        flexDir={"column"}
-        bgImage="linear-gradient(orange.100, white, orange.100)"
-      >
-        <Header backgroundColor="gray.300" />
-        {children}
-        <Footer />
-      </Flex>
-    </html>
+    <Flex
+      flexDir={"column"}
+      bgImage="linear-gradient(orange.100, white, orange.100)"
+    >
+      <Header backgroundColor="gray.300" />
+      {children}
+      <Footer />
+    </Flex>
   );
 }

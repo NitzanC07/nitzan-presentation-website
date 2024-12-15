@@ -8,7 +8,7 @@ import Courses from "../Courses/Courses";
 const tabButtonsInitial = [
   {
     id: "about",
-    content: "אודות",
+    content: "מי אני?",
     isActive: true,
   },
   {
@@ -80,6 +80,7 @@ function PresentMe() {
         alignItems={"flex-start"}
         bgColor={"#fff"}
         overflowY={"scroll"}
+        boxShadow={"0px 4px 4px rgba(0, 0, 0, 0.25)"}
       >
         {
           page === "about" ? 
