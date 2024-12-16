@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 interface TableDataProps {
-  caption: string;
+  caption?: string;
   headingRow: string[];
   rows: (string | number)[][];
 }

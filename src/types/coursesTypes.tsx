@@ -6,7 +6,7 @@ export interface Lesson {
     textBlock?: string[];
     listBlock?: string[];
     tableData?: {
-      caption: string;
+      caption?: string;
       headingRow: string[];
       rows: (string | number)[][];
     };

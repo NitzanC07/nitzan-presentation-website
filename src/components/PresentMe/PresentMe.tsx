@@ -4,6 +4,8 @@ import TabButton from "../TabButton.tsx/TabButton";
 import { useEffect, useState } from "react";
 import About from "../About/About";
 import Courses from "../Courses/Courses";
+import Portfolio from "../Portfolio/Portfolio";
+import Contact from "../Contact/Contact";
 
 const tabButtonsInitial = [
   {
@@ -17,8 +19,8 @@ const tabButtonsInitial = [
     isActive: false,
   },
   {
-    id: "blog",
-    content: "בלוג",
+    id: "contact",
+    content: "צור קשר",
     isActive: false,
   },
   {
@@ -70,8 +72,8 @@ function PresentMe() {
       </Flex>
       <Flex
         m={0}        
-        py={5}
-        px={3}        
+        py={0}
+        px={0}        
         borderWidth={"7px"}
         borderColor={"#133E87"}
         width={"100%"}
@@ -87,6 +89,10 @@ function PresentMe() {
             <About /> : 
             page === "courses" ? 
             <Courses /> :
+            page === "projects" ?
+            <Portfolio /> :
+            page === "contact" ?
+            <Contact /> :
             <p>Content</p>
         }
       </Flex>
