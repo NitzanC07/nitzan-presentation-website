@@ -6,7 +6,6 @@ const nextConfig = {
         source: `/courses/:courseId`,
         destination: "/404",
         permanent: true,
-        target: "serverless",
       },
     ];
   },

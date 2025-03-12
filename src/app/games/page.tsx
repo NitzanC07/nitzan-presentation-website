@@ -1,6 +1,7 @@
-"use client";
+'use client';
 import { Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import useSWR from "swr";
 import cards from "../../../data/memory-game.json";
 import ImageCard from "@/components/Games/ImageCard";
 import PopupMessage from "@/components/PopupMessage/PopupMessage";
